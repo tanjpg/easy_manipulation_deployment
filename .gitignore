@@ -1,3 +1,2 @@
-easy_manipulation_deployment/grasp_planner/.vscode/*
-easy_manipulation_deployment/workcell_builder/workcell_builder/include/attributes/.vscode/*
+.vscode/
 *.pyc
