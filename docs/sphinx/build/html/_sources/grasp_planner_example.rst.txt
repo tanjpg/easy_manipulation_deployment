@@ -10,11 +10,22 @@ Grasp Planner Example
 
 In this part of the tutorial we will reference the scene that we have generated in the :ref:`workcell_builder_example`
 
-If you currently do not have a working perception system, you can still test out the package using a ROSbag located in :code:`/workcell_ws/src/easy_manipulation_deployment/grasp_planner/rosbag/perception_example.zip`
+If you currently do not have a working perception system, you can still test out the package using a rosbag located in :code:`/workcell_ws/src/easy_manipulation_deployment/grasp_planner/rosbag/perception_simulator.zip`
 
 The perception rosbag is an simple box as shown below.
 
 .. image:: ./images/example/example_object.png
+
+Unzip Perception Rosbag
+--------------------------------
+
+Before starting, if you are planning to use the perception simulator to test out this package, first unzip the folder in the /grasp_planner/rosbag/ folder.
+
+.. code-block:: bash
+
+   sudo apt-get install unzip
+
+   unzip ~/workcell_ws/src/easy_manipulation_deployment/grasp_planner/rosbag/perception_simulator.zip -d ~/workcell_ws/src/easy_manipulation_deployment/grasp_planner/rosbag/
 
 
 Set up end effector parameters
