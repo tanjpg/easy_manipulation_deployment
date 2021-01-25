@@ -15,7 +15,7 @@ before_install:
   
 before_script:
 #  - git clone --quiet --depth 1 https://github.com/ros-industrial/industrial_ci.git .industrial_ci -b master
-  - git clone --quiet --depth 1 https://github.com/Briancbn/industrial_ci .industrial_ci -b pr-coverage
+  - git clone --quiet --depth 1 https://github.com/Briancbn/industrial_ci .industrial_ci -b master
 
 variables:
   - DOCKER_RUN_OPTS="-v /etc/ssl/certs:/etc/ssl/certs:ro"

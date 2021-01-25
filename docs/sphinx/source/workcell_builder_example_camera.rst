@@ -8,12 +8,14 @@
 Adding a camera to the scene
 -----------------------------------
 
-For manipulation systems with cameras, you would need to have a representation of the camera in the scene. The current workcell builder version **does not support**  camera addition via the gui, but in this tutorial we will teach you how to add a camera to the scene. 
+For manipulation systems with cameras, you would need to have a representation of the camera in the scene. The current workcell builder version **does not support**  camera addition via the gui, but in this tutorial we will teach you how to add a camera to the scene.  
 
 For this example, we will adding the **Intel Realsense D415** depth camera in the scene.
 
 Downloading Camera Description Folder
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+**Note that the default easy_manipulation_deployment package includes the intel realsense camera in the assets/environment/realsense2_description directory, but this portion provides a step by step guide on replicating it for other cameras. If you are planning to use what was provided, skip to the next step, "Add the camera to the scene"**
 
 In the directory :code:`/workcell_ws/src/assets/environment/` , download the realsense repository
 
