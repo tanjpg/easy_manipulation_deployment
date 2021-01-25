@@ -18,7 +18,7 @@ Grasp execution configuration
 Grasp execution launch file
 -------------------------------
 
-First we need to configure the grasp execution launch file. In :code:`/home/rosi5/test_ws/src/easy_manipulation_deployment/grasp_execution/launch/grasp_execution.launch.py` , make sure you define the correct scene package for the grasp execution, and the correct base link of the robot. 
+First we need to configure the grasp execution launch file. In :code:`/workcell_ws/src/easy_manipulation_deployment/grasp_execution/launch/grasp_execution.launch.py` , make sure you define the correct scene package for the grasp execution, and the correct base link of the robot. 
 
 .. code-block:: bash
 
@@ -28,7 +28,7 @@ First we need to configure the grasp execution launch file. In :code:`/home/rosi
 Grasp execution node file
 -------------------------------
 
-In :code:`/home/rosi5/test_ws/src/easy_manipulation_deployment/grasp_execution/src/grasp_execution_node.cpp`,edit the following line to reflect the link of the end effector that will represent the point of contact with respect to the grasp object. In this case, it will be :code:`ee_palm`.
+In :code:`/workcell_ws/src/easy_manipulation_deployment/grasp_execution/src/grasp_execution_node.cpp`,edit the following line to reflect the link of the end effector that will represent the point of contact with respect to the grasp object. In this case, it will be :code:`ee_palm`.
 
 .. code-block:: bash
 
@@ -54,7 +54,7 @@ This terminal runs the manipulation workspace simulation. First, source all rele
 .. code-block:: bash
 
    source /opt/ros/foxy/setup.bash
-   source ~/moveit_ws/install/setup.bash
+   source ~/moveit2_ws/install/setup.bash
    source install/setup.bash
 
 Next, launch the grasp execution component.
@@ -74,7 +74,7 @@ This terminal runs the grasp_planner. First, source all relevant repositories. I
 .. code-block:: bash
 
    source /opt/ros/foxy/setup.bash
-   source ~/moveit_ws/install/setup.bash
+   source ~/moveit2_ws/install/setup.bash
    source install/setup.bash
 
 Next, launch the grasp planner.
@@ -96,7 +96,7 @@ This terminal runs the perception example. First, source all relevant repositori
 .. code-block:: bash
 
    source /opt/ros/foxy/setup.bash
-   source ~/moveit_ws/install/setup.bash
+   source ~/moveit2_ws/install/setup.bash
    source install/setup.bash
 
 Next, run the rosbag
