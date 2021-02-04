@@ -91,7 +91,7 @@ Next, We will launch RViz to check the orientation of this link.
    ros2 launch realsense2_description view_model.launch.py model:=test_d415_camera.urdf.xacro
 
 
-On the left panel, in order to see the frame, make sure to only check that link, and also increase the Marker Scale to about 0.5.
+On the RViz GUI left panel, in order to see the frame, make sure to only check that link, and also increase the Marker Scale to about 0.5.
 
 .. image:: ./images/example/example_realsense_rviz.png
 

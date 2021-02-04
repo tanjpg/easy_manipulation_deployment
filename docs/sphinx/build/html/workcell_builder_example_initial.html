@@ -327,7 +327,7 @@ ament_package<span class="o">()</span>
 &lt;/package&gt;
 </pre></div>
 </div>
-<p>In the <code class="code docutils literal notranslate"><span class="pre">/assets/end_effectors/robotiq_85_description/CMakeLists.txt</span></code>, replace the contents with the following:</p>
+<p>In the <code class="code docutils literal notranslate"><span class="pre">/assets/end_effectors/robotiq_85_gripper/robotiq_85_description/CMakeLists.txt</span></code>, replace the contents with the following:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>cmake_minimum_required<span class="o">(</span>VERSION <span class="m">3</span>.10.2<span class="o">)</span>
 project<span class="o">(</span>robotiq_85_description<span class="o">)</span>
 find_package<span class="o">(</span>ament_cmake REQUIRED<span class="o">)</span>
@@ -337,7 +337,7 @@ install<span class="o">(</span>DIRECTORY urdf DESTINATION <span class="s2">&quot
 ament_package<span class="o">()</span>
 </pre></div>
 </div>
-<p>In the <code class="code docutils literal notranslate"><span class="pre">/assets/end_effectors/robotiq_85_description/package.xml</span></code>, replace the contents with the following:</p>
+<p>In the <code class="code docutils literal notranslate"><span class="pre">/assets/end_effectors/robotiq_85_gripper/robotiq_85_description/package.xml</span></code>, replace the contents with the following:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>&lt;?xml <span class="nv">version</span><span class="o">=</span><span class="s2">&quot;1.0&quot;</span>?&gt;
 &lt;package <span class="nv">format</span><span class="o">=</span><span class="s2">&quot;3&quot;</span>&gt;
  &lt;name&gt;robotiq_85_description&lt;/name&gt;
@@ -359,7 +359,7 @@ ament_package<span class="o">()</span>
 &lt;/package&gt;
 </pre></div>
 </div>
-<p>In the <code class="code docutils literal notranslate"><span class="pre">/assets/end_effectors/robotiq_85_moveit_config/CMakeLists.txt</span></code>, replace the contents with the following:</p>
+<p>In the <code class="code docutils literal notranslate"><span class="pre">/assets/end_effectors/robotiq_85_gripper/robotiq_85_moveit_config/CMakeLists.txt</span></code>, replace the contents with the following:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>cmake_minimum_required<span class="o">(</span>VERSION <span class="m">3</span>.10.2<span class="o">)</span>
 project<span class="o">(</span>robotiq_85_moveit_config<span class="o">)</span>
 find_package<span class="o">(</span>ament_cmake REQUIRED<span class="o">)</span>
@@ -404,7 +404,7 @@ ament_package<span class="o">()</span>
 <div class="section" id="xacro-ize-the-srdfs">
 <h2>Xacro-ize the SRDFs<a class="headerlink" href="#xacro-ize-the-srdfs" title="Permalink to this headline">¶</a></h2>
 <p>As this workcell builder aims to create links between the manipulator and end effector, the semantic descriptions need to be accessible as macros.</p>
-<p>In the <code class="code docutils literal notranslate"><span class="pre">/assets/end_effectors/robotiq_85_moveit_config/config</span></code> folder, make a copy of <code class="code docutils literal notranslate"><span class="pre">robotiq_85_gripper.srdf</span></code> and rename it <code class="code docutils literal notranslate"><span class="pre">robotiq_85_gripper.srdf.xacro</span></code> . in this file, add the xacro tags <code class="code docutils literal notranslate"><span class="pre">&lt;xacro:macro</span> <span class="pre">name=&quot;robotiq_85&quot;&gt;</span></code> and :code:`
+<p>In the <code class="code docutils literal notranslate"><span class="pre">/assets/end_effectors/robotiq_85_gripper/robotiq_85_moveit_config/config</span></code> folder, make a copy of <code class="code docutils literal notranslate"><span class="pre">robotiq_85_gripper.srdf</span></code> and rename it <code class="code docutils literal notranslate"><span class="pre">robotiq_85_gripper.srdf.xacro</span></code> . in this file, add the xacro tags <code class="code docutils literal notranslate"><span class="pre">&lt;xacro:macro</span> <span class="pre">name=&quot;robotiq_85&quot;&gt;</span></code> and :code:`
 &lt;/xacro:macro&gt;` to the start and end of the file, as well as adding the XML NameSpace <code class="code docutils literal notranslate"><span class="pre">&lt;robot</span> <span class="pre">xmlns:xacro=&quot;http://www.ros.org/wiki/xacro&quot;</span> <span class="pre">name=&quot;robotiq_85_gripper&quot;&gt;</span></code></p>
 <p>Your <code class="code docutils literal notranslate"><span class="pre">robotiq_85_gripper.srdf.xacro</span></code> file should be as shown</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>&lt;?xml <span class="nv">version</span><span class="o">=</span><span class="s2">&quot;1.0&quot;</span> ?&gt;
@@ -423,7 +423,7 @@ ament_package<span class="o">()</span>
 &lt;/robot&gt;
 </pre></div>
 </div>
-<p>In the <code class="code docutils literal notranslate"><span class="pre">/assets/end_effectors/ur5_moveit_config/config</span></code> folder, make a copy of <code class="code docutils literal notranslate"><span class="pre">ur5.srdf</span></code> and rename it <code class="code docutils literal notranslate"><span class="pre">ur5.srdf.xacro</span></code> . in this file, add the xacro tags <code class="code docutils literal notranslate"><span class="pre">&lt;xacro:macro</span> <span class="pre">name=&quot;ur5&quot;&gt;</span></code> and :code:`
+<p>In the <code class="code docutils literal notranslate"><span class="pre">/assets/end_effectors/robotiq_85_gripper/ur5_moveit_config/config</span></code> folder, make a copy of <code class="code docutils literal notranslate"><span class="pre">ur5.srdf</span></code> and rename it <code class="code docutils literal notranslate"><span class="pre">ur5.srdf.xacro</span></code> . in this file, add the xacro tags <code class="code docutils literal notranslate"><span class="pre">&lt;xacro:macro</span> <span class="pre">name=&quot;ur5&quot;&gt;</span></code> and :code:`
 &lt;/xacro:macro&gt;` to the start and end of the file, as well as adding the XML NameSpace <code class="code docutils literal notranslate"><span class="pre">&lt;robot</span> <span class="pre">xmlns:xacro=&quot;http://www.ros.org/wiki/xacro&quot;</span> <span class="pre">name=&quot;ur5&quot;&gt;</span></code></p>
 <p>Your <code class="code docutils literal notranslate"><span class="pre">ur5.srdf.xacro</span></code> file should be as shown</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>&lt;?xml <span class="nv">version</span><span class="o">=</span><span class="s2">&quot;1.0&quot;</span> ?&gt;

@@ -45,7 +45,7 @@ Build and Install easy_manipulation_deployment
 
    cd ~/workcell_ws/src
 
-   https://github.com/ros-industrial/easy_manipulation_deployment.git
+   git clone https://github.com/ros-industrial/easy_manipulation_deployment.git
    
    mv easy_manipulation_deployment/assets/ .
 

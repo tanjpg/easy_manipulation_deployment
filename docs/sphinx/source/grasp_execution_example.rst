@@ -24,7 +24,26 @@ First we need to configure the grasp execution launch file. In :code:`/workcell_
 
    scene_pkg = 'new_scene'
    robot_base_link = 'base_link'
-   
+
+Scene URDF File
+-------------------------------
+In :code:`/workcell_ws/src/scenes/new_scene/urdf/scene.urdf.xacro`, add the following lines *before* the :code:`robot` tag:
+
+.. code-block:: bash
+
+   <link name="ee_palm" />
+   <joint name="base_to_palm" type="fixed">
+      <parent link="tool0"/>
+      <child link="ee_palm"/>
+      <origin xyz="0 0 0.09" rpy="0 0 0"/>
+   </joint>
+
+This link, :code:`ee_palm` represents the point of contact with respect to the grasp object. 
+
+.. image:: ./images/example/example_ee_palm.png
+   :scale: 75%
+   :align: center
+
 Grasp execution node file
 -------------------------------
 
@@ -33,7 +52,6 @@ In :code:`/workcell_ws/src/easy_manipulation_deployment/grasp_execution/src/gras
 .. code-block:: bash
 
    demo.init("manipulator", "ee_palm");
-   
 
 Running full pipeline
 ^^^^^^^^^^^^^^^^^^^^^^

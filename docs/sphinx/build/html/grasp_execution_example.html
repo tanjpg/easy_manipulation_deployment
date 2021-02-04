@@ -98,6 +98,7 @@
 <li class="toctree-l2 current"><a class="current reference internal" href="#">Grasp Execution Example</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#grasp-execution-configuration">Grasp execution configuration</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#grasp-execution-launch-file">Grasp execution launch file</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#scene-urdf-file">Scene URDF File</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#grasp-execution-node-file">Grasp execution node file</a></li>
 </ul>
 </li>
@@ -193,15 +194,29 @@
 <h2>Grasp execution configuration<a class="headerlink" href="#grasp-execution-configuration" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="grasp-execution-launch-file">
 <h3>Grasp execution launch file<a class="headerlink" href="#grasp-execution-launch-file" title="Permalink to this headline">¶</a></h3>
-<p>First we need to configure the grasp execution launch file. In <code class="code docutils literal notranslate"><span class="pre">/home/rosi5/test_ws/src/easy_manipulation_deployment/grasp_execution/launch/grasp_execution.launch.py</span></code> , make sure you define the correct scene package for the grasp execution, and the correct base link of the robot.</p>
+<p>First we need to configure the grasp execution launch file. In <code class="code docutils literal notranslate"><span class="pre">/workcell_ws/src/easy_manipulation_deployment/grasp_execution/launch/grasp_execution.launch.py</span></code> , make sure you define the correct scene package for the grasp execution, and the correct base link of the robot.</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nv">scene_pkg</span> <span class="o">=</span> <span class="s1">&#39;new_scene&#39;</span>
 <span class="nv">robot_base_link</span> <span class="o">=</span> <span class="s1">&#39;base_link&#39;</span>
 </pre></div>
 </div>
 </div>
+<div class="section" id="scene-urdf-file">
+<h3>Scene URDF File<a class="headerlink" href="#scene-urdf-file" title="Permalink to this headline">¶</a></h3>
+<p>In <code class="code docutils literal notranslate"><span class="pre">/workcell_ws/src/scenes/new_scene/urdf/scene.urdf.xacro</span></code>, add the following lines <em>before</em> the <code class="code docutils literal notranslate"><span class="pre">robot</span></code> tag:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>&lt;link <span class="nv">name</span><span class="o">=</span><span class="s2">&quot;ee_palm&quot;</span> /&gt;
+&lt;joint <span class="nv">name</span><span class="o">=</span><span class="s2">&quot;base_to_palm&quot;</span> <span class="nv">type</span><span class="o">=</span><span class="s2">&quot;fixed&quot;</span>&gt;
+   &lt;parent <span class="nv">link</span><span class="o">=</span><span class="s2">&quot;tool0&quot;</span>/&gt;
+   &lt;child <span class="nv">link</span><span class="o">=</span><span class="s2">&quot;ee_palm&quot;</span>/&gt;
+   &lt;origin <span class="nv">xyz</span><span class="o">=</span><span class="s2">&quot;0 0 0.09&quot;</span> <span class="nv">rpy</span><span class="o">=</span><span class="s2">&quot;0 0 0&quot;</span>/&gt;
+&lt;/joint&gt;
+</pre></div>
+</div>
+<p>This link, <code class="code docutils literal notranslate"><span class="pre">ee_palm</span></code> represents the point of contact with respect to the grasp object.</p>
+<a class="reference internal image-reference" href="_images/example_ee_palm.png"><img alt="_images/example_ee_palm.png" class="align-center" src="_images/example_ee_palm.png" style="width: 789.75px; height: 699.0px;" /></a>
+</div>
 <div class="section" id="grasp-execution-node-file">
 <h3>Grasp execution node file<a class="headerlink" href="#grasp-execution-node-file" title="Permalink to this headline">¶</a></h3>
-<p>In <code class="code docutils literal notranslate"><span class="pre">/home/rosi5/test_ws/src/easy_manipulation_deployment/grasp_execution/src/grasp_execution_node.cpp</span></code>,edit the following line to reflect the link of the end effector that will represent the point of contact with respect to the grasp object. In this case, it will be <code class="code docutils literal notranslate"><span class="pre">ee_palm</span></code>.</p>
+<p>In <code class="code docutils literal notranslate"><span class="pre">/workcell_ws/src/easy_manipulation_deployment/grasp_execution/src/grasp_execution_node.cpp</span></code>,edit the following line to reflect the link of the end effector that will represent the point of contact with respect to the grasp object. In this case, it will be <code class="code docutils literal notranslate"><span class="pre">ee_palm</span></code>.</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>demo.init<span class="o">(</span><span class="s2">&quot;manipulator&quot;</span>, <span class="s2">&quot;ee_palm&quot;</span><span class="o">)</span><span class="p">;</span>
 </pre></div>
 </div>
@@ -219,7 +234,7 @@
 <h3>Terminal 1: Grasp Execution<a class="headerlink" href="#terminal-1-grasp-execution" title="Permalink to this headline">¶</a></h3>
 <p>This terminal runs the manipulation workspace simulation. First, source all relevant repositories. In <code class="code docutils literal notranslate"><span class="pre">/workcell</span></code>,</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">source</span> /opt/ros/foxy/setup.bash
-<span class="nb">source</span> ~/moveit_ws/install/setup.bash
+<span class="nb">source</span> ~/moveit2_ws/install/setup.bash
 <span class="nb">source</span> install/setup.bash
 </pre></div>
 </div>
@@ -234,7 +249,7 @@
 <h3>Terminal 2: Grasp Planner<a class="headerlink" href="#terminal-2-grasp-planner" title="Permalink to this headline">¶</a></h3>
 <p>This terminal runs the grasp_planner. First, source all relevant repositories. In <code class="code docutils literal notranslate"><span class="pre">/workcell</span></code>,</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">source</span> /opt/ros/foxy/setup.bash
-<span class="nb">source</span> ~/moveit_ws/install/setup.bash
+<span class="nb">source</span> ~/moveit2_ws/install/setup.bash
 <span class="nb">source</span> install/setup.bash
 </pre></div>
 </div>
@@ -251,7 +266,7 @@
 <h3>Terminal 3: Perception example rosbag<a class="headerlink" href="#terminal-3-perception-example-rosbag" title="Permalink to this headline">¶</a></h3>
 <p>This terminal runs the perception example. First, source all relevant repositories. In <code class="code docutils literal notranslate"><span class="pre">/workcell</span></code>,</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">source</span> /opt/ros/foxy/setup.bash
-<span class="nb">source</span> ~/moveit_ws/install/setup.bash
+<span class="nb">source</span> ~/moveit2_ws/install/setup.bash
 <span class="nb">source</span> install/setup.bash
 </pre></div>
 </div>
