@@ -88,7 +88,7 @@
             
               <p class="caption"><span class="caption-text">About</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../../overview/index.html">About</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../about/index.html">About</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Getting Started</span></p>
 <ul>
@@ -97,7 +97,7 @@
 </ul>
 <p class="caption"><span class="caption-text">Tutorials</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../../tutorials/emd_example.html">Step-By-Step Tutorials</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../tutorial/emd_example.html">Step-By-Step Tutorials</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Individual Package Details</span></p>
 <ul class="current">
@@ -105,7 +105,10 @@
 <li class="toctree-l1"><a class="reference internal" href="../grasp_execution/grasp_execution_demo.html">Grasp Execution Demo</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="grasp_planner.html">Grasp Planner</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="grasp_planner_before.html">Before running the Grasp Planner</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">Running the Grasp Planner</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Running the Grasp Planner</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#example-grasp-planning-output">Example Grasp Planning Output:</a></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
@@ -179,35 +182,136 @@
             
   <div class="section" id="running-the-grasp-planner">
 <span id="grasp-planner-run"></span><h1>Running the Grasp Planner<a class="headerlink" href="#running-the-grasp-planner" title="Permalink to this headline">¶</a></h1>
-<p>To run the grasp planner:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ros2 run grasp_planning grasp_planning_node
+<ul class="simple">
+<li><p>Copy any of the files found in <code class="docutils literal notranslate"><span class="pre">grasp_planner/example/launch</span></code>, rename it to <code class="docutils literal notranslate"><span class="pre">grasp_planner_(end_effector)_launch.py</span></code> and replace
+the <code class="docutils literal notranslate"><span class="pre">params_(end_effector).yaml</span></code> within the launch file with the name of the .yaml file you have created.</p></li>
+</ul>
+<p class="rubric">Build the workspace and source</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span> ~/workcell_ws
+colcon build
+<span class="nb">source</span> /install/setup.bash
+</pre></div>
+</div>
+<p class="rubric">To run the grasp planner:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ros2 launch grasp_planner grasp_planner_<span class="o">(</span>end_effector<span class="o">)</span>_launch.py
 </pre></div>
 </div>
 <p>The package will then show the following when waiting for the perception topic</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="o">[</span>easy_manipulation_deployment<span class="o">][</span>Grasp Planner<span class="o">]</span> Waiting <span class="k">for</span> topic....
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="o">[</span>pcl_test_node-1<span class="o">]</span> waiting...
 </pre></div>
 </div>
-<p><strong>Example Grasp Planning Output:</strong></p>
-<p>Finger gripper:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="o">[</span>easy_manipulation_deployment<span class="o">][</span>Grasp Planner<span class="o">]</span> Waiting <span class="k">for</span> topic....
-<span class="o">[</span>easy_manipulation_deployment<span class="o">][</span>Grasp Planner<span class="o">]</span> Objects Detected!
-<span class="o">[</span>easy_manipulation_deployment<span class="o">][</span>Grasp Planner<span class="o">]</span> Gripper Type Detected: finger
-<span class="o">[</span>easy_manipulation_deployment<span class="o">][</span>Grasp Planner<span class="o">]</span> Generating Finger grasps
-<span class="o">[</span>easy_manipulation_deployment<span class="o">][</span>Grasp Planner<span class="o">]</span> Number of Grasp Samples: <span class="m">15</span>
-<span class="o">[</span>easy_manipulation_deployment<span class="o">][</span>Grasp Planner<span class="o">]</span> Best Grasp found! GDI Score: <span class="m">2941</span>
-<span class="o">[</span>easy_manipulation_deployment<span class="o">][</span>Grasp Planner<span class="o">]</span> Generate Result Files...
-<span class="o">[</span>easy_manipulation_deployment<span class="o">][</span>Grasp Planner<span class="o">]</span> Time elapsed<span class="o">(</span>ms<span class="o">)</span>: <span class="m">445</span>
+<ul class="simple">
+<li><p>A blank Cloud Viewer window will pop up</p></li>
+</ul>
+<p class="rubric">Proceed to run the perception topic</p>
+<div class="section" id="example-grasp-planning-output">
+<h2>Example Grasp Planning Output:<a class="headerlink" href="#example-grasp-planning-output" title="Permalink to this headline">¶</a></h2>
+<p class="rubric">Finger gripper:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="o">[</span>pcl_test_node-1<span class="o">]</span>  Direct Point Cloud Grasp Planning:
+<span class="o">[</span>pcl_test_node-1<span class="o">]</span> indExt
+<span class="o">[</span>pcl_test_node-1<span class="o">]</span> indExt
+<span class="o">[</span>pcl_test_node-1<span class="o">]</span> Grasp planning <span class="nb">time</span> <span class="k">for</span> computeCloudNormal <span class="m">280</span><span class="o">[</span>ms<span class="o">]</span>
+<span class="o">[</span>pcl_test_node-1<span class="o">]</span> dim <span class="m">00</span>.00935828
+<span class="o">[</span>pcl_test_node-1<span class="o">]</span> dim <span class="m">10</span>.0627482
+<span class="o">[</span>pcl_test_node-1<span class="o">]</span> dim <span class="m">20</span>.14448
+<span class="o">[</span>pcl_test_node-1<span class="o">]</span> <span class="o">[</span>Grasp Planning<span class="o">]</span> Finger Gripper Available.
+<span class="o">[</span>pcl_test_node-1<span class="o">]</span> getCuttingPlanes
+<span class="o">[</span>pcl_test_node-1<span class="o">]</span> getGraspCloud
+<span class="o">[</span>pcl_test_node-1<span class="o">]</span> getInitialSamplePoints
+<span class="o">[</span>pcl_test_node-1<span class="o">]</span> It is oriented with the X axis
+<span class="o">[</span>pcl_test_node-1<span class="o">]</span> getInitialSampleCloud
+<span class="o">[</span>pcl_test_node-1<span class="o">]</span> voxelizeSampleCloud
+<span class="o">[</span>pcl_test_node-1<span class="o">]</span> getMaxMinValues
+<span class="o">[</span>pcl_test_node-1<span class="o">]</span> getFingerSamples
+<span class="o">[</span>pcl_test_node-1<span class="o">]</span> getGripperClusters
+<span class="o">[</span>pcl_test_node-1<span class="o">]</span> getAllGripperConfigs
+<span class="o">[</span>pcl_test_node-1<span class="o">]</span> end getAllGripperConfigs:
+<span class="o">[</span>pcl_test_node-1<span class="o">]</span> grasp_samples size: <span class="m">1</span>
 </pre></div>
 </div>
-<p>Suction gripper:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="o">[</span>easy_manipulation_deployment<span class="o">][</span>Grasp Planner<span class="o">]</span> Waiting <span class="k">for</span> topic....
-<span class="o">[</span>easy_manipulation_deployment<span class="o">][</span>Grasp Planner<span class="o">]</span> Objects Detected!
-<span class="o">[</span>easy_manipulation_deployment<span class="o">][</span>Grasp Planner<span class="o">]</span> Gripper Type Detected: suction
-<span class="o">[</span>easy_manipulation_deployment<span class="o">][</span>Grasp Planner<span class="o">]</span> Generating Suction Cup grasps
-<span class="o">[</span>easy_manipulation_deployment<span class="o">][</span>Grasp Planner<span class="o">]</span> Best Grasp found! GDI Score: <span class="m">226</span>
-<span class="o">[</span>easy_manipulation_deployment<span class="o">][</span>Grasp Planner<span class="o">]</span> Generate Result Files...
-<span class="o">[</span>easy_manipulation_deployment<span class="o">][</span>Grasp Planner<span class="o">]</span> Time elapsed<span class="o">(</span>ms<span class="o">)</span>: <span class="m">802</span>
+<ul class="simple">
+<li><ol class="arabic simple">
+<li><p>Proceed to click on the Cloud Viewer window and it will show the pointcloud and bounding box of the object (Use the mouse scroll to view the pointclouds better).</p></li>
+</ol>
+</li>
+<li><ol class="arabic simple" start="2">
+<li><p>Press the <code class="docutils literal notranslate"><span class="pre">Q</span></code> key within the Cloud Viewer window to view the results of the grasp_samples</p></li>
+</ol>
+</li>
+<li><ol class="arabic simple" start="3">
+<li><p>The terminal running grasp_planner_launch.py will show the ranks of all ranked grasps on the object and the total number of grasps that can be sampled for the object.</p></li>
+</ol>
+</li>
+<li><ol class="arabic simple" start="4">
+<li><p>First grasp visualized on the viewer is the best grasp.</p></li>
+</ol>
+</li>
+<li><ol class="arabic simple" start="5">
+<li><p>Pressing <code class="docutils literal notranslate"><span class="pre">Q</span></code> will show the rest of the consecutively ranked grasps.</p></li>
+</ol>
+</li>
+<li><ol class="arabic simple" start="6">
+<li><p>Once all the grasps have been screened through, the grasp_planner will publish the /grasp_tasks topic.</p></li>
+</ol>
+</li>
+</ul>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>If the pointclouds shown on Cloud Viewer is not satisfactory, adjust the passthrough_filter_limits parameters defined in <a class="reference internal" href="grasp_planner_config.html#grasp-planner-configuration"><span class="std std-ref">Grasp Planner Configuration</span></a> to suit to your
+desired environment.</p>
+</div>
+<p class="rubric">Suction gripper:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="o">[</span>pcl_test_node-1<span class="o">]</span>  Direct Point Cloud Grasp Planning
+<span class="o">[</span>pcl_test_node-1<span class="o">]</span> indExt
+<span class="o">[</span>pcl_test_node-1<span class="o">]</span> indExt
+<span class="o">[</span>pcl_test_node-1<span class="o">]</span> Grasp planning <span class="nb">time</span> <span class="k">for</span> computeCloudNormal <span class="m">457</span><span class="o">[</span>ms<span class="o">]</span>
+<span class="o">[</span>pcl_test_node-1<span class="o">]</span> dim <span class="m">00</span>.00935828
+<span class="o">[</span>pcl_test_node-1<span class="o">]</span> dim <span class="m">10</span>.0627482
+<span class="o">[</span>pcl_test_node-1<span class="o">]</span> dim <span class="m">20</span>.14448
+<span class="o">[</span>pcl_test_node-1<span class="o">]</span> <span class="o">[</span>Grasp Planning<span class="o">]</span> Suction Gripper Available.
+<span class="o">[</span>pcl_test_node-1<span class="o">]</span> length dim: <span class="m">0</span>
+<span class="o">[</span>pcl_test_node-1<span class="o">]</span> breadth dim: <span class="m">0</span>
+<span class="o">[</span>pcl_test_node-1<span class="o">]</span> Object center: x -0.0138821
+<span class="o">[</span>pcl_test_node-1<span class="o">]</span> Object center: y <span class="m">0</span>.0386563
+<span class="o">[</span>pcl_test_node-1<span class="o">]</span> Object center: z <span class="m">0</span>.590018
+<span class="o">[</span>pcl_test_node-1<span class="o">]</span> object_top_point: x <span class="m">0</span>.0388006
+<span class="o">[</span>pcl_test_node-1<span class="o">]</span> object_top_point: y <span class="m">0</span>.0453913
+<span class="o">[</span>pcl_test_node-1<span class="o">]</span> object_top_point: z <span class="m">0</span>.582
+<span class="o">[</span>pcl_test_node-1<span class="o">]</span> Grasp planning <span class="nb">time</span> <span class="k">for</span> suction_cup : <span class="m">257</span><span class="o">[</span>ms<span class="o">]</span>
 </pre></div>
+</div>
+<ul class="simple">
+<li><ol class="arabic simple">
+<li><p>Proceed to click on the Cloud Viewer window and it will show the pointcloud and bounding box of the object (Use the mouse scroll to view the pointclouds better).</p></li>
+</ol>
+</li>
+<li><ol class="arabic simple" start="2">
+<li><p>Press the <code class="docutils literal notranslate"><span class="pre">Q</span></code> key within the Cloud Viewer window to view the results of the grasp_samples</p></li>
+</ol>
+</li>
+<li><ol class="arabic simple" start="3">
+<li><p>The terminal running grasp_planner_launch.py will show the ranks of all ranked grasps on the object and the total number of grasps that can be sampled for the object.</p></li>
+</ol>
+</li>
+<li><ol class="arabic simple" start="4">
+<li><p>First grasp visualized on the viewer is the best grasp.</p></li>
+</ol>
+</li>
+<li><ol class="arabic simple" start="5">
+<li><p>Pressing <code class="docutils literal notranslate"><span class="pre">Q</span></code> will show the rest of the ranked grasps consecutively.</p></li>
+</ol>
+</li>
+<li><ol class="arabic simple" start="6">
+<li><p>Once all the grasps have been screened through, the grasp_planner will publish the /grasp_tasks topic.</p></li>
+</ol>
+</li>
+</ul>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>If the pointclouds shown on Cloud Viewer is not satisfactory, adjust the passthrough_filter_limits parameters defined in <a class="reference internal" href="grasp_planner_config.html#grasp-planner-configuration"><span class="std std-ref">Grasp Planner Configuration</span></a> to suit to your
+desired environment.</p>
+</div>
+<p>The pose and orientation of the top ranked grasp will then be published for <a class="reference internal" href="../../tutorial/grasp_execution_example/grasp_execution_example.html#grasp-execution-example"><span class="std std-ref">Grasp Execution Example</span></a></p>
 </div>
 </div>
 

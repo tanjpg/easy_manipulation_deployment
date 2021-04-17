@@ -1,0 +1,358 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>Suction Gripper &mdash; EMD alpha documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/doctools.js"></script>
+    
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Grasp Planner Message Definitions" href="grasp_planner_msgs.html" />
+    <link rel="prev" title="Finger Gripper" href="grasp_planner_finger.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> EMD
+          
+
+          
+            
+            <img src="../../_static/emd_logo.png" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">About</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../about/index.html">About</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Getting Started</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../getting_started/common_concepts.html">Common Concepts</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../getting_started/download_instructions.html">Download Instructions</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Individual Package Details</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../workcell_builder/workcell_builder.html">Workcell Builder</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../grasp_execution/grasp_execution_demo.html">Grasp Execution Demo</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="grasp_planner.html">Grasp Planner</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="grasp_planner_before.html">Before running the Grasp Planner</a><ul class="current">
+<li class="toctree-l3 current"><a class="reference internal" href="grasp_planner_config.html">Grasp Planner Configuration</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="grasp_planner_finger.html">Finger Gripper</a></li>
+<li class="toctree-l4"><a class="reference internal" href="grasp_planner_finger.html#grasp-planning-metric-finger">Grasp Planning Metric    (Finger)</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">Suction Gripper</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#grasp-planning-metric-suction">Grasp Planning Metric (Suction)</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="grasp_planner_msgs.html">Grasp Planner Message Definitions</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="grasp_planner_run.html">Running the Grasp Planner</a></li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">EMD</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="grasp_planner.html">Grasp Planner</a> &raquo;</li>
+        
+          <li><a href="grasp_planner_before.html">Before running the Grasp Planner</a> &raquo;</li>
+        
+          <li><a href="grasp_planner_config.html">Grasp Planner Configuration</a> &raquo;</li>
+        
+      <li>Suction Gripper</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../../_sources/emd_packages/grasp_planner/grasp_planner_suction.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="suction-gripper">
+<span id="grasp-planner-suction"></span><h1>Suction Gripper<a class="headerlink" href="#suction-gripper" title="Permalink to this headline">¶</a></h1>
+<p>The parameters for Suction Gripper end effectors are as follows:</p>
+<img alt="../../_images/suction_params_only.png" src="../../_images/suction_params_only.png" />
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 24%" />
+<col style="width: 76%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Parameter</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>end_effector_names</p></td>
+<td><p>Name of end effector</p></td>
+</tr>
+<tr class="row-odd"><td colspan="2"><p><em>Replace ``suction_cup`` with Name of end_effector</em></p></td>
+</tr>
+<tr class="row-even"><td><p>type</p></td>
+<td><p>suction</p></td>
+</tr>
+<tr class="row-odd"><td><p>num_cups_length</p></td>
+<td><p>Number of cups the suction gripper has lengthwise (Shown in Figure 1)</p></td>
+</tr>
+<tr class="row-even"><td><p>num_cups_breadth</p></td>
+<td><p>Number of cups the suction gripper has breadthwise (Shown in Figure 1)</p></td>
+</tr>
+<tr class="row-odd"><td><p>dist_between_cups_length</p></td>
+<td><p>Lengthwise distance between each suction cup  (Shown in Figure 1)</p></td>
+</tr>
+<tr class="row-even"><td><p>dist_between_cups_breadth</p></td>
+<td><p>Breadthwise distance between each suction cup  (Shown in Figure 1)</p></td>
+</tr>
+<tr class="row-odd"><td><p>cup_radius</p></td>
+<td><p>Radius of a single suction cup (Shown in Figure 1)</p></td>
+</tr>
+<tr class="row-even"><td><p>cup_height</p></td>
+<td><p>Height of suction cup from surface (Shown in Figure 1)</p></td>
+</tr>
+<tr class="row-odd"><td><p>num_sample_along_axis</p></td>
+<td><p>Number of grasp samples created to search for a better grasp (Shown in Figure 2)</p></td>
+</tr>
+<tr class="row-even"><td><p>search_resolution</p></td>
+<td><p>Resolution between the num_sample_along_axis (Shown in Figure 2)</p></td>
+</tr>
+<tr class="row-odd"><td><p>search_angle_resolution</p></td>
+<td><p>Angle resoultion in for every sample along axis (Shown in Figure 3)</p></td>
+</tr>
+<tr class="row-even"><td><p>curvature</p></td>
+<td><p>Weights for Suction Grasp Planner Ranking formula (Default value)</p></td>
+</tr>
+<tr class="row-odd"><td><p>grasp_distance_to_center</p></td>
+<td><p>Weights for Suction Grasp Planner Ranking formula (Default value)</p></td>
+</tr>
+<tr class="row-even"><td><p>number_contact_points</p></td>
+<td><p>Weights for Suction Grasp Planner Ranking formula (Default value)</p></td>
+</tr>
+</tbody>
+</table>
+<ul class="simple">
+<li><p>Determining <code class="docutils literal notranslate"><span class="pre">num_cups_length</span></code>, <code class="docutils literal notranslate"><span class="pre">num_cups_breadth</span></code>, <code class="docutils literal notranslate"><span class="pre">dist_between_cups_length</span></code>, <code class="docutils literal notranslate"><span class="pre">dist_between_cups_breadth</span></code>, <code class="docutils literal notranslate"><span class="pre">cup_radius</span></code> and <code class="docutils literal notranslate"><span class="pre">cup_height</span></code>
+parameters are shown in Figure 1 below.</p></li>
+</ul>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 100%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Figure 1</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><img alt="Figure_1" class="align-middle" src="../../_images/suction_gripper_figure1.png" /></p></td>
+</tr>
+</tbody>
+</table>
+<ul class="simple">
+<li><p>Determining <code class="docutils literal notranslate"><span class="pre">num_sample_along_axis</span></code> and <code class="docutils literal notranslate"><span class="pre">search_resolution</span></code> parameters are shown in Figure 2 below.</p></li>
+</ul>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 100%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Figure 2</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><img alt="Figure_2" class="align-middle" src="../../_images/suction_gripper_figure2.png" /></p></td>
+</tr>
+</tbody>
+</table>
+<ul class="simple">
+<li><p>Determining <code class="docutils literal notranslate"><span class="pre">search_angle_resolution</span></code> parameter is shown in Figure 3 below.</p></li>
+</ul>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 100%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Figure 3</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><img alt="Figure_3" class="align-middle" src="../../_images/suction_gripper_figure3.png" /></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="grasp-planning-metric-suction">
+<h1>Grasp Planning Metric (Suction)<a class="headerlink" href="#grasp-planning-metric-suction" title="Permalink to this headline">¶</a></h1>
+<img alt="../../_images/suction_gripper_formula.png" src="../../_images/suction_gripper_formula.png" />
+<ul class="simple">
+<li><p>The possible grasps on the object are ranked by utlizing this formula. The position and orientation of the best quality grasp is then published for ref::<cite>grasp_execution_demo</cite>.</p></li>
+</ul>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="grasp_planner_msgs.html" class="btn btn-neutral float-right" title="Grasp Planner Message Definitions" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="grasp_planner_finger.html" class="btn btn-neutral float-left" title="Finger Gripper" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2020, Glenn Tan.
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>
