@@ -263,8 +263,6 @@ void FingerGripper::addCuttingPlanesEqualAligned(
   int min_fingers = (side_1_max ? this->num_fingers_side_2 : this->num_fingers_side_1);
   int num_itr = (max_fingers == 1 ? 0 : floor(max_fingers / 2) + 1);
   int curr_min_size = (side_1_max ? this->plane_2_index.size() : this->plane_1_index.size());
-  std::cout << "max_fingers: " << max_fingers << std::endl;
-  std::cout << "min_fingers: " << min_fingers << std::endl;
   for (int row = 0, updown_toggle = 1; row < num_itr; row += updown_toggle ^= 1) {
     // for(int row = 0, updown_toggle = 0; row < num_itr; row += updown_toggle ^=1)
     float gap;
@@ -292,10 +290,7 @@ void FingerGripper::addCuttingPlanesEqualAligned(
       // }
 
     } else {
-      // std::cout << "Add plane. Initial size: " << this->grasp_samples.size() << std::endl;
       if (curr_min_size < min_fingers) {  // Plane still contains fingers on both side
-      //if (min_fingers > 0) {  // Plane still contains fingers on both side
-        std::cout << "Add to both" << std::endl;
         addPlane(gap, centerpoint, plane_vector, true, true);
         curr_min_size++;
       } else {  // Plane only contains fingers on the side with more fingers
@@ -308,10 +303,7 @@ void FingerGripper::addCuttingPlanesEqualAligned(
           addPlane(gap, centerpoint, plane_vector, false, true);
         }
       }
-      // addPlane(gap, centerpoint, plane_vector, false, true);
     }
-    // std::cout << "Final: " << this->grasp_samples.size() << std::endl;
-    //min_fingers--;
   }
 }
 
