@@ -1,0 +1,386 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>Finger Gripper &mdash; EMD alpha documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/doctools.js"></script>
+    
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Suction Gripper" href="grasp_planner_suction.html" />
+    <link rel="prev" title="Grasp Planner Configuration" href="grasp_planner_config.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> EMD
+          
+
+          
+            
+            <img src="../../_static/emd_logo.png" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">About</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../about/index.html">About</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Getting Started</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../getting_started/common_concepts.html">Common Concepts</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../getting_started/download_instructions.html">Download Instructions</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Tutorials</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../tutorial/emd_example.html">Step-By-Step Tutorials</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Individual Package Details</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../workcell_builder/workcell_builder.html">Workcell Builder</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../grasp_execution/grasp_execution_demo.html">Grasp Execution Demo</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="grasp_planner.html">Grasp Planner</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="grasp_planner_before.html">Before running the Grasp Planner</a><ul class="current">
+<li class="toctree-l3 current"><a class="reference internal" href="grasp_planner_config.html">Grasp Planner Configuration</a><ul class="current">
+<li class="toctree-l4 current"><a class="current reference internal" href="#">Finger Gripper</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#grasp-planning-metric-finger">Grasp Planning Metric    (Finger)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="grasp_planner_suction.html">Suction Gripper</a></li>
+<li class="toctree-l4"><a class="reference internal" href="grasp_planner_suction.html#grasp-planning-metric-suction">Grasp Planning Metric (Suction)</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="grasp_planner_msgs.html">Grasp Planner Message Definitions</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="grasp_planner_run.html">Running the Grasp Planner</a></li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">EMD</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="grasp_planner.html">Grasp Planner</a> &raquo;</li>
+        
+          <li><a href="grasp_planner_before.html">Before running the Grasp Planner</a> &raquo;</li>
+        
+          <li><a href="grasp_planner_config.html">Grasp Planner Configuration</a> &raquo;</li>
+        
+      <li>Finger Gripper</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../../_sources/emd_packages/grasp_planner/grasp_planner_finger.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="finger-gripper">
+<span id="grasp-planner-finger"></span><h1>Finger Gripper<a class="headerlink" href="#finger-gripper" title="Permalink to this headline">¶</a></h1>
+<p>The parameters for Finger Gripper end effectors are as follows:</p>
+<img alt="../../_images/finger_params_only.png" src="../../_images/finger_params_only.png" />
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 29%" />
+<col style="width: 71%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Parameter</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>end_effector_names</p></td>
+<td><p>Name of end effector</p></td>
+</tr>
+<tr class="row-odd"><td colspan="2"><p><em>Replace ``robotiq_2f`` with Name of end_effector</em></p></td>
+</tr>
+<tr class="row-even"><td><p>type</p></td>
+<td><p>finger</p></td>
+</tr>
+<tr class="row-odd"><td><p>num_fingers_side_1</p></td>
+<td><p>Number of fingers on left side (Shown in Figure 1)</p></td>
+</tr>
+<tr class="row-even"><td><p>num_fingers_side_2</p></td>
+<td><p>Number of fingers on right side (Shown in Figure 1)</p></td>
+</tr>
+<tr class="row-odd"><td><p>distance_between_fingers_1</p></td>
+<td><p>Distance between each finger on left side (Shown in Figure 2)</p></td>
+</tr>
+<tr class="row-even"><td><p>distance_between_fingers_2</p></td>
+<td><p>Distance between each finger on right side (Shown in Figure 2)</p></td>
+</tr>
+<tr class="row-odd"><td><p>finger_thickness</p></td>
+<td><p>Thickness of a single finger (Shown in Figure 2)</p></td>
+</tr>
+<tr class="row-even"><td><p>gripper_stroke</p></td>
+<td><p>Distance of between fingers on opposite ends (Shown in Figure 2)</p></td>
+</tr>
+<tr class="row-odd"><td><p>grasp_plane_dist_limit</p></td>
+<td><p>Determine the thickness of the grasp area sampled.</p></td>
+</tr>
+<tr class="row-even"><td><p>voxel_size</p></td>
+<td><p>Determine the leaf size during point cloud down sampling</p></td>
+</tr>
+<tr class="row-odd"><td><p>grasp_rank_weight_1</p></td>
+<td><p>Part of Grasp Planner Ranking formula (Default value)</p></td>
+</tr>
+<tr class="row-even"><td><p>grasp_rank_weight_2</p></td>
+<td><p>Part of Grasp Planner Ranking formula (Default value)</p></td>
+</tr>
+<tr class="row-odd"><td><p>world_x_angle_threshold</p></td>
+<td><p>(Default value)</p></td>
+</tr>
+<tr class="row-even"><td><p>world_y_angle_threshold</p></td>
+<td><p>(Default value)</p></td>
+</tr>
+<tr class="row-odd"><td><p>world_z_angle_threshold</p></td>
+<td><p>(Default value)</p></td>
+</tr>
+</tbody>
+</table>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The line right after <code class="docutils literal notranslate"><span class="pre">end_effector_names</span></code> requires you to input the name of the end_effector specified.</p>
+</div>
+<ul class="simple">
+<li><p>Determining <code class="docutils literal notranslate"><span class="pre">num_fingers_side_1</span></code> and <code class="docutils literal notranslate"><span class="pre">num_fingers_side_2</span></code> parameters are shown in Figure 1 below.</p></li>
+</ul>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 100%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Figure 1</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><img alt="Figure_1" class="align-middle" src="../../_images/finger_gripper_figure1.png" /></p></td>
+</tr>
+</tbody>
+</table>
+<ul class="simple">
+<li><p>Determining <code class="docutils literal notranslate"><span class="pre">distance_between_fingers_1</span></code>, <code class="docutils literal notranslate"><span class="pre">distance_between_fingers_2</span></code>, <code class="docutils literal notranslate"><span class="pre">finger_thickness</span></code> and <code class="docutils literal notranslate"><span class="pre">gripper_stroke</span></code> parameters are shown in Figure 2 below.</p></li>
+</ul>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 100%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Figure 2</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><img alt="Figure_2" class="align-middle" src="../../_images/finger_gripper_figure2.png" /></p></td>
+</tr>
+</tbody>
+</table>
+<p class="rubric"><code class="docutils literal notranslate"><span class="pre">grasp_plane_dist_limit</span></code></p>
+<ul class="simple">
+<li><p>Determine the thickness of the grasp area sampled.</p></li>
+</ul>
+<p>Smaller plane distance results  in less points considered during grasp planning, resulting in faster planning times, but possibly less accurate grasp plans</p>
+<p>Larger plane distance results  in more points considered during grasp planning, resulting in lower planning times, but possibly more accurate grasp plans</p>
+<img alt="../../_images/finger_gripper_grasp_plane_dist_limit.png" class="align-center" src="../../_images/finger_gripper_grasp_plane_dist_limit.png" />
+<p class="rubric"><code class="docutils literal notranslate"><span class="pre">voxel_size</span></code></p>
+<ul class="simple">
+<li><p>Determine the leaf size during point cloud down sampling</p></li>
+</ul>
+<p>Small voxel sizes means higher number of points after downsampling, resulting in slower grasp planning time, but possible more accurate grasp plans</p>
+<p>Large voxel sizes means smaller number of points after downsampling, which may result faster planning time, but lower accuracy of grasp plans due to the lack of points</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 29%" />
+<col style="width: 40%" />
+<col style="width: 31%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head" colspan="3"><p>Voxel Sizes</p></th>
+</tr>
+<tr class="row-even"><th class="head"><p>Small</p></th>
+<th class="head"><p>Medium</p></th>
+<th class="head"><p>Large</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-odd"><td><p><img alt="Voxel_A" class="align-middle" src="../../_images/finger_gripper_voxel_size_A.png" /></p></td>
+<td><p><img alt="Voxel_B" class="align-middle" src="../../_images/finger_gripper_voxel_size_B.png" /></p></td>
+<td><p><img alt="Voxel_C" class="align-middle" src="../../_images/finger_gripper_voxel_size_C.png" /></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="grasp-planning-metric-finger">
+<h1>Grasp Planning Metric    (Finger)<a class="headerlink" href="#grasp-planning-metric-finger" title="Permalink to this headline">¶</a></h1>
+<img alt="../../_images/finger_gripper_formula.png" src="../../_images/finger_gripper_formula.png" />
+<ul class="simple">
+<li><p>Every possible grasps on the object are ranked by utlizing this formula. The position and orientation of the best quality grasp is then published for ref::<cite>grasp_execution_demo</cite>.</p></li>
+</ul>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="grasp_planner_suction.html" class="btn btn-neutral float-right" title="Suction Gripper" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="grasp_planner_config.html" class="btn btn-neutral float-left" title="Grasp Planner Configuration" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2020, Glenn Tan.
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

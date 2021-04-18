@@ -1,0 +1,325 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>Grasp Planner Example &mdash; EMD alpha documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/doctools.js"></script>
+    
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> EMD
+          
+
+          
+            
+            <img src="../../_static/emd_logo.png" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">About</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../about/index.html">About</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Getting Started</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../getting_started/common_concepts.html">Common Concepts</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../getting_started/download_instructions.html">Download Instructions</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Individual Package Details</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../emd_packages/workcell_builder/workcell_builder.html">Workcell Builder</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../emd_packages/grasp_execution/grasp_execution_demo.html">Grasp Execution Demo</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../emd_packages/grasp_planner/grasp_planner.html">Grasp Planner</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">EMD</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>Grasp Planner Example</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../../_sources/example/grasp_planner_example/grasp_planner_tutorial.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="grasp-planner-example">
+<span id="id1"></span><h1>Grasp Planner Example<a class="headerlink" href="#grasp-planner-example" title="Permalink to this headline">¶</a></h1>
+<p>In this part of the tutorial we will reference the scene we have generated in the :ref:’Workcell Builder Example’</p>
+<p>Currently, perception data inputs for the Grasp Planner only works with:</p>
+<blockquote>
+<div><ol class="arabic simple">
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Point_cloud">Pointcloud</a></p></li>
+<li><p><a class="reference external" href="https://github.com/ros-industrial/easy_perception_deployment">Easy Perception Deployment</a> (EPD)</p></li>
+</ol>
+</div></blockquote>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Do take note that the topics currently have to be named /camera/pointcloud for Pointcloud or
+/processor/epd_localize_output for EPD</p>
+</div>
+<p>If you currently do not have a working perception system, you can still test out the package using either the epd_rosbag or pointcloud_rosbag located in <em>PATH TO ROSBAG folder TO BE WRITTEN</em></p>
+<p>The rosbags are using the stream of a simple tea box as shown below.</p>
+<img alt="../../_images/example_pointcloud_picture.png" src="../../_images/example_pointcloud_picture.png" />
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Prority is given to <a class="reference external" href="https://github.com/ros-industrial/easy_perception_deployment">Easy Perception Deployment</a> data if both <a class="reference external" href="https://en.wikipedia.org/wiki/Point_cloud">Pointcloud</a> and <a class="reference external" href="https://github.com/ros-industrial/easy_perception_deployment">Easy Perception Deployment</a>  are running simultaneously.</p>
+</div>
+<div class="section" id="set-up-end-effector-parameters">
+<h2>Set up end effector parameters<a class="headerlink" href="#set-up-end-effector-parameters" title="Permalink to this headline">¶</a></h2>
+<p>The current version of Grasp Planner is able support End-effectors for both multiple suction arrays and multiple fingered grippers.</p>
+<p>For the example, we will utilize the <strong>2-Finger gripper</strong> in line with the End-Effector used for the scene in <a class="reference internal" href="../workcell_builder_example/workcell_builder_example.html#workcell-builder-example"><span class="std std-ref">Workcell Builder Example</span></a></p>
+<p>The configuration files need to be set according to the type of End-effector that is being used.
+In the configuration file <em>PATH TO CONFIG FILE</em>, replace the contents with the following based of the desired end_effector:</p>
+<div class="section" id="finger-gripper">
+<h3>2-Finger gripper<a class="headerlink" href="#finger-gripper" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>end_effectors:
+  end_effector_names: <span class="o">[</span>robotiq_2f<span class="o">]</span>
+  robotiq_2f:
+    type: finger
+    num_fingers_side_1: <span class="m">1</span>
+    num_fingers_side_2: <span class="m">1</span>
+    distance_between_fingers_1: <span class="m">0</span>.0
+    distance_between_fingers_2: <span class="m">0</span>.0
+    finger_thickness: <span class="m">0</span>.02
+    gripper_stroke: <span class="m">0</span>.085
+    grasp_planning_params:
+      grasp_plane_dist_limit: <span class="m">0</span>.007
+      voxel_size: <span class="m">0</span>.01
+      grasp_rank_weight_1: <span class="m">1</span>.5
+      grasp_rank_weight_2: <span class="m">1</span>.0
+      world_x_angle_threshold: <span class="m">0</span>.5
+      world_y_angle_threshold: <span class="m">0</span>.5
+      world_z_angle_threshold: <span class="m">0</span>.25
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="running-the-grasp-planner">
+<h2>Running the Grasp Planner<a class="headerlink" href="#running-the-grasp-planner" title="Permalink to this headline">¶</a></h2>
+<p>This part of the example requires 2 terminals. We will be running the epd_rosbag for the example.</p>
+<p><em>In terminal 1:</em> (Grasp Planner Terminal)</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">source</span> /opt/ros/foxy/setup.bash
+
+<span class="nb">source</span> PATH_TO_MOVEIT_WS/install/setup.bash
+
+<span class="nb">cd</span> PATH_TO_EMD_WS/
+
+colcon build
+
+<span class="nb">source</span> install/setup.bash
+
+ros2 launch grasp_planner grasp_planner_launch.py
+</pre></div>
+</div>
+<p>Once successfully launched, <code class="code docutils literal notranslate"><span class="pre">waiting...</span></code> should be seen Terminal 1 and a seperate screen <code class="code docutils literal notranslate"><span class="pre">Cloud</span> <span class="pre">viewer</span></code> will pop out.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Take note that Grasp Execution should be launched first as the Grasp Planner requires the frame <code class="code docutils literal notranslate"><span class="pre">camera_color_optical_frame</span></code> to be present.
+If not the following will be shown on Terminal 1:</p>
+</div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="o">[</span>pcl_test_node-1<span class="o">]</span> <span class="o">[</span>INFO<span class="o">]</span> <span class="o">[</span><span class="m">1617252094</span>.561454528<span class="o">]</span> <span class="o">[</span>pcl_node<span class="o">]</span>: Message Filter dropping message: frame <span class="s1">&#39;camera_color_optical_frame&#39;</span> at <span class="nb">time</span> <span class="m">0</span>.000 <span class="k">for</span> reason <span class="s1">&#39;Unknown&#39;</span>
+</pre></div>
+</div>
+<p><em>In terminal 2:</em> (Rosbag/Perception stream Terminal)</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">source</span> /opt/ros/foxy/setup.bash
+
+<span class="nb">cd</span> PATH_TO_EMD_WS/
+
+<span class="nb">source</span> install/setup.bash
+
+<span class="nb">cd</span> PATH_TO_CAMERA/EPD_ROSBAG
+
+ros2 bag play epd_rosbag.db3
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This step uses the rosbag as an example, you can provide your own stream of pointcloud/EPD data.</p>
+</div>
+<p>Once successfully launched, the output should be as shown below on Terminal 2.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="o">[</span>INFO<span class="o">]</span> <span class="o">[</span><span class="m">1617251978</span>.247342106<span class="o">]</span> <span class="o">[</span>rosbag2_storage<span class="o">]</span>: Opened database <span class="s1">&#39;epd_rosbag.db3&#39;</span> <span class="k">for</span> READ_ONLY.
+</pre></div>
+</div>
+</div>
+<div class="section" id="viewing-grasping-results-on-cloud-viewer">
+<h2>Viewing grasping results on Cloud viewer<a class="headerlink" href="#viewing-grasping-results-on-cloud-viewer" title="Permalink to this headline">¶</a></h2>
+<p>The <code class="code docutils literal notranslate"><span class="pre">Cloud</span> <span class="pre">viewer</span></code> window will then load the frame of the perception input data as shown below:</p>
+<a class="reference internal image-reference" href="../../_images/example_epd_pointcloud.png"><img alt="../../_images/example_epd_pointcloud.png" class="align-center" src="../../_images/example_epd_pointcloud.png" style="width: 1283.2px; height: 799.2px;" /></a>
+<p>Click on the <code class="code docutils literal notranslate"><span class="pre">Cloud</span> <span class="pre">viewer</span></code> window and press <code class="code docutils literal notranslate"><span class="pre">Q</span></code>. The Grasp Planner will then process the pointcloud data, showing the Bounding Box of
+the object/objects in the <code class="code docutils literal notranslate"><span class="pre">Cloud</span> <span class="pre">viewer</span></code> window,</p>
+<a class="reference internal image-reference" href="../../_images/example_epd_bounding_box.png"><img alt="../../_images/example_epd_bounding_box.png" class="align-center" src="../../_images/example_epd_bounding_box.png" style="width: 719.2px; height: 450.40000000000003px;" /></a>
+<p>Continue to press <code class="code docutils literal notranslate"><span class="pre">Q</span></code> to visualize all of the possible grasps on the object.</p>
+<a class="reference internal image-reference" href="../../_images/example_epd_grasps_balls.png"><img alt="../../_images/example_epd_grasps_balls.png" class="align-center" src="../../_images/example_epd_grasps_balls.png" style="width: 714.4000000000001px; height: 463.20000000000005px;" /></a>
+<p>The grasps are ranked based off the quality of their grasps. The pose and orientation of the top ranked grasp will then be published for <a class="reference internal" href="../grasp_execution_example/grasp_execution_example.html#grasp-execution-example"><span class="std std-ref">Grasp Execution Example</span></a></p>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2020, Glenn Tan.
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

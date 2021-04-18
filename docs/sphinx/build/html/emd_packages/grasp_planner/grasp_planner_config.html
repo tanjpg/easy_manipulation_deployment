@@ -38,7 +38,7 @@
     
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="Grasp Planner Message Definitions" href="grasp_planner_msgs.html" />
+    <link rel="next" title="Finger Gripper" href="grasp_planner_finger.html" />
     <link rel="prev" title="Before running the Grasp Planner" href="grasp_planner_before.html" /> 
 </head>
 
@@ -89,7 +89,7 @@
             
               <p class="caption"><span class="caption-text">About</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../../overview/index.html">About</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../about/index.html">About</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Getting Started</span></p>
 <ul>
@@ -98,7 +98,7 @@
 </ul>
 <p class="caption"><span class="caption-text">Tutorials</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../../tutorials/emd_example.html">Step-By-Step Tutorials</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../tutorial/emd_example.html">Step-By-Step Tutorials</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Individual Package Details</span></p>
 <ul class="current">
@@ -107,8 +107,10 @@
 <li class="toctree-l1 current"><a class="reference internal" href="grasp_planner.html">Grasp Planner</a><ul class="current">
 <li class="toctree-l2 current"><a class="reference internal" href="grasp_planner_before.html">Before running the Grasp Planner</a><ul class="current">
 <li class="toctree-l3 current"><a class="current reference internal" href="#">Grasp Planner Configuration</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#finger-gripper">Finger Gripper</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#suction-gripper">Suction Gripper</a></li>
+<li class="toctree-l4"><a class="reference internal" href="grasp_planner_finger.html">Finger Gripper</a></li>
+<li class="toctree-l4"><a class="reference internal" href="grasp_planner_finger.html#grasp-planning-metric-finger">Grasp Planning Metric    (Finger)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="grasp_planner_suction.html">Suction Gripper</a></li>
+<li class="toctree-l4"><a class="reference internal" href="grasp_planner_suction.html#grasp-planning-metric-suction">Grasp Planning Metric (Suction)</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="grasp_planner_msgs.html">Grasp Planner Message Definitions</a></li>
@@ -190,59 +192,112 @@
             
   <div class="section" id="grasp-planner-configuration">
 <span id="id1"></span><h1>Grasp Planner Configuration<a class="headerlink" href="#grasp-planner-configuration" title="Permalink to this headline">¶</a></h1>
-<p>In order for the grasp planner to plan the right type of grasp, we need to first create a configuration file in the config folder , <strong>attributes.yaml</strong> . It is advised to write over the current <strong>attributes.yaml</strong> file to prevent any YAML parsing errors.</p>
-<p>This File will be located in grasp_planner/config/attributes.yaml</p>
-<div class="section" id="finger-gripper">
-<h2>Finger Gripper<a class="headerlink" href="#finger-gripper" title="Permalink to this headline">¶</a></h2>
-<img alt="../../_images/finger_yaml.png" src="../../_images/finger_yaml.png" />
-<div class="section" id="fingers">
-<h3><strong>fingers</strong><a class="headerlink" href="#fingers" title="Permalink to this headline">¶</a></h3>
-<p>Number of fingers for the end effector. <strong>Currently only 2 fingered grippers are supported</strong></p>
+<p>In order for the grasp planner to plan the right type of grasp, we need to first create a configuration file in the config folder , <code class="docutils literal notranslate"><span class="pre">params.yaml</span></code>.</p>
+<p>This file can be located in <code class="docutils literal notranslate"><span class="pre">grasp_planner/example/config/params.yaml</span></code></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>It is advised to write over the current <cite>params.yaml</cite> file to prevent any YAML parsing errors. The params.yaml file can be renamed and
+and saved as a specific configuration as a preloaded configuration file for a specific end effector.</p>
+<p>Example: <cite>params_2f.yaml</cite></p>
 </div>
-<div class="section" id="distance-between-fingers">
-<h3><strong>distance_between_fingers</strong><a class="headerlink" href="#distance-between-fingers" title="Permalink to this headline">¶</a></h3>
-<p>The distance between the fingers of the end effector(in mm). Using the Robotiq 2F-85 gripper as an example:</p>
+<ul>
+<li><p>Grasp Planner package currently identifies End Effectors as either <code class="docutils literal notranslate"><span class="pre">Suction</span></code> or <code class="docutils literal notranslate"><span class="pre">Finger</span></code> types. However both <code class="docutils literal notranslate"><span class="pre">param.yaml</span></code> files require pointcloud
+parameters. Therefore this section of the configuration can be used for both types of <code class="docutils literal notranslate"><span class="pre">param.yaml</span></code> files.</p>
+<img alt="../../_images/pointcloud_params_only.png" src="../../_images/pointcloud_params_only.png" />
+</li>
+</ul>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 44%" />
+<col style="width: 56%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Parameter</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>perception_topic</p></td>
+<td><p>Topic name of camera</p></td>
+</tr>
+<tr class="row-odd"><td><p>camera_frame</p></td>
+<td><p>Reference frame the camera uses</p></td>
+</tr>
+<tr class="row-even"><td><p>passthrough_filter_limits_x</p></td>
+<td><p>Upper and lower limits for passthrough filtering in the x axis</p></td>
+</tr>
+<tr class="row-odd"><td><p>passthrough_filter_limits_y</p></td>
+<td><p>Upper and lower limits for passthrough filtering in the y axis</p></td>
+</tr>
+<tr class="row-even"><td><p>passthrough_filter_limits_z</p></td>
+<td><p>Upper and lower limits for passthrough filtering in the z axis</p></td>
+</tr>
+<tr class="row-odd"><td><p>segmentation_max_iterations (For plane segmentation)</p></td>
+<td><p>Maximum number of iterations before giving up</p></td>
+</tr>
+<tr class="row-even"><td><p>segmentation_distance_threshold (For plane segmentation)</p></td>
+<td><p>Determines how close a point must be to the model in order to be considered an inlier</p></td>
+</tr>
+<tr class="row-odd"><td><p>cluster_tolerance (For Normals estimation)</p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>min_cluster_size (For Euclidean cluster extraction)</p></td>
+<td><p>Determine the minimum number of points to be considered a cluster</p></td>
+</tr>
+<tr class="row-odd"><td><p>cloud_normal_radius (For Normals estimation)</p></td>
+<td><p>Determine the radius around which the planner estimates the local surface properties at each point.</p></td>
+</tr>
+</tbody>
+</table>
+<p class="rubric"><code class="docutils literal notranslate"><span class="pre">passthrough_filter_limits</span> <span class="pre">(x,</span> <span class="pre">y.</span> <span class="pre">z)</span></code></p>
+<ul class="simple">
+<li><p>Upper and lower limits for passthrough filtering for respective x, y, z axis</p></li>
+</ul>
+<p>Pointclouds from the camera may include several objects or difference in terrain that is not required to be part of the pointcloud processing.
+This is shown in the images below.</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Pointcloud before filtering</p></th>
+<th class="head"><p>Pointcloud after filtering</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><a class="reference internal" href="../../_images/pointcloud_before_filter.png"><img alt="image_before_filter" class="align-middle" src="../../_images/pointcloud_before_filter.png" style="width: 270.0px; height: 287.5px;" /></a></p></td>
+<td><p><a class="reference internal" href="../../_images/pointcloud_after_filter.png"><img alt="image_after_filter" class="align-middle" src="../../_images/pointcloud_after_filter.png" style="width: 425.0px; height: 283.0px;" /></a></p></td>
+</tr>
+</tbody>
+</table>
+<p>If you set the range limits too big, you may cut out parts of the point cloud that may be important. If you set the limits too small, processing time may increase.</p>
+<p>Therefore <code class="docutils literal notranslate"><span class="pre">passthrough_filter_limits_(_)</span></code> parameters should be adjusted depending to your environment</p>
+<p class="rubric"><code class="docutils literal notranslate"><span class="pre">segmentation_max_iterations</span></code> &amp; <code class="docutils literal notranslate"><span class="pre">segmentation_distance_threshold</span></code></p>
+<img alt="../../_images/pointcloud_segmentation.png" src="../../_images/pointcloud_segmentation.png" />
+<p class="rubric">segmentation_max_iterations</p>
+<ul class="simple">
+<li><p>Maximum number of iterations before giving up</p></li>
+</ul>
+<p>The higher you set, the slower the path planning times, but the higher the chance of better quality plane segmentation</p>
+<p class="rubric"><code class="docutils literal notranslate"><span class="pre">segmentation_distance_threshold</span></code></p>
+<ul class="simple">
+<li><p>Determines how close a point must be to the model in order to be considered an inlier</p></li>
+</ul>
+<p>A higher number ensures that more points will be clustered with the object cluster, but you run the risk of including points on the table as part of the object</p>
+<p>A lower number ensures that only objects really close to the cluster is included inside, but you may run the risk of missing out some points on the surface</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The formula for each end-effector type is different, do select the correct end-effector type for your use case.</p>
 </div>
-<div class="section" id="longest-gripper-dim">
-<h3><strong>longest_gripper_dim</strong><a class="headerlink" href="#longest-gripper-dim" title="Permalink to this headline">¶</a></h3>
-<p>The longest dimensions of a finger (in mm). Using the robotiq 2F-85 gripper:</p>
-</div>
-<div class="section" id="table-height">
-<h3><strong>table_height</strong><a class="headerlink" href="#table-height" title="Permalink to this headline">¶</a></h3>
-<p>The distance between the camera used to capture the workspace and the surface on which the object is on.</p>
-</div>
-<div class="section" id="min-zero-angle">
-<h3><strong>min_zero_angle</strong><a class="headerlink" href="#min-zero-angle" title="Permalink to this headline">¶</a></h3>
-<p>Minimum angle (in radians) that can be regarded as 0 rad. Increase this value to increase planning speeds (but might result in a less desirable grasp)</p>
-</div>
-<div class="section" id="min-height-diff-to-grip">
-<h3><strong>min_height_diff_to_grip</strong><a class="headerlink" href="#min-height-diff-to-grip" title="Permalink to this headline">¶</a></h3>
-<p>Minimum height difference that can be gripped. Increase this to increase stability of grasps, but may lead to the grasp planner not finding any grasps if too high.</p>
-</div>
-<div class="section" id="min-gdi-diff-for-comparison">
-<h3><strong>min_gdi_diff_for_comparison</strong><a class="headerlink" href="#min-gdi-diff-for-comparison" title="Permalink to this headline">¶</a></h3>
-<p>Used to determine when centroid position is taken into comparison. Increasing this number increases the consideration of centroid grasp position compared to finger collision</p>
-</div>
-</div>
-<div class="section" id="suction-gripper">
-<h2>Suction Gripper<a class="headerlink" href="#suction-gripper" title="Permalink to this headline">¶</a></h2>
-<img alt="../../_images/suction_yaml.png" src="../../_images/suction_yaml.png" />
-<div class="section" id="length-cups">
-<h3><strong>length_cups</strong><a class="headerlink" href="#length-cups" title="Permalink to this headline">¶</a></h3>
-<p>The number of cups in the length dimension. <strong>Currently only support value of 1</strong></p>
-</div>
-<div class="section" id="breadth-cups">
-<h3><strong>breadth_cups</strong><a class="headerlink" href="#breadth-cups" title="Permalink to this headline">¶</a></h3>
-<p>The number of cups in the breadth dimension. <strong>Currently only support value of 1</strong></p>
-</div>
-<div class="section" id="radius">
-<h3><strong>radius</strong><a class="headerlink" href="#radius" title="Permalink to this headline">¶</a></h3>
-<p>The radius one of the suction cup.</p>
-</div>
-<div class="section" id="id2">
-<h3><strong>table_height</strong><a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h3>
-<p>The distance between the camera used to capture the workspace and the surface on which the object is on.</p>
-</div>
+<p>Proceed to either <a class="reference internal" href="grasp_planner_finger.html#grasp-planner-finger"><span class="std std-ref">Finger Gripper</span></a> or <a class="reference internal" href="grasp_planner_suction.html#grasp-planner-suction"><span class="std std-ref">Suction Gripper</span></a> to complete the rest of configuration .</p>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="grasp_planner_finger.html">Finger Gripper</a></li>
+<li class="toctree-l1"><a class="reference internal" href="grasp_planner_finger.html#grasp-planning-metric-finger">Grasp Planning Metric    (Finger)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="grasp_planner_suction.html">Suction Gripper</a></li>
+<li class="toctree-l1"><a class="reference internal" href="grasp_planner_suction.html#grasp-planning-metric-suction">Grasp Planning Metric (Suction)</a></li>
+</ul>
 </div>
 </div>
 
@@ -252,7 +307,7 @@
           </div>
           <footer>
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-        <a href="grasp_planner_msgs.html" class="btn btn-neutral float-right" title="Grasp Planner Message Definitions" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="grasp_planner_finger.html" class="btn btn-neutral float-right" title="Finger Gripper" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
         <a href="grasp_planner_before.html" class="btn btn-neutral float-left" title="Before running the Grasp Planner" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
     </div>
 

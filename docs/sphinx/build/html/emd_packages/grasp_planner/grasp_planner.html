@@ -89,7 +89,7 @@
             
               <p class="caption"><span class="caption-text">About</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../../overview/index.html">About</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../about/index.html">About</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Getting Started</span></p>
 <ul>
@@ -98,7 +98,7 @@
 </ul>
 <p class="caption"><span class="caption-text">Tutorials</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../../tutorials/emd_example.html">Step-By-Step Tutorials</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../tutorial/emd_example.html">Step-By-Step Tutorials</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Individual Package Details</span></p>
 <ul class="current">
@@ -178,41 +178,50 @@
             
   <div class="section" id="grasp-planner">
 <span id="id1"></span><h1>Grasp Planner<a class="headerlink" href="#grasp-planner" title="Permalink to this headline">¶</a></h1>
-<p><strong>Motivation</strong></p>
-<p>Traditionally, grasp pose generation is done through using convolutional neural networks (CNNs) to achieve grasp plans. The issues with using machine learning and neural networks is several fold</p>
-<ol class="arabic simple">
-<li><p>Computation power required for fast grasp pose planning using CNNs.</p></li>
-<li><p>Dataset for training neural netwoks are currently restricted to 2 finger grippers (notably, the <a class="reference external" href="http://pr.cs.cornell.edu/grasping/rect_data/data.php">Cornell Grasping Dataset</a> has been the most comprehensive and well labelled dataset for current grasp planning neural networks)</p></li>
-</ol>
-<img alt="../../_images/cornell_grasp_display.jpeg" class="align-center" src="../../_images/cornell_grasp_display.jpeg" />
-<ol class="arabic simple" start="3">
-<li><p>Training of new types of grippers require <strong>manual labelling</strong> of new datasets (labour intensive).</p></li>
-<li><p>Accurate and stable grasp poses may not be available for <strong>irregular objects</strong>, so specifically labelled dataset is needed in order to generate accurate grasps</p></li>
-</ol>
-<p>This ROS2 package presents a solution that requires no training, no labelling and little computational power to generate a 3 + 1 DOF grasp poses. The modular design of this package also allows for expansion into other gripper types. Current support for this package includes <strong>2 finger gripper and single suction cup gripper</strong>.</p>
+<p class="rubric">Methodology</p>
+<p>The methodology for the grasp planner can be broken down into several steps.</p>
+<p class="rubric">1) Point Cloud filtering</p>
+<p class="rubric">2) Plane Segmentation</p>
+<p class="rubric">3) Object Segmentation</p>
+<p class="rubric">4) Grasp Area determination</p>
+<p class="rubric">5) Grasp point determination</p>
+<p class="rubric">6) Grasp Ranking</p>
+<p class="rubric">7) Best Final Grasp</p>
+<img alt="../../_images/grasp_planner_introduction.png" class="align-center" src="../../_images/grasp_planner_introduction.png" />
+<p class="rubric">1) Point Cloud filtering</p>
+<p>Raw pointclouds generally include areas that are unnecessary and include alot of noise. Therefore, the user given the option to filter to an area of
+the raw pointcloud that they may want to focus on. This is shown later in the <a class="reference internal" href="grasp_planner_config.html#grasp-planner-configuration"><span class="std std-ref">Grasp Planner Configuration page</span></a></p>
+<p>Once the desired area of the pointcloud is specified, noise within specified pointcloud is then removed. This is done through a
+<a href="#id2"><span class="problematic" id="id3">`StatisticalOutlierRemoval filter&lt;https://pcl.readthedocs.io/en/latest/statistical_outlier.html&gt;`__</span></a></p>
 <table class="docutils align-default">
 <colgroup>
-<col style="width: 26%" />
-<col style="width: 32%" />
-<col style="width: 42%" />
+<col style="width: 52%" />
+<col style="width: 48%" />
 </colgroup>
 <thead>
-<tr class="row-odd"><th class="head"><p>Input image</p></th>
-<th class="head"><p>2 Finger Gripper</p></th>
-<th class="head"><p>Single Cup Suction Gripper</p></th>
+<tr class="row-odd"><th class="head"><p>Before Noise Removal</p></th>
+<th class="head"><p>After Noise Removal</p></th>
 </tr>
 </thead>
 <tbody>
-<tr class="row-even"><td><p><a class="reference internal" href="../../_images/original_1.jpg"><img alt="original1" class="align-middle" src="../../_images/original_1.jpg" style="width: 192.0px; height: 108.0px;" /></a></p></td>
-<td><p><a class="reference internal" href="../../_images/finger_2_1_grasp.png"><img alt="finger1" class="align-middle" src="../../_images/finger_2_1_grasp.png" style="width: 192.0px; height: 111.0px;" /></a></p></td>
-<td><p><a class="reference internal" href="../../_images/suction_1_1_1_grasp.png"><img alt="suction1" class="align-middle" src="../../_images/suction_1_1_1_grasp.png" style="width: 192.0px; height: 111.0px;" /></a></p></td>
-</tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="../../_images/original_2.png"><img alt="original2" class="align-middle" src="../../_images/original_2.png" style="width: 166.0px; height: 93.2px;" /></a></p></td>
-<td><p><a class="reference internal" href="../../_images/finger_2_2_grasp.png"><img alt="finger2" class="align-middle" src="../../_images/finger_2_2_grasp.png" style="width: 192.0px; height: 111.0px;" /></a></p></td>
-<td><p><a class="reference internal" href="../../_images/suction_1_1_2_grasp.png"><img alt="suction2" class="align-middle" src="../../_images/suction_1_1_2_grasp.png" style="width: 192.0px; height: 111.0px;" /></a></p></td>
+<tr class="row-even"><td><p><img alt="Before_statis" class="align-middle" src="../../_images/grasp_planner_before_statisticaloutlier.png" /></p></td>
+<td><p><img alt="After_statis" class="align-middle" src="../../_images/grasp_planner_after_statisticaloutlier.png" /></p></td>
 </tr>
 </tbody>
 </table>
+<p class="rubric">2) Plane Segmentation</p>
+<p class="rubric">3) Object Segmentation</p>
+<p>Every individual object within the filtered pointcloud is segmented and the grasp planner does planning for each object.</p>
+<p class="rubric">4) Grasp Area determination</p>
+<p>Area of which the planner will take into account for determining grasp points depending on the number of fingers/number of suction cups</p>
+<p class="rubric">5) Grasp point determination</p>
+<p>Exact points of where the middle of the finger/suction cup should be for that specific grasp</p>
+<p class="rubric">6) Grasp Ranking</p>
+<p>There are many possibe grasping configurations that the grasp planner has taken into account. The quality of those grasps are then ranked based of a metric.
+The metrics of the individual end-effector types can be found on their respective pages</p>
+<p><a class="reference internal" href="grasp_planner_finger.html#grasp-planner-finger"><span class="std std-ref">Finger Grasps</span></a> and <a class="reference internal" href="grasp_planner_suction.html#grasp-planner-suction"><span class="std std-ref">Suction Grasps</span></a></p>
+<p class="rubric">7) Best Final Grasp</p>
+<p>The pose of the top ranked grasp is then published for <a class="reference internal" href="../grasp_execution/grasp_execution_demo.html#grasp-execution-demo"><span class="std std-ref">Grasp Execution</span></a></p>
 <div class="toctree-wrapper compound">
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="grasp_planner_before.html">Before running the Grasp Planner</a><ul>
@@ -220,7 +229,10 @@
 <li class="toctree-l2"><a class="reference internal" href="grasp_planner_msgs.html">Grasp Planner Message Definitions</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="grasp_planner_run.html">Running the Grasp Planner</a></li>
+<li class="toctree-l1"><a class="reference internal" href="grasp_planner_run.html">Running the Grasp Planner</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="grasp_planner_run.html#example-grasp-planning-output">Example Grasp Planning Output:</a></li>
+</ul>
+</li>
 </ul>
 </div>
 </div>
