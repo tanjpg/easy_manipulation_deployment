@@ -1088,8 +1088,6 @@ void FingerGripper::getMaxMinValues(std::shared_ptr<GraspObject> object)
     object->centerpoint(1),
     object->centerpoint(2)};
 
-  int counter = 0;
-
   for (auto & sample : this->grasp_samples) {
     if (sample->plane_intersects_object) {
       for (auto & point : sample->sample_side_1->finger_nvoxel->points) {
@@ -1097,7 +1095,7 @@ void FingerGripper::getMaxMinValues(std::shared_ptr<GraspObject> object)
         centroid_distance = pcl::geometry::distance(point, centroid_point);
         grasp_plane_distance = PCLFunctions::pointToPlane(sample->plane_eigen, point);
         curvature = point.curvature;
-        updateMaxMinAttributes(sample->sample_side_2, centroid_distance, grasp_plane_distance, curvature);
+        updateMaxMinAttributes(sample->sample_side_1, centroid_distance, grasp_plane_distance, curvature);
         // if (curvature < sample->sample_side_1->curvature_min) {
         //   sample->sample_side_1->curvature_min = curvature;
         // }
@@ -1123,7 +1121,6 @@ void FingerGripper::getMaxMinValues(std::shared_ptr<GraspObject> object)
         centroid_distance = pcl::geometry::distance(point, centroid_point);
         grasp_plane_distance = PCLFunctions::pointToPlane(sample->plane_eigen, point);
         curvature = point.curvature;
-
         updateMaxMinAttributes(sample->sample_side_2, centroid_distance, grasp_plane_distance, curvature);
         // if (curvature < sample->sample_side_2->curvature_min) {
         //   sample->sample_side_2->curvature_min = curvature;
@@ -1145,9 +1142,9 @@ void FingerGripper::getMaxMinValues(std::shared_ptr<GraspObject> object)
         // }
       }
     }
-    counter++;
   }
 }
+
 void FingerGripper::updateMaxMinAttributes(
     std::shared_ptr < fingerCloudSample > &sample,
     float centroid_distance,
