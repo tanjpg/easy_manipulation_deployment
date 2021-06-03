@@ -1,0 +1,4 @@
+<map id="SuctionGripper" name="SuctionGripper">
+<area shape="rect" id="node1" title="General Class for Suction Gripper grasp planning" alt="" coords="5,80,124,107"/>
+<area shape="rect" id="node2" href="$classEndEffector.html" title="Generic class for an end effector, to be inherited by other end effectors." alt="" coords="16,5,113,32"/>
+</map>

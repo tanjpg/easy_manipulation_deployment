@@ -1,0 +1,90 @@
+\hypertarget{classgrasp__execution_1_1core_1_1Scheduler}{}\doxysection{grasp\+\_\+execution\+::core\+::Scheduler Class Reference}
+\label{classgrasp__execution_1_1core_1_1Scheduler}\index{grasp\_execution::core::Scheduler@{grasp\_execution::core::Scheduler}}
+
+
+{\ttfamily \#include $<$scheduler.\+hpp$>$}
+
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+typedef std\+::function$<$ \mbox{\hyperlink{namespacegrasp__execution_1_1core_a24f9f1b991924ddae65d3bf3ae80190f}{result\+\_\+t}}(const std\+::string \&)$>$ \mbox{\hyperlink{classgrasp__execution_1_1core_1_1Scheduler_af44254e871445b7b22b84d342f1f9e22}{WorkflowT}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classgrasp__execution_1_1core_1_1Scheduler_adbeff932aaccd8d0a9b0b31f97d13774}{Scheduler}} (size\+\_\+t concurrency)
+\item 
+\mbox{\hyperlink{classgrasp__execution_1_1core_1_1Scheduler_af3579ada2dd305f5c49c676d1d7d03ab}{$\sim$\+Scheduler}} ()
+\item 
+\mbox{\hyperlink{namespacegrasp__execution_1_1core_1_1Workflow_a127b0158edfba8b99564f7edb73c99b2}{Workflow\+::\+Status}} \mbox{\hyperlink{classgrasp__execution_1_1core_1_1Scheduler_a9d056b36fd07ef45cf86d7e10f6ab7cc}{add\+\_\+workflow}} (const std\+::string \&workflow\+\_\+id, \mbox{\hyperlink{classgrasp__execution_1_1core_1_1Scheduler_af44254e871445b7b22b84d342f1f9e22}{WorkflowT}} workflow)
+\item 
+\mbox{\hyperlink{namespacegrasp__execution_1_1core_1_1Workflow_a127b0158edfba8b99564f7edb73c99b2}{Workflow\+::\+Status}} \mbox{\hyperlink{classgrasp__execution_1_1core_1_1Scheduler_ae054e2687137916cdbfc10761cd64754}{cancel\+\_\+workflow}} (const std\+::string \&workflow\+\_\+id)
+\item 
+void \mbox{\hyperlink{classgrasp__execution_1_1core_1_1Scheduler_a7f9a9e8e4e263be599abea8cdb4c4bd6}{wait\+\_\+till\+\_\+all\+\_\+complete}} () const
+\item 
+\mbox{\hyperlink{namespacegrasp__execution_1_1core_1_1Workflow_a127b0158edfba8b99564f7edb73c99b2}{Workflow\+::\+Status}} \mbox{\hyperlink{classgrasp__execution_1_1core_1_1Scheduler_a4c24ab9b4d6b3936d3b6695464db00c9}{wait\+\_\+till\+\_\+complete}} (const std\+::string \&workflow\+\_\+id, \mbox{\hyperlink{namespacegrasp__execution_1_1core_a24f9f1b991924ddae65d3bf3ae80190f}{result\+\_\+t}} \&result) const
+\item 
+\mbox{\hyperlink{namespacegrasp__execution_1_1core_1_1Workflow_a127b0158edfba8b99564f7edb73c99b2}{Workflow\+::\+Status}} \mbox{\hyperlink{classgrasp__execution_1_1core_1_1Scheduler_a75c3c4da6d7f19fc8dcad357311d2a9d}{get\+\_\+status}} (const std\+::string \&workflow\+\_\+id) const
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Typedef Documentation}
+\mbox{\Hypertarget{classgrasp__execution_1_1core_1_1Scheduler_af44254e871445b7b22b84d342f1f9e22}\label{classgrasp__execution_1_1core_1_1Scheduler_af44254e871445b7b22b84d342f1f9e22}} 
+\index{grasp\_execution::core::Scheduler@{grasp\_execution::core::Scheduler}!WorkflowT@{WorkflowT}}
+\index{WorkflowT@{WorkflowT}!grasp\_execution::core::Scheduler@{grasp\_execution::core::Scheduler}}
+\doxysubsubsection{\texorpdfstring{WorkflowT}{WorkflowT}}
+{\footnotesize\ttfamily typedef std\+::function$<$\mbox{\hyperlink{namespacegrasp__execution_1_1core_a24f9f1b991924ddae65d3bf3ae80190f}{result\+\_\+t}}(const std\+::string \&)$>$ \mbox{\hyperlink{classgrasp__execution_1_1core_1_1Scheduler_af44254e871445b7b22b84d342f1f9e22}{grasp\+\_\+execution\+::core\+::\+Scheduler\+::\+WorkflowT}}}
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classgrasp__execution_1_1core_1_1Scheduler_adbeff932aaccd8d0a9b0b31f97d13774}\label{classgrasp__execution_1_1core_1_1Scheduler_adbeff932aaccd8d0a9b0b31f97d13774}} 
+\index{grasp\_execution::core::Scheduler@{grasp\_execution::core::Scheduler}!Scheduler@{Scheduler}}
+\index{Scheduler@{Scheduler}!grasp\_execution::core::Scheduler@{grasp\_execution::core::Scheduler}}
+\doxysubsubsection{\texorpdfstring{Scheduler()}{Scheduler()}}
+{\footnotesize\ttfamily grasp\+\_\+execution\+::core\+::\+Scheduler\+::\+Scheduler (\begin{DoxyParamCaption}\item[{size\+\_\+t}]{concurrency }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+\mbox{\Hypertarget{classgrasp__execution_1_1core_1_1Scheduler_af3579ada2dd305f5c49c676d1d7d03ab}\label{classgrasp__execution_1_1core_1_1Scheduler_af3579ada2dd305f5c49c676d1d7d03ab}} 
+\index{grasp\_execution::core::Scheduler@{grasp\_execution::core::Scheduler}!````~Scheduler@{$\sim$Scheduler}}
+\index{````~Scheduler@{$\sim$Scheduler}!grasp\_execution::core::Scheduler@{grasp\_execution::core::Scheduler}}
+\doxysubsubsection{\texorpdfstring{$\sim$Scheduler()}{~Scheduler()}}
+{\footnotesize\ttfamily grasp\+\_\+execution\+::core\+::\+Scheduler\+::$\sim$\+Scheduler (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classgrasp__execution_1_1core_1_1Scheduler_a9d056b36fd07ef45cf86d7e10f6ab7cc}\label{classgrasp__execution_1_1core_1_1Scheduler_a9d056b36fd07ef45cf86d7e10f6ab7cc}} 
+\index{grasp\_execution::core::Scheduler@{grasp\_execution::core::Scheduler}!add\_workflow@{add\_workflow}}
+\index{add\_workflow@{add\_workflow}!grasp\_execution::core::Scheduler@{grasp\_execution::core::Scheduler}}
+\doxysubsubsection{\texorpdfstring{add\_workflow()}{add\_workflow()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacegrasp__execution_1_1core_1_1Workflow_a127b0158edfba8b99564f7edb73c99b2}{Workflow\+::\+Status}} grasp\+\_\+execution\+::core\+::\+Scheduler\+::add\+\_\+workflow (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{workflow\+\_\+id,  }\item[{\mbox{\hyperlink{classgrasp__execution_1_1core_1_1Scheduler_af44254e871445b7b22b84d342f1f9e22}{WorkflowT}}}]{workflow }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classgrasp__execution_1_1core_1_1Scheduler_ae054e2687137916cdbfc10761cd64754}\label{classgrasp__execution_1_1core_1_1Scheduler_ae054e2687137916cdbfc10761cd64754}} 
+\index{grasp\_execution::core::Scheduler@{grasp\_execution::core::Scheduler}!cancel\_workflow@{cancel\_workflow}}
+\index{cancel\_workflow@{cancel\_workflow}!grasp\_execution::core::Scheduler@{grasp\_execution::core::Scheduler}}
+\doxysubsubsection{\texorpdfstring{cancel\_workflow()}{cancel\_workflow()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacegrasp__execution_1_1core_1_1Workflow_a127b0158edfba8b99564f7edb73c99b2}{Workflow\+::\+Status}} grasp\+\_\+execution\+::core\+::\+Scheduler\+::cancel\+\_\+workflow (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{workflow\+\_\+id }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classgrasp__execution_1_1core_1_1Scheduler_a75c3c4da6d7f19fc8dcad357311d2a9d}\label{classgrasp__execution_1_1core_1_1Scheduler_a75c3c4da6d7f19fc8dcad357311d2a9d}} 
+\index{grasp\_execution::core::Scheduler@{grasp\_execution::core::Scheduler}!get\_status@{get\_status}}
+\index{get\_status@{get\_status}!grasp\_execution::core::Scheduler@{grasp\_execution::core::Scheduler}}
+\doxysubsubsection{\texorpdfstring{get\_status()}{get\_status()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacegrasp__execution_1_1core_1_1Workflow_a127b0158edfba8b99564f7edb73c99b2}{Workflow\+::\+Status}} grasp\+\_\+execution\+::core\+::\+Scheduler\+::get\+\_\+status (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{workflow\+\_\+id }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{classgrasp__execution_1_1core_1_1Scheduler_a7f9a9e8e4e263be599abea8cdb4c4bd6}\label{classgrasp__execution_1_1core_1_1Scheduler_a7f9a9e8e4e263be599abea8cdb4c4bd6}} 
+\index{grasp\_execution::core::Scheduler@{grasp\_execution::core::Scheduler}!wait\_till\_all\_complete@{wait\_till\_all\_complete}}
+\index{wait\_till\_all\_complete@{wait\_till\_all\_complete}!grasp\_execution::core::Scheduler@{grasp\_execution::core::Scheduler}}
+\doxysubsubsection{\texorpdfstring{wait\_till\_all\_complete()}{wait\_till\_all\_complete()}}
+{\footnotesize\ttfamily void grasp\+\_\+execution\+::core\+::\+Scheduler\+::wait\+\_\+till\+\_\+all\+\_\+complete (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{classgrasp__execution_1_1core_1_1Scheduler_a4c24ab9b4d6b3936d3b6695464db00c9}\label{classgrasp__execution_1_1core_1_1Scheduler_a4c24ab9b4d6b3936d3b6695464db00c9}} 
+\index{grasp\_execution::core::Scheduler@{grasp\_execution::core::Scheduler}!wait\_till\_complete@{wait\_till\_complete}}
+\index{wait\_till\_complete@{wait\_till\_complete}!grasp\_execution::core::Scheduler@{grasp\_execution::core::Scheduler}}
+\doxysubsubsection{\texorpdfstring{wait\_till\_complete()}{wait\_till\_complete()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacegrasp__execution_1_1core_1_1Workflow_a127b0158edfba8b99564f7edb73c99b2}{Workflow\+::\+Status}} grasp\+\_\+execution\+::core\+::\+Scheduler\+::wait\+\_\+till\+\_\+complete (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{workflow\+\_\+id,  }\item[{\mbox{\hyperlink{namespacegrasp__execution_1_1core_a24f9f1b991924ddae65d3bf3ae80190f}{result\+\_\+t}} \&}]{result }\end{DoxyParamCaption}) const}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/rosi5/workspaces/emd\+\_\+ws/src/easy\+\_\+manipulation\+\_\+deployment/grasp\+\_\+execution/include/grasp\+\_\+execution/core/\mbox{\hyperlink{scheduler_8hpp}{scheduler.\+hpp}}\end{DoxyCompactItemize}

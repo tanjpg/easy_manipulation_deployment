@@ -1,0 +1,137 @@
+\hypertarget{structgraspPlaneSample}{}\doxysection{grasp\+Plane\+Sample Struct Reference}
+\label{structgraspPlaneSample}\index{graspPlaneSample@{graspPlaneSample}}
+
+
+General Struct for a grasp plane ~\newline
+  
+
+
+
+
+{\ttfamily \#include $<$finger\+\_\+gripper.\+hpp$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{structgraspPlaneSample_a2be7e97fd24cb825aaa42a6f5f97c430}{grasp\+Plane\+Sample}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{structgraspPlaneSample_a55d7371f16c1d447c149309c2fbb2de5}{plane\+\_\+index}}
+\begin{DoxyCompactList}\small\item\em Index of this current plane with respect to plane vector. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{structgraspPlaneSample_a8f3325c9e248f3866424a4fe97d100fe}{plane\+\_\+intersects\+\_\+object}}
+\begin{DoxyCompactList}\small\item\em True if cutting plane intersects object. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{structgraspPlaneSample_a68941966b2b1f503ce5aecaaed02dec4}{dist\+\_\+to\+\_\+center\+\_\+plane}}
+\begin{DoxyCompactList}\small\item\em Distance of this plane to the center plane. \end{DoxyCompactList}\item 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{structfingerCloudSample}{finger\+Cloud\+Sample}} $>$ \mbox{\hyperlink{structgraspPlaneSample_afc0c07b56b3fb0481e41b5afb3654c00}{sample\+\_\+side\+\_\+1}}
+\begin{DoxyCompactList}\small\item\em Point cloud on plane containing points representing side 1. \end{DoxyCompactList}\item 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{structfingerCloudSample}{finger\+Cloud\+Sample}} $>$ \mbox{\hyperlink{structgraspPlaneSample_aea94f89171a1dbcde30bc3f264c993cb}{sample\+\_\+side\+\_\+2}}
+\begin{DoxyCompactList}\small\item\em Point cloud on plane containing points representing side 2. \end{DoxyCompactList}\item 
+pcl\+::\+Point\+Cloud$<$ pcl\+::\+Point\+Normal $>$\+::Ptr \mbox{\hyperlink{structgraspPlaneSample_acdb66363476de08784f94dea3980d2aa}{grasp\+\_\+plane\+\_\+ncloud}}
+\begin{DoxyCompactList}\small\item\em Normal Point cloud strip for this grasp plane. \end{DoxyCompactList}\item 
+pcl\+::\+Model\+Coefficients\+::\+Ptr \mbox{\hyperlink{structgraspPlaneSample_a99999649874c8d71ac1881cbc532b695}{plane}}
+\begin{DoxyCompactList}\small\item\em Coefficients for this current plane. \end{DoxyCompactList}\item 
+Eigen\+::\+Vector4f \mbox{\hyperlink{structgraspPlaneSample_aa9acfcad440ecd870601fdd34df101aa}{plane\+\_\+eigen}}
+\begin{DoxyCompactList}\small\item\em Coefficients for this current plane as Eigen 4f. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+General Struct for a grasp plane ~\newline
+ 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{structgraspPlaneSample_a2be7e97fd24cb825aaa42a6f5f97c430}\label{structgraspPlaneSample_a2be7e97fd24cb825aaa42a6f5f97c430}} 
+\index{graspPlaneSample@{graspPlaneSample}!graspPlaneSample@{graspPlaneSample}}
+\index{graspPlaneSample@{graspPlaneSample}!graspPlaneSample@{graspPlaneSample}}
+\doxysubsubsection{\texorpdfstring{graspPlaneSample()}{graspPlaneSample()}}
+{\footnotesize\ttfamily grasp\+Plane\+Sample\+::grasp\+Plane\+Sample (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\hyperlink{structgraspPlaneSample}{grasp\+Plane\+Sample}} Constructor 
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{structgraspPlaneSample_a68941966b2b1f503ce5aecaaed02dec4}\label{structgraspPlaneSample_a68941966b2b1f503ce5aecaaed02dec4}} 
+\index{graspPlaneSample@{graspPlaneSample}!dist\_to\_center\_plane@{dist\_to\_center\_plane}}
+\index{dist\_to\_center\_plane@{dist\_to\_center\_plane}!graspPlaneSample@{graspPlaneSample}}
+\doxysubsubsection{\texorpdfstring{dist\_to\_center\_plane}{dist\_to\_center\_plane}}
+{\footnotesize\ttfamily float grasp\+Plane\+Sample\+::dist\+\_\+to\+\_\+center\+\_\+plane}
+
+
+
+Distance of this plane to the center plane. 
+
+\mbox{\Hypertarget{structgraspPlaneSample_acdb66363476de08784f94dea3980d2aa}\label{structgraspPlaneSample_acdb66363476de08784f94dea3980d2aa}} 
+\index{graspPlaneSample@{graspPlaneSample}!grasp\_plane\_ncloud@{grasp\_plane\_ncloud}}
+\index{grasp\_plane\_ncloud@{grasp\_plane\_ncloud}!graspPlaneSample@{graspPlaneSample}}
+\doxysubsubsection{\texorpdfstring{grasp\_plane\_ncloud}{grasp\_plane\_ncloud}}
+{\footnotesize\ttfamily pcl\+::\+Point\+Cloud$<$pcl\+::\+Point\+Normal$>$\+::Ptr grasp\+Plane\+Sample\+::grasp\+\_\+plane\+\_\+ncloud}
+
+
+
+Normal Point cloud strip for this grasp plane. 
+
+\mbox{\Hypertarget{structgraspPlaneSample_a99999649874c8d71ac1881cbc532b695}\label{structgraspPlaneSample_a99999649874c8d71ac1881cbc532b695}} 
+\index{graspPlaneSample@{graspPlaneSample}!plane@{plane}}
+\index{plane@{plane}!graspPlaneSample@{graspPlaneSample}}
+\doxysubsubsection{\texorpdfstring{plane}{plane}}
+{\footnotesize\ttfamily pcl\+::\+Model\+Coefficients\+::\+Ptr grasp\+Plane\+Sample\+::plane}
+
+
+
+Coefficients for this current plane. 
+
+\mbox{\Hypertarget{structgraspPlaneSample_aa9acfcad440ecd870601fdd34df101aa}\label{structgraspPlaneSample_aa9acfcad440ecd870601fdd34df101aa}} 
+\index{graspPlaneSample@{graspPlaneSample}!plane\_eigen@{plane\_eigen}}
+\index{plane\_eigen@{plane\_eigen}!graspPlaneSample@{graspPlaneSample}}
+\doxysubsubsection{\texorpdfstring{plane\_eigen}{plane\_eigen}}
+{\footnotesize\ttfamily Eigen\+::\+Vector4f grasp\+Plane\+Sample\+::plane\+\_\+eigen}
+
+
+
+Coefficients for this current plane as Eigen 4f. 
+
+\mbox{\Hypertarget{structgraspPlaneSample_a55d7371f16c1d447c149309c2fbb2de5}\label{structgraspPlaneSample_a55d7371f16c1d447c149309c2fbb2de5}} 
+\index{graspPlaneSample@{graspPlaneSample}!plane\_index@{plane\_index}}
+\index{plane\_index@{plane\_index}!graspPlaneSample@{graspPlaneSample}}
+\doxysubsubsection{\texorpdfstring{plane\_index}{plane\_index}}
+{\footnotesize\ttfamily int grasp\+Plane\+Sample\+::plane\+\_\+index}
+
+
+
+Index of this current plane with respect to plane vector. 
+
+\mbox{\Hypertarget{structgraspPlaneSample_a8f3325c9e248f3866424a4fe97d100fe}\label{structgraspPlaneSample_a8f3325c9e248f3866424a4fe97d100fe}} 
+\index{graspPlaneSample@{graspPlaneSample}!plane\_intersects\_object@{plane\_intersects\_object}}
+\index{plane\_intersects\_object@{plane\_intersects\_object}!graspPlaneSample@{graspPlaneSample}}
+\doxysubsubsection{\texorpdfstring{plane\_intersects\_object}{plane\_intersects\_object}}
+{\footnotesize\ttfamily bool grasp\+Plane\+Sample\+::plane\+\_\+intersects\+\_\+object}
+
+
+
+True if cutting plane intersects object. 
+
+\mbox{\Hypertarget{structgraspPlaneSample_afc0c07b56b3fb0481e41b5afb3654c00}\label{structgraspPlaneSample_afc0c07b56b3fb0481e41b5afb3654c00}} 
+\index{graspPlaneSample@{graspPlaneSample}!sample\_side\_1@{sample\_side\_1}}
+\index{sample\_side\_1@{sample\_side\_1}!graspPlaneSample@{graspPlaneSample}}
+\doxysubsubsection{\texorpdfstring{sample\_side\_1}{sample\_side\_1}}
+{\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$\mbox{\hyperlink{structfingerCloudSample}{finger\+Cloud\+Sample}}$>$ grasp\+Plane\+Sample\+::sample\+\_\+side\+\_\+1}
+
+
+
+Point cloud on plane containing points representing side 1. 
+
+\mbox{\Hypertarget{structgraspPlaneSample_aea94f89171a1dbcde30bc3f264c993cb}\label{structgraspPlaneSample_aea94f89171a1dbcde30bc3f264c993cb}} 
+\index{graspPlaneSample@{graspPlaneSample}!sample\_side\_2@{sample\_side\_2}}
+\index{sample\_side\_2@{sample\_side\_2}!graspPlaneSample@{graspPlaneSample}}
+\doxysubsubsection{\texorpdfstring{sample\_side\_2}{sample\_side\_2}}
+{\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$\mbox{\hyperlink{structfingerCloudSample}{finger\+Cloud\+Sample}}$>$ grasp\+Plane\+Sample\+::sample\+\_\+side\+\_\+2}
+
+
+
+Point cloud on plane containing points representing side 2. 
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/rosi5/workspaces/emd\+\_\+ws/src/easy\+\_\+manipulation\+\_\+deployment/grasp\+\_\+planner/include/grasp\+\_\+planner/end\+\_\+effectors/\mbox{\hyperlink{finger__gripper_8hpp}{finger\+\_\+gripper.\+hpp}}\end{DoxyCompactItemize}

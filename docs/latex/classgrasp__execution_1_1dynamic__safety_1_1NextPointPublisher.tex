@@ -1,0 +1,361 @@
+\hypertarget{classgrasp__execution_1_1dynamic__safety_1_1NextPointPublisher}{}\doxysection{grasp\+\_\+execution\+::dynamic\+\_\+safety\+::Next\+Point\+Publisher Class Reference}
+\label{classgrasp__execution_1_1dynamic__safety_1_1NextPointPublisher}\index{grasp\_execution::dynamic\_safety::NextPointPublisher@{grasp\_execution::dynamic\_safety::NextPointPublisher}}
+
+
+Next point publisher for dynamic safety.  
+
+
+
+
+{\ttfamily \#include $<$next\+\_\+point\+\_\+publisher.\+hpp$>$}
+
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structgrasp__execution_1_1dynamic__safety_1_1NextPointPublisher_1_1Option}{Option}}
+\begin{DoxyCompactList}\small\item\em Next Point Publisher options. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{classgrasp__execution_1_1dynamic__safety_1_1NextPointPublisher_a8e14ab9f7efc4396c8cd0c808420eeb1}{Command}} \+: uint8\+\_\+t \{ \mbox{\hyperlink{classgrasp__execution_1_1dynamic__safety_1_1NextPointPublisher_a8e14ab9f7efc4396c8cd0c808420eeb1a34225c1cf0341960a46a1624fb6d665e}{Command\+::\+T\+R\+A\+J\+E\+C\+T\+O\+RY}}, 
+\mbox{\hyperlink{classgrasp__execution_1_1dynamic__safety_1_1NextPointPublisher_a8e14ab9f7efc4396c8cd0c808420eeb1acb4fb1757fb37c43cded35d3eb857c43}{Command\+::\+A\+R\+R\+AY}}
+ \}
+\begin{DoxyCompactList}\small\item\em Command type. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classgrasp__execution_1_1dynamic__safety_1_1NextPointPublisher_af14836c83428cf3d2142242f756273df}{Next\+Point\+Publisher}} ()
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classgrasp__execution_1_1dynamic__safety_1_1NextPointPublisher_a82d91635196f107424c720b327037e8d}{$\sim$\+Next\+Point\+Publisher}} ()
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classgrasp__execution_1_1dynamic__safety_1_1NextPointPublisher_a568a1df57e9002fa7e006a3656318ca5}{configure}} (const robot\+\_\+trajectory\+::\+Robot\+Trajectory\+Ptr \&traj, const \mbox{\hyperlink{structgrasp__execution_1_1dynamic__safety_1_1NextPointPublisher_1_1Option}{Option}} \&option, const rclcpp\+::\+Node\+::\+Shared\+Ptr \&node, double rate)
+\begin{DoxyCompactList}\small\item\em Configure the next point publisher to start controlling the robot. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classgrasp__execution_1_1dynamic__safety_1_1NextPointPublisher_a59b0b136a8918e6e899110fd1c211330}{start}} (double \mbox{\hyperlink{classgrasp__execution_1_1dynamic__safety_1_1NextPointPublisher_afc2598ab0ef5d4046fee3895b2196f00}{scale}}=1)
+\begin{DoxyCompactList}\small\item\em Start the next point publisher. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classgrasp__execution_1_1dynamic__safety_1_1NextPointPublisher_afc2598ab0ef5d4046fee3895b2196f00}{scale}} (double scale, double time\+\_\+to\+\_\+scale)
+\begin{DoxyCompactList}\small\item\em Scale the next point publisher speed. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classgrasp__execution_1_1dynamic__safety_1_1NextPointPublisher_a6e4a6b00847b81947132786c0d5a4ce7}{stop}} ()
+\begin{DoxyCompactList}\small\item\em Stop the next point publisher. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classgrasp__execution_1_1dynamic__safety_1_1NextPointPublisher_a387e2fac491313c3a93f504f014298ba}{halt}} ()
+\begin{DoxyCompactList}\small\item\em Halt and reset the next point publisher. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classgrasp__execution_1_1dynamic__safety_1_1NextPointPublisher_ab9f176fd6e741b3abe97a5dcc977cc07}{reset}} ()
+\begin{DoxyCompactList}\small\item\em Reset / stop the next point publisher. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classgrasp__execution_1_1dynamic__safety_1_1NextPointPublisher_a553b22c90055efdd0f4a487f6aceb44a}{update\+\_\+traj}} (const robot\+\_\+trajectory\+::\+Robot\+Trajectory\+Ptr \&traj)
+\begin{DoxyCompactList}\small\item\em Update the trajectory after next point publisher has started. \end{DoxyCompactList}\item 
+int8\+\_\+t \mbox{\hyperlink{classgrasp__execution_1_1dynamic__safety_1_1NextPointPublisher_a81d793209b52669ab9a2bf5d14e7ec9d}{get\+\_\+status}} () const
+\begin{DoxyCompactList}\small\item\em Get execution status. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{classgrasp__execution_1_1dynamic__safety_1_1NextPointPublisher_a7495d296e25269151290c2461e3987c8}{get\+\_\+scale}} () const
+\begin{DoxyCompactList}\small\item\em Get scale. \end{DoxyCompactList}\item 
+const double \& \mbox{\hyperlink{classgrasp__execution_1_1dynamic__safety_1_1NextPointPublisher_a7fce46957a36100e14a96e4ac3ddf0fd}{get\+\_\+time\+\_\+point}} () const
+\begin{DoxyCompactList}\small\item\em Get the current time point. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classgrasp__execution_1_1dynamic__safety_1_1NextPointPublisher_a414f3cc7b61fea2663e2ce8aab4dc315}{run\+\_\+once}} ()
+\begin{DoxyCompactList}\small\item\em Run the next point publisher once. \end{DoxyCompactList}\item 
+const double \& \mbox{\hyperlink{classgrasp__execution_1_1dynamic__safety_1_1NextPointPublisher_a45c6b28a67424f3dd6b020938211c085}{current\+\_\+point}} ()
+\begin{DoxyCompactList}\small\item\em Update and get the current time point. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static const int8\+\_\+t \mbox{\hyperlink{classgrasp__execution_1_1dynamic__safety_1_1NextPointPublisher_ad31520a0346ecf395b0e8776f708307f}{I\+D\+LE}} = 0
+\begin{DoxyCompactList}\small\item\em Status Macro. \end{DoxyCompactList}\item 
+static const int8\+\_\+t \mbox{\hyperlink{classgrasp__execution_1_1dynamic__safety_1_1NextPointPublisher_a5dc4ea285b982097206f7ff7732fd2f6}{S\+U\+C\+C\+E\+E\+D\+ED}} = 1
+\item 
+static const int8\+\_\+t \mbox{\hyperlink{classgrasp__execution_1_1dynamic__safety_1_1NextPointPublisher_a12c3546d6382bbb6be19df784e511bd4}{F\+A\+I\+L\+ED}} = 4
+\item 
+static const int8\+\_\+t \mbox{\hyperlink{classgrasp__execution_1_1dynamic__safety_1_1NextPointPublisher_a03df3a42bab86c9be7f6a512b3fec916}{R\+U\+N\+N\+I\+NG}} = 5
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+rclcpp\+::\+Node\+::\+Shared\+Ptr \mbox{\hyperlink{classgrasp__execution_1_1dynamic__safety_1_1NextPointPublisher_a6981c5de0e0b41315ea4d9253781e072}{node\+\_\+}}
+\item 
+rclcpp\+::\+Publisher$<$ std\+\_\+msgs\+::msg\+::\+Float64\+Multi\+Array $>$\+::Shared\+Ptr \mbox{\hyperlink{classgrasp__execution_1_1dynamic__safety_1_1NextPointPublisher_a1c8b137ef8a1804605af7aa0d0c9cc66}{command\+\_\+out\+\_\+array\+\_\+pub\+\_\+}}
+\item 
+rclcpp\+::\+Publisher$<$ trajectory\+\_\+msgs\+::msg\+::\+Joint\+Trajectory $>$\+::Shared\+Ptr \mbox{\hyperlink{classgrasp__execution_1_1dynamic__safety_1_1NextPointPublisher_a94c8e80f04d0ee0ec235cdb933c338d0}{command\+\_\+out\+\_\+traj\+\_\+pub\+\_\+}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Next point publisher for dynamic safety. 
+
+\doxysubsection{Member Enumeration Documentation}
+\mbox{\Hypertarget{classgrasp__execution_1_1dynamic__safety_1_1NextPointPublisher_a8e14ab9f7efc4396c8cd0c808420eeb1}\label{classgrasp__execution_1_1dynamic__safety_1_1NextPointPublisher_a8e14ab9f7efc4396c8cd0c808420eeb1}} 
+\index{grasp\_execution::dynamic\_safety::NextPointPublisher@{grasp\_execution::dynamic\_safety::NextPointPublisher}!Command@{Command}}
+\index{Command@{Command}!grasp\_execution::dynamic\_safety::NextPointPublisher@{grasp\_execution::dynamic\_safety::NextPointPublisher}}
+\doxysubsubsection{\texorpdfstring{Command}{Command}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{classgrasp__execution_1_1dynamic__safety_1_1NextPointPublisher_a8e14ab9f7efc4396c8cd0c808420eeb1}{grasp\+\_\+execution\+::dynamic\+\_\+safety\+::\+Next\+Point\+Publisher\+::\+Command}} \+: uint8\+\_\+t\hspace{0.3cm}{\ttfamily [strong]}}
+
+
+
+Command type. 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{TRAJECTORY@{TRAJECTORY}!grasp\_execution::dynamic\_safety::NextPointPublisher@{grasp\_execution::dynamic\_safety::NextPointPublisher}}\index{grasp\_execution::dynamic\_safety::NextPointPublisher@{grasp\_execution::dynamic\_safety::NextPointPublisher}!TRAJECTORY@{TRAJECTORY}}}\mbox{\Hypertarget{classgrasp__execution_1_1dynamic__safety_1_1NextPointPublisher_a8e14ab9f7efc4396c8cd0c808420eeb1a34225c1cf0341960a46a1624fb6d665e}\label{classgrasp__execution_1_1dynamic__safety_1_1NextPointPublisher_a8e14ab9f7efc4396c8cd0c808420eeb1a34225c1cf0341960a46a1624fb6d665e}} 
+T\+R\+A\+J\+E\+C\+T\+O\+RY&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ARRAY@{ARRAY}!grasp\_execution::dynamic\_safety::NextPointPublisher@{grasp\_execution::dynamic\_safety::NextPointPublisher}}\index{grasp\_execution::dynamic\_safety::NextPointPublisher@{grasp\_execution::dynamic\_safety::NextPointPublisher}!ARRAY@{ARRAY}}}\mbox{\Hypertarget{classgrasp__execution_1_1dynamic__safety_1_1NextPointPublisher_a8e14ab9f7efc4396c8cd0c808420eeb1acb4fb1757fb37c43cded35d3eb857c43}\label{classgrasp__execution_1_1dynamic__safety_1_1NextPointPublisher_a8e14ab9f7efc4396c8cd0c808420eeb1acb4fb1757fb37c43cded35d3eb857c43}} 
+A\+R\+R\+AY&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classgrasp__execution_1_1dynamic__safety_1_1NextPointPublisher_af14836c83428cf3d2142242f756273df}\label{classgrasp__execution_1_1dynamic__safety_1_1NextPointPublisher_af14836c83428cf3d2142242f756273df}} 
+\index{grasp\_execution::dynamic\_safety::NextPointPublisher@{grasp\_execution::dynamic\_safety::NextPointPublisher}!NextPointPublisher@{NextPointPublisher}}
+\index{NextPointPublisher@{NextPointPublisher}!grasp\_execution::dynamic\_safety::NextPointPublisher@{grasp\_execution::dynamic\_safety::NextPointPublisher}}
+\doxysubsubsection{\texorpdfstring{NextPointPublisher()}{NextPointPublisher()}}
+{\footnotesize\ttfamily grasp\+\_\+execution\+::dynamic\+\_\+safety\+::\+Next\+Point\+Publisher\+::\+Next\+Point\+Publisher (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Constructor. 
+
+\mbox{\Hypertarget{classgrasp__execution_1_1dynamic__safety_1_1NextPointPublisher_a82d91635196f107424c720b327037e8d}\label{classgrasp__execution_1_1dynamic__safety_1_1NextPointPublisher_a82d91635196f107424c720b327037e8d}} 
+\index{grasp\_execution::dynamic\_safety::NextPointPublisher@{grasp\_execution::dynamic\_safety::NextPointPublisher}!````~NextPointPublisher@{$\sim$NextPointPublisher}}
+\index{````~NextPointPublisher@{$\sim$NextPointPublisher}!grasp\_execution::dynamic\_safety::NextPointPublisher@{grasp\_execution::dynamic\_safety::NextPointPublisher}}
+\doxysubsubsection{\texorpdfstring{$\sim$NextPointPublisher()}{~NextPointPublisher()}}
+{\footnotesize\ttfamily grasp\+\_\+execution\+::dynamic\+\_\+safety\+::\+Next\+Point\+Publisher\+::$\sim$\+Next\+Point\+Publisher (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Destructor. 
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classgrasp__execution_1_1dynamic__safety_1_1NextPointPublisher_a568a1df57e9002fa7e006a3656318ca5}\label{classgrasp__execution_1_1dynamic__safety_1_1NextPointPublisher_a568a1df57e9002fa7e006a3656318ca5}} 
+\index{grasp\_execution::dynamic\_safety::NextPointPublisher@{grasp\_execution::dynamic\_safety::NextPointPublisher}!configure@{configure}}
+\index{configure@{configure}!grasp\_execution::dynamic\_safety::NextPointPublisher@{grasp\_execution::dynamic\_safety::NextPointPublisher}}
+\doxysubsubsection{\texorpdfstring{configure()}{configure()}}
+{\footnotesize\ttfamily void grasp\+\_\+execution\+::dynamic\+\_\+safety\+::\+Next\+Point\+Publisher\+::configure (\begin{DoxyParamCaption}\item[{const robot\+\_\+trajectory\+::\+Robot\+Trajectory\+Ptr \&}]{traj,  }\item[{const \mbox{\hyperlink{structgrasp__execution_1_1dynamic__safety_1_1NextPointPublisher_1_1Option}{Option}} \&}]{option,  }\item[{const rclcpp\+::\+Node\+::\+Shared\+Ptr \&}]{node,  }\item[{double}]{rate }\end{DoxyParamCaption})}
+
+
+
+Configure the next point publisher to start controlling the robot. 
+
+rate will be how far ahead the next point will be relative to the current time stamp.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em traj} & Trajectory to follow. \\
+\hline
+\mbox{\texttt{ in}}  & {\em option} & Next point publisher options. \\
+\hline
+\mbox{\texttt{ in}}  & {\em node} & R\+OS Node to use for the publisher. \\
+\hline
+\mbox{\texttt{ in}}  & {\em rate} & How fast the outer loop will run. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classgrasp__execution_1_1dynamic__safety_1_1NextPointPublisher_a45c6b28a67424f3dd6b020938211c085}\label{classgrasp__execution_1_1dynamic__safety_1_1NextPointPublisher_a45c6b28a67424f3dd6b020938211c085}} 
+\index{grasp\_execution::dynamic\_safety::NextPointPublisher@{grasp\_execution::dynamic\_safety::NextPointPublisher}!current\_point@{current\_point}}
+\index{current\_point@{current\_point}!grasp\_execution::dynamic\_safety::NextPointPublisher@{grasp\_execution::dynamic\_safety::NextPointPublisher}}
+\doxysubsubsection{\texorpdfstring{current\_point()}{current\_point()}}
+{\footnotesize\ttfamily const double\& grasp\+\_\+execution\+::dynamic\+\_\+safety\+::\+Next\+Point\+Publisher\+::current\+\_\+point (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Update and get the current time point. 
+
+This time point is where the robot is on a trajectory, N\+OT absolute time. This time point will take into scale into account.
+
+\begin{DoxyReturn}{Returns}
+Time point. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classgrasp__execution_1_1dynamic__safety_1_1NextPointPublisher_a7495d296e25269151290c2461e3987c8}\label{classgrasp__execution_1_1dynamic__safety_1_1NextPointPublisher_a7495d296e25269151290c2461e3987c8}} 
+\index{grasp\_execution::dynamic\_safety::NextPointPublisher@{grasp\_execution::dynamic\_safety::NextPointPublisher}!get\_scale@{get\_scale}}
+\index{get\_scale@{get\_scale}!grasp\_execution::dynamic\_safety::NextPointPublisher@{grasp\_execution::dynamic\_safety::NextPointPublisher}}
+\doxysubsubsection{\texorpdfstring{get\_scale()}{get\_scale()}}
+{\footnotesize\ttfamily double grasp\+\_\+execution\+::dynamic\+\_\+safety\+::\+Next\+Point\+Publisher\+::get\+\_\+scale (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get scale. 
+
+This is N\+OT thread safe. Target scale if it is in the process of scaling, otherwise it will return the current scale.
+
+\begin{DoxyReturn}{Returns}
+Execution scale. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classgrasp__execution_1_1dynamic__safety_1_1NextPointPublisher_a81d793209b52669ab9a2bf5d14e7ec9d}\label{classgrasp__execution_1_1dynamic__safety_1_1NextPointPublisher_a81d793209b52669ab9a2bf5d14e7ec9d}} 
+\index{grasp\_execution::dynamic\_safety::NextPointPublisher@{grasp\_execution::dynamic\_safety::NextPointPublisher}!get\_status@{get\_status}}
+\index{get\_status@{get\_status}!grasp\_execution::dynamic\_safety::NextPointPublisher@{grasp\_execution::dynamic\_safety::NextPointPublisher}}
+\doxysubsubsection{\texorpdfstring{get\_status()}{get\_status()}}
+{\footnotesize\ttfamily int8\+\_\+t grasp\+\_\+execution\+::dynamic\+\_\+safety\+::\+Next\+Point\+Publisher\+::get\+\_\+status (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get execution status. 
+
+This is thread safe. Available status 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{classgrasp__execution_1_1dynamic__safety_1_1NextPointPublisher_ad31520a0346ecf395b0e8776f708307f}{IDLE}}}
+\DoxyCodeLine{\mbox{\hyperlink{classgrasp__execution_1_1dynamic__safety_1_1NextPointPublisher_a5dc4ea285b982097206f7ff7732fd2f6}{SUCCEEDED}}}
+\DoxyCodeLine{\mbox{\hyperlink{classgrasp__execution_1_1dynamic__safety_1_1NextPointPublisher_a03df3a42bab86c9be7f6a512b3fec916}{RUNNING}}}
+\DoxyCodeLine{\mbox{\hyperlink{classgrasp__execution_1_1dynamic__safety_1_1NextPointPublisher_a12c3546d6382bbb6be19df784e511bd4}{FAILED}}}
+\end{DoxyCode}
+
+
+\begin{DoxyReturn}{Returns}
+Current execution status. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classgrasp__execution_1_1dynamic__safety_1_1NextPointPublisher_a7fce46957a36100e14a96e4ac3ddf0fd}\label{classgrasp__execution_1_1dynamic__safety_1_1NextPointPublisher_a7fce46957a36100e14a96e4ac3ddf0fd}} 
+\index{grasp\_execution::dynamic\_safety::NextPointPublisher@{grasp\_execution::dynamic\_safety::NextPointPublisher}!get\_time\_point@{get\_time\_point}}
+\index{get\_time\_point@{get\_time\_point}!grasp\_execution::dynamic\_safety::NextPointPublisher@{grasp\_execution::dynamic\_safety::NextPointPublisher}}
+\doxysubsubsection{\texorpdfstring{get\_time\_point()}{get\_time\_point()}}
+{\footnotesize\ttfamily const double\& grasp\+\_\+execution\+::dynamic\+\_\+safety\+::\+Next\+Point\+Publisher\+::get\+\_\+time\+\_\+point (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get the current time point. 
+
+This time point is where the robot is on a trajectory, N\+OT absolute time. This time point will take into scale into account.
+
+\begin{DoxyReturn}{Returns}
+Time point reference. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classgrasp__execution_1_1dynamic__safety_1_1NextPointPublisher_a387e2fac491313c3a93f504f014298ba}\label{classgrasp__execution_1_1dynamic__safety_1_1NextPointPublisher_a387e2fac491313c3a93f504f014298ba}} 
+\index{grasp\_execution::dynamic\_safety::NextPointPublisher@{grasp\_execution::dynamic\_safety::NextPointPublisher}!halt@{halt}}
+\index{halt@{halt}!grasp\_execution::dynamic\_safety::NextPointPublisher@{grasp\_execution::dynamic\_safety::NextPointPublisher}}
+\doxysubsubsection{\texorpdfstring{halt()}{halt()}}
+{\footnotesize\ttfamily void grasp\+\_\+execution\+::dynamic\+\_\+safety\+::\+Next\+Point\+Publisher\+::halt (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Halt and reset the next point publisher. 
+
+\mbox{\Hypertarget{classgrasp__execution_1_1dynamic__safety_1_1NextPointPublisher_ab9f176fd6e741b3abe97a5dcc977cc07}\label{classgrasp__execution_1_1dynamic__safety_1_1NextPointPublisher_ab9f176fd6e741b3abe97a5dcc977cc07}} 
+\index{grasp\_execution::dynamic\_safety::NextPointPublisher@{grasp\_execution::dynamic\_safety::NextPointPublisher}!reset@{reset}}
+\index{reset@{reset}!grasp\_execution::dynamic\_safety::NextPointPublisher@{grasp\_execution::dynamic\_safety::NextPointPublisher}}
+\doxysubsubsection{\texorpdfstring{reset()}{reset()}}
+{\footnotesize\ttfamily void grasp\+\_\+execution\+::dynamic\+\_\+safety\+::\+Next\+Point\+Publisher\+::reset (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Reset / stop the next point publisher. 
+
+\mbox{\Hypertarget{classgrasp__execution_1_1dynamic__safety_1_1NextPointPublisher_a414f3cc7b61fea2663e2ce8aab4dc315}\label{classgrasp__execution_1_1dynamic__safety_1_1NextPointPublisher_a414f3cc7b61fea2663e2ce8aab4dc315}} 
+\index{grasp\_execution::dynamic\_safety::NextPointPublisher@{grasp\_execution::dynamic\_safety::NextPointPublisher}!run\_once@{run\_once}}
+\index{run\_once@{run\_once}!grasp\_execution::dynamic\_safety::NextPointPublisher@{grasp\_execution::dynamic\_safety::NextPointPublisher}}
+\doxysubsubsection{\texorpdfstring{run\_once()}{run\_once()}}
+{\footnotesize\ttfamily void grasp\+\_\+execution\+::dynamic\+\_\+safety\+::\+Next\+Point\+Publisher\+::run\+\_\+once (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Run the next point publisher once. 
+
+This should always run 1 / rate after receiving the joint state update. Command will be published to the controller or driver. \mbox{\Hypertarget{classgrasp__execution_1_1dynamic__safety_1_1NextPointPublisher_afc2598ab0ef5d4046fee3895b2196f00}\label{classgrasp__execution_1_1dynamic__safety_1_1NextPointPublisher_afc2598ab0ef5d4046fee3895b2196f00}} 
+\index{grasp\_execution::dynamic\_safety::NextPointPublisher@{grasp\_execution::dynamic\_safety::NextPointPublisher}!scale@{scale}}
+\index{scale@{scale}!grasp\_execution::dynamic\_safety::NextPointPublisher@{grasp\_execution::dynamic\_safety::NextPointPublisher}}
+\doxysubsubsection{\texorpdfstring{scale()}{scale()}}
+{\footnotesize\ttfamily void grasp\+\_\+execution\+::dynamic\+\_\+safety\+::\+Next\+Point\+Publisher\+::scale (\begin{DoxyParamCaption}\item[{double}]{scale,  }\item[{double}]{time\+\_\+to\+\_\+scale }\end{DoxyParamCaption})}
+
+
+
+Scale the next point publisher speed. 
+
+Configure the next point publisher to change the speed scale to the target scale within given time. If given time is shorter than given rate, the scale will be set immediately, otherwise it will decrease linearly.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em scale} & The target scale to reach. \\
+\hline
+\mbox{\texttt{ in}}  & {\em time\+\_\+to\+\_\+scale} & Desired time to reach that scale. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classgrasp__execution_1_1dynamic__safety_1_1NextPointPublisher_a59b0b136a8918e6e899110fd1c211330}\label{classgrasp__execution_1_1dynamic__safety_1_1NextPointPublisher_a59b0b136a8918e6e899110fd1c211330}} 
+\index{grasp\_execution::dynamic\_safety::NextPointPublisher@{grasp\_execution::dynamic\_safety::NextPointPublisher}!start@{start}}
+\index{start@{start}!grasp\_execution::dynamic\_safety::NextPointPublisher@{grasp\_execution::dynamic\_safety::NextPointPublisher}}
+\doxysubsubsection{\texorpdfstring{start()}{start()}}
+{\footnotesize\ttfamily void grasp\+\_\+execution\+::dynamic\+\_\+safety\+::\+Next\+Point\+Publisher\+::start (\begin{DoxyParamCaption}\item[{double}]{scale = {\ttfamily 1} }\end{DoxyParamCaption})}
+
+
+
+Start the next point publisher. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em scale} & The speed scale at which the next point publisher will start with. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classgrasp__execution_1_1dynamic__safety_1_1NextPointPublisher_a6e4a6b00847b81947132786c0d5a4ce7}\label{classgrasp__execution_1_1dynamic__safety_1_1NextPointPublisher_a6e4a6b00847b81947132786c0d5a4ce7}} 
+\index{grasp\_execution::dynamic\_safety::NextPointPublisher@{grasp\_execution::dynamic\_safety::NextPointPublisher}!stop@{stop}}
+\index{stop@{stop}!grasp\_execution::dynamic\_safety::NextPointPublisher@{grasp\_execution::dynamic\_safety::NextPointPublisher}}
+\doxysubsubsection{\texorpdfstring{stop()}{stop()}}
+{\footnotesize\ttfamily void grasp\+\_\+execution\+::dynamic\+\_\+safety\+::\+Next\+Point\+Publisher\+::stop (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Stop the next point publisher. 
+
+This is equivalent as calling {\ttfamily scale(1e-\/3, 0)}. \mbox{\Hypertarget{classgrasp__execution_1_1dynamic__safety_1_1NextPointPublisher_a553b22c90055efdd0f4a487f6aceb44a}\label{classgrasp__execution_1_1dynamic__safety_1_1NextPointPublisher_a553b22c90055efdd0f4a487f6aceb44a}} 
+\index{grasp\_execution::dynamic\_safety::NextPointPublisher@{grasp\_execution::dynamic\_safety::NextPointPublisher}!update\_traj@{update\_traj}}
+\index{update\_traj@{update\_traj}!grasp\_execution::dynamic\_safety::NextPointPublisher@{grasp\_execution::dynamic\_safety::NextPointPublisher}}
+\doxysubsubsection{\texorpdfstring{update\_traj()}{update\_traj()}}
+{\footnotesize\ttfamily void grasp\+\_\+execution\+::dynamic\+\_\+safety\+::\+Next\+Point\+Publisher\+::update\+\_\+traj (\begin{DoxyParamCaption}\item[{const robot\+\_\+trajectory\+::\+Robot\+Trajectory\+Ptr \&}]{traj }\end{DoxyParamCaption})}
+
+
+
+Update the trajectory after next point publisher has started. 
+
+This cannot run parallel with \mbox{\hyperlink{classgrasp__execution_1_1dynamic__safety_1_1NextPointPublisher_a414f3cc7b61fea2663e2ce8aab4dc315}{run\+\_\+once()}}.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em traj} & Trajectory to replace the current one. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classgrasp__execution_1_1dynamic__safety_1_1NextPointPublisher_a1c8b137ef8a1804605af7aa0d0c9cc66}\label{classgrasp__execution_1_1dynamic__safety_1_1NextPointPublisher_a1c8b137ef8a1804605af7aa0d0c9cc66}} 
+\index{grasp\_execution::dynamic\_safety::NextPointPublisher@{grasp\_execution::dynamic\_safety::NextPointPublisher}!command\_out\_array\_pub\_@{command\_out\_array\_pub\_}}
+\index{command\_out\_array\_pub\_@{command\_out\_array\_pub\_}!grasp\_execution::dynamic\_safety::NextPointPublisher@{grasp\_execution::dynamic\_safety::NextPointPublisher}}
+\doxysubsubsection{\texorpdfstring{command\_out\_array\_pub\_}{command\_out\_array\_pub\_}}
+{\footnotesize\ttfamily rclcpp\+::\+Publisher$<$std\+\_\+msgs\+::msg\+::\+Float64\+Multi\+Array$>$\+::Shared\+Ptr grasp\+\_\+execution\+::dynamic\+\_\+safety\+::\+Next\+Point\+Publisher\+::command\+\_\+out\+\_\+array\+\_\+pub\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classgrasp__execution_1_1dynamic__safety_1_1NextPointPublisher_a94c8e80f04d0ee0ec235cdb933c338d0}\label{classgrasp__execution_1_1dynamic__safety_1_1NextPointPublisher_a94c8e80f04d0ee0ec235cdb933c338d0}} 
+\index{grasp\_execution::dynamic\_safety::NextPointPublisher@{grasp\_execution::dynamic\_safety::NextPointPublisher}!command\_out\_traj\_pub\_@{command\_out\_traj\_pub\_}}
+\index{command\_out\_traj\_pub\_@{command\_out\_traj\_pub\_}!grasp\_execution::dynamic\_safety::NextPointPublisher@{grasp\_execution::dynamic\_safety::NextPointPublisher}}
+\doxysubsubsection{\texorpdfstring{command\_out\_traj\_pub\_}{command\_out\_traj\_pub\_}}
+{\footnotesize\ttfamily rclcpp\+::\+Publisher$<$trajectory\+\_\+msgs\+::msg\+::\+Joint\+Trajectory$>$\+::Shared\+Ptr grasp\+\_\+execution\+::dynamic\+\_\+safety\+::\+Next\+Point\+Publisher\+::command\+\_\+out\+\_\+traj\+\_\+pub\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classgrasp__execution_1_1dynamic__safety_1_1NextPointPublisher_a12c3546d6382bbb6be19df784e511bd4}\label{classgrasp__execution_1_1dynamic__safety_1_1NextPointPublisher_a12c3546d6382bbb6be19df784e511bd4}} 
+\index{grasp\_execution::dynamic\_safety::NextPointPublisher@{grasp\_execution::dynamic\_safety::NextPointPublisher}!FAILED@{FAILED}}
+\index{FAILED@{FAILED}!grasp\_execution::dynamic\_safety::NextPointPublisher@{grasp\_execution::dynamic\_safety::NextPointPublisher}}
+\doxysubsubsection{\texorpdfstring{FAILED}{FAILED}}
+{\footnotesize\ttfamily const int8\+\_\+t grasp\+\_\+execution\+::dynamic\+\_\+safety\+::\+Next\+Point\+Publisher\+::\+F\+A\+I\+L\+ED = 4\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{classgrasp__execution_1_1dynamic__safety_1_1NextPointPublisher_ad31520a0346ecf395b0e8776f708307f}\label{classgrasp__execution_1_1dynamic__safety_1_1NextPointPublisher_ad31520a0346ecf395b0e8776f708307f}} 
+\index{grasp\_execution::dynamic\_safety::NextPointPublisher@{grasp\_execution::dynamic\_safety::NextPointPublisher}!IDLE@{IDLE}}
+\index{IDLE@{IDLE}!grasp\_execution::dynamic\_safety::NextPointPublisher@{grasp\_execution::dynamic\_safety::NextPointPublisher}}
+\doxysubsubsection{\texorpdfstring{IDLE}{IDLE}}
+{\footnotesize\ttfamily const int8\+\_\+t grasp\+\_\+execution\+::dynamic\+\_\+safety\+::\+Next\+Point\+Publisher\+::\+I\+D\+LE = 0\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Status Macro. 
+
+\mbox{\Hypertarget{classgrasp__execution_1_1dynamic__safety_1_1NextPointPublisher_a6981c5de0e0b41315ea4d9253781e072}\label{classgrasp__execution_1_1dynamic__safety_1_1NextPointPublisher_a6981c5de0e0b41315ea4d9253781e072}} 
+\index{grasp\_execution::dynamic\_safety::NextPointPublisher@{grasp\_execution::dynamic\_safety::NextPointPublisher}!node\_@{node\_}}
+\index{node\_@{node\_}!grasp\_execution::dynamic\_safety::NextPointPublisher@{grasp\_execution::dynamic\_safety::NextPointPublisher}}
+\doxysubsubsection{\texorpdfstring{node\_}{node\_}}
+{\footnotesize\ttfamily rclcpp\+::\+Node\+::\+Shared\+Ptr grasp\+\_\+execution\+::dynamic\+\_\+safety\+::\+Next\+Point\+Publisher\+::node\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classgrasp__execution_1_1dynamic__safety_1_1NextPointPublisher_a03df3a42bab86c9be7f6a512b3fec916}\label{classgrasp__execution_1_1dynamic__safety_1_1NextPointPublisher_a03df3a42bab86c9be7f6a512b3fec916}} 
+\index{grasp\_execution::dynamic\_safety::NextPointPublisher@{grasp\_execution::dynamic\_safety::NextPointPublisher}!RUNNING@{RUNNING}}
+\index{RUNNING@{RUNNING}!grasp\_execution::dynamic\_safety::NextPointPublisher@{grasp\_execution::dynamic\_safety::NextPointPublisher}}
+\doxysubsubsection{\texorpdfstring{RUNNING}{RUNNING}}
+{\footnotesize\ttfamily const int8\+\_\+t grasp\+\_\+execution\+::dynamic\+\_\+safety\+::\+Next\+Point\+Publisher\+::\+R\+U\+N\+N\+I\+NG = 5\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{classgrasp__execution_1_1dynamic__safety_1_1NextPointPublisher_a5dc4ea285b982097206f7ff7732fd2f6}\label{classgrasp__execution_1_1dynamic__safety_1_1NextPointPublisher_a5dc4ea285b982097206f7ff7732fd2f6}} 
+\index{grasp\_execution::dynamic\_safety::NextPointPublisher@{grasp\_execution::dynamic\_safety::NextPointPublisher}!SUCCEEDED@{SUCCEEDED}}
+\index{SUCCEEDED@{SUCCEEDED}!grasp\_execution::dynamic\_safety::NextPointPublisher@{grasp\_execution::dynamic\_safety::NextPointPublisher}}
+\doxysubsubsection{\texorpdfstring{SUCCEEDED}{SUCCEEDED}}
+{\footnotesize\ttfamily const int8\+\_\+t grasp\+\_\+execution\+::dynamic\+\_\+safety\+::\+Next\+Point\+Publisher\+::\+S\+U\+C\+C\+E\+E\+D\+ED = 1\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/rosi5/workspaces/emd\+\_\+ws/src/easy\+\_\+manipulation\+\_\+deployment/grasp\+\_\+execution/include/grasp\+\_\+execution/dynamic\+\_\+safety/\mbox{\hyperlink{next__point__publisher_8hpp}{next\+\_\+point\+\_\+publisher.\+hpp}}\end{DoxyCompactItemize}

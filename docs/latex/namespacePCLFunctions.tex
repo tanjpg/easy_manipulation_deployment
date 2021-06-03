@@ -1,0 +1,171 @@
+\hypertarget{namespacePCLFunctions}{}\doxysection{P\+C\+L\+Functions Namespace Reference}
+\label{namespacePCLFunctions}\index{PCLFunctions@{PCLFunctions}}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename T , typename U $>$ }\\void \mbox{\hyperlink{namespacePCLFunctions_a7794be02d154b42e04780b81f5513a7c}{extract\+Inliers\+Cloud}} (const T \&input\+Cloud, const pcl\+::\+Point\+Indices\+::\+Ptr \&input\+Cloud\+Inliers, T output\+Cloud)
+\item 
+void \mbox{\hyperlink{namespacePCLFunctions_a3764e03e674b86ac98854b1d1b7141fe}{center\+Camera}} (pcl\+::\+Point\+Cloud$<$ pcl\+::\+Point\+X\+Y\+Z\+R\+GB $>$\+::Ptr target\+\_\+cloud, pcl\+::visualization\+::\+P\+C\+L\+Visualizer\+::\+Ptr viewer)
+\item 
+void \mbox{\hyperlink{namespacePCLFunctions_a7f535a30e3691ab97d5029f9dcf923e4}{view\+Cloud}} (pcl\+::\+Point\+Cloud$<$ pcl\+::\+Point\+Normal $>$\+::Ptr target\+\_\+cloud, pcl\+::visualization\+::\+P\+C\+L\+Visualizer\+::\+Ptr viewer)
+\item 
+void \mbox{\hyperlink{namespacePCLFunctions_a4828580630c8aa479c58b846d3c85881}{viewer\+Add\+Normal\+Cloud}} (pcl\+::\+Point\+Cloud$<$ pcl\+::\+Point\+Normal $>$\+::Ptr target\+\_\+ncloud, pcl\+::\+Point\+Cloud$<$ pcl\+::\+Point\+X\+Y\+Z\+R\+GB $>$\+::Ptr target\+\_\+cloud, std\+::string name, pcl\+::visualization\+::\+P\+C\+L\+Visualizer\+::\+Ptr viewer)
+\item 
+void \mbox{\hyperlink{namespacePCLFunctions_ae0300092e8037378eabc56121ce0fbed}{viewer\+Add\+R\+G\+B\+Cloud}} (pcl\+::\+Point\+Cloud$<$ pcl\+::\+Point\+X\+Y\+Z\+R\+GB $>$\+::Ptr target\+\_\+cloud, std\+::string name, pcl\+::visualization\+::\+P\+C\+L\+Visualizer\+::\+Ptr viewer)
+\item 
+bool \mbox{\hyperlink{namespacePCLFunctions_ab38dac5d8ecdf81ac3b5aa046e5addbc}{passthrough\+Filter}} (pcl\+::\+Point\+Cloud$<$ pcl\+::\+Point\+X\+Y\+Z\+R\+GB $>$\+::Ptr cloud, const float \&pt\+Filter\+\_\+\+Ulimit\+\_\+x, const float \&pt\+Filter\+\_\+\+Llimit\+\_\+x, const float \&pt\+Filter\+\_\+\+Ulimit\+\_\+y, const float \&pt\+Filter\+\_\+\+Llimit\+\_\+y, const float \&pt\+Filter\+\_\+\+Ulimit\+\_\+z, const float \&pt\+Filter\+\_\+\+Llimit\+\_\+z)
+\item 
+void \mbox{\hyperlink{namespacePCLFunctions_a466c8f946eb31d95dd8025f17b484249}{Sensor\+Msgto\+P\+C\+L\+Point\+Cloud2}} (const sensor\+\_\+msgs\+::msg\+::\+Point\+Cloud2 \&pc2, pcl\+::\+P\+C\+L\+Point\+Cloud2 \&pcl\+\_\+pc2)
+\item 
+bool \mbox{\hyperlink{namespacePCLFunctions_afdf1c635d71c7c28b4461b35817bf748}{plane\+Segmentation}} (pcl\+::\+Point\+Cloud$<$ pcl\+::\+Point\+X\+Y\+Z\+R\+GB $>$\+::Ptr cloud, pcl\+::\+Point\+Cloud$<$ pcl\+::\+Point\+X\+Y\+Z\+R\+GB $>$\+::Ptr cloud\+\_\+plane\+\_\+removed, pcl\+::\+Point\+Cloud$<$ pcl\+::\+Point\+X\+Y\+Z\+R\+GB $>$\+::Ptr cloud\+\_\+table, const int \&segmentation\+\_\+max\+\_\+iterations, const float \&segmentation\+\_\+distance\+\_\+threshold)
+\item 
+void \mbox{\hyperlink{namespacePCLFunctions_a8ece2f7ad0d7e5ac5510bae12d3287b9}{remove\+All\+Zeros}} (pcl\+::\+Point\+Cloud$<$ pcl\+::\+Point\+X\+Y\+Z\+R\+GB $>$\+::Ptr cloud)
+\item 
+void \mbox{\hyperlink{namespacePCLFunctions_ae75d0d3133ffb540f39a07f083cc214f}{remove\+All\+Zeros}} (pcl\+::\+Point\+Cloud$<$ pcl\+::\+Point\+X\+YZ $>$\+::Ptr cloud)
+\item 
+float \mbox{\hyperlink{namespacePCLFunctions_acfec5f63a0b10fb91950e2d838bbcf5a}{point\+To\+Plane}} (Eigen\+::\+Vector4f \&plane, pcl\+::\+Point\+X\+Y\+Z\+R\+GB const \&point)
+\item 
+float \mbox{\hyperlink{namespacePCLFunctions_a12d94a787ecf538ee1e1de622fcc32b5}{point\+To\+Plane}} (Eigen\+::\+Vector4f \&plane, pcl\+::\+Point\+Normal const \&point)
+\item 
+float \mbox{\hyperlink{namespacePCLFunctions_aa428588f20bac28b629e71694d7a3ea2}{point\+To\+Plane}} (Eigen\+::\+Vector3f \&plane, pcl\+::\+Point\+Normal const \&point)
+\item 
+void \mbox{\hyperlink{namespacePCLFunctions_a13ed7e3596d9128f19ba8ae7564100fa}{remove\+Statistical\+Outlier}} (const pcl\+::\+Point\+Cloud$<$ pcl\+::\+Point\+X\+Y\+Z\+R\+GB $>$\+::Ptr \&cloud, float threshold)
+\item 
+void \mbox{\hyperlink{namespacePCLFunctions_a1522b793a0c3c47b32c3bec3becfa946}{get\+Closest\+Points\+By\+Radius}} (const pcl\+::\+Point\+Normal \&point, const float \&radius, pcl\+::\+Point\+Cloud$<$ pcl\+::\+Point\+X\+Y\+Z\+R\+GB $>$\+::Ptr \&input\+Cloud, pcl\+::\+Point\+Cloud$<$ pcl\+::\+Point\+Normal $>$\+::Ptr \&input\+Normal\+Cloud, pcl\+::\+Point\+Cloud$<$ pcl\+::\+Point\+X\+Y\+Z\+R\+GB $>$\+::Ptr \&output\+Cloud, pcl\+::\+Point\+Cloud$<$ pcl\+::\+Point\+Normal $>$\+::Ptr \&output\+Normal\+Cloud)
+\item 
+void \mbox{\hyperlink{namespacePCLFunctions_a3746c6c03f6a01dbda75b4eb1f4814d8}{compute\+Cloud\+Normal}} (pcl\+::\+Point\+Cloud$<$ pcl\+::\+Point\+X\+Y\+Z\+R\+GB $>$\+::Ptr cloud, pcl\+::\+Point\+Cloud$<$ pcl\+::\+Point\+Normal $>$\+::Ptr cloud\+\_\+normal, const float \&cloud\+\_\+normal\+\_\+radius)
+\item 
+{\footnotesize template$<$typename T , typename U $>$ }\\void \mbox{\hyperlink{namespacePCLFunctions_a295b877556a8a8521e6bf66d2498ab4b}{voxelize\+Cloud}} (const T \&input\+Cloud, const float \&leaf\+Size, T output\+Cloud)
+\item 
+void \mbox{\hyperlink{namespacePCLFunctions_ab5fab1269e7e0bfee2e314f8402078a1}{create\+Sphere\+Cloud}} (pcl\+::\+Point\+Cloud$<$ pcl\+::\+Point\+X\+YZ $>$\+::Ptr output\+\_\+sphere\+\_\+cloud, Eigen\+::\+Vector3f \&centerpoint, const float \&radius, const int \&resolution)
+\item 
+{\footnotesize template$<$typename V $>$ }\\Eigen\+::\+Vector3f \mbox{\hyperlink{namespacePCLFunctions_a4888d571adc4ff1cabdc60bd028e28a6}{convert\+P\+C\+Lto\+Eigen}} (V pcl\+\_\+point)
+\item 
+Eigen\+::\+Vector3f \mbox{\hyperlink{namespacePCLFunctions_af44c0cf26a28429c7420cb05b40a2ffa}{convert\+P\+C\+L\+Normalto\+Eigen}} (const pcl\+::\+Point\+Normal \&pcl\+\_\+point)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{namespacePCLFunctions_a3764e03e674b86ac98854b1d1b7141fe}\label{namespacePCLFunctions_a3764e03e674b86ac98854b1d1b7141fe}} 
+\index{PCLFunctions@{PCLFunctions}!centerCamera@{centerCamera}}
+\index{centerCamera@{centerCamera}!PCLFunctions@{PCLFunctions}}
+\doxysubsubsection{\texorpdfstring{centerCamera()}{centerCamera()}}
+{\footnotesize\ttfamily void P\+C\+L\+Functions\+::center\+Camera (\begin{DoxyParamCaption}\item[{pcl\+::\+Point\+Cloud$<$ pcl\+::\+Point\+X\+Y\+Z\+R\+GB $>$\+::Ptr}]{target\+\_\+cloud,  }\item[{pcl\+::visualization\+::\+P\+C\+L\+Visualizer\+::\+Ptr}]{viewer }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{namespacePCLFunctions_a3746c6c03f6a01dbda75b4eb1f4814d8}\label{namespacePCLFunctions_a3746c6c03f6a01dbda75b4eb1f4814d8}} 
+\index{PCLFunctions@{PCLFunctions}!computeCloudNormal@{computeCloudNormal}}
+\index{computeCloudNormal@{computeCloudNormal}!PCLFunctions@{PCLFunctions}}
+\doxysubsubsection{\texorpdfstring{computeCloudNormal()}{computeCloudNormal()}}
+{\footnotesize\ttfamily void P\+C\+L\+Functions\+::compute\+Cloud\+Normal (\begin{DoxyParamCaption}\item[{pcl\+::\+Point\+Cloud$<$ pcl\+::\+Point\+X\+Y\+Z\+R\+GB $>$\+::Ptr}]{cloud,  }\item[{pcl\+::\+Point\+Cloud$<$ pcl\+::\+Point\+Normal $>$\+::Ptr}]{cloud\+\_\+normal,  }\item[{const float \&}]{cloud\+\_\+normal\+\_\+radius }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{namespacePCLFunctions_af44c0cf26a28429c7420cb05b40a2ffa}\label{namespacePCLFunctions_af44c0cf26a28429c7420cb05b40a2ffa}} 
+\index{PCLFunctions@{PCLFunctions}!convertPCLNormaltoEigen@{convertPCLNormaltoEigen}}
+\index{convertPCLNormaltoEigen@{convertPCLNormaltoEigen}!PCLFunctions@{PCLFunctions}}
+\doxysubsubsection{\texorpdfstring{convertPCLNormaltoEigen()}{convertPCLNormaltoEigen()}}
+{\footnotesize\ttfamily Eigen\+::\+Vector3f P\+C\+L\+Functions\+::convert\+P\+C\+L\+Normalto\+Eigen (\begin{DoxyParamCaption}\item[{const pcl\+::\+Point\+Normal \&}]{pcl\+\_\+point }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{namespacePCLFunctions_a4888d571adc4ff1cabdc60bd028e28a6}\label{namespacePCLFunctions_a4888d571adc4ff1cabdc60bd028e28a6}} 
+\index{PCLFunctions@{PCLFunctions}!convertPCLtoEigen@{convertPCLtoEigen}}
+\index{convertPCLtoEigen@{convertPCLtoEigen}!PCLFunctions@{PCLFunctions}}
+\doxysubsubsection{\texorpdfstring{convertPCLtoEigen()}{convertPCLtoEigen()}}
+{\footnotesize\ttfamily template$<$typename V $>$ \\
+Eigen\+::\+Vector3f P\+C\+L\+Functions\+::convert\+P\+C\+Lto\+Eigen (\begin{DoxyParamCaption}\item[{V}]{pcl\+\_\+point }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{namespacePCLFunctions_ab5fab1269e7e0bfee2e314f8402078a1}\label{namespacePCLFunctions_ab5fab1269e7e0bfee2e314f8402078a1}} 
+\index{PCLFunctions@{PCLFunctions}!createSphereCloud@{createSphereCloud}}
+\index{createSphereCloud@{createSphereCloud}!PCLFunctions@{PCLFunctions}}
+\doxysubsubsection{\texorpdfstring{createSphereCloud()}{createSphereCloud()}}
+{\footnotesize\ttfamily void P\+C\+L\+Functions\+::create\+Sphere\+Cloud (\begin{DoxyParamCaption}\item[{pcl\+::\+Point\+Cloud$<$ pcl\+::\+Point\+X\+YZ $>$\+::Ptr}]{output\+\_\+sphere\+\_\+cloud,  }\item[{Eigen\+::\+Vector3f \&}]{centerpoint,  }\item[{const float \&}]{radius,  }\item[{const int \&}]{resolution }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{namespacePCLFunctions_a7794be02d154b42e04780b81f5513a7c}\label{namespacePCLFunctions_a7794be02d154b42e04780b81f5513a7c}} 
+\index{PCLFunctions@{PCLFunctions}!extractInliersCloud@{extractInliersCloud}}
+\index{extractInliersCloud@{extractInliersCloud}!PCLFunctions@{PCLFunctions}}
+\doxysubsubsection{\texorpdfstring{extractInliersCloud()}{extractInliersCloud()}}
+{\footnotesize\ttfamily template$<$typename T , typename U $>$ \\
+void P\+C\+L\+Functions\+::extract\+Inliers\+Cloud (\begin{DoxyParamCaption}\item[{const T \&}]{input\+Cloud,  }\item[{const pcl\+::\+Point\+Indices\+::\+Ptr \&}]{input\+Cloud\+Inliers,  }\item[{T}]{output\+Cloud }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{namespacePCLFunctions_a1522b793a0c3c47b32c3bec3becfa946}\label{namespacePCLFunctions_a1522b793a0c3c47b32c3bec3becfa946}} 
+\index{PCLFunctions@{PCLFunctions}!getClosestPointsByRadius@{getClosestPointsByRadius}}
+\index{getClosestPointsByRadius@{getClosestPointsByRadius}!PCLFunctions@{PCLFunctions}}
+\doxysubsubsection{\texorpdfstring{getClosestPointsByRadius()}{getClosestPointsByRadius()}}
+{\footnotesize\ttfamily void P\+C\+L\+Functions\+::get\+Closest\+Points\+By\+Radius (\begin{DoxyParamCaption}\item[{const pcl\+::\+Point\+Normal \&}]{point,  }\item[{const float \&}]{radius,  }\item[{pcl\+::\+Point\+Cloud$<$ pcl\+::\+Point\+X\+Y\+Z\+R\+GB $>$\+::Ptr \&}]{input\+Cloud,  }\item[{pcl\+::\+Point\+Cloud$<$ pcl\+::\+Point\+Normal $>$\+::Ptr \&}]{input\+Normal\+Cloud,  }\item[{pcl\+::\+Point\+Cloud$<$ pcl\+::\+Point\+X\+Y\+Z\+R\+GB $>$\+::Ptr \&}]{output\+Cloud,  }\item[{pcl\+::\+Point\+Cloud$<$ pcl\+::\+Point\+Normal $>$\+::Ptr \&}]{output\+Normal\+Cloud }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{namespacePCLFunctions_ab38dac5d8ecdf81ac3b5aa046e5addbc}\label{namespacePCLFunctions_ab38dac5d8ecdf81ac3b5aa046e5addbc}} 
+\index{PCLFunctions@{PCLFunctions}!passthroughFilter@{passthroughFilter}}
+\index{passthroughFilter@{passthroughFilter}!PCLFunctions@{PCLFunctions}}
+\doxysubsubsection{\texorpdfstring{passthroughFilter()}{passthroughFilter()}}
+{\footnotesize\ttfamily bool P\+C\+L\+Functions\+::passthrough\+Filter (\begin{DoxyParamCaption}\item[{pcl\+::\+Point\+Cloud$<$ pcl\+::\+Point\+X\+Y\+Z\+R\+GB $>$\+::Ptr}]{cloud,  }\item[{const float \&}]{pt\+Filter\+\_\+\+Ulimit\+\_\+x,  }\item[{const float \&}]{pt\+Filter\+\_\+\+Llimit\+\_\+x,  }\item[{const float \&}]{pt\+Filter\+\_\+\+Ulimit\+\_\+y,  }\item[{const float \&}]{pt\+Filter\+\_\+\+Llimit\+\_\+y,  }\item[{const float \&}]{pt\+Filter\+\_\+\+Ulimit\+\_\+z,  }\item[{const float \&}]{pt\+Filter\+\_\+\+Llimit\+\_\+z }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{namespacePCLFunctions_afdf1c635d71c7c28b4461b35817bf748}\label{namespacePCLFunctions_afdf1c635d71c7c28b4461b35817bf748}} 
+\index{PCLFunctions@{PCLFunctions}!planeSegmentation@{planeSegmentation}}
+\index{planeSegmentation@{planeSegmentation}!PCLFunctions@{PCLFunctions}}
+\doxysubsubsection{\texorpdfstring{planeSegmentation()}{planeSegmentation()}}
+{\footnotesize\ttfamily bool P\+C\+L\+Functions\+::plane\+Segmentation (\begin{DoxyParamCaption}\item[{pcl\+::\+Point\+Cloud$<$ pcl\+::\+Point\+X\+Y\+Z\+R\+GB $>$\+::Ptr}]{cloud,  }\item[{pcl\+::\+Point\+Cloud$<$ pcl\+::\+Point\+X\+Y\+Z\+R\+GB $>$\+::Ptr}]{cloud\+\_\+plane\+\_\+removed,  }\item[{pcl\+::\+Point\+Cloud$<$ pcl\+::\+Point\+X\+Y\+Z\+R\+GB $>$\+::Ptr}]{cloud\+\_\+table,  }\item[{const int \&}]{segmentation\+\_\+max\+\_\+iterations,  }\item[{const float \&}]{segmentation\+\_\+distance\+\_\+threshold }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{namespacePCLFunctions_aa428588f20bac28b629e71694d7a3ea2}\label{namespacePCLFunctions_aa428588f20bac28b629e71694d7a3ea2}} 
+\index{PCLFunctions@{PCLFunctions}!pointToPlane@{pointToPlane}}
+\index{pointToPlane@{pointToPlane}!PCLFunctions@{PCLFunctions}}
+\doxysubsubsection{\texorpdfstring{pointToPlane()}{pointToPlane()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily float P\+C\+L\+Functions\+::point\+To\+Plane (\begin{DoxyParamCaption}\item[{Eigen\+::\+Vector3f \&}]{plane,  }\item[{pcl\+::\+Point\+Normal const \&}]{point }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{namespacePCLFunctions_a12d94a787ecf538ee1e1de622fcc32b5}\label{namespacePCLFunctions_a12d94a787ecf538ee1e1de622fcc32b5}} 
+\index{PCLFunctions@{PCLFunctions}!pointToPlane@{pointToPlane}}
+\index{pointToPlane@{pointToPlane}!PCLFunctions@{PCLFunctions}}
+\doxysubsubsection{\texorpdfstring{pointToPlane()}{pointToPlane()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily float P\+C\+L\+Functions\+::point\+To\+Plane (\begin{DoxyParamCaption}\item[{Eigen\+::\+Vector4f \&}]{plane,  }\item[{pcl\+::\+Point\+Normal const \&}]{point }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{namespacePCLFunctions_acfec5f63a0b10fb91950e2d838bbcf5a}\label{namespacePCLFunctions_acfec5f63a0b10fb91950e2d838bbcf5a}} 
+\index{PCLFunctions@{PCLFunctions}!pointToPlane@{pointToPlane}}
+\index{pointToPlane@{pointToPlane}!PCLFunctions@{PCLFunctions}}
+\doxysubsubsection{\texorpdfstring{pointToPlane()}{pointToPlane()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily float P\+C\+L\+Functions\+::point\+To\+Plane (\begin{DoxyParamCaption}\item[{Eigen\+::\+Vector4f \&}]{plane,  }\item[{pcl\+::\+Point\+X\+Y\+Z\+R\+GB const \&}]{point }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{namespacePCLFunctions_ae75d0d3133ffb540f39a07f083cc214f}\label{namespacePCLFunctions_ae75d0d3133ffb540f39a07f083cc214f}} 
+\index{PCLFunctions@{PCLFunctions}!removeAllZeros@{removeAllZeros}}
+\index{removeAllZeros@{removeAllZeros}!PCLFunctions@{PCLFunctions}}
+\doxysubsubsection{\texorpdfstring{removeAllZeros()}{removeAllZeros()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void P\+C\+L\+Functions\+::remove\+All\+Zeros (\begin{DoxyParamCaption}\item[{pcl\+::\+Point\+Cloud$<$ pcl\+::\+Point\+X\+YZ $>$\+::Ptr}]{cloud }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{namespacePCLFunctions_a8ece2f7ad0d7e5ac5510bae12d3287b9}\label{namespacePCLFunctions_a8ece2f7ad0d7e5ac5510bae12d3287b9}} 
+\index{PCLFunctions@{PCLFunctions}!removeAllZeros@{removeAllZeros}}
+\index{removeAllZeros@{removeAllZeros}!PCLFunctions@{PCLFunctions}}
+\doxysubsubsection{\texorpdfstring{removeAllZeros()}{removeAllZeros()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void P\+C\+L\+Functions\+::remove\+All\+Zeros (\begin{DoxyParamCaption}\item[{pcl\+::\+Point\+Cloud$<$ pcl\+::\+Point\+X\+Y\+Z\+R\+GB $>$\+::Ptr}]{cloud }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{namespacePCLFunctions_a13ed7e3596d9128f19ba8ae7564100fa}\label{namespacePCLFunctions_a13ed7e3596d9128f19ba8ae7564100fa}} 
+\index{PCLFunctions@{PCLFunctions}!removeStatisticalOutlier@{removeStatisticalOutlier}}
+\index{removeStatisticalOutlier@{removeStatisticalOutlier}!PCLFunctions@{PCLFunctions}}
+\doxysubsubsection{\texorpdfstring{removeStatisticalOutlier()}{removeStatisticalOutlier()}}
+{\footnotesize\ttfamily void P\+C\+L\+Functions\+::remove\+Statistical\+Outlier (\begin{DoxyParamCaption}\item[{const pcl\+::\+Point\+Cloud$<$ pcl\+::\+Point\+X\+Y\+Z\+R\+GB $>$\+::Ptr \&}]{cloud,  }\item[{float}]{threshold }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{namespacePCLFunctions_a466c8f946eb31d95dd8025f17b484249}\label{namespacePCLFunctions_a466c8f946eb31d95dd8025f17b484249}} 
+\index{PCLFunctions@{PCLFunctions}!SensorMsgtoPCLPointCloud2@{SensorMsgtoPCLPointCloud2}}
+\index{SensorMsgtoPCLPointCloud2@{SensorMsgtoPCLPointCloud2}!PCLFunctions@{PCLFunctions}}
+\doxysubsubsection{\texorpdfstring{SensorMsgtoPCLPointCloud2()}{SensorMsgtoPCLPointCloud2()}}
+{\footnotesize\ttfamily void P\+C\+L\+Functions\+::\+Sensor\+Msgto\+P\+C\+L\+Point\+Cloud2 (\begin{DoxyParamCaption}\item[{const sensor\+\_\+msgs\+::msg\+::\+Point\+Cloud2 \&}]{pc2,  }\item[{pcl\+::\+P\+C\+L\+Point\+Cloud2 \&}]{pcl\+\_\+pc2 }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{namespacePCLFunctions_a7f535a30e3691ab97d5029f9dcf923e4}\label{namespacePCLFunctions_a7f535a30e3691ab97d5029f9dcf923e4}} 
+\index{PCLFunctions@{PCLFunctions}!viewCloud@{viewCloud}}
+\index{viewCloud@{viewCloud}!PCLFunctions@{PCLFunctions}}
+\doxysubsubsection{\texorpdfstring{viewCloud()}{viewCloud()}}
+{\footnotesize\ttfamily void P\+C\+L\+Functions\+::view\+Cloud (\begin{DoxyParamCaption}\item[{pcl\+::\+Point\+Cloud$<$ pcl\+::\+Point\+Normal $>$\+::Ptr}]{target\+\_\+cloud,  }\item[{pcl\+::visualization\+::\+P\+C\+L\+Visualizer\+::\+Ptr}]{viewer }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{namespacePCLFunctions_a4828580630c8aa479c58b846d3c85881}\label{namespacePCLFunctions_a4828580630c8aa479c58b846d3c85881}} 
+\index{PCLFunctions@{PCLFunctions}!viewerAddNormalCloud@{viewerAddNormalCloud}}
+\index{viewerAddNormalCloud@{viewerAddNormalCloud}!PCLFunctions@{PCLFunctions}}
+\doxysubsubsection{\texorpdfstring{viewerAddNormalCloud()}{viewerAddNormalCloud()}}
+{\footnotesize\ttfamily void P\+C\+L\+Functions\+::viewer\+Add\+Normal\+Cloud (\begin{DoxyParamCaption}\item[{pcl\+::\+Point\+Cloud$<$ pcl\+::\+Point\+Normal $>$\+::Ptr}]{target\+\_\+ncloud,  }\item[{pcl\+::\+Point\+Cloud$<$ pcl\+::\+Point\+X\+Y\+Z\+R\+GB $>$\+::Ptr}]{target\+\_\+cloud,  }\item[{std\+::string}]{name,  }\item[{pcl\+::visualization\+::\+P\+C\+L\+Visualizer\+::\+Ptr}]{viewer }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{namespacePCLFunctions_ae0300092e8037378eabc56121ce0fbed}\label{namespacePCLFunctions_ae0300092e8037378eabc56121ce0fbed}} 
+\index{PCLFunctions@{PCLFunctions}!viewerAddRGBCloud@{viewerAddRGBCloud}}
+\index{viewerAddRGBCloud@{viewerAddRGBCloud}!PCLFunctions@{PCLFunctions}}
+\doxysubsubsection{\texorpdfstring{viewerAddRGBCloud()}{viewerAddRGBCloud()}}
+{\footnotesize\ttfamily void P\+C\+L\+Functions\+::viewer\+Add\+R\+G\+B\+Cloud (\begin{DoxyParamCaption}\item[{pcl\+::\+Point\+Cloud$<$ pcl\+::\+Point\+X\+Y\+Z\+R\+GB $>$\+::Ptr}]{target\+\_\+cloud,  }\item[{std\+::string}]{name,  }\item[{pcl\+::visualization\+::\+P\+C\+L\+Visualizer\+::\+Ptr}]{viewer }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{namespacePCLFunctions_a295b877556a8a8521e6bf66d2498ab4b}\label{namespacePCLFunctions_a295b877556a8a8521e6bf66d2498ab4b}} 
+\index{PCLFunctions@{PCLFunctions}!voxelizeCloud@{voxelizeCloud}}
+\index{voxelizeCloud@{voxelizeCloud}!PCLFunctions@{PCLFunctions}}
+\doxysubsubsection{\texorpdfstring{voxelizeCloud()}{voxelizeCloud()}}
+{\footnotesize\ttfamily template$<$typename T , typename U $>$ \\
+void P\+C\+L\+Functions\+::voxelize\+Cloud (\begin{DoxyParamCaption}\item[{const T \&}]{input\+Cloud,  }\item[{const float \&}]{leaf\+Size,  }\item[{T}]{output\+Cloud }\end{DoxyParamCaption})}
+

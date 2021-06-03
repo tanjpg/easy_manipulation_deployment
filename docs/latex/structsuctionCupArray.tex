@@ -1,0 +1,175 @@
+\hypertarget{structsuctionCupArray}{}\doxysection{suction\+Cup\+Array Struct Reference}
+\label{structsuctionCupArray}\index{suctionCupArray@{suctionCupArray}}
+
+
+General Struct for Suction array grasp sample ~\newline
+  
+
+
+
+
+{\ttfamily \#include $<$suction\+\_\+gripper.\+hpp$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{structsuctionCupArray_a63b908a7203af28ed4fc3db479294f29}{suction\+Cup\+Array}} (pcl\+::\+Point\+X\+YZ gripper\+\_\+center\+\_\+, Eigen\+::\+Vector3f row\+\_\+direction\+\_\+, Eigen\+::\+Vector3f col\+\_\+direction\+\_\+)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::vector$<$ std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{structsingleSuctionCup}{single\+Suction\+Cup}} $>$ $>$ $>$ \mbox{\hyperlink{structsuctionCupArray_a4da8b96cf9ce800ea414893e6e928000}{cup\+\_\+array}}
+\begin{DoxyCompactList}\small\item\em 2D matrix representing a suction cup array \end{DoxyCompactList}\item 
+pcl\+::\+Point\+X\+YZ \mbox{\hyperlink{structsuctionCupArray_a91f3a9bcc2c47f52695d205aea0ce0c0}{gripper\+\_\+center}}
+\begin{DoxyCompactList}\small\item\em Center of entire suction cup array. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{structsuctionCupArray_a0c9dd601d9a6a735a00a6fc7ef2b71a7}{center\+\_\+dist}}
+\begin{DoxyCompactList}\small\item\em Distance from gripper center to the center of object. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{structsuctionCupArray_a3d8e9be617900ea59fab4bc60f527ae5}{rank}}
+\begin{DoxyCompactList}\small\item\em Grasp quality of this suction array. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{structsuctionCupArray_a55cab9bf5e91a27c1f993a8f3c056f73}{total\+\_\+contact\+\_\+points}}
+\begin{DoxyCompactList}\small\item\em Total contact points of all the suction cups on this suction array. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{structsuctionCupArray_a4b9b26b4d6e03fc97da8104a2b9aeea7}{total\+\_\+curvature}}
+\begin{DoxyCompactList}\small\item\em Total Curvature of all points of the suction cups on this suction array. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{structsuctionCupArray_a5ef40097b3f17340acbfefba881c9798}{average\+\_\+curvature}}
+\begin{DoxyCompactList}\small\item\em Average Curvature of all points of the suction cups on this suction array. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{structsuctionCupArray_a2bd28e542fae9c80081b1b29b6a28884}{grasp\+\_\+angle}}
+\begin{DoxyCompactList}\small\item\em Angle of grasp sample. \end{DoxyCompactList}\item 
+Eigen\+::\+Vector3f \mbox{\hyperlink{structsuctionCupArray_aa5c7802999eb6f1deb846da5dbd03a31}{row\+\_\+direction}}
+\begin{DoxyCompactList}\small\item\em Vector representing the row direction. \end{DoxyCompactList}\item 
+Eigen\+::\+Vector3f \mbox{\hyperlink{structsuctionCupArray_a13f07e327e0941036e25207480520231}{col\+\_\+direction}}
+\begin{DoxyCompactList}\small\item\em Vector representing the col direction. \end{DoxyCompactList}\item 
+visualization\+\_\+msgs\+::msg\+::\+Marker \mbox{\hyperlink{structsuctionCupArray_abf815657da0f71c1c361c420c9494ac9}{marker}}
+\begin{DoxyCompactList}\small\item\em Array of markers representing the grasp points of all suction cups ~\newline
+ \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+General Struct for Suction array grasp sample ~\newline
+ 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{structsuctionCupArray_a63b908a7203af28ed4fc3db479294f29}\label{structsuctionCupArray_a63b908a7203af28ed4fc3db479294f29}} 
+\index{suctionCupArray@{suctionCupArray}!suctionCupArray@{suctionCupArray}}
+\index{suctionCupArray@{suctionCupArray}!suctionCupArray@{suctionCupArray}}
+\doxysubsubsection{\texorpdfstring{suctionCupArray()}{suctionCupArray()}}
+{\footnotesize\ttfamily suction\+Cup\+Array\+::suction\+Cup\+Array (\begin{DoxyParamCaption}\item[{pcl\+::\+Point\+X\+YZ}]{gripper\+\_\+center\+\_\+,  }\item[{Eigen\+::\+Vector3f}]{row\+\_\+direction\+\_\+,  }\item[{Eigen\+::\+Vector3f}]{col\+\_\+direction\+\_\+ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{structsuctionCupArray_a5ef40097b3f17340acbfefba881c9798}\label{structsuctionCupArray_a5ef40097b3f17340acbfefba881c9798}} 
+\index{suctionCupArray@{suctionCupArray}!average\_curvature@{average\_curvature}}
+\index{average\_curvature@{average\_curvature}!suctionCupArray@{suctionCupArray}}
+\doxysubsubsection{\texorpdfstring{average\_curvature}{average\_curvature}}
+{\footnotesize\ttfamily float suction\+Cup\+Array\+::average\+\_\+curvature}
+
+
+
+Average Curvature of all points of the suction cups on this suction array. 
+
+\mbox{\Hypertarget{structsuctionCupArray_a0c9dd601d9a6a735a00a6fc7ef2b71a7}\label{structsuctionCupArray_a0c9dd601d9a6a735a00a6fc7ef2b71a7}} 
+\index{suctionCupArray@{suctionCupArray}!center\_dist@{center\_dist}}
+\index{center\_dist@{center\_dist}!suctionCupArray@{suctionCupArray}}
+\doxysubsubsection{\texorpdfstring{center\_dist}{center\_dist}}
+{\footnotesize\ttfamily float suction\+Cup\+Array\+::center\+\_\+dist}
+
+
+
+Distance from gripper center to the center of object. 
+
+\mbox{\Hypertarget{structsuctionCupArray_a13f07e327e0941036e25207480520231}\label{structsuctionCupArray_a13f07e327e0941036e25207480520231}} 
+\index{suctionCupArray@{suctionCupArray}!col\_direction@{col\_direction}}
+\index{col\_direction@{col\_direction}!suctionCupArray@{suctionCupArray}}
+\doxysubsubsection{\texorpdfstring{col\_direction}{col\_direction}}
+{\footnotesize\ttfamily Eigen\+::\+Vector3f suction\+Cup\+Array\+::col\+\_\+direction}
+
+
+
+Vector representing the col direction. 
+
+\mbox{\Hypertarget{structsuctionCupArray_a4da8b96cf9ce800ea414893e6e928000}\label{structsuctionCupArray_a4da8b96cf9ce800ea414893e6e928000}} 
+\index{suctionCupArray@{suctionCupArray}!cup\_array@{cup\_array}}
+\index{cup\_array@{cup\_array}!suctionCupArray@{suctionCupArray}}
+\doxysubsubsection{\texorpdfstring{cup\_array}{cup\_array}}
+{\footnotesize\ttfamily std\+::vector$<$std\+::vector$<$std\+::shared\+\_\+ptr$<$\mbox{\hyperlink{structsingleSuctionCup}{single\+Suction\+Cup}}$>$ $>$ $>$ suction\+Cup\+Array\+::cup\+\_\+array}
+
+
+
+2D matrix representing a suction cup array 
+
+\mbox{\Hypertarget{structsuctionCupArray_a2bd28e542fae9c80081b1b29b6a28884}\label{structsuctionCupArray_a2bd28e542fae9c80081b1b29b6a28884}} 
+\index{suctionCupArray@{suctionCupArray}!grasp\_angle@{grasp\_angle}}
+\index{grasp\_angle@{grasp\_angle}!suctionCupArray@{suctionCupArray}}
+\doxysubsubsection{\texorpdfstring{grasp\_angle}{grasp\_angle}}
+{\footnotesize\ttfamily float suction\+Cup\+Array\+::grasp\+\_\+angle}
+
+
+
+Angle of grasp sample. 
+
+\mbox{\Hypertarget{structsuctionCupArray_a91f3a9bcc2c47f52695d205aea0ce0c0}\label{structsuctionCupArray_a91f3a9bcc2c47f52695d205aea0ce0c0}} 
+\index{suctionCupArray@{suctionCupArray}!gripper\_center@{gripper\_center}}
+\index{gripper\_center@{gripper\_center}!suctionCupArray@{suctionCupArray}}
+\doxysubsubsection{\texorpdfstring{gripper\_center}{gripper\_center}}
+{\footnotesize\ttfamily pcl\+::\+Point\+X\+YZ suction\+Cup\+Array\+::gripper\+\_\+center}
+
+
+
+Center of entire suction cup array. 
+
+\mbox{\Hypertarget{structsuctionCupArray_abf815657da0f71c1c361c420c9494ac9}\label{structsuctionCupArray_abf815657da0f71c1c361c420c9494ac9}} 
+\index{suctionCupArray@{suctionCupArray}!marker@{marker}}
+\index{marker@{marker}!suctionCupArray@{suctionCupArray}}
+\doxysubsubsection{\texorpdfstring{marker}{marker}}
+{\footnotesize\ttfamily visualization\+\_\+msgs\+::msg\+::\+Marker suction\+Cup\+Array\+::marker}
+
+
+
+Array of markers representing the grasp points of all suction cups ~\newline
+ 
+
+\mbox{\Hypertarget{structsuctionCupArray_a3d8e9be617900ea59fab4bc60f527ae5}\label{structsuctionCupArray_a3d8e9be617900ea59fab4bc60f527ae5}} 
+\index{suctionCupArray@{suctionCupArray}!rank@{rank}}
+\index{rank@{rank}!suctionCupArray@{suctionCupArray}}
+\doxysubsubsection{\texorpdfstring{rank}{rank}}
+{\footnotesize\ttfamily float suction\+Cup\+Array\+::rank}
+
+
+
+Grasp quality of this suction array. 
+
+\mbox{\Hypertarget{structsuctionCupArray_aa5c7802999eb6f1deb846da5dbd03a31}\label{structsuctionCupArray_aa5c7802999eb6f1deb846da5dbd03a31}} 
+\index{suctionCupArray@{suctionCupArray}!row\_direction@{row\_direction}}
+\index{row\_direction@{row\_direction}!suctionCupArray@{suctionCupArray}}
+\doxysubsubsection{\texorpdfstring{row\_direction}{row\_direction}}
+{\footnotesize\ttfamily Eigen\+::\+Vector3f suction\+Cup\+Array\+::row\+\_\+direction}
+
+
+
+Vector representing the row direction. 
+
+\mbox{\Hypertarget{structsuctionCupArray_a55cab9bf5e91a27c1f993a8f3c056f73}\label{structsuctionCupArray_a55cab9bf5e91a27c1f993a8f3c056f73}} 
+\index{suctionCupArray@{suctionCupArray}!total\_contact\_points@{total\_contact\_points}}
+\index{total\_contact\_points@{total\_contact\_points}!suctionCupArray@{suctionCupArray}}
+\doxysubsubsection{\texorpdfstring{total\_contact\_points}{total\_contact\_points}}
+{\footnotesize\ttfamily int suction\+Cup\+Array\+::total\+\_\+contact\+\_\+points}
+
+
+
+Total contact points of all the suction cups on this suction array. 
+
+\mbox{\Hypertarget{structsuctionCupArray_a4b9b26b4d6e03fc97da8104a2b9aeea7}\label{structsuctionCupArray_a4b9b26b4d6e03fc97da8104a2b9aeea7}} 
+\index{suctionCupArray@{suctionCupArray}!total\_curvature@{total\_curvature}}
+\index{total\_curvature@{total\_curvature}!suctionCupArray@{suctionCupArray}}
+\doxysubsubsection{\texorpdfstring{total\_curvature}{total\_curvature}}
+{\footnotesize\ttfamily float suction\+Cup\+Array\+::total\+\_\+curvature}
+
+
+
+Total Curvature of all points of the suction cups on this suction array. 
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/rosi5/workspaces/emd\+\_\+ws/src/easy\+\_\+manipulation\+\_\+deployment/grasp\+\_\+planner/include/grasp\+\_\+planner/end\+\_\+effectors/\mbox{\hyperlink{suction__gripper_8hpp}{suction\+\_\+gripper.\+hpp}}\end{DoxyCompactItemize}

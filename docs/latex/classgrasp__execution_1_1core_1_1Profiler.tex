@@ -1,0 +1,105 @@
+\hypertarget{classgrasp__execution_1_1core_1_1Profiler}{}\doxysection{grasp\+\_\+execution\+::core\+::Profiler$<$ T $>$ Class Template Reference}
+\label{classgrasp__execution_1_1core_1_1Profiler}\index{grasp\_execution::core::Profiler$<$ T $>$@{grasp\_execution::core::Profiler$<$ T $>$}}
+
+
+A profiler base that record data.  
+
+
+
+
+{\ttfamily \#include $<$profiler.\+hpp$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classgrasp__execution_1_1core_1_1Profiler_a69a6492779179a02b1414b09c9d907d5}{Profiler}} (size\+\_\+t size)
+\begin{DoxyCompactList}\small\item\em Create a new profiler with fixed recording buffer size. \end{DoxyCompactList}\item 
+const T \& \mbox{\hyperlink{classgrasp__execution_1_1core_1_1Profiler_ae86d1344174651381a41a8d9aebc1290}{record}} (T data)
+\begin{DoxyCompactList}\small\item\em Record data into the profiler. \end{DoxyCompactList}\item 
+std\+::vector$<$ T $>$ \mbox{\hyperlink{classgrasp__execution_1_1core_1_1Profiler_aa563fbe7bc294f8183fa51aa956d4fe1}{get}} () const
+\begin{DoxyCompactList}\small\item\em Get recorded data. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classgrasp__execution_1_1core_1_1Profiler_ab235714fc7476151fb6d5c9e7617b8ab}{$\sim$\+Profiler}} ()
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\subsubsection*{template$<$typename T$>$\newline
+class grasp\+\_\+execution\+::core\+::\+Profiler$<$ T $>$}
+
+A profiler base that record data. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classgrasp__execution_1_1core_1_1Profiler_a69a6492779179a02b1414b09c9d907d5}\label{classgrasp__execution_1_1core_1_1Profiler_a69a6492779179a02b1414b09c9d907d5}} 
+\index{grasp\_execution::core::Profiler$<$ T $>$@{grasp\_execution::core::Profiler$<$ T $>$}!Profiler@{Profiler}}
+\index{Profiler@{Profiler}!grasp\_execution::core::Profiler$<$ T $>$@{grasp\_execution::core::Profiler$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{Profiler()}{Profiler()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\mbox{\hyperlink{classgrasp__execution_1_1core_1_1Profiler}{grasp\+\_\+execution\+::core\+::\+Profiler}}$<$ T $>$\+::\mbox{\hyperlink{classgrasp__execution_1_1core_1_1Profiler}{Profiler}} (\begin{DoxyParamCaption}\item[{size\+\_\+t}]{size }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [explicit]}}
+
+
+
+Create a new profiler with fixed recording buffer size. 
+
+Setting a data size before starting the profiler help mitigate dynamic memory allocation involved when changing buffer size.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em size} & Buffer size for recording statistics. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classgrasp__execution_1_1core_1_1Profiler_ab235714fc7476151fb6d5c9e7617b8ab}\label{classgrasp__execution_1_1core_1_1Profiler_ab235714fc7476151fb6d5c9e7617b8ab}} 
+\index{grasp\_execution::core::Profiler$<$ T $>$@{grasp\_execution::core::Profiler$<$ T $>$}!````~Profiler@{$\sim$Profiler}}
+\index{````~Profiler@{$\sim$Profiler}!grasp\_execution::core::Profiler$<$ T $>$@{grasp\_execution::core::Profiler$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{$\sim$Profiler()}{~Profiler()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\mbox{\hyperlink{classgrasp__execution_1_1core_1_1Profiler}{grasp\+\_\+execution\+::core\+::\+Profiler}}$<$ T $>$\+::$\sim$\mbox{\hyperlink{classgrasp__execution_1_1core_1_1Profiler}{Profiler}} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Destructor. 
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classgrasp__execution_1_1core_1_1Profiler_aa563fbe7bc294f8183fa51aa956d4fe1}\label{classgrasp__execution_1_1core_1_1Profiler_aa563fbe7bc294f8183fa51aa956d4fe1}} 
+\index{grasp\_execution::core::Profiler$<$ T $>$@{grasp\_execution::core::Profiler$<$ T $>$}!get@{get}}
+\index{get@{get}!grasp\_execution::core::Profiler$<$ T $>$@{grasp\_execution::core::Profiler$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{get()}{get()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+std\+::vector$<$T$>$ \mbox{\hyperlink{classgrasp__execution_1_1core_1_1Profiler}{grasp\+\_\+execution\+::core\+::\+Profiler}}$<$ T $>$\+::get (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get recorded data. 
+
+This function will automatically remove buffer that hasn\textquotesingle{}t been filled by a recorded data.
+
+\begin{DoxyReturn}{Returns}
+A copy of all the recorded data. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classgrasp__execution_1_1core_1_1Profiler_ae86d1344174651381a41a8d9aebc1290}\label{classgrasp__execution_1_1core_1_1Profiler_ae86d1344174651381a41a8d9aebc1290}} 
+\index{grasp\_execution::core::Profiler$<$ T $>$@{grasp\_execution::core::Profiler$<$ T $>$}!record@{record}}
+\index{record@{record}!grasp\_execution::core::Profiler$<$ T $>$@{grasp\_execution::core::Profiler$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{record()}{record()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+const T\& \mbox{\hyperlink{classgrasp__execution_1_1core_1_1Profiler}{grasp\+\_\+execution\+::core\+::\+Profiler}}$<$ T $>$\+::record (\begin{DoxyParamCaption}\item[{T}]{data }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Record data into the profiler. 
+
+This function is thread safe.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em data} & Data to record. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The reference idiom to the stored data. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/rosi5/workspaces/emd\+\_\+ws/src/easy\+\_\+manipulation\+\_\+deployment/grasp\+\_\+execution/include/grasp\+\_\+execution/core/\mbox{\hyperlink{profiler_8hpp}{profiler.\+hpp}}\end{DoxyCompactItemize}

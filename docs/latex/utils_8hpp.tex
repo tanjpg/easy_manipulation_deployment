@@ -1,0 +1,50 @@
+\hypertarget{utils_8hpp}{}\doxysection{/home/rosi5/workspaces/emd\+\_\+ws/src/easy\+\_\+manipulation\+\_\+deployment/grasp\+\_\+execution/include/grasp\+\_\+execution/utils.hpp File Reference}
+\label{utils_8hpp}\index{/home/rosi5/workspaces/emd\_ws/src/easy\_manipulation\_deployment/grasp\_execution/include/grasp\_execution/utils.hpp@{/home/rosi5/workspaces/emd\_ws/src/easy\_manipulation\_deployment/grasp\_execution/include/grasp\_execution/utils.hpp}}
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include $<$string$>$}\newline
+{\ttfamily \#include $<$vector$>$}\newline
+{\ttfamily \#include \char`\"{}boost/uuid/uuid.\+hpp\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}boost/uuid/random\+\_\+generator.\+hpp\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}boost/uuid/uuid\+\_\+io.\+hpp\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}tf2\+\_\+ros/buffer.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}tf2/impl/utils.\+h\char`\"{}}\newline
+Include dependency graph for utils.\+hpp\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{utils_8hpp__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{utils_8hpp__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \mbox{\hyperlink{namespacegrasp__execution}{grasp\+\_\+execution}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+std\+::string \mbox{\hyperlink{namespacegrasp__execution_aa872b79598bd80e79607a90ef39c86ac}{grasp\+\_\+execution\+::gen\+\_\+uuid}} ()
+\item 
+void \mbox{\hyperlink{namespacegrasp__execution_a68716446cdfc0ca140da282c311b3ff3}{grasp\+\_\+execution\+::print\+\_\+pose}} (const geometry\+\_\+msgs\+::msg\+::\+Pose \&\+\_\+pose, std\+::ostream \&\+\_\+out=std\+::cout, bool \+\_\+euler=true)
+\begin{DoxyCompactList}\small\item\em Print Pose Message T\+O\+D\+O(\+Briancbn)\+: default std\+::cout doesn\textquotesingle{}t seems to work here. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{namespacegrasp__execution_a3354b6d874b760fa92bc4e8c51d941d6}{grasp\+\_\+execution\+::print\+\_\+pose}} (const geometry\+\_\+msgs\+::msg\+::\+Pose\+Stamped \&\+\_\+pose, std\+::ostream \&\+\_\+out=std\+::cout, bool \+\_\+euler=true)
+\begin{DoxyCompactList}\small\item\em Print Pose\+Stamped Message. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{namespacegrasp__execution_a8ec71a601a1d505c1732d3174e3fbbbf}{grasp\+\_\+execution\+::print\+\_\+pose\+\_\+ros}} (const rclcpp\+::\+Logger logger, const geometry\+\_\+msgs\+::msg\+::\+Pose \&\+\_\+pose, bool \+\_\+euler=true)
+\begin{DoxyCompactList}\small\item\em Use R\+OS to print Pose\+Stamped message. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{namespacegrasp__execution_a0b08614f446fb2fc6d76cd538df780b9}{grasp\+\_\+execution\+::print\+\_\+pose\+\_\+ros}} (const rclcpp\+::\+Logger logger, const geometry\+\_\+msgs\+::msg\+::\+Pose\+Stamped \&\+\_\+pose, bool \+\_\+euler=true)
+\begin{DoxyCompactList}\small\item\em Use R\+OS to print Pose\+Stamped message. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{namespacegrasp__execution_a95f0436cde14207521e7001d7865d1e7}{grasp\+\_\+execution\+::to\+\_\+frame}} (const geometry\+\_\+msgs\+::msg\+::\+Pose\+Stamped \&in\+\_\+, geometry\+\_\+msgs\+::msg\+::\+Pose\+Stamped \&out\+\_\+, const std\+::string \&\+\_\+target\+\_\+frame, const tf2\+\_\+ros\+::\+Buffer \&\+\_\+buffer)
+\begin{DoxyCompactList}\small\item\em Transform pose to target end reference frame. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{namespacegrasp__execution_acdbc03a70c6a20e59961cf6da4049551}{grasp\+\_\+execution\+::parse\+\_\+pose\+\_\+vector}} (const std\+::vector$<$ double $>$ \&param, geometry\+\_\+msgs\+::msg\+::\+Pose \&pose)
+\begin{DoxyCompactList}\small\item\em Parse vector with 6 or 7 variables to a pose. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T $>$ }\\void \mbox{\hyperlink{namespacegrasp__execution_a3913cdb0cf51e9946e3cca7df581a319}{grasp\+\_\+execution\+::declare\+\_\+or\+\_\+get\+\_\+param}} (T \&output\+\_\+value, const std\+::string \&param\+\_\+name, const rclcpp\+::\+Node\+::\+Shared\+Ptr \&node, const rclcpp\+::\+Logger \&logger, const T \&default\+\_\+value=T\{\})
+\begin{DoxyCompactList}\small\item\em Get parameter (declare if doesn\textquotesingle{}t allow overload) \end{DoxyCompactList}\end{DoxyCompactItemize}

@@ -1,0 +1,154 @@
+\hypertarget{classgrasp__execution_1_1core_1_1TimeProfiler}{}\doxysection{grasp\+\_\+execution\+::core\+::Time\+Profiler$<$ Duration $>$ Class Template Reference}
+\label{classgrasp__execution_1_1core_1_1TimeProfiler}\index{grasp\_execution::core::TimeProfiler$<$ Duration $>$@{grasp\_execution::core::TimeProfiler$<$ Duration $>$}}
+
+
+{\ttfamily \#include $<$profiler.\+hpp$>$}
+
+
+
+Inheritance diagram for grasp\+\_\+execution\+::core\+::Time\+Profiler$<$ Duration $>$\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=226pt]{classgrasp__execution_1_1core_1_1TimeProfiler__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for grasp\+\_\+execution\+::core\+::Time\+Profiler$<$ Duration $>$\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=226pt]{classgrasp__execution_1_1core_1_1TimeProfiler__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classgrasp__execution_1_1core_1_1TimeProfiler_adb23a3c887adfe3420c492f456b5cee8}{Time\+Profiler}} (size\+\_\+t size)
+\begin{DoxyCompactList}\small\item\em Create a new time profiler with fixed recording buffer size. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classgrasp__execution_1_1core_1_1TimeProfiler_a434be5f1c690977ba1497bec592fd31a}{start}} ()
+\begin{DoxyCompactList}\small\item\em Start the stopwatch. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{classgrasp__execution_1_1core_1_1TimeProfiler_a9e2883978485fd0fb1adac5e5ae33406}{lapse\+\_\+and\+\_\+record}} ()
+\begin{DoxyCompactList}\small\item\em Lapse and record the time taken. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{classgrasp__execution_1_1core_1_1TimeProfiler_a98032114b13d482f016c20208d7b25c2}{lapse}} ()
+\begin{DoxyCompactList}\small\item\em Lapse but don\textquotesingle{}t record the time taken. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classgrasp__execution_1_1core_1_1TimeProfiler_ab54d266e9f831b407336689134b0e152}{reset}} ()
+\begin{DoxyCompactList}\small\item\em Reset the stopwatch. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classgrasp__execution_1_1core_1_1TimeProfiler_ae2b186178bdb474e18dec13042fa70c8}{print}} (std\+::ostream \&os=std\+::cout, bool metadata\+\_\+only=false)
+\begin{DoxyCompactList}\small\item\em Print the recorded result. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\subsubsection*{template$<$typename Duration = std\+::chrono\+::duration$<$double, std\+::ratio$<$1$>$$>$$>$\newline
+class grasp\+\_\+execution\+::core\+::\+Time\+Profiler$<$ Duration $>$}
+
+\mbox{\hyperlink{classgrasp__execution_1_1core_1_1Profiler}{Profiler}} that act like a stopwatch. By default everything is seconds in double format. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classgrasp__execution_1_1core_1_1TimeProfiler_adb23a3c887adfe3420c492f456b5cee8}\label{classgrasp__execution_1_1core_1_1TimeProfiler_adb23a3c887adfe3420c492f456b5cee8}} 
+\index{grasp\_execution::core::TimeProfiler$<$ Duration $>$@{grasp\_execution::core::TimeProfiler$<$ Duration $>$}!TimeProfiler@{TimeProfiler}}
+\index{TimeProfiler@{TimeProfiler}!grasp\_execution::core::TimeProfiler$<$ Duration $>$@{grasp\_execution::core::TimeProfiler$<$ Duration $>$}}
+\doxysubsubsection{\texorpdfstring{TimeProfiler()}{TimeProfiler()}}
+{\footnotesize\ttfamily template$<$typename Duration  = std\+::chrono\+::duration$<$double, std\+::ratio$<$1$>$$>$$>$ \\
+\mbox{\hyperlink{classgrasp__execution_1_1core_1_1TimeProfiler}{grasp\+\_\+execution\+::core\+::\+Time\+Profiler}}$<$ Duration $>$\+::\mbox{\hyperlink{classgrasp__execution_1_1core_1_1TimeProfiler}{Time\+Profiler}} (\begin{DoxyParamCaption}\item[{size\+\_\+t}]{size }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [explicit]}}
+
+
+
+Create a new time profiler with fixed recording buffer size. 
+
+Setting a data size before starting the profiler help mitigate dynamic memory allocation involved when changing buffer size.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em size} & Buffer size for recording statistics. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classgrasp__execution_1_1core_1_1TimeProfiler_a98032114b13d482f016c20208d7b25c2}\label{classgrasp__execution_1_1core_1_1TimeProfiler_a98032114b13d482f016c20208d7b25c2}} 
+\index{grasp\_execution::core::TimeProfiler$<$ Duration $>$@{grasp\_execution::core::TimeProfiler$<$ Duration $>$}!lapse@{lapse}}
+\index{lapse@{lapse}!grasp\_execution::core::TimeProfiler$<$ Duration $>$@{grasp\_execution::core::TimeProfiler$<$ Duration $>$}}
+\doxysubsubsection{\texorpdfstring{lapse()}{lapse()}}
+{\footnotesize\ttfamily template$<$typename Duration  = std\+::chrono\+::duration$<$double, std\+::ratio$<$1$>$$>$$>$ \\
+double \mbox{\hyperlink{classgrasp__execution_1_1core_1_1TimeProfiler}{grasp\+\_\+execution\+::core\+::\+Time\+Profiler}}$<$ Duration $>$\+::lapse (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Lapse but don\textquotesingle{}t record the time taken. 
+
+\begin{DoxyReturn}{Returns}
+time lapse between now and the start time. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classgrasp__execution_1_1core_1_1TimeProfiler_a9e2883978485fd0fb1adac5e5ae33406}\label{classgrasp__execution_1_1core_1_1TimeProfiler_a9e2883978485fd0fb1adac5e5ae33406}} 
+\index{grasp\_execution::core::TimeProfiler$<$ Duration $>$@{grasp\_execution::core::TimeProfiler$<$ Duration $>$}!lapse\_and\_record@{lapse\_and\_record}}
+\index{lapse\_and\_record@{lapse\_and\_record}!grasp\_execution::core::TimeProfiler$<$ Duration $>$@{grasp\_execution::core::TimeProfiler$<$ Duration $>$}}
+\doxysubsubsection{\texorpdfstring{lapse\_and\_record()}{lapse\_and\_record()}}
+{\footnotesize\ttfamily template$<$typename Duration  = std\+::chrono\+::duration$<$double, std\+::ratio$<$1$>$$>$$>$ \\
+double \mbox{\hyperlink{classgrasp__execution_1_1core_1_1TimeProfiler}{grasp\+\_\+execution\+::core\+::\+Time\+Profiler}}$<$ Duration $>$\+::lapse\+\_\+and\+\_\+record (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Lapse and record the time taken. 
+
+\begin{DoxyReturn}{Returns}
+time lapse between now and the start time. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classgrasp__execution_1_1core_1_1TimeProfiler_ae2b186178bdb474e18dec13042fa70c8}\label{classgrasp__execution_1_1core_1_1TimeProfiler_ae2b186178bdb474e18dec13042fa70c8}} 
+\index{grasp\_execution::core::TimeProfiler$<$ Duration $>$@{grasp\_execution::core::TimeProfiler$<$ Duration $>$}!print@{print}}
+\index{print@{print}!grasp\_execution::core::TimeProfiler$<$ Duration $>$@{grasp\_execution::core::TimeProfiler$<$ Duration $>$}}
+\doxysubsubsection{\texorpdfstring{print()}{print()}}
+{\footnotesize\ttfamily template$<$typename Duration  = std\+::chrono\+::duration$<$double, std\+::ratio$<$1$>$$>$$>$ \\
+void \mbox{\hyperlink{classgrasp__execution_1_1core_1_1TimeProfiler}{grasp\+\_\+execution\+::core\+::\+Time\+Profiler}}$<$ Duration $>$\+::print (\begin{DoxyParamCaption}\item[{std\+::ostream \&}]{os = {\ttfamily std\+:\+:cout},  }\item[{bool}]{metadata\+\_\+only = {\ttfamily false} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Print the recorded result. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em os} & Output stream. \\
+\hline
+\mbox{\texttt{ in}}  & {\em metadata\+\_\+only} & Whether to print out full data or just meta data. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classgrasp__execution_1_1core_1_1TimeProfiler_ab54d266e9f831b407336689134b0e152}\label{classgrasp__execution_1_1core_1_1TimeProfiler_ab54d266e9f831b407336689134b0e152}} 
+\index{grasp\_execution::core::TimeProfiler$<$ Duration $>$@{grasp\_execution::core::TimeProfiler$<$ Duration $>$}!reset@{reset}}
+\index{reset@{reset}!grasp\_execution::core::TimeProfiler$<$ Duration $>$@{grasp\_execution::core::TimeProfiler$<$ Duration $>$}}
+\doxysubsubsection{\texorpdfstring{reset()}{reset()}}
+{\footnotesize\ttfamily template$<$typename Duration  = std\+::chrono\+::duration$<$double, std\+::ratio$<$1$>$$>$$>$ \\
+void \mbox{\hyperlink{classgrasp__execution_1_1core_1_1TimeProfiler}{grasp\+\_\+execution\+::core\+::\+Time\+Profiler}}$<$ Duration $>$\+::reset (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Reset the stopwatch. 
+
+Equivalent to \mbox{\hyperlink{classgrasp__execution_1_1core_1_1TimeProfiler_a434be5f1c690977ba1497bec592fd31a}{start()}}.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classgrasp__execution_1_1core_1_1TimeProfiler_a434be5f1c690977ba1497bec592fd31a}{start()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classgrasp__execution_1_1core_1_1TimeProfiler_a434be5f1c690977ba1497bec592fd31a}\label{classgrasp__execution_1_1core_1_1TimeProfiler_a434be5f1c690977ba1497bec592fd31a}} 
+\index{grasp\_execution::core::TimeProfiler$<$ Duration $>$@{grasp\_execution::core::TimeProfiler$<$ Duration $>$}!start@{start}}
+\index{start@{start}!grasp\_execution::core::TimeProfiler$<$ Duration $>$@{grasp\_execution::core::TimeProfiler$<$ Duration $>$}}
+\doxysubsubsection{\texorpdfstring{start()}{start()}}
+{\footnotesize\ttfamily template$<$typename Duration  = std\+::chrono\+::duration$<$double, std\+::ratio$<$1$>$$>$$>$ \\
+void \mbox{\hyperlink{classgrasp__execution_1_1core_1_1TimeProfiler}{grasp\+\_\+execution\+::core\+::\+Time\+Profiler}}$<$ Duration $>$\+::start (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Start the stopwatch. 
+
+Equivalent to \mbox{\hyperlink{classgrasp__execution_1_1core_1_1TimeProfiler_ab54d266e9f831b407336689134b0e152}{reset()}}.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classgrasp__execution_1_1core_1_1TimeProfiler_ab54d266e9f831b407336689134b0e152}{reset()}} 
+\end{DoxySeeAlso}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/rosi5/workspaces/emd\+\_\+ws/src/easy\+\_\+manipulation\+\_\+deployment/grasp\+\_\+execution/include/grasp\+\_\+execution/core/\mbox{\hyperlink{profiler_8hpp}{profiler.\+hpp}}\end{DoxyCompactItemize}

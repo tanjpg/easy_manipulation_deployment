@@ -1,0 +1,755 @@
+\hypertarget{classFingerGripper}{}\doxysection{Finger\+Gripper Class Reference}
+\label{classFingerGripper}\index{FingerGripper@{FingerGripper}}
+
+
+General Struct for Finger gripper grasp planning ~\newline
+  
+
+
+
+
+{\ttfamily \#include $<$finger\+\_\+gripper.\+hpp$>$}
+
+
+
+Inheritance diagram for Finger\+Gripper\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=162pt]{classFingerGripper__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Finger\+Gripper\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=162pt]{classFingerGripper__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classFingerGripper_a2d202ce13ebd3009a06da6cce5037afc}{Finger\+Gripper}} (std\+::string id\+\_\+, const int \&num\+\_\+fingers\+\_\+side\+\_\+1\+\_\+, const int \&num\+\_\+fingers\+\_\+side\+\_\+2\+\_\+, const float \&distance\+\_\+between\+\_\+fingers\+\_\+1\+\_\+, const float \&distance\+\_\+between\+\_\+fingers\+\_\+2\+\_\+, const float \&finger\+\_\+thickness\+\_\+, const float \&gripper\+\_\+stroke\+\_\+, const float \&voxel\+\_\+size\+\_\+, const float \&grasp\+\_\+quality\+\_\+weight1\+\_\+, const float \&grasp\+\_\+quality\+\_\+weight2\+\_\+, const float \&grasp\+\_\+plane\+\_\+dist\+\_\+limit\+\_\+, const float \&cloud\+\_\+normal\+\_\+radius\+\_\+, const float \&world\+X\+Angle\+Threshold\+\_\+, const float \&world\+Y\+Angle\+Threshold\+\_\+, const float \&world\+Z\+Angle\+Threshold\+\_\+, std\+::string grasp\+\_\+stroke\+\_\+direction\+\_\+, std\+::string grasp\+\_\+stroke\+\_\+normal\+\_\+direction\+\_\+, std\+::string grasp\+\_\+approach\+\_\+direction\+\_\+)
+\item 
+void \mbox{\hyperlink{classFingerGripper_ad77fea048bb380439d1abf15abf2c9fd}{generate\+Gripper\+Attributes}} ()
+\item 
+bool \mbox{\hyperlink{classFingerGripper_a37b077909ea1c1ebab542b203438031a}{get\+Initial\+Sample\+Points}} (const std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classGraspObject}{Grasp\+Object}} $>$ \&object)
+\item 
+void \mbox{\hyperlink{classFingerGripper_a67d513489a851f1d2795a77e338902a2}{get\+Initial\+Sample\+Cloud}} (const std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classGraspObject}{Grasp\+Object}} $>$ \&object)
+\item 
+bool \mbox{\hyperlink{classFingerGripper_ae45ee62a139aab905eee7891a9776335}{get\+Grasp\+Cloud}} (const std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classGraspObject}{Grasp\+Object}} $>$ \&object)
+\item 
+void \mbox{\hyperlink{classFingerGripper_acf7570c6faa751473eff83cda3e1d84b}{get\+Center\+Cutting\+Plane}} (const std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classGraspObject}{Grasp\+Object}} $>$ \&object)
+\item 
+void \mbox{\hyperlink{classFingerGripper_aa1209ef481a591b5b9d549e4e1a03847}{get\+Cutting\+Planes}} (const std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classGraspObject}{Grasp\+Object}} $>$ \&object)
+\item 
+void \mbox{\hyperlink{classFingerGripper_af33c16d3134811c20a321b6fbe997e94}{voxelize\+Sample\+Cloud}} ()
+\item 
+void \mbox{\hyperlink{classFingerGripper_aac66e492843f99d03730790716fea1db}{get\+Best\+Grasps}} (const std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classGraspObject}{Grasp\+Object}} $>$ object, emd\+\_\+msgs\+::msg\+::\+Grasp\+Method $\ast$grasp\+\_\+method, const std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classEndEffector_a786988d384b481e8b03d035bbe26e26d}{Collision\+Object}} $>$ world\+\_\+collision\+\_\+object)
+\item 
+void \mbox{\hyperlink{classFingerGripper_ade730fcc9a550ede5f9998e36a289b92}{get\+Max\+Min\+Values}} (const std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classGraspObject}{Grasp\+Object}} $>$ \&object)
+\item 
+void \mbox{\hyperlink{classFingerGripper_acfe75e3c09f2d4d42663c2e3fe3ac9dc}{update\+Max\+Min\+Attributes}} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{structfingerCloudSample}{finger\+Cloud\+Sample}} $>$ \&sample, const float \&centroid\+\_\+distance, const float \&grasp\+\_\+plane\+\_\+distance, const float \&curvature)
+\item 
+void \mbox{\hyperlink{classFingerGripper_a67769ec77ac2132a5a3ccb25bbc2a4f8}{get\+Grasp\+Pose}} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{structmultiFingerGripper}{multi\+Finger\+Gripper}} $>$ gripper, const std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classGraspObject}{Grasp\+Object}} $>$ \&object)
+\item 
+void \mbox{\hyperlink{classFingerGripper_a1163df20343293093fdb75d4e46bf5c6}{plan\+Grasps}} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classGraspObject}{Grasp\+Object}} $>$ object, emd\+\_\+msgs\+::msg\+::\+Grasp\+Method $\ast$grasp\+\_\+method, std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classEndEffector_a786988d384b481e8b03d035bbe26e26d}{Collision\+Object}} $>$ world\+\_\+collision\+\_\+object, std\+::string camera\+\_\+frame)
+\item 
+void \mbox{\hyperlink{classFingerGripper_a6ca38c4c6c589ad934c099e82d6ac083}{reset\+Variables}} ()
+\item 
+void \mbox{\hyperlink{classFingerGripper_a423cefcc48896f4c0280689667b29c49}{add\+Cutting\+Planes\+Equal\+Aligned}} (const Eigen\+::\+Vector4f \&centerpoint, const Eigen\+::\+Vector4f \&plane\+\_\+vector, const bool \&both\+\_\+sides\+\_\+even)
+\item 
+void \mbox{\hyperlink{classFingerGripper_ad62fcca1e0eeba3cc5d5d4bfbc990b41}{add\+Cutting\+Planes}} (const Eigen\+::\+Vector4f \&centerpoint, const Eigen\+::\+Vector4f \&plane\+\_\+vector, const int \&\mbox{\hyperlink{classFingerGripper_a15f389e3e6aa075ee37fb40cfd9f15e6}{num\+\_\+itr\+\_\+1}}, const int \&\mbox{\hyperlink{classFingerGripper_ae8039b2240fc605f833b739277c5bcf0}{num\+\_\+itr\+\_\+2}}, const float \&\mbox{\hyperlink{classFingerGripper_a03c3aae6b78e5f5f9b5e7574422c136b}{initial\+\_\+gap\+\_\+1}}, const float \&\mbox{\hyperlink{classFingerGripper_ae59fa95d09ab2fdb3f57bdb0d0e568de}{initial\+\_\+gap\+\_\+2}})
+\item 
+int \mbox{\hyperlink{classFingerGripper_abfc2b4f64db89b28d974d9e9f7bc90a6}{check\+Plane\+Exists}} (const float \&dist)
+\item 
+void \mbox{\hyperlink{classFingerGripper_aafc307b2f97078b7a4c0c0a77267047d}{add\+Plane}} (const float \&dist, const Eigen\+::\+Vector4f \&centerpoint, const Eigen\+::\+Vector4f \&plane\+\_\+vector, const bool \&inside\+\_\+1, const bool \&inside\+\_\+2)
+\item 
+void \mbox{\hyperlink{classFingerGripper_a5be8b13d95574260af821285945eb182}{get\+Gripper\+Clusters}} ()
+\item 
+void \mbox{\hyperlink{classFingerGripper_af30607d2316681db98ae06d19bd683c9}{get\+Gripper\+Samples\+From\+Clusters}} ()
+\item 
+void \mbox{\hyperlink{classFingerGripper_a1625343ba2d0d5a032b7830cb078642e}{get\+Finger\+Samples}} (const std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classGraspObject}{Grasp\+Object}} $>$ \&object)
+\item 
+std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{structmultiFingerGripper}{multi\+Finger\+Gripper}} $>$ $>$ \mbox{\hyperlink{classFingerGripper_a1864e880412e55bfa3243181d9b8c458}{get\+All\+Gripper\+Configs}} (const std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classGraspObject}{Grasp\+Object}} $>$ \&object, const std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classEndEffector_a786988d384b481e8b03d035bbe26e26d}{Collision\+Object}} $>$ \&world\+\_\+collision\+\_\+object, std\+::string camera\+\_\+frame)
+\item 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{structmultiFingerGripper}{multi\+Finger\+Gripper}} $>$ \mbox{\hyperlink{classFingerGripper_a0fc0c923e90182fb137d945399e2243c}{generate\+Gripper\+Open\+Config}} (const std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classEndEffector_a786988d384b481e8b03d035bbe26e26d}{Collision\+Object}} $>$ \&world\+\_\+collision\+\_\+object, const std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{structsingleFinger}{single\+Finger}} $>$ \&closed\+\_\+center\+\_\+finger\+\_\+1, const std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{structsingleFinger}{single\+Finger}} $>$ \&closed\+\_\+center\+\_\+finger\+\_\+2, const Eigen\+::\+Vector3f \&open\+\_\+center\+\_\+finger\+\_\+1, const Eigen\+::\+Vector3f \&open\+\_\+center\+\_\+finger\+\_\+2, const Eigen\+::\+Vector3f \&plane\+\_\+normal\+\_\+normalized, const Eigen\+::\+Vector3f \&grasp\+\_\+direction, std\+::string camera\+\_\+frame)
+\item 
+bool \mbox{\hyperlink{classFingerGripper_a2e12a2013c27e0a45b244b402b7f8374}{check\+Finger\+Collision}} (const Eigen\+::\+Vector3f \&finger\+\_\+point, const std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classEndEffector_a786988d384b481e8b03d035bbe26e26d}{Collision\+Object}} $>$ \&world\+\_\+collision\+\_\+object)
+\item 
+void \mbox{\hyperlink{classFingerGripper_aee6fbcf4bbb3d551946fa454ce592733}{add\+Plane}} (float dist, Eigen\+::\+Vector4f centerpoint, Eigen\+::\+Vector4f plane\+\_\+vector)
+\item 
+void \mbox{\hyperlink{classFingerGripper_a5cbf84a4aaef00a760c3574ad3aed774}{visualize\+Grasps}} (pcl\+::visualization\+::\+P\+C\+L\+Visualizer\+::\+Ptr viewer)
+\item 
+Eigen\+::\+Vector3f \mbox{\hyperlink{classFingerGripper_a79f7ad2f1d6647ca58bc8fbed63851be}{get\+Perpendicular\+Vector\+In\+Plane}} (Eigen\+::\+Vector3f target\+\_\+vector, pcl\+::\+Model\+Coefficients\+::\+Ptr plane)
+\item 
+void \mbox{\hyperlink{classFingerGripper_a85b9e0c685f202e317788cc07a4897dd}{get\+Gripper\+Rank}} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{structmultiFingerGripper}{multi\+Finger\+Gripper}} $>$ gripper)
+\item 
+std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{structmultiFingerGripper}{multi\+Finger\+Gripper}} $>$ $>$ \mbox{\hyperlink{classFingerGripper_abf535c1ea5827ef9df81597c2c5ac8cd}{get\+All\+Ranks}} (std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{structmultiFingerGripper}{multi\+Finger\+Gripper}} $>$$>$ input\+\_\+vector, emd\+\_\+msgs\+::msg\+::\+Grasp\+Method $\ast$grasp\+\_\+method)
+\item 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{structgraspPlaneSample}{grasp\+Plane\+Sample}} $>$ \mbox{\hyperlink{classFingerGripper_abb264781315a5661fb0c681999b74bd4}{generate\+Grasp\+Samples}} (Eigen\+::\+Vector4f plane\+\_\+vector, Eigen\+::\+Vector3f point\+\_\+on\+\_\+plane, float dist\+\_\+to\+\_\+center\+\_\+plane, int plane\+\_\+index)
+\item 
+std\+::vector$<$ Eigen\+::\+Vector3f $>$ \mbox{\hyperlink{classFingerGripper_ab92603f7bf2d7c557dcdea424b5d5b9e}{get\+Open\+Finger\+Coordinates}} (const Eigen\+::\+Vector3f \&grasp\+\_\+direction, const Eigen\+::\+Vector3f \&finger\+\_\+1, const Eigen\+::\+Vector3f \&finger\+\_\+2)
+\item 
+int \mbox{\hyperlink{classFingerGripper_a75ac480369312eeeaef4ece303cdf6f7}{get\+Nearest\+Plane\+Index}} (float target\+\_\+distance)
+\item 
+int \mbox{\hyperlink{classFingerGripper_a0e55f0016bc2a2ed3d118fd6e7a326c4}{get\+Nearest\+Point\+Index}} (const pcl\+::\+Point\+Normal \&target\+\_\+point, const pcl\+::\+Point\+Cloud$<$ pcl\+::\+Point\+Normal $>$\+::Ptr cloud)
+\item 
+Eigen\+::\+Vector3f \mbox{\hyperlink{classFingerGripper_af8ef2442737937693aed4ba656e73660}{get\+Gripper\+Plane}} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{structsingleFinger}{single\+Finger}} $>$ \&finger\+\_\+sample\+\_\+1, std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{structsingleFinger}{single\+Finger}} $>$ \&finger\+\_\+sample\+\_\+2, const Eigen\+::\+Vector3f \&grasp\+\_\+direction, const std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classGraspObject}{Grasp\+Object}} $>$ \&object)
+\item 
+std\+::string \mbox{\hyperlink{classFingerGripper_aa3d85bd8df5a9a8710198993b16d5306}{get\+ID}} ()
+\item 
+std\+::vector$<$ double $>$ \mbox{\hyperlink{classFingerGripper_a34edf9caba29e941992b8838b5621955}{get\+Planar\+R\+PY}} (const Eigen\+::\+Vector3f \&grasp\+\_\+direction, const Eigen\+::\+Vector3f \&grasp\+\_\+direction\+\_\+normal)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::string \mbox{\hyperlink{classFingerGripper_ac1d743a02d8adb9548ee512b8b386715}{id}}
+\begin{DoxyCompactList}\small\item\em Gripper ID. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classFingerGripper_af760156be13d4d09048a321e699101f6}{num\+\_\+fingers\+\_\+total}}
+\begin{DoxyCompactList}\small\item\em Total Number of finger grippers. \end{DoxyCompactList}\item 
+const int \mbox{\hyperlink{classFingerGripper_ac35619c121e404152521159cb23d45b3}{num\+\_\+fingers\+\_\+side\+\_\+1}}
+\begin{DoxyCompactList}\small\item\em Number of fingers on side 1. \end{DoxyCompactList}\item 
+const int \mbox{\hyperlink{classFingerGripper_a0baef90e247f8e8fc554fa767423e36b}{num\+\_\+fingers\+\_\+side\+\_\+2}}
+\begin{DoxyCompactList}\small\item\em Number of fingers on side 2. \end{DoxyCompactList}\item 
+const float \mbox{\hyperlink{classFingerGripper_ad1b28dd3eccbea22f89f5482263ddbd3}{distance\+\_\+between\+\_\+fingers\+\_\+1}}
+\begin{DoxyCompactList}\small\item\em Distance between fingers on side 1. \end{DoxyCompactList}\item 
+const float \mbox{\hyperlink{classFingerGripper_a5c7134a68d031fd65f782787ec68276a}{distance\+\_\+between\+\_\+fingers\+\_\+2}}
+\begin{DoxyCompactList}\small\item\em Distance between fingers on side 2. \end{DoxyCompactList}\item 
+const float \mbox{\hyperlink{classFingerGripper_acca19b8be15e3bdee5bee1f2be2cacec}{finger\+\_\+thickness}}
+\begin{DoxyCompactList}\small\item\em Largest thickness dimension of a finger. \end{DoxyCompactList}\item 
+const float \mbox{\hyperlink{classFingerGripper_a81387f3ab609dc40a11557cbc20d18c7}{gripper\+\_\+stroke}}
+\begin{DoxyCompactList}\small\item\em Distance between fingers of opposing sides. \end{DoxyCompactList}\item 
+const float \mbox{\hyperlink{classFingerGripper_a84c56cead216259f0e95a2d01acb5eef}{voxel\+\_\+size}}
+\begin{DoxyCompactList}\small\item\em Voxel Size for downsampling of point cloud. \end{DoxyCompactList}\item 
+const float \mbox{\hyperlink{classFingerGripper_a11bdfada1aa06f4c4e95c2ebcd06bb1c}{grasp\+\_\+quality\+\_\+weight1}}
+\begin{DoxyCompactList}\small\item\em weight 1 of grasp ranking \end{DoxyCompactList}\item 
+const float \mbox{\hyperlink{classFingerGripper_a066cf408ce75f3da53728bd9b50d79a0}{grasp\+\_\+quality\+\_\+weight2}}
+\begin{DoxyCompactList}\small\item\em weight 2 of grasp ranking \end{DoxyCompactList}\item 
+const float \mbox{\hyperlink{classFingerGripper_a1e0858bfd6427c42d4a6e89baa9374ad}{grasp\+\_\+plane\+\_\+dist\+\_\+limit}}
+\begin{DoxyCompactList}\small\item\em Parameter for S\+AC search for points on plane. \end{DoxyCompactList}\item 
+const float \mbox{\hyperlink{classFingerGripper_a3c8cc3113debbb5f012f759e4d95aeb3}{cloud\+\_\+normal\+\_\+radius}}
+\begin{DoxyCompactList}\small\item\em Radius of which to determine cloud normals. \end{DoxyCompactList}\item 
+const float \mbox{\hyperlink{classFingerGripper_a31e2a90b3f880fec8a4332d4015daf79}{world\+X\+Angle\+Threshold}}
+\begin{DoxyCompactList}\small\item\em Threshold after which the object is angled to the world X axis. \end{DoxyCompactList}\item 
+const float \mbox{\hyperlink{classFingerGripper_abe2a3763eb5031a88ce032b53eb52c0a}{world\+Y\+Angle\+Threshold}}
+\begin{DoxyCompactList}\small\item\em Threshold after which the object is angled to the world Y axis. \end{DoxyCompactList}\item 
+const float \mbox{\hyperlink{classFingerGripper_a32a1f4d7ac0c3deb323fe22a97a283db}{world\+Z\+Angle\+Threshold}}
+\begin{DoxyCompactList}\small\item\em Threshold after which the object is angled to the world Z axis. \end{DoxyCompactList}\item 
+const char \mbox{\hyperlink{classFingerGripper_a83565ea40498c3ff43a25567b36ac02d}{grasp\+\_\+stroke\+\_\+direction}}
+\begin{DoxyCompactList}\small\item\em Axis in the same direction as the gripper stroke. \end{DoxyCompactList}\item 
+const char \mbox{\hyperlink{classFingerGripper_abc47a4955cfb1c4693fbb75930446d17}{grasp\+\_\+stroke\+\_\+normal\+\_\+direction}}
+\begin{DoxyCompactList}\small\item\em Axis normal to the direction of the gripper stroke. \end{DoxyCompactList}\item 
+const char \mbox{\hyperlink{classFingerGripper_a4f2f0a105fb4c01041652749708341e2}{grasp\+\_\+approach\+\_\+direction}}
+\begin{DoxyCompactList}\small\item\em Axis in which the gripper approaches the object. \end{DoxyCompactList}\item 
+Eigen\+::\+Vector4f \mbox{\hyperlink{classFingerGripper_a77b19441caddc781a3a6205a356b7fae}{center\+\_\+cutting\+\_\+plane}}
+\begin{DoxyCompactList}\small\item\em Coefficients of the cutting plane through the object. \end{DoxyCompactList}\item 
+Eigen\+::\+Vector3f \mbox{\hyperlink{classFingerGripper_a7dcbf4550ef96486f308d786e3701d4f}{center\+\_\+cutting\+\_\+plane\+\_\+normal}}
+\begin{DoxyCompactList}\small\item\em Normal vector of the cutting plane. \end{DoxyCompactList}\item 
+std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{structgraspPlaneSample}{grasp\+Plane\+Sample}} $>$ $>$ \mbox{\hyperlink{classFingerGripper_a8523b1e12743911d91ab1b3898e6d6e7}{grasp\+\_\+samples}}
+\begin{DoxyCompactList}\small\item\em List of finger grasp samples. \end{DoxyCompactList}\item 
+std\+::vector$<$ float $>$ \mbox{\hyperlink{classFingerGripper_a06d9ca10f8941811eb7cc0bcf2483441}{cutting\+\_\+plane\+\_\+distances}}
+\begin{DoxyCompactList}\small\item\em Vector containing distance of each cutting plane to the center. \end{DoxyCompactList}\item 
+std\+::vector$<$ int $>$ \mbox{\hyperlink{classFingerGripper_a6b9f618f680ccbd28281aee73b3aaf0b}{plane\+\_\+1\+\_\+index}}
+\begin{DoxyCompactList}\small\item\em Vector containing the indexes of the cutting planes belonging to side 1. \end{DoxyCompactList}\item 
+std\+::vector$<$ int $>$ \mbox{\hyperlink{classFingerGripper_a2c3b6ad6fc283973efae7600fc030fae}{plane\+\_\+2\+\_\+index}}
+\begin{DoxyCompactList}\small\item\em Vector containing the indexes of the cutting planes belonging to side 2. \end{DoxyCompactList}\item 
+std\+::vector$<$ std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{structsingleFinger}{single\+Finger}} $>$ $>$ $>$ \mbox{\hyperlink{classFingerGripper_ace6e333016e90c0adc6c09c35e1adc57}{gripper\+\_\+clusters}}
+\begin{DoxyCompactList}\small\item\em ~\newline
+ \end{DoxyCompactList}\item 
+std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{structmultiFingerGripper}{multi\+Finger\+Gripper}} $>$ $>$ \mbox{\hyperlink{classFingerGripper_aa11ec21888e1110f42e99b4dad15bb12}{sorted\+\_\+gripper\+\_\+configs}}
+\begin{DoxyCompactList}\small\item\em Vector containing grasp samples sorted by ranks. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classFingerGripper_a8fc727883ef0912f630a37c8aa6beba2}{is\+\_\+even\+\_\+1}}
+\begin{DoxyCompactList}\small\item\em True if number of fingers in side 1 is even. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classFingerGripper_aad2e33565003fae4a9e4be0cab3f38e7}{is\+\_\+even\+\_\+2}}
+\begin{DoxyCompactList}\small\item\em True if number of fingers in side 2 is even. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{classFingerGripper_a03c3aae6b78e5f5f9b5e7574422c136b}{initial\+\_\+gap\+\_\+1}}
+\begin{DoxyCompactList}\small\item\em Initial gap between the center of finger gripper and the next gripper in side 1. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{classFingerGripper_ae59fa95d09ab2fdb3f57bdb0d0e568de}{initial\+\_\+gap\+\_\+2}}
+\begin{DoxyCompactList}\small\item\em Initial gap between the center of finger gripper and the next gripper in side 2. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classFingerGripper_a15f389e3e6aa075ee37fb40cfd9f15e6}{num\+\_\+itr\+\_\+1}}
+\begin{DoxyCompactList}\small\item\em Number of iterations for Finger gripper to be populated in side 1. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classFingerGripper_ae8039b2240fc605f833b739277c5bcf0}{num\+\_\+itr\+\_\+2}}
+\begin{DoxyCompactList}\small\item\em Number of iterations for Finger gripper to be populated in side 2. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+General Struct for Finger gripper grasp planning ~\newline
+ 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classFingerGripper_a2d202ce13ebd3009a06da6cce5037afc}\label{classFingerGripper_a2d202ce13ebd3009a06da6cce5037afc}} 
+\index{FingerGripper@{FingerGripper}!FingerGripper@{FingerGripper}}
+\index{FingerGripper@{FingerGripper}!FingerGripper@{FingerGripper}}
+\doxysubsubsection{\texorpdfstring{FingerGripper()}{FingerGripper()}}
+{\footnotesize\ttfamily Finger\+Gripper\+::\+Finger\+Gripper (\begin{DoxyParamCaption}\item[{std\+::string}]{id\+\_\+,  }\item[{const int \&}]{num\+\_\+fingers\+\_\+side\+\_\+1\+\_\+,  }\item[{const int \&}]{num\+\_\+fingers\+\_\+side\+\_\+2\+\_\+,  }\item[{const float \&}]{distance\+\_\+between\+\_\+fingers\+\_\+1\+\_\+,  }\item[{const float \&}]{distance\+\_\+between\+\_\+fingers\+\_\+2\+\_\+,  }\item[{const float \&}]{finger\+\_\+thickness\+\_\+,  }\item[{const float \&}]{gripper\+\_\+stroke\+\_\+,  }\item[{const float \&}]{voxel\+\_\+size\+\_\+,  }\item[{const float \&}]{grasp\+\_\+quality\+\_\+weight1\+\_\+,  }\item[{const float \&}]{grasp\+\_\+quality\+\_\+weight2\+\_\+,  }\item[{const float \&}]{grasp\+\_\+plane\+\_\+dist\+\_\+limit\+\_\+,  }\item[{const float \&}]{cloud\+\_\+normal\+\_\+radius\+\_\+,  }\item[{const float \&}]{world\+X\+Angle\+Threshold\+\_\+,  }\item[{const float \&}]{world\+Y\+Angle\+Threshold\+\_\+,  }\item[{const float \&}]{world\+Z\+Angle\+Threshold\+\_\+,  }\item[{std\+::string}]{grasp\+\_\+stroke\+\_\+direction\+\_\+,  }\item[{std\+::string}]{grasp\+\_\+stroke\+\_\+normal\+\_\+direction\+\_\+,  }\item[{std\+::string}]{grasp\+\_\+approach\+\_\+direction\+\_\+ }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classFingerGripper_ad62fcca1e0eeba3cc5d5d4bfbc990b41}\label{classFingerGripper_ad62fcca1e0eeba3cc5d5d4bfbc990b41}} 
+\index{FingerGripper@{FingerGripper}!addCuttingPlanes@{addCuttingPlanes}}
+\index{addCuttingPlanes@{addCuttingPlanes}!FingerGripper@{FingerGripper}}
+\doxysubsubsection{\texorpdfstring{addCuttingPlanes()}{addCuttingPlanes()}}
+{\footnotesize\ttfamily void Finger\+Gripper\+::add\+Cutting\+Planes (\begin{DoxyParamCaption}\item[{const Eigen\+::\+Vector4f \&}]{centerpoint,  }\item[{const Eigen\+::\+Vector4f \&}]{plane\+\_\+vector,  }\item[{const int \&}]{num\+\_\+itr\+\_\+1,  }\item[{const int \&}]{num\+\_\+itr\+\_\+2,  }\item[{const float \&}]{initial\+\_\+gap\+\_\+1,  }\item[{const float \&}]{initial\+\_\+gap\+\_\+2 }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classFingerGripper_a423cefcc48896f4c0280689667b29c49}\label{classFingerGripper_a423cefcc48896f4c0280689667b29c49}} 
+\index{FingerGripper@{FingerGripper}!addCuttingPlanesEqualAligned@{addCuttingPlanesEqualAligned}}
+\index{addCuttingPlanesEqualAligned@{addCuttingPlanesEqualAligned}!FingerGripper@{FingerGripper}}
+\doxysubsubsection{\texorpdfstring{addCuttingPlanesEqualAligned()}{addCuttingPlanesEqualAligned()}}
+{\footnotesize\ttfamily void Finger\+Gripper\+::add\+Cutting\+Planes\+Equal\+Aligned (\begin{DoxyParamCaption}\item[{const Eigen\+::\+Vector4f \&}]{centerpoint,  }\item[{const Eigen\+::\+Vector4f \&}]{plane\+\_\+vector,  }\item[{const bool \&}]{both\+\_\+sides\+\_\+even }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classFingerGripper_aafc307b2f97078b7a4c0c0a77267047d}\label{classFingerGripper_aafc307b2f97078b7a4c0c0a77267047d}} 
+\index{FingerGripper@{FingerGripper}!addPlane@{addPlane}}
+\index{addPlane@{addPlane}!FingerGripper@{FingerGripper}}
+\doxysubsubsection{\texorpdfstring{addPlane()}{addPlane()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void Finger\+Gripper\+::add\+Plane (\begin{DoxyParamCaption}\item[{const float \&}]{dist,  }\item[{const Eigen\+::\+Vector4f \&}]{centerpoint,  }\item[{const Eigen\+::\+Vector4f \&}]{plane\+\_\+vector,  }\item[{const bool \&}]{inside\+\_\+1,  }\item[{const bool \&}]{inside\+\_\+2 }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classFingerGripper_aee6fbcf4bbb3d551946fa454ce592733}\label{classFingerGripper_aee6fbcf4bbb3d551946fa454ce592733}} 
+\index{FingerGripper@{FingerGripper}!addPlane@{addPlane}}
+\index{addPlane@{addPlane}!FingerGripper@{FingerGripper}}
+\doxysubsubsection{\texorpdfstring{addPlane()}{addPlane()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void Finger\+Gripper\+::add\+Plane (\begin{DoxyParamCaption}\item[{float}]{dist,  }\item[{Eigen\+::\+Vector4f}]{centerpoint,  }\item[{Eigen\+::\+Vector4f}]{plane\+\_\+vector }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classFingerGripper_a2e12a2013c27e0a45b244b402b7f8374}\label{classFingerGripper_a2e12a2013c27e0a45b244b402b7f8374}} 
+\index{FingerGripper@{FingerGripper}!checkFingerCollision@{checkFingerCollision}}
+\index{checkFingerCollision@{checkFingerCollision}!FingerGripper@{FingerGripper}}
+\doxysubsubsection{\texorpdfstring{checkFingerCollision()}{checkFingerCollision()}}
+{\footnotesize\ttfamily bool Finger\+Gripper\+::check\+Finger\+Collision (\begin{DoxyParamCaption}\item[{const Eigen\+::\+Vector3f \&}]{finger\+\_\+point,  }\item[{const std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classEndEffector_a786988d384b481e8b03d035bbe26e26d}{Collision\+Object}} $>$ \&}]{world\+\_\+collision\+\_\+object }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classFingerGripper_abfc2b4f64db89b28d974d9e9f7bc90a6}\label{classFingerGripper_abfc2b4f64db89b28d974d9e9f7bc90a6}} 
+\index{FingerGripper@{FingerGripper}!checkPlaneExists@{checkPlaneExists}}
+\index{checkPlaneExists@{checkPlaneExists}!FingerGripper@{FingerGripper}}
+\doxysubsubsection{\texorpdfstring{checkPlaneExists()}{checkPlaneExists()}}
+{\footnotesize\ttfamily int Finger\+Gripper\+::check\+Plane\+Exists (\begin{DoxyParamCaption}\item[{const float \&}]{dist }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classFingerGripper_abb264781315a5661fb0c681999b74bd4}\label{classFingerGripper_abb264781315a5661fb0c681999b74bd4}} 
+\index{FingerGripper@{FingerGripper}!generateGraspSamples@{generateGraspSamples}}
+\index{generateGraspSamples@{generateGraspSamples}!FingerGripper@{FingerGripper}}
+\doxysubsubsection{\texorpdfstring{generateGraspSamples()}{generateGraspSamples()}}
+{\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$\mbox{\hyperlink{structgraspPlaneSample}{grasp\+Plane\+Sample}}$>$ Finger\+Gripper\+::generate\+Grasp\+Samples (\begin{DoxyParamCaption}\item[{Eigen\+::\+Vector4f}]{plane\+\_\+vector,  }\item[{Eigen\+::\+Vector3f}]{point\+\_\+on\+\_\+plane,  }\item[{float}]{dist\+\_\+to\+\_\+center\+\_\+plane,  }\item[{int}]{plane\+\_\+index }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classFingerGripper_ad77fea048bb380439d1abf15abf2c9fd}\label{classFingerGripper_ad77fea048bb380439d1abf15abf2c9fd}} 
+\index{FingerGripper@{FingerGripper}!generateGripperAttributes@{generateGripperAttributes}}
+\index{generateGripperAttributes@{generateGripperAttributes}!FingerGripper@{FingerGripper}}
+\doxysubsubsection{\texorpdfstring{generateGripperAttributes()}{generateGripperAttributes()}}
+{\footnotesize\ttfamily void Finger\+Gripper\+::generate\+Gripper\+Attributes (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classFingerGripper_a0fc0c923e90182fb137d945399e2243c}\label{classFingerGripper_a0fc0c923e90182fb137d945399e2243c}} 
+\index{FingerGripper@{FingerGripper}!generateGripperOpenConfig@{generateGripperOpenConfig}}
+\index{generateGripperOpenConfig@{generateGripperOpenConfig}!FingerGripper@{FingerGripper}}
+\doxysubsubsection{\texorpdfstring{generateGripperOpenConfig()}{generateGripperOpenConfig()}}
+{\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$\mbox{\hyperlink{structmultiFingerGripper}{multi\+Finger\+Gripper}}$>$ Finger\+Gripper\+::generate\+Gripper\+Open\+Config (\begin{DoxyParamCaption}\item[{const std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classEndEffector_a786988d384b481e8b03d035bbe26e26d}{Collision\+Object}} $>$ \&}]{world\+\_\+collision\+\_\+object,  }\item[{const std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{structsingleFinger}{single\+Finger}} $>$ \&}]{closed\+\_\+center\+\_\+finger\+\_\+1,  }\item[{const std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{structsingleFinger}{single\+Finger}} $>$ \&}]{closed\+\_\+center\+\_\+finger\+\_\+2,  }\item[{const Eigen\+::\+Vector3f \&}]{open\+\_\+center\+\_\+finger\+\_\+1,  }\item[{const Eigen\+::\+Vector3f \&}]{open\+\_\+center\+\_\+finger\+\_\+2,  }\item[{const Eigen\+::\+Vector3f \&}]{plane\+\_\+normal\+\_\+normalized,  }\item[{const Eigen\+::\+Vector3f \&}]{grasp\+\_\+direction,  }\item[{std\+::string}]{camera\+\_\+frame }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classFingerGripper_a1864e880412e55bfa3243181d9b8c458}\label{classFingerGripper_a1864e880412e55bfa3243181d9b8c458}} 
+\index{FingerGripper@{FingerGripper}!getAllGripperConfigs@{getAllGripperConfigs}}
+\index{getAllGripperConfigs@{getAllGripperConfigs}!FingerGripper@{FingerGripper}}
+\doxysubsubsection{\texorpdfstring{getAllGripperConfigs()}{getAllGripperConfigs()}}
+{\footnotesize\ttfamily std\+::vector$<$std\+::shared\+\_\+ptr$<$\mbox{\hyperlink{structmultiFingerGripper}{multi\+Finger\+Gripper}}$>$ $>$ Finger\+Gripper\+::get\+All\+Gripper\+Configs (\begin{DoxyParamCaption}\item[{const std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classGraspObject}{Grasp\+Object}} $>$ \&}]{object,  }\item[{const std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classEndEffector_a786988d384b481e8b03d035bbe26e26d}{Collision\+Object}} $>$ \&}]{world\+\_\+collision\+\_\+object,  }\item[{std\+::string}]{camera\+\_\+frame }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classFingerGripper_abf535c1ea5827ef9df81597c2c5ac8cd}\label{classFingerGripper_abf535c1ea5827ef9df81597c2c5ac8cd}} 
+\index{FingerGripper@{FingerGripper}!getAllRanks@{getAllRanks}}
+\index{getAllRanks@{getAllRanks}!FingerGripper@{FingerGripper}}
+\doxysubsubsection{\texorpdfstring{getAllRanks()}{getAllRanks()}}
+{\footnotesize\ttfamily std\+::vector$<$std\+::shared\+\_\+ptr$<$\mbox{\hyperlink{structmultiFingerGripper}{multi\+Finger\+Gripper}}$>$ $>$ Finger\+Gripper\+::get\+All\+Ranks (\begin{DoxyParamCaption}\item[{std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{structmultiFingerGripper}{multi\+Finger\+Gripper}} $>$$>$}]{input\+\_\+vector,  }\item[{emd\+\_\+msgs\+::msg\+::\+Grasp\+Method $\ast$}]{grasp\+\_\+method }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classFingerGripper_aac66e492843f99d03730790716fea1db}\label{classFingerGripper_aac66e492843f99d03730790716fea1db}} 
+\index{FingerGripper@{FingerGripper}!getBestGrasps@{getBestGrasps}}
+\index{getBestGrasps@{getBestGrasps}!FingerGripper@{FingerGripper}}
+\doxysubsubsection{\texorpdfstring{getBestGrasps()}{getBestGrasps()}}
+{\footnotesize\ttfamily void Finger\+Gripper\+::get\+Best\+Grasps (\begin{DoxyParamCaption}\item[{const std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classGraspObject}{Grasp\+Object}} $>$}]{object,  }\item[{emd\+\_\+msgs\+::msg\+::\+Grasp\+Method $\ast$}]{grasp\+\_\+method,  }\item[{const std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classEndEffector_a786988d384b481e8b03d035bbe26e26d}{Collision\+Object}} $>$}]{world\+\_\+collision\+\_\+object }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classFingerGripper_acf7570c6faa751473eff83cda3e1d84b}\label{classFingerGripper_acf7570c6faa751473eff83cda3e1d84b}} 
+\index{FingerGripper@{FingerGripper}!getCenterCuttingPlane@{getCenterCuttingPlane}}
+\index{getCenterCuttingPlane@{getCenterCuttingPlane}!FingerGripper@{FingerGripper}}
+\doxysubsubsection{\texorpdfstring{getCenterCuttingPlane()}{getCenterCuttingPlane()}}
+{\footnotesize\ttfamily void Finger\+Gripper\+::get\+Center\+Cutting\+Plane (\begin{DoxyParamCaption}\item[{const std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classGraspObject}{Grasp\+Object}} $>$ \&}]{object }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classFingerGripper_aa1209ef481a591b5b9d549e4e1a03847}\label{classFingerGripper_aa1209ef481a591b5b9d549e4e1a03847}} 
+\index{FingerGripper@{FingerGripper}!getCuttingPlanes@{getCuttingPlanes}}
+\index{getCuttingPlanes@{getCuttingPlanes}!FingerGripper@{FingerGripper}}
+\doxysubsubsection{\texorpdfstring{getCuttingPlanes()}{getCuttingPlanes()}}
+{\footnotesize\ttfamily void Finger\+Gripper\+::get\+Cutting\+Planes (\begin{DoxyParamCaption}\item[{const std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classGraspObject}{Grasp\+Object}} $>$ \&}]{object }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classFingerGripper_a1625343ba2d0d5a032b7830cb078642e}\label{classFingerGripper_a1625343ba2d0d5a032b7830cb078642e}} 
+\index{FingerGripper@{FingerGripper}!getFingerSamples@{getFingerSamples}}
+\index{getFingerSamples@{getFingerSamples}!FingerGripper@{FingerGripper}}
+\doxysubsubsection{\texorpdfstring{getFingerSamples()}{getFingerSamples()}}
+{\footnotesize\ttfamily void Finger\+Gripper\+::get\+Finger\+Samples (\begin{DoxyParamCaption}\item[{const std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classGraspObject}{Grasp\+Object}} $>$ \&}]{object }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classFingerGripper_ae45ee62a139aab905eee7891a9776335}\label{classFingerGripper_ae45ee62a139aab905eee7891a9776335}} 
+\index{FingerGripper@{FingerGripper}!getGraspCloud@{getGraspCloud}}
+\index{getGraspCloud@{getGraspCloud}!FingerGripper@{FingerGripper}}
+\doxysubsubsection{\texorpdfstring{getGraspCloud()}{getGraspCloud()}}
+{\footnotesize\ttfamily bool Finger\+Gripper\+::get\+Grasp\+Cloud (\begin{DoxyParamCaption}\item[{const std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classGraspObject}{Grasp\+Object}} $>$ \&}]{object }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classFingerGripper_a67769ec77ac2132a5a3ccb25bbc2a4f8}\label{classFingerGripper_a67769ec77ac2132a5a3ccb25bbc2a4f8}} 
+\index{FingerGripper@{FingerGripper}!getGraspPose@{getGraspPose}}
+\index{getGraspPose@{getGraspPose}!FingerGripper@{FingerGripper}}
+\doxysubsubsection{\texorpdfstring{getGraspPose()}{getGraspPose()}}
+{\footnotesize\ttfamily void Finger\+Gripper\+::get\+Grasp\+Pose (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{structmultiFingerGripper}{multi\+Finger\+Gripper}} $>$}]{gripper,  }\item[{const std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classGraspObject}{Grasp\+Object}} $>$ \&}]{object }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classFingerGripper_a5be8b13d95574260af821285945eb182}\label{classFingerGripper_a5be8b13d95574260af821285945eb182}} 
+\index{FingerGripper@{FingerGripper}!getGripperClusters@{getGripperClusters}}
+\index{getGripperClusters@{getGripperClusters}!FingerGripper@{FingerGripper}}
+\doxysubsubsection{\texorpdfstring{getGripperClusters()}{getGripperClusters()}}
+{\footnotesize\ttfamily void Finger\+Gripper\+::get\+Gripper\+Clusters (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classFingerGripper_af8ef2442737937693aed4ba656e73660}\label{classFingerGripper_af8ef2442737937693aed4ba656e73660}} 
+\index{FingerGripper@{FingerGripper}!getGripperPlane@{getGripperPlane}}
+\index{getGripperPlane@{getGripperPlane}!FingerGripper@{FingerGripper}}
+\doxysubsubsection{\texorpdfstring{getGripperPlane()}{getGripperPlane()}}
+{\footnotesize\ttfamily Eigen\+::\+Vector3f Finger\+Gripper\+::get\+Gripper\+Plane (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{structsingleFinger}{single\+Finger}} $>$ \&}]{finger\+\_\+sample\+\_\+1,  }\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{structsingleFinger}{single\+Finger}} $>$ \&}]{finger\+\_\+sample\+\_\+2,  }\item[{const Eigen\+::\+Vector3f \&}]{grasp\+\_\+direction,  }\item[{const std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classGraspObject}{Grasp\+Object}} $>$ \&}]{object }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classFingerGripper_a85b9e0c685f202e317788cc07a4897dd}\label{classFingerGripper_a85b9e0c685f202e317788cc07a4897dd}} 
+\index{FingerGripper@{FingerGripper}!getGripperRank@{getGripperRank}}
+\index{getGripperRank@{getGripperRank}!FingerGripper@{FingerGripper}}
+\doxysubsubsection{\texorpdfstring{getGripperRank()}{getGripperRank()}}
+{\footnotesize\ttfamily void Finger\+Gripper\+::get\+Gripper\+Rank (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{structmultiFingerGripper}{multi\+Finger\+Gripper}} $>$}]{gripper }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classFingerGripper_af30607d2316681db98ae06d19bd683c9}\label{classFingerGripper_af30607d2316681db98ae06d19bd683c9}} 
+\index{FingerGripper@{FingerGripper}!getGripperSamplesFromClusters@{getGripperSamplesFromClusters}}
+\index{getGripperSamplesFromClusters@{getGripperSamplesFromClusters}!FingerGripper@{FingerGripper}}
+\doxysubsubsection{\texorpdfstring{getGripperSamplesFromClusters()}{getGripperSamplesFromClusters()}}
+{\footnotesize\ttfamily void Finger\+Gripper\+::get\+Gripper\+Samples\+From\+Clusters (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classFingerGripper_aa3d85bd8df5a9a8710198993b16d5306}\label{classFingerGripper_aa3d85bd8df5a9a8710198993b16d5306}} 
+\index{FingerGripper@{FingerGripper}!getID@{getID}}
+\index{getID@{getID}!FingerGripper@{FingerGripper}}
+\doxysubsubsection{\texorpdfstring{getID()}{getID()}}
+{\footnotesize\ttfamily std\+::string Finger\+Gripper\+::get\+ID (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{classEndEffector_a8e31e81d48fa8cf8b1be104153ed2f11}{End\+Effector}}.
+
+\mbox{\Hypertarget{classFingerGripper_a67d513489a851f1d2795a77e338902a2}\label{classFingerGripper_a67d513489a851f1d2795a77e338902a2}} 
+\index{FingerGripper@{FingerGripper}!getInitialSampleCloud@{getInitialSampleCloud}}
+\index{getInitialSampleCloud@{getInitialSampleCloud}!FingerGripper@{FingerGripper}}
+\doxysubsubsection{\texorpdfstring{getInitialSampleCloud()}{getInitialSampleCloud()}}
+{\footnotesize\ttfamily void Finger\+Gripper\+::get\+Initial\+Sample\+Cloud (\begin{DoxyParamCaption}\item[{const std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classGraspObject}{Grasp\+Object}} $>$ \&}]{object }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classFingerGripper_a37b077909ea1c1ebab542b203438031a}\label{classFingerGripper_a37b077909ea1c1ebab542b203438031a}} 
+\index{FingerGripper@{FingerGripper}!getInitialSamplePoints@{getInitialSamplePoints}}
+\index{getInitialSamplePoints@{getInitialSamplePoints}!FingerGripper@{FingerGripper}}
+\doxysubsubsection{\texorpdfstring{getInitialSamplePoints()}{getInitialSamplePoints()}}
+{\footnotesize\ttfamily bool Finger\+Gripper\+::get\+Initial\+Sample\+Points (\begin{DoxyParamCaption}\item[{const std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classGraspObject}{Grasp\+Object}} $>$ \&}]{object }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classFingerGripper_ade730fcc9a550ede5f9998e36a289b92}\label{classFingerGripper_ade730fcc9a550ede5f9998e36a289b92}} 
+\index{FingerGripper@{FingerGripper}!getMaxMinValues@{getMaxMinValues}}
+\index{getMaxMinValues@{getMaxMinValues}!FingerGripper@{FingerGripper}}
+\doxysubsubsection{\texorpdfstring{getMaxMinValues()}{getMaxMinValues()}}
+{\footnotesize\ttfamily void Finger\+Gripper\+::get\+Max\+Min\+Values (\begin{DoxyParamCaption}\item[{const std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classGraspObject}{Grasp\+Object}} $>$ \&}]{object }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classFingerGripper_a75ac480369312eeeaef4ece303cdf6f7}\label{classFingerGripper_a75ac480369312eeeaef4ece303cdf6f7}} 
+\index{FingerGripper@{FingerGripper}!getNearestPlaneIndex@{getNearestPlaneIndex}}
+\index{getNearestPlaneIndex@{getNearestPlaneIndex}!FingerGripper@{FingerGripper}}
+\doxysubsubsection{\texorpdfstring{getNearestPlaneIndex()}{getNearestPlaneIndex()}}
+{\footnotesize\ttfamily int Finger\+Gripper\+::get\+Nearest\+Plane\+Index (\begin{DoxyParamCaption}\item[{float}]{target\+\_\+distance }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classFingerGripper_a0e55f0016bc2a2ed3d118fd6e7a326c4}\label{classFingerGripper_a0e55f0016bc2a2ed3d118fd6e7a326c4}} 
+\index{FingerGripper@{FingerGripper}!getNearestPointIndex@{getNearestPointIndex}}
+\index{getNearestPointIndex@{getNearestPointIndex}!FingerGripper@{FingerGripper}}
+\doxysubsubsection{\texorpdfstring{getNearestPointIndex()}{getNearestPointIndex()}}
+{\footnotesize\ttfamily int Finger\+Gripper\+::get\+Nearest\+Point\+Index (\begin{DoxyParamCaption}\item[{const pcl\+::\+Point\+Normal \&}]{target\+\_\+point,  }\item[{const pcl\+::\+Point\+Cloud$<$ pcl\+::\+Point\+Normal $>$\+::Ptr}]{cloud }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classFingerGripper_ab92603f7bf2d7c557dcdea424b5d5b9e}\label{classFingerGripper_ab92603f7bf2d7c557dcdea424b5d5b9e}} 
+\index{FingerGripper@{FingerGripper}!getOpenFingerCoordinates@{getOpenFingerCoordinates}}
+\index{getOpenFingerCoordinates@{getOpenFingerCoordinates}!FingerGripper@{FingerGripper}}
+\doxysubsubsection{\texorpdfstring{getOpenFingerCoordinates()}{getOpenFingerCoordinates()}}
+{\footnotesize\ttfamily std\+::vector$<$Eigen\+::\+Vector3f$>$ Finger\+Gripper\+::get\+Open\+Finger\+Coordinates (\begin{DoxyParamCaption}\item[{const Eigen\+::\+Vector3f \&}]{grasp\+\_\+direction,  }\item[{const Eigen\+::\+Vector3f \&}]{finger\+\_\+1,  }\item[{const Eigen\+::\+Vector3f \&}]{finger\+\_\+2 }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classFingerGripper_a79f7ad2f1d6647ca58bc8fbed63851be}\label{classFingerGripper_a79f7ad2f1d6647ca58bc8fbed63851be}} 
+\index{FingerGripper@{FingerGripper}!getPerpendicularVectorInPlane@{getPerpendicularVectorInPlane}}
+\index{getPerpendicularVectorInPlane@{getPerpendicularVectorInPlane}!FingerGripper@{FingerGripper}}
+\doxysubsubsection{\texorpdfstring{getPerpendicularVectorInPlane()}{getPerpendicularVectorInPlane()}}
+{\footnotesize\ttfamily Eigen\+::\+Vector3f Finger\+Gripper\+::get\+Perpendicular\+Vector\+In\+Plane (\begin{DoxyParamCaption}\item[{Eigen\+::\+Vector3f}]{target\+\_\+vector,  }\item[{pcl\+::\+Model\+Coefficients\+::\+Ptr}]{plane }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classFingerGripper_a34edf9caba29e941992b8838b5621955}\label{classFingerGripper_a34edf9caba29e941992b8838b5621955}} 
+\index{FingerGripper@{FingerGripper}!getPlanarRPY@{getPlanarRPY}}
+\index{getPlanarRPY@{getPlanarRPY}!FingerGripper@{FingerGripper}}
+\doxysubsubsection{\texorpdfstring{getPlanarRPY()}{getPlanarRPY()}}
+{\footnotesize\ttfamily std\+::vector$<$double$>$ Finger\+Gripper\+::get\+Planar\+R\+PY (\begin{DoxyParamCaption}\item[{const Eigen\+::\+Vector3f \&}]{grasp\+\_\+direction,  }\item[{const Eigen\+::\+Vector3f \&}]{grasp\+\_\+direction\+\_\+normal }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classFingerGripper_a1163df20343293093fdb75d4e46bf5c6}\label{classFingerGripper_a1163df20343293093fdb75d4e46bf5c6}} 
+\index{FingerGripper@{FingerGripper}!planGrasps@{planGrasps}}
+\index{planGrasps@{planGrasps}!FingerGripper@{FingerGripper}}
+\doxysubsubsection{\texorpdfstring{planGrasps()}{planGrasps()}}
+{\footnotesize\ttfamily void Finger\+Gripper\+::plan\+Grasps (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classGraspObject}{Grasp\+Object}} $>$}]{object,  }\item[{emd\+\_\+msgs\+::msg\+::\+Grasp\+Method $\ast$}]{grasp\+\_\+method,  }\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classEndEffector_a786988d384b481e8b03d035bbe26e26d}{Collision\+Object}} $>$}]{world\+\_\+collision\+\_\+object,  }\item[{std\+::string}]{camera\+\_\+frame }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{classEndEffector_ad29fc2c7977c27f94cb61779a5029739}{End\+Effector}}.
+
+\mbox{\Hypertarget{classFingerGripper_a6ca38c4c6c589ad934c099e82d6ac083}\label{classFingerGripper_a6ca38c4c6c589ad934c099e82d6ac083}} 
+\index{FingerGripper@{FingerGripper}!resetVariables@{resetVariables}}
+\index{resetVariables@{resetVariables}!FingerGripper@{FingerGripper}}
+\doxysubsubsection{\texorpdfstring{resetVariables()}{resetVariables()}}
+{\footnotesize\ttfamily void Finger\+Gripper\+::reset\+Variables (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classFingerGripper_acfe75e3c09f2d4d42663c2e3fe3ac9dc}\label{classFingerGripper_acfe75e3c09f2d4d42663c2e3fe3ac9dc}} 
+\index{FingerGripper@{FingerGripper}!updateMaxMinAttributes@{updateMaxMinAttributes}}
+\index{updateMaxMinAttributes@{updateMaxMinAttributes}!FingerGripper@{FingerGripper}}
+\doxysubsubsection{\texorpdfstring{updateMaxMinAttributes()}{updateMaxMinAttributes()}}
+{\footnotesize\ttfamily void Finger\+Gripper\+::update\+Max\+Min\+Attributes (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{structfingerCloudSample}{finger\+Cloud\+Sample}} $>$ \&}]{sample,  }\item[{const float \&}]{centroid\+\_\+distance,  }\item[{const float \&}]{grasp\+\_\+plane\+\_\+distance,  }\item[{const float \&}]{curvature }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classFingerGripper_a5cbf84a4aaef00a760c3574ad3aed774}\label{classFingerGripper_a5cbf84a4aaef00a760c3574ad3aed774}} 
+\index{FingerGripper@{FingerGripper}!visualizeGrasps@{visualizeGrasps}}
+\index{visualizeGrasps@{visualizeGrasps}!FingerGripper@{FingerGripper}}
+\doxysubsubsection{\texorpdfstring{visualizeGrasps()}{visualizeGrasps()}}
+{\footnotesize\ttfamily void Finger\+Gripper\+::visualize\+Grasps (\begin{DoxyParamCaption}\item[{pcl\+::visualization\+::\+P\+C\+L\+Visualizer\+::\+Ptr}]{viewer }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{classEndEffector_a43c2afac8b1021dfe6eff3ad5bf86ecf}{End\+Effector}}.
+
+\mbox{\Hypertarget{classFingerGripper_af33c16d3134811c20a321b6fbe997e94}\label{classFingerGripper_af33c16d3134811c20a321b6fbe997e94}} 
+\index{FingerGripper@{FingerGripper}!voxelizeSampleCloud@{voxelizeSampleCloud}}
+\index{voxelizeSampleCloud@{voxelizeSampleCloud}!FingerGripper@{FingerGripper}}
+\doxysubsubsection{\texorpdfstring{voxelizeSampleCloud()}{voxelizeSampleCloud()}}
+{\footnotesize\ttfamily void Finger\+Gripper\+::voxelize\+Sample\+Cloud (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classFingerGripper_a77b19441caddc781a3a6205a356b7fae}\label{classFingerGripper_a77b19441caddc781a3a6205a356b7fae}} 
+\index{FingerGripper@{FingerGripper}!center\_cutting\_plane@{center\_cutting\_plane}}
+\index{center\_cutting\_plane@{center\_cutting\_plane}!FingerGripper@{FingerGripper}}
+\doxysubsubsection{\texorpdfstring{center\_cutting\_plane}{center\_cutting\_plane}}
+{\footnotesize\ttfamily Eigen\+::\+Vector4f Finger\+Gripper\+::center\+\_\+cutting\+\_\+plane}
+
+
+
+Coefficients of the cutting plane through the object. 
+
+\mbox{\Hypertarget{classFingerGripper_a7dcbf4550ef96486f308d786e3701d4f}\label{classFingerGripper_a7dcbf4550ef96486f308d786e3701d4f}} 
+\index{FingerGripper@{FingerGripper}!center\_cutting\_plane\_normal@{center\_cutting\_plane\_normal}}
+\index{center\_cutting\_plane\_normal@{center\_cutting\_plane\_normal}!FingerGripper@{FingerGripper}}
+\doxysubsubsection{\texorpdfstring{center\_cutting\_plane\_normal}{center\_cutting\_plane\_normal}}
+{\footnotesize\ttfamily Eigen\+::\+Vector3f Finger\+Gripper\+::center\+\_\+cutting\+\_\+plane\+\_\+normal}
+
+
+
+Normal vector of the cutting plane. 
+
+\mbox{\Hypertarget{classFingerGripper_a3c8cc3113debbb5f012f759e4d95aeb3}\label{classFingerGripper_a3c8cc3113debbb5f012f759e4d95aeb3}} 
+\index{FingerGripper@{FingerGripper}!cloud\_normal\_radius@{cloud\_normal\_radius}}
+\index{cloud\_normal\_radius@{cloud\_normal\_radius}!FingerGripper@{FingerGripper}}
+\doxysubsubsection{\texorpdfstring{cloud\_normal\_radius}{cloud\_normal\_radius}}
+{\footnotesize\ttfamily const float Finger\+Gripper\+::cloud\+\_\+normal\+\_\+radius}
+
+
+
+Radius of which to determine cloud normals. 
+
+\mbox{\Hypertarget{classFingerGripper_a06d9ca10f8941811eb7cc0bcf2483441}\label{classFingerGripper_a06d9ca10f8941811eb7cc0bcf2483441}} 
+\index{FingerGripper@{FingerGripper}!cutting\_plane\_distances@{cutting\_plane\_distances}}
+\index{cutting\_plane\_distances@{cutting\_plane\_distances}!FingerGripper@{FingerGripper}}
+\doxysubsubsection{\texorpdfstring{cutting\_plane\_distances}{cutting\_plane\_distances}}
+{\footnotesize\ttfamily std\+::vector$<$float$>$ Finger\+Gripper\+::cutting\+\_\+plane\+\_\+distances}
+
+
+
+Vector containing distance of each cutting plane to the center. 
+
+\mbox{\Hypertarget{classFingerGripper_ad1b28dd3eccbea22f89f5482263ddbd3}\label{classFingerGripper_ad1b28dd3eccbea22f89f5482263ddbd3}} 
+\index{FingerGripper@{FingerGripper}!distance\_between\_fingers\_1@{distance\_between\_fingers\_1}}
+\index{distance\_between\_fingers\_1@{distance\_between\_fingers\_1}!FingerGripper@{FingerGripper}}
+\doxysubsubsection{\texorpdfstring{distance\_between\_fingers\_1}{distance\_between\_fingers\_1}}
+{\footnotesize\ttfamily const float Finger\+Gripper\+::distance\+\_\+between\+\_\+fingers\+\_\+1}
+
+
+
+Distance between fingers on side 1. 
+
+\mbox{\Hypertarget{classFingerGripper_a5c7134a68d031fd65f782787ec68276a}\label{classFingerGripper_a5c7134a68d031fd65f782787ec68276a}} 
+\index{FingerGripper@{FingerGripper}!distance\_between\_fingers\_2@{distance\_between\_fingers\_2}}
+\index{distance\_between\_fingers\_2@{distance\_between\_fingers\_2}!FingerGripper@{FingerGripper}}
+\doxysubsubsection{\texorpdfstring{distance\_between\_fingers\_2}{distance\_between\_fingers\_2}}
+{\footnotesize\ttfamily const float Finger\+Gripper\+::distance\+\_\+between\+\_\+fingers\+\_\+2}
+
+
+
+Distance between fingers on side 2. 
+
+\mbox{\Hypertarget{classFingerGripper_acca19b8be15e3bdee5bee1f2be2cacec}\label{classFingerGripper_acca19b8be15e3bdee5bee1f2be2cacec}} 
+\index{FingerGripper@{FingerGripper}!finger\_thickness@{finger\_thickness}}
+\index{finger\_thickness@{finger\_thickness}!FingerGripper@{FingerGripper}}
+\doxysubsubsection{\texorpdfstring{finger\_thickness}{finger\_thickness}}
+{\footnotesize\ttfamily const float Finger\+Gripper\+::finger\+\_\+thickness}
+
+
+
+Largest thickness dimension of a finger. 
+
+\mbox{\Hypertarget{classFingerGripper_a4f2f0a105fb4c01041652749708341e2}\label{classFingerGripper_a4f2f0a105fb4c01041652749708341e2}} 
+\index{FingerGripper@{FingerGripper}!grasp\_approach\_direction@{grasp\_approach\_direction}}
+\index{grasp\_approach\_direction@{grasp\_approach\_direction}!FingerGripper@{FingerGripper}}
+\doxysubsubsection{\texorpdfstring{grasp\_approach\_direction}{grasp\_approach\_direction}}
+{\footnotesize\ttfamily const char Finger\+Gripper\+::grasp\+\_\+approach\+\_\+direction}
+
+
+
+Axis in which the gripper approaches the object. 
+
+\mbox{\Hypertarget{classFingerGripper_a1e0858bfd6427c42d4a6e89baa9374ad}\label{classFingerGripper_a1e0858bfd6427c42d4a6e89baa9374ad}} 
+\index{FingerGripper@{FingerGripper}!grasp\_plane\_dist\_limit@{grasp\_plane\_dist\_limit}}
+\index{grasp\_plane\_dist\_limit@{grasp\_plane\_dist\_limit}!FingerGripper@{FingerGripper}}
+\doxysubsubsection{\texorpdfstring{grasp\_plane\_dist\_limit}{grasp\_plane\_dist\_limit}}
+{\footnotesize\ttfamily const float Finger\+Gripper\+::grasp\+\_\+plane\+\_\+dist\+\_\+limit}
+
+
+
+Parameter for S\+AC search for points on plane. 
+
+\mbox{\Hypertarget{classFingerGripper_a11bdfada1aa06f4c4e95c2ebcd06bb1c}\label{classFingerGripper_a11bdfada1aa06f4c4e95c2ebcd06bb1c}} 
+\index{FingerGripper@{FingerGripper}!grasp\_quality\_weight1@{grasp\_quality\_weight1}}
+\index{grasp\_quality\_weight1@{grasp\_quality\_weight1}!FingerGripper@{FingerGripper}}
+\doxysubsubsection{\texorpdfstring{grasp\_quality\_weight1}{grasp\_quality\_weight1}}
+{\footnotesize\ttfamily const float Finger\+Gripper\+::grasp\+\_\+quality\+\_\+weight1}
+
+
+
+weight 1 of grasp ranking 
+
+\mbox{\Hypertarget{classFingerGripper_a066cf408ce75f3da53728bd9b50d79a0}\label{classFingerGripper_a066cf408ce75f3da53728bd9b50d79a0}} 
+\index{FingerGripper@{FingerGripper}!grasp\_quality\_weight2@{grasp\_quality\_weight2}}
+\index{grasp\_quality\_weight2@{grasp\_quality\_weight2}!FingerGripper@{FingerGripper}}
+\doxysubsubsection{\texorpdfstring{grasp\_quality\_weight2}{grasp\_quality\_weight2}}
+{\footnotesize\ttfamily const float Finger\+Gripper\+::grasp\+\_\+quality\+\_\+weight2}
+
+
+
+weight 2 of grasp ranking 
+
+\mbox{\Hypertarget{classFingerGripper_a8523b1e12743911d91ab1b3898e6d6e7}\label{classFingerGripper_a8523b1e12743911d91ab1b3898e6d6e7}} 
+\index{FingerGripper@{FingerGripper}!grasp\_samples@{grasp\_samples}}
+\index{grasp\_samples@{grasp\_samples}!FingerGripper@{FingerGripper}}
+\doxysubsubsection{\texorpdfstring{grasp\_samples}{grasp\_samples}}
+{\footnotesize\ttfamily std\+::vector$<$std\+::shared\+\_\+ptr$<$\mbox{\hyperlink{structgraspPlaneSample}{grasp\+Plane\+Sample}}$>$ $>$ Finger\+Gripper\+::grasp\+\_\+samples}
+
+
+
+List of finger grasp samples. 
+
+\mbox{\Hypertarget{classFingerGripper_a83565ea40498c3ff43a25567b36ac02d}\label{classFingerGripper_a83565ea40498c3ff43a25567b36ac02d}} 
+\index{FingerGripper@{FingerGripper}!grasp\_stroke\_direction@{grasp\_stroke\_direction}}
+\index{grasp\_stroke\_direction@{grasp\_stroke\_direction}!FingerGripper@{FingerGripper}}
+\doxysubsubsection{\texorpdfstring{grasp\_stroke\_direction}{grasp\_stroke\_direction}}
+{\footnotesize\ttfamily const char Finger\+Gripper\+::grasp\+\_\+stroke\+\_\+direction}
+
+
+
+Axis in the same direction as the gripper stroke. 
+
+\mbox{\Hypertarget{classFingerGripper_abc47a4955cfb1c4693fbb75930446d17}\label{classFingerGripper_abc47a4955cfb1c4693fbb75930446d17}} 
+\index{FingerGripper@{FingerGripper}!grasp\_stroke\_normal\_direction@{grasp\_stroke\_normal\_direction}}
+\index{grasp\_stroke\_normal\_direction@{grasp\_stroke\_normal\_direction}!FingerGripper@{FingerGripper}}
+\doxysubsubsection{\texorpdfstring{grasp\_stroke\_normal\_direction}{grasp\_stroke\_normal\_direction}}
+{\footnotesize\ttfamily const char Finger\+Gripper\+::grasp\+\_\+stroke\+\_\+normal\+\_\+direction}
+
+
+
+Axis normal to the direction of the gripper stroke. 
+
+\mbox{\Hypertarget{classFingerGripper_ace6e333016e90c0adc6c09c35e1adc57}\label{classFingerGripper_ace6e333016e90c0adc6c09c35e1adc57}} 
+\index{FingerGripper@{FingerGripper}!gripper\_clusters@{gripper\_clusters}}
+\index{gripper\_clusters@{gripper\_clusters}!FingerGripper@{FingerGripper}}
+\doxysubsubsection{\texorpdfstring{gripper\_clusters}{gripper\_clusters}}
+{\footnotesize\ttfamily std\+::vector$<$std\+::vector$<$std\+::shared\+\_\+ptr$<$\mbox{\hyperlink{structsingleFinger}{single\+Finger}}$>$ $>$ $>$ Finger\+Gripper\+::gripper\+\_\+clusters}
+
+
+
+~\newline
+ 
+
+\mbox{\Hypertarget{classFingerGripper_a81387f3ab609dc40a11557cbc20d18c7}\label{classFingerGripper_a81387f3ab609dc40a11557cbc20d18c7}} 
+\index{FingerGripper@{FingerGripper}!gripper\_stroke@{gripper\_stroke}}
+\index{gripper\_stroke@{gripper\_stroke}!FingerGripper@{FingerGripper}}
+\doxysubsubsection{\texorpdfstring{gripper\_stroke}{gripper\_stroke}}
+{\footnotesize\ttfamily const float Finger\+Gripper\+::gripper\+\_\+stroke}
+
+
+
+Distance between fingers of opposing sides. 
+
+\mbox{\Hypertarget{classFingerGripper_ac1d743a02d8adb9548ee512b8b386715}\label{classFingerGripper_ac1d743a02d8adb9548ee512b8b386715}} 
+\index{FingerGripper@{FingerGripper}!id@{id}}
+\index{id@{id}!FingerGripper@{FingerGripper}}
+\doxysubsubsection{\texorpdfstring{id}{id}}
+{\footnotesize\ttfamily std\+::string Finger\+Gripper\+::id}
+
+
+
+Gripper ID. 
+
+\mbox{\Hypertarget{classFingerGripper_a03c3aae6b78e5f5f9b5e7574422c136b}\label{classFingerGripper_a03c3aae6b78e5f5f9b5e7574422c136b}} 
+\index{FingerGripper@{FingerGripper}!initial\_gap\_1@{initial\_gap\_1}}
+\index{initial\_gap\_1@{initial\_gap\_1}!FingerGripper@{FingerGripper}}
+\doxysubsubsection{\texorpdfstring{initial\_gap\_1}{initial\_gap\_1}}
+{\footnotesize\ttfamily float Finger\+Gripper\+::initial\+\_\+gap\+\_\+1}
+
+
+
+Initial gap between the center of finger gripper and the next gripper in side 1. 
+
+\mbox{\Hypertarget{classFingerGripper_ae59fa95d09ab2fdb3f57bdb0d0e568de}\label{classFingerGripper_ae59fa95d09ab2fdb3f57bdb0d0e568de}} 
+\index{FingerGripper@{FingerGripper}!initial\_gap\_2@{initial\_gap\_2}}
+\index{initial\_gap\_2@{initial\_gap\_2}!FingerGripper@{FingerGripper}}
+\doxysubsubsection{\texorpdfstring{initial\_gap\_2}{initial\_gap\_2}}
+{\footnotesize\ttfamily float Finger\+Gripper\+::initial\+\_\+gap\+\_\+2}
+
+
+
+Initial gap between the center of finger gripper and the next gripper in side 2. 
+
+\mbox{\Hypertarget{classFingerGripper_a8fc727883ef0912f630a37c8aa6beba2}\label{classFingerGripper_a8fc727883ef0912f630a37c8aa6beba2}} 
+\index{FingerGripper@{FingerGripper}!is\_even\_1@{is\_even\_1}}
+\index{is\_even\_1@{is\_even\_1}!FingerGripper@{FingerGripper}}
+\doxysubsubsection{\texorpdfstring{is\_even\_1}{is\_even\_1}}
+{\footnotesize\ttfamily bool Finger\+Gripper\+::is\+\_\+even\+\_\+1}
+
+
+
+True if number of fingers in side 1 is even. 
+
+\mbox{\Hypertarget{classFingerGripper_aad2e33565003fae4a9e4be0cab3f38e7}\label{classFingerGripper_aad2e33565003fae4a9e4be0cab3f38e7}} 
+\index{FingerGripper@{FingerGripper}!is\_even\_2@{is\_even\_2}}
+\index{is\_even\_2@{is\_even\_2}!FingerGripper@{FingerGripper}}
+\doxysubsubsection{\texorpdfstring{is\_even\_2}{is\_even\_2}}
+{\footnotesize\ttfamily bool Finger\+Gripper\+::is\+\_\+even\+\_\+2}
+
+
+
+True if number of fingers in side 2 is even. 
+
+\mbox{\Hypertarget{classFingerGripper_ac35619c121e404152521159cb23d45b3}\label{classFingerGripper_ac35619c121e404152521159cb23d45b3}} 
+\index{FingerGripper@{FingerGripper}!num\_fingers\_side\_1@{num\_fingers\_side\_1}}
+\index{num\_fingers\_side\_1@{num\_fingers\_side\_1}!FingerGripper@{FingerGripper}}
+\doxysubsubsection{\texorpdfstring{num\_fingers\_side\_1}{num\_fingers\_side\_1}}
+{\footnotesize\ttfamily const int Finger\+Gripper\+::num\+\_\+fingers\+\_\+side\+\_\+1}
+
+
+
+Number of fingers on side 1. 
+
+\mbox{\Hypertarget{classFingerGripper_a0baef90e247f8e8fc554fa767423e36b}\label{classFingerGripper_a0baef90e247f8e8fc554fa767423e36b}} 
+\index{FingerGripper@{FingerGripper}!num\_fingers\_side\_2@{num\_fingers\_side\_2}}
+\index{num\_fingers\_side\_2@{num\_fingers\_side\_2}!FingerGripper@{FingerGripper}}
+\doxysubsubsection{\texorpdfstring{num\_fingers\_side\_2}{num\_fingers\_side\_2}}
+{\footnotesize\ttfamily const int Finger\+Gripper\+::num\+\_\+fingers\+\_\+side\+\_\+2}
+
+
+
+Number of fingers on side 2. 
+
+\mbox{\Hypertarget{classFingerGripper_af760156be13d4d09048a321e699101f6}\label{classFingerGripper_af760156be13d4d09048a321e699101f6}} 
+\index{FingerGripper@{FingerGripper}!num\_fingers\_total@{num\_fingers\_total}}
+\index{num\_fingers\_total@{num\_fingers\_total}!FingerGripper@{FingerGripper}}
+\doxysubsubsection{\texorpdfstring{num\_fingers\_total}{num\_fingers\_total}}
+{\footnotesize\ttfamily int Finger\+Gripper\+::num\+\_\+fingers\+\_\+total}
+
+
+
+Total Number of finger grippers. 
+
+\mbox{\Hypertarget{classFingerGripper_a15f389e3e6aa075ee37fb40cfd9f15e6}\label{classFingerGripper_a15f389e3e6aa075ee37fb40cfd9f15e6}} 
+\index{FingerGripper@{FingerGripper}!num\_itr\_1@{num\_itr\_1}}
+\index{num\_itr\_1@{num\_itr\_1}!FingerGripper@{FingerGripper}}
+\doxysubsubsection{\texorpdfstring{num\_itr\_1}{num\_itr\_1}}
+{\footnotesize\ttfamily int Finger\+Gripper\+::num\+\_\+itr\+\_\+1}
+
+
+
+Number of iterations for Finger gripper to be populated in side 1. 
+
+\mbox{\Hypertarget{classFingerGripper_ae8039b2240fc605f833b739277c5bcf0}\label{classFingerGripper_ae8039b2240fc605f833b739277c5bcf0}} 
+\index{FingerGripper@{FingerGripper}!num\_itr\_2@{num\_itr\_2}}
+\index{num\_itr\_2@{num\_itr\_2}!FingerGripper@{FingerGripper}}
+\doxysubsubsection{\texorpdfstring{num\_itr\_2}{num\_itr\_2}}
+{\footnotesize\ttfamily int Finger\+Gripper\+::num\+\_\+itr\+\_\+2}
+
+
+
+Number of iterations for Finger gripper to be populated in side 2. 
+
+\mbox{\Hypertarget{classFingerGripper_a6b9f618f680ccbd28281aee73b3aaf0b}\label{classFingerGripper_a6b9f618f680ccbd28281aee73b3aaf0b}} 
+\index{FingerGripper@{FingerGripper}!plane\_1\_index@{plane\_1\_index}}
+\index{plane\_1\_index@{plane\_1\_index}!FingerGripper@{FingerGripper}}
+\doxysubsubsection{\texorpdfstring{plane\_1\_index}{plane\_1\_index}}
+{\footnotesize\ttfamily std\+::vector$<$int$>$ Finger\+Gripper\+::plane\+\_\+1\+\_\+index}
+
+
+
+Vector containing the indexes of the cutting planes belonging to side 1. 
+
+\mbox{\Hypertarget{classFingerGripper_a2c3b6ad6fc283973efae7600fc030fae}\label{classFingerGripper_a2c3b6ad6fc283973efae7600fc030fae}} 
+\index{FingerGripper@{FingerGripper}!plane\_2\_index@{plane\_2\_index}}
+\index{plane\_2\_index@{plane\_2\_index}!FingerGripper@{FingerGripper}}
+\doxysubsubsection{\texorpdfstring{plane\_2\_index}{plane\_2\_index}}
+{\footnotesize\ttfamily std\+::vector$<$int$>$ Finger\+Gripper\+::plane\+\_\+2\+\_\+index}
+
+
+
+Vector containing the indexes of the cutting planes belonging to side 2. 
+
+\mbox{\Hypertarget{classFingerGripper_aa11ec21888e1110f42e99b4dad15bb12}\label{classFingerGripper_aa11ec21888e1110f42e99b4dad15bb12}} 
+\index{FingerGripper@{FingerGripper}!sorted\_gripper\_configs@{sorted\_gripper\_configs}}
+\index{sorted\_gripper\_configs@{sorted\_gripper\_configs}!FingerGripper@{FingerGripper}}
+\doxysubsubsection{\texorpdfstring{sorted\_gripper\_configs}{sorted\_gripper\_configs}}
+{\footnotesize\ttfamily std\+::vector$<$std\+::shared\+\_\+ptr$<$\mbox{\hyperlink{structmultiFingerGripper}{multi\+Finger\+Gripper}}$>$ $>$ Finger\+Gripper\+::sorted\+\_\+gripper\+\_\+configs}
+
+
+
+Vector containing grasp samples sorted by ranks. 
+
+\mbox{\Hypertarget{classFingerGripper_a84c56cead216259f0e95a2d01acb5eef}\label{classFingerGripper_a84c56cead216259f0e95a2d01acb5eef}} 
+\index{FingerGripper@{FingerGripper}!voxel\_size@{voxel\_size}}
+\index{voxel\_size@{voxel\_size}!FingerGripper@{FingerGripper}}
+\doxysubsubsection{\texorpdfstring{voxel\_size}{voxel\_size}}
+{\footnotesize\ttfamily const float Finger\+Gripper\+::voxel\+\_\+size}
+
+
+
+Voxel Size for downsampling of point cloud. 
+
+\mbox{\Hypertarget{classFingerGripper_a31e2a90b3f880fec8a4332d4015daf79}\label{classFingerGripper_a31e2a90b3f880fec8a4332d4015daf79}} 
+\index{FingerGripper@{FingerGripper}!worldXAngleThreshold@{worldXAngleThreshold}}
+\index{worldXAngleThreshold@{worldXAngleThreshold}!FingerGripper@{FingerGripper}}
+\doxysubsubsection{\texorpdfstring{worldXAngleThreshold}{worldXAngleThreshold}}
+{\footnotesize\ttfamily const float Finger\+Gripper\+::world\+X\+Angle\+Threshold}
+
+
+
+Threshold after which the object is angled to the world X axis. 
+
+\mbox{\Hypertarget{classFingerGripper_abe2a3763eb5031a88ce032b53eb52c0a}\label{classFingerGripper_abe2a3763eb5031a88ce032b53eb52c0a}} 
+\index{FingerGripper@{FingerGripper}!worldYAngleThreshold@{worldYAngleThreshold}}
+\index{worldYAngleThreshold@{worldYAngleThreshold}!FingerGripper@{FingerGripper}}
+\doxysubsubsection{\texorpdfstring{worldYAngleThreshold}{worldYAngleThreshold}}
+{\footnotesize\ttfamily const float Finger\+Gripper\+::world\+Y\+Angle\+Threshold}
+
+
+
+Threshold after which the object is angled to the world Y axis. 
+
+\mbox{\Hypertarget{classFingerGripper_a32a1f4d7ac0c3deb323fe22a97a283db}\label{classFingerGripper_a32a1f4d7ac0c3deb323fe22a97a283db}} 
+\index{FingerGripper@{FingerGripper}!worldZAngleThreshold@{worldZAngleThreshold}}
+\index{worldZAngleThreshold@{worldZAngleThreshold}!FingerGripper@{FingerGripper}}
+\doxysubsubsection{\texorpdfstring{worldZAngleThreshold}{worldZAngleThreshold}}
+{\footnotesize\ttfamily const float Finger\+Gripper\+::world\+Z\+Angle\+Threshold}
+
+
+
+Threshold after which the object is angled to the world Z axis. 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/rosi5/workspaces/emd\+\_\+ws/src/easy\+\_\+manipulation\+\_\+deployment/grasp\+\_\+planner/include/grasp\+\_\+planner/end\+\_\+effectors/\mbox{\hyperlink{finger__gripper_8hpp}{finger\+\_\+gripper.\+hpp}}\end{DoxyCompactItemize}

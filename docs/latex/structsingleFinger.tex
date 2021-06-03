@@ -1,0 +1,136 @@
+\hypertarget{structsingleFinger}{}\doxysection{single\+Finger Struct Reference}
+\label{structsingleFinger}\index{singleFinger@{singleFinger}}
+
+
+General Struct for a single finger in a gripper sample ~\newline
+  
+
+
+
+
+{\ttfamily \#include $<$finger\+\_\+gripper.\+hpp$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{structsingleFinger_a2bb1429384bc75b67636e0f30b55e9bd}{single\+Finger}} (pcl\+::\+Point\+Normal finger\+\_\+point\+\_\+, float centroid\+\_\+dist\+\_\+, float grasp\+\_\+plane\+\_\+dist\+\_\+, float curvature\+\_\+, int plane\+\_\+index\+\_\+)
+\item 
+\mbox{\hyperlink{structsingleFinger_a1f7e75e5889bad2d5a9a5f95d69901af}{single\+Finger}} ()=default
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+pcl\+::\+Point\+Normal \mbox{\hyperlink{structsingleFinger_ac127d56a7b5c42af1062141c8ad6c6b2}{finger\+\_\+point}}
+\begin{DoxyCompactList}\small\item\em 3D coordinate of point \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{structsingleFinger_ad3098a7004b1a827749108543c1603b2}{centroid\+\_\+dist}}
+\begin{DoxyCompactList}\small\item\em Distance between finger to center point of object. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{structsingleFinger_ac08f2fb408efd60fc5fbafc61b3d2ce8}{grasp\+\_\+plane\+\_\+dist}}
+\begin{DoxyCompactList}\small\item\em Distance between point to the finger\textquotesingle{}s grasp plane. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{structsingleFinger_aac4233bad97573a1879a667ed1b8d595}{curvature}}
+\begin{DoxyCompactList}\small\item\em Curvature at this Point. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{structsingleFinger_aca281ef5f7ff595baf4e74c68261abb8}{plane\+\_\+index}}
+\begin{DoxyCompactList}\small\item\em Index of plane this finger belongs to with respect to the plane vector. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{structsingleFinger_afc901097c3de8d8b5c3d2860b52cf67f}{angle\+\_\+cos}}
+\begin{DoxyCompactList}\small\item\em Cosine of angle of Finger normal with respect to the plane normal vector. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+General Struct for a single finger in a gripper sample ~\newline
+ 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{structsingleFinger_a2bb1429384bc75b67636e0f30b55e9bd}\label{structsingleFinger_a2bb1429384bc75b67636e0f30b55e9bd}} 
+\index{singleFinger@{singleFinger}!singleFinger@{singleFinger}}
+\index{singleFinger@{singleFinger}!singleFinger@{singleFinger}}
+\doxysubsubsection{\texorpdfstring{singleFinger()}{singleFinger()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily single\+Finger\+::single\+Finger (\begin{DoxyParamCaption}\item[{pcl\+::\+Point\+Normal}]{finger\+\_\+point\+\_\+,  }\item[{float}]{centroid\+\_\+dist\+\_\+,  }\item[{float}]{grasp\+\_\+plane\+\_\+dist\+\_\+,  }\item[{float}]{curvature\+\_\+,  }\item[{int}]{plane\+\_\+index\+\_\+ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\hyperlink{structsingleFinger}{single\+Finger}} Constructor
+
+
+\begin{DoxyParams}{Parameters}
+{\em finger\+\_\+point\+\_\+} & Coordinate of finger point \\
+\hline
+{\em centroid\+\_\+dist\+\_\+} & Distance between Finger point and center of gripper \\
+\hline
+{\em grasp\+\_\+plane\+\_\+dist\+\_\+} & Distance between Finger point and grasp plane \\
+\hline
+{\em curvature\+\_\+} & Curvature of that particular point \\
+\hline
+{\em plane\+\_\+index\+\_\+} & Plane this point is in with respect to the plane vector \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{structsingleFinger_a1f7e75e5889bad2d5a9a5f95d69901af}\label{structsingleFinger_a1f7e75e5889bad2d5a9a5f95d69901af}} 
+\index{singleFinger@{singleFinger}!singleFinger@{singleFinger}}
+\index{singleFinger@{singleFinger}!singleFinger@{singleFinger}}
+\doxysubsubsection{\texorpdfstring{singleFinger()}{singleFinger()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily single\+Finger\+::single\+Finger (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{structsingleFinger_afc901097c3de8d8b5c3d2860b52cf67f}\label{structsingleFinger_afc901097c3de8d8b5c3d2860b52cf67f}} 
+\index{singleFinger@{singleFinger}!angle\_cos@{angle\_cos}}
+\index{angle\_cos@{angle\_cos}!singleFinger@{singleFinger}}
+\doxysubsubsection{\texorpdfstring{angle\_cos}{angle\_cos}}
+{\footnotesize\ttfamily float single\+Finger\+::angle\+\_\+cos}
+
+
+
+Cosine of angle of Finger normal with respect to the plane normal vector. 
+
+\mbox{\Hypertarget{structsingleFinger_ad3098a7004b1a827749108543c1603b2}\label{structsingleFinger_ad3098a7004b1a827749108543c1603b2}} 
+\index{singleFinger@{singleFinger}!centroid\_dist@{centroid\_dist}}
+\index{centroid\_dist@{centroid\_dist}!singleFinger@{singleFinger}}
+\doxysubsubsection{\texorpdfstring{centroid\_dist}{centroid\_dist}}
+{\footnotesize\ttfamily float single\+Finger\+::centroid\+\_\+dist}
+
+
+
+Distance between finger to center point of object. 
+
+\mbox{\Hypertarget{structsingleFinger_aac4233bad97573a1879a667ed1b8d595}\label{structsingleFinger_aac4233bad97573a1879a667ed1b8d595}} 
+\index{singleFinger@{singleFinger}!curvature@{curvature}}
+\index{curvature@{curvature}!singleFinger@{singleFinger}}
+\doxysubsubsection{\texorpdfstring{curvature}{curvature}}
+{\footnotesize\ttfamily float single\+Finger\+::curvature}
+
+
+
+Curvature at this Point. 
+
+\mbox{\Hypertarget{structsingleFinger_ac127d56a7b5c42af1062141c8ad6c6b2}\label{structsingleFinger_ac127d56a7b5c42af1062141c8ad6c6b2}} 
+\index{singleFinger@{singleFinger}!finger\_point@{finger\_point}}
+\index{finger\_point@{finger\_point}!singleFinger@{singleFinger}}
+\doxysubsubsection{\texorpdfstring{finger\_point}{finger\_point}}
+{\footnotesize\ttfamily pcl\+::\+Point\+Normal single\+Finger\+::finger\+\_\+point}
+
+
+
+3D coordinate of point 
+
+\mbox{\Hypertarget{structsingleFinger_ac08f2fb408efd60fc5fbafc61b3d2ce8}\label{structsingleFinger_ac08f2fb408efd60fc5fbafc61b3d2ce8}} 
+\index{singleFinger@{singleFinger}!grasp\_plane\_dist@{grasp\_plane\_dist}}
+\index{grasp\_plane\_dist@{grasp\_plane\_dist}!singleFinger@{singleFinger}}
+\doxysubsubsection{\texorpdfstring{grasp\_plane\_dist}{grasp\_plane\_dist}}
+{\footnotesize\ttfamily float single\+Finger\+::grasp\+\_\+plane\+\_\+dist}
+
+
+
+Distance between point to the finger\textquotesingle{}s grasp plane. 
+
+\mbox{\Hypertarget{structsingleFinger_aca281ef5f7ff595baf4e74c68261abb8}\label{structsingleFinger_aca281ef5f7ff595baf4e74c68261abb8}} 
+\index{singleFinger@{singleFinger}!plane\_index@{plane\_index}}
+\index{plane\_index@{plane\_index}!singleFinger@{singleFinger}}
+\doxysubsubsection{\texorpdfstring{plane\_index}{plane\_index}}
+{\footnotesize\ttfamily int single\+Finger\+::plane\+\_\+index}
+
+
+
+Index of plane this finger belongs to with respect to the plane vector. 
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/rosi5/workspaces/emd\+\_\+ws/src/easy\+\_\+manipulation\+\_\+deployment/grasp\+\_\+planner/include/grasp\+\_\+planner/end\+\_\+effectors/\mbox{\hyperlink{finger__gripper_8hpp}{finger\+\_\+gripper.\+hpp}}\end{DoxyCompactItemize}

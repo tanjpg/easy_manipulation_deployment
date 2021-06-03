@@ -1,0 +1,169 @@
+\hypertarget{structfingerCloudSample}{}\doxysection{finger\+Cloud\+Sample Struct Reference}
+\label{structfingerCloudSample}\index{fingerCloudSample@{fingerCloudSample}}
+
+
+General Struct for a Finger Cloud Sample ~\newline
+  
+
+
+
+
+{\ttfamily \#include $<$finger\+\_\+gripper.\+hpp$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{structfingerCloudSample_a42683d47ee7276660d41b1e2cb0253c9}{finger\+Cloud\+Sample}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+pcl\+::\+Point\+Cloud$<$ pcl\+::\+Point\+X\+Y\+Z\+R\+GB $>$\+::Ptr \mbox{\hyperlink{structfingerCloudSample_a6b3fbf766ad749f7da651a559eea287e}{finger\+\_\+cloud}}
+\begin{DoxyCompactList}\small\item\em Point cloud for current finger sample. \end{DoxyCompactList}\item 
+pcl\+::\+Point\+Cloud$<$ pcl\+::\+Point\+Normal $>$\+::Ptr \mbox{\hyperlink{structfingerCloudSample_ab628d272fe415def6a36f2bac6140a40}{finger\+\_\+ncloud}}
+\begin{DoxyCompactList}\small\item\em Point cloud normals for current finger sample. \end{DoxyCompactList}\item 
+pcl\+::\+Point\+Cloud$<$ pcl\+::\+Point\+Normal $>$\+::Ptr \mbox{\hyperlink{structfingerCloudSample_a2b6b58e652dfc7f0d119770e1a374787}{finger\+\_\+nvoxel}}
+\begin{DoxyCompactList}\small\item\em Downsampled Point cloud normals for current finger sample. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{structfingerCloudSample_ad584faf14388e18540ef88e9113fa9d7}{centroid\+\_\+dist\+\_\+min}}
+\begin{DoxyCompactList}\small\item\em Maximum distance of a point in the cloud sample to the center of object. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{structfingerCloudSample_ae543782c5482335cba44f597a7973d06}{centroid\+\_\+dist\+\_\+max}}
+\begin{DoxyCompactList}\small\item\em Minimum distance of a point in the cloud sample to the center of object. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{structfingerCloudSample_a38249c8296b5ccfb37d94e18116075b5}{grasp\+\_\+plane\+\_\+dist\+\_\+min}}
+\begin{DoxyCompactList}\small\item\em Minimum distance of a point in the cloud sample to the grasp plane. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{structfingerCloudSample_a19d1d50bffc0e7f7a5d18dcfef094a67}{grasp\+\_\+plane\+\_\+dist\+\_\+max}}
+\begin{DoxyCompactList}\small\item\em Maximum distance of a point in the cloud sample to the grasp plane. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{structfingerCloudSample_a827660cebe33e788497698eb157a93d7}{curvature\+\_\+min}}
+\begin{DoxyCompactList}\small\item\em Minimum Curvature of point in cloud sample. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{structfingerCloudSample_a022e557410a295004a9faafc9f1fcd1d}{curvature\+\_\+max}}
+\begin{DoxyCompactList}\small\item\em Maximum Curvature of point in cloud sample. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{structfingerCloudSample_aa2b9aa8414490bf8e852ace99f875c6e}{start\+\_\+index}}
+\item 
+std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{structsingleFinger}{single\+Finger}} $>$ $>$ \mbox{\hyperlink{structfingerCloudSample_ae2f2aba81e1b6daea71f6c502d081cb8}{finger\+\_\+samples}}
+\begin{DoxyCompactList}\small\item\em Finger Samples derived from current finger cloud. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+General Struct for a Finger Cloud Sample ~\newline
+ 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{structfingerCloudSample_a42683d47ee7276660d41b1e2cb0253c9}\label{structfingerCloudSample_a42683d47ee7276660d41b1e2cb0253c9}} 
+\index{fingerCloudSample@{fingerCloudSample}!fingerCloudSample@{fingerCloudSample}}
+\index{fingerCloudSample@{fingerCloudSample}!fingerCloudSample@{fingerCloudSample}}
+\doxysubsubsection{\texorpdfstring{fingerCloudSample()}{fingerCloudSample()}}
+{\footnotesize\ttfamily finger\+Cloud\+Sample\+::finger\+Cloud\+Sample (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\hyperlink{structfingerCloudSample}{finger\+Cloud\+Sample}} Constructor 
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{structfingerCloudSample_ae543782c5482335cba44f597a7973d06}\label{structfingerCloudSample_ae543782c5482335cba44f597a7973d06}} 
+\index{fingerCloudSample@{fingerCloudSample}!centroid\_dist\_max@{centroid\_dist\_max}}
+\index{centroid\_dist\_max@{centroid\_dist\_max}!fingerCloudSample@{fingerCloudSample}}
+\doxysubsubsection{\texorpdfstring{centroid\_dist\_max}{centroid\_dist\_max}}
+{\footnotesize\ttfamily float finger\+Cloud\+Sample\+::centroid\+\_\+dist\+\_\+max}
+
+
+
+Minimum distance of a point in the cloud sample to the center of object. 
+
+\mbox{\Hypertarget{structfingerCloudSample_ad584faf14388e18540ef88e9113fa9d7}\label{structfingerCloudSample_ad584faf14388e18540ef88e9113fa9d7}} 
+\index{fingerCloudSample@{fingerCloudSample}!centroid\_dist\_min@{centroid\_dist\_min}}
+\index{centroid\_dist\_min@{centroid\_dist\_min}!fingerCloudSample@{fingerCloudSample}}
+\doxysubsubsection{\texorpdfstring{centroid\_dist\_min}{centroid\_dist\_min}}
+{\footnotesize\ttfamily float finger\+Cloud\+Sample\+::centroid\+\_\+dist\+\_\+min}
+
+
+
+Maximum distance of a point in the cloud sample to the center of object. 
+
+\mbox{\Hypertarget{structfingerCloudSample_a022e557410a295004a9faafc9f1fcd1d}\label{structfingerCloudSample_a022e557410a295004a9faafc9f1fcd1d}} 
+\index{fingerCloudSample@{fingerCloudSample}!curvature\_max@{curvature\_max}}
+\index{curvature\_max@{curvature\_max}!fingerCloudSample@{fingerCloudSample}}
+\doxysubsubsection{\texorpdfstring{curvature\_max}{curvature\_max}}
+{\footnotesize\ttfamily float finger\+Cloud\+Sample\+::curvature\+\_\+max}
+
+
+
+Maximum Curvature of point in cloud sample. 
+
+\mbox{\Hypertarget{structfingerCloudSample_a827660cebe33e788497698eb157a93d7}\label{structfingerCloudSample_a827660cebe33e788497698eb157a93d7}} 
+\index{fingerCloudSample@{fingerCloudSample}!curvature\_min@{curvature\_min}}
+\index{curvature\_min@{curvature\_min}!fingerCloudSample@{fingerCloudSample}}
+\doxysubsubsection{\texorpdfstring{curvature\_min}{curvature\_min}}
+{\footnotesize\ttfamily float finger\+Cloud\+Sample\+::curvature\+\_\+min}
+
+
+
+Minimum Curvature of point in cloud sample. 
+
+\mbox{\Hypertarget{structfingerCloudSample_a6b3fbf766ad749f7da651a559eea287e}\label{structfingerCloudSample_a6b3fbf766ad749f7da651a559eea287e}} 
+\index{fingerCloudSample@{fingerCloudSample}!finger\_cloud@{finger\_cloud}}
+\index{finger\_cloud@{finger\_cloud}!fingerCloudSample@{fingerCloudSample}}
+\doxysubsubsection{\texorpdfstring{finger\_cloud}{finger\_cloud}}
+{\footnotesize\ttfamily pcl\+::\+Point\+Cloud$<$pcl\+::\+Point\+X\+Y\+Z\+R\+GB$>$\+::Ptr finger\+Cloud\+Sample\+::finger\+\_\+cloud}
+
+
+
+Point cloud for current finger sample. 
+
+\mbox{\Hypertarget{structfingerCloudSample_ab628d272fe415def6a36f2bac6140a40}\label{structfingerCloudSample_ab628d272fe415def6a36f2bac6140a40}} 
+\index{fingerCloudSample@{fingerCloudSample}!finger\_ncloud@{finger\_ncloud}}
+\index{finger\_ncloud@{finger\_ncloud}!fingerCloudSample@{fingerCloudSample}}
+\doxysubsubsection{\texorpdfstring{finger\_ncloud}{finger\_ncloud}}
+{\footnotesize\ttfamily pcl\+::\+Point\+Cloud$<$pcl\+::\+Point\+Normal$>$\+::Ptr finger\+Cloud\+Sample\+::finger\+\_\+ncloud}
+
+
+
+Point cloud normals for current finger sample. 
+
+\mbox{\Hypertarget{structfingerCloudSample_a2b6b58e652dfc7f0d119770e1a374787}\label{structfingerCloudSample_a2b6b58e652dfc7f0d119770e1a374787}} 
+\index{fingerCloudSample@{fingerCloudSample}!finger\_nvoxel@{finger\_nvoxel}}
+\index{finger\_nvoxel@{finger\_nvoxel}!fingerCloudSample@{fingerCloudSample}}
+\doxysubsubsection{\texorpdfstring{finger\_nvoxel}{finger\_nvoxel}}
+{\footnotesize\ttfamily pcl\+::\+Point\+Cloud$<$pcl\+::\+Point\+Normal$>$\+::Ptr finger\+Cloud\+Sample\+::finger\+\_\+nvoxel}
+
+
+
+Downsampled Point cloud normals for current finger sample. 
+
+\mbox{\Hypertarget{structfingerCloudSample_ae2f2aba81e1b6daea71f6c502d081cb8}\label{structfingerCloudSample_ae2f2aba81e1b6daea71f6c502d081cb8}} 
+\index{fingerCloudSample@{fingerCloudSample}!finger\_samples@{finger\_samples}}
+\index{finger\_samples@{finger\_samples}!fingerCloudSample@{fingerCloudSample}}
+\doxysubsubsection{\texorpdfstring{finger\_samples}{finger\_samples}}
+{\footnotesize\ttfamily std\+::vector$<$std\+::shared\+\_\+ptr$<$\mbox{\hyperlink{structsingleFinger}{single\+Finger}}$>$ $>$ finger\+Cloud\+Sample\+::finger\+\_\+samples}
+
+
+
+Finger Samples derived from current finger cloud. 
+
+\mbox{\Hypertarget{structfingerCloudSample_a19d1d50bffc0e7f7a5d18dcfef094a67}\label{structfingerCloudSample_a19d1d50bffc0e7f7a5d18dcfef094a67}} 
+\index{fingerCloudSample@{fingerCloudSample}!grasp\_plane\_dist\_max@{grasp\_plane\_dist\_max}}
+\index{grasp\_plane\_dist\_max@{grasp\_plane\_dist\_max}!fingerCloudSample@{fingerCloudSample}}
+\doxysubsubsection{\texorpdfstring{grasp\_plane\_dist\_max}{grasp\_plane\_dist\_max}}
+{\footnotesize\ttfamily float finger\+Cloud\+Sample\+::grasp\+\_\+plane\+\_\+dist\+\_\+max}
+
+
+
+Maximum distance of a point in the cloud sample to the grasp plane. 
+
+\mbox{\Hypertarget{structfingerCloudSample_a38249c8296b5ccfb37d94e18116075b5}\label{structfingerCloudSample_a38249c8296b5ccfb37d94e18116075b5}} 
+\index{fingerCloudSample@{fingerCloudSample}!grasp\_plane\_dist\_min@{grasp\_plane\_dist\_min}}
+\index{grasp\_plane\_dist\_min@{grasp\_plane\_dist\_min}!fingerCloudSample@{fingerCloudSample}}
+\doxysubsubsection{\texorpdfstring{grasp\_plane\_dist\_min}{grasp\_plane\_dist\_min}}
+{\footnotesize\ttfamily float finger\+Cloud\+Sample\+::grasp\+\_\+plane\+\_\+dist\+\_\+min}
+
+
+
+Minimum distance of a point in the cloud sample to the grasp plane. 
+
+\mbox{\Hypertarget{structfingerCloudSample_aa2b9aa8414490bf8e852ace99f875c6e}\label{structfingerCloudSample_aa2b9aa8414490bf8e852ace99f875c6e}} 
+\index{fingerCloudSample@{fingerCloudSample}!start\_index@{start\_index}}
+\index{start\_index@{start\_index}!fingerCloudSample@{fingerCloudSample}}
+\doxysubsubsection{\texorpdfstring{start\_index}{start\_index}}
+{\footnotesize\ttfamily int finger\+Cloud\+Sample\+::start\+\_\+index}
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/rosi5/workspaces/emd\+\_\+ws/src/easy\+\_\+manipulation\+\_\+deployment/grasp\+\_\+planner/include/grasp\+\_\+planner/end\+\_\+effectors/\mbox{\hyperlink{finger__gripper_8hpp}{finger\+\_\+gripper.\+hpp}}\end{DoxyCompactItemize}

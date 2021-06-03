@@ -1,0 +1,64 @@
+\hypertarget{suction__gripper_8hpp}{}\doxysection{/home/rosi5/workspaces/emd\+\_\+ws/src/easy\+\_\+manipulation\+\_\+deployment/grasp\+\_\+planner/include/grasp\+\_\+planner/end\+\_\+effectors/suction\+\_\+gripper.hpp File Reference}
+\label{suction__gripper_8hpp}\index{/home/rosi5/workspaces/emd\_ws/src/easy\_manipulation\_deployment/grasp\_planner/include/grasp\_planner/end\_effectors/suction\_gripper.hpp@{/home/rosi5/workspaces/emd\_ws/src/easy\_manipulation\_deployment/grasp\_planner/include/grasp\_planner/end\_effectors/suction\_gripper.hpp}}
+{\ttfamily \#include $<$pcl/io/pcd\+\_\+io.\+h$>$}\newline
+{\ttfamily \#include $<$pcl/\+Model\+Coefficients.\+h$>$}\newline
+{\ttfamily \#include $<$pcl/point\+\_\+types.\+h$>$}\newline
+{\ttfamily \#include $<$pcl/common/centroid.\+h$>$}\newline
+{\ttfamily \#include $<$pcl/common/eigen.\+h$>$}\newline
+{\ttfamily \#include $<$pcl/common/common.\+h$>$}\newline
+{\ttfamily \#include $<$pcl/common/transforms.\+h$>$}\newline
+{\ttfamily \#include $<$pcl/search/search.\+h$>$}\newline
+{\ttfamily \#include $<$pcl/sample\+\_\+consensus/method\+\_\+types.\+h$>$}\newline
+{\ttfamily \#include $<$pcl/sample\+\_\+consensus/model\+\_\+types.\+h$>$}\newline
+{\ttfamily \#include $<$pcl/segmentation/sac\+\_\+segmentation.\+h$>$}\newline
+{\ttfamily \#include $<$pcl/segmentation/extract\+\_\+clusters.\+h$>$}\newline
+{\ttfamily \#include $<$pcl/filters/passthrough.\+h$>$}\newline
+{\ttfamily \#include $<$pcl/filters/extract\+\_\+indices.\+h$>$}\newline
+{\ttfamily \#include $<$pcl/filters/project\+\_\+inliers.\+h$>$}\newline
+{\ttfamily \#include $<$pcl/visualization/cloud\+\_\+viewer.\+h$>$}\newline
+{\ttfamily \#include $<$pcl/visualization/point\+\_\+cloud\+\_\+color\+\_\+handlers.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}visualization\+\_\+msgs/msg/marker.\+hpp\char`\"{}}\newline
+{\ttfamily \#include $<$sensor\+\_\+msgs/msg/point\+\_\+cloud2.\+hpp$>$}\newline
+{\ttfamily \#include $<$tf2\+\_\+geometry\+\_\+msgs/tf2\+\_\+geometry\+\_\+msgs.\+h$>$}\newline
+{\ttfamily \#include $<$emd\+\_\+msgs/msg/grasp\+\_\+method.\+hpp$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include $<$math.\+h$>$}\newline
+{\ttfamily \#include $<$algorithm$>$}\newline
+{\ttfamily \#include $<$cmath$>$}\newline
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include $<$chrono$>$}\newline
+{\ttfamily \#include $<$string$>$}\newline
+{\ttfamily \#include $<$memory$>$}\newline
+{\ttfamily \#include $<$vector$>$}\newline
+{\ttfamily \#include $<$future$>$}\newline
+{\ttfamily \#include \char`\"{}grasp\+\_\+planner/common/pcl\+\_\+functions.\+hpp\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}grasp\+\_\+planner/common/fcl\+\_\+functions.\+hpp\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}grasp\+\_\+planner/common/math\+\_\+functions.\+hpp\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}grasp\+\_\+planner/end\+\_\+effectors/end\+\_\+effector.\+hpp\char`\"{}}\newline
+Include dependency graph for suction\+\_\+gripper.\+hpp\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{suction__gripper_8hpp__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=277pt]{suction__gripper_8hpp__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structsingleSuctionCup}{single\+Suction\+Cup}}
+\begin{DoxyCompactList}\small\item\em Struct for a single suction cup. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structsuctionCupArray}{suction\+Cup\+Array}}
+\begin{DoxyCompactList}\small\item\em General Struct for Suction array grasp sample ~\newline
+ \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classSuctionGripper}{Suction\+Gripper}}
+\begin{DoxyCompactList}\small\item\em General Class for Suction Gripper grasp planning ~\newline
+ \end{DoxyCompactList}\end{DoxyCompactItemize}

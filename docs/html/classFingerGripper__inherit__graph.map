@@ -1,0 +1,4 @@
+<map id="FingerGripper" name="FingerGripper">
+<area shape="rect" id="node1" title="General Struct for Finger gripper grasp planning" alt="" coords="5,80,115,107"/>
+<area shape="rect" id="node2" href="$classEndEffector.html" title="Generic class for an end effector, to be inherited by other end effectors." alt="" coords="11,5,109,32"/>
+</map>

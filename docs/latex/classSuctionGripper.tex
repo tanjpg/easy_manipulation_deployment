@@ -1,0 +1,693 @@
+\hypertarget{classSuctionGripper}{}\doxysection{Suction\+Gripper Class Reference}
+\label{classSuctionGripper}\index{SuctionGripper@{SuctionGripper}}
+
+
+General Class for Suction Gripper grasp planning ~\newline
+  
+
+
+
+
+{\ttfamily \#include $<$suction\+\_\+gripper.\+hpp$>$}
+
+
+
+Inheritance diagram for Suction\+Gripper\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=169pt]{classSuctionGripper__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Suction\+Gripper\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=169pt]{classSuctionGripper__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classSuctionGripper_aaf242011415b35140ff98a6854b565d6}{Suction\+Gripper}} (std\+::string id\+\_\+, const int \&num\+\_\+cups\+\_\+length\+\_\+, const int \&num\+\_\+cups\+\_\+breadth\+\_\+, const float \&dist\+\_\+between\+\_\+cups\+\_\+length\+\_\+, const float \&dist\+\_\+between\+\_\+cups\+\_\+breadth\+\_\+, const float \&cup\+\_\+radius\+\_\+, const float \&cup\+\_\+height\+\_\+, const int \&num\+\_\+sample\+\_\+along\+\_\+axis\+\_\+, const float \&search\+\_\+resolution\+\_\+, const int \&search\+\_\+angle\+\_\+resolution\+\_\+, const float \&cloud\+\_\+normal\+\_\+radius\+\_\+, const float \&curvature\+\_\+weight\+\_\+, const float \&grasp\+\_\+center\+\_\+distance\+\_\+weight\+\_\+, const float \&num\+\_\+contact\+\_\+points\+\_\+weight\+\_\+, std\+::string length\+\_\+direction\+\_\+, std\+::string breadth\+\_\+direction\+\_\+, std\+::string grasp\+\_\+approach\+\_\+direction\+\_\+)
+\item 
+void \mbox{\hyperlink{classSuctionGripper_adc775f0baa16a727a79739da18ac62f9}{generate\+Gripper\+Attributes}} ()
+\item 
+void \mbox{\hyperlink{classSuctionGripper_aab0ef261e5f26b0aa8790b16a68e8d76}{plan\+Grasps}} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classGraspObject}{Grasp\+Object}} $>$ object, emd\+\_\+msgs\+::msg\+::\+Grasp\+Method $\ast$grasp\+\_\+method, std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classEndEffector_a786988d384b481e8b03d035bbe26e26d}{Collision\+Object}} $>$ world\+\_\+collision\+\_\+object, std\+::string camera\+\_\+frame)
+\item 
+std\+::string \mbox{\hyperlink{classSuctionGripper_ad303c6918e1f54f15a4e9267d5937b30}{get\+ID}} ()
+\item 
+void \mbox{\hyperlink{classSuctionGripper_a8df7dcf58b19b7e1766018f425f0895b}{visualize\+Grasps}} (pcl\+::visualization\+::\+P\+C\+L\+Visualizer\+::\+Ptr viewer)
+\item 
+int \mbox{\hyperlink{classSuctionGripper_a6176745acff96457358cbf9f4538167c}{get\+Centroid\+Index}} (const pcl\+::\+Point\+Cloud$<$ pcl\+::\+Point\+X\+Y\+Z\+R\+GB $>$\+::Ptr \&cloud)
+\item 
+void \mbox{\hyperlink{classSuctionGripper_a7660c5913f90811ff35247b3a8a0bfc2}{get\+All\+Possible\+Grasps}} (const std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classGraspObject}{Grasp\+Object}} $>$ \&object, const pcl\+::\+Point\+X\+YZ \&object\+\_\+center, const pcl\+::\+Point\+X\+Y\+Z\+R\+GB \&top\+\_\+point, std\+::string camera\+\_\+frame)
+\item 
+bool \mbox{\hyperlink{classSuctionGripper_aae7bda371e5a6cc6981129bbab33beb6}{get\+Cup\+Contact\+Cloud}} (pcl\+::\+Point\+X\+Y\+Z\+R\+GB contact\+\_\+point, float radius, pcl\+::\+Point\+Cloud$<$ pcl\+::\+Point\+X\+Y\+Z\+R\+GB $>$\+::Ptr cloud\+\_\+input, pcl\+::\+Point\+Cloud$<$ pcl\+::\+Point\+X\+YZ $>$\+::Ptr cloud\+\_\+output)
+\item 
+std\+::vector$<$ int $>$ \mbox{\hyperlink{classSuctionGripper_ac3242e7c8034e4b769c1b9186eb48e1b}{get\+Cup\+Contact\+Indices}} (pcl\+::\+Point\+X\+Y\+Z\+R\+GB contact\+\_\+point, float radius, pcl\+::\+Point\+Cloud$<$ pcl\+::\+Point\+X\+Y\+Z\+R\+GB $>$\+::Ptr cloud\+\_\+input)
+\item 
+pcl\+::\+Point\+X\+Y\+Z\+R\+GB \mbox{\hyperlink{classSuctionGripper_a81caa8e22bcbeb9d763914706bb8d562}{find\+Highest\+Point}} (const pcl\+::\+Point\+Cloud$<$ pcl\+::\+Point\+X\+Y\+Z\+R\+GB $>$\+::Ptr \&cloud, const char \&height\+\_\+axis, const bool \&is\+\_\+positive)
+\item 
+void \mbox{\hyperlink{classSuctionGripper_a43b7d4f5c12504b4a2305a8f2be67518}{get\+Starting\+Plane}} (pcl\+::\+Model\+Coefficients\+::\+Ptr plane\+\_\+coefficients, const Eigen\+::\+Vector3f \&axis, const Eigen\+::\+Vector4f \&object\+\_\+centerpoint, const pcl\+::\+Point\+X\+Y\+Z\+R\+GB \&top\+\_\+point, const char \&height\+\_\+axis)
+\item 
+\mbox{\hyperlink{structsingleSuctionCup}{single\+Suction\+Cup}} \mbox{\hyperlink{classSuctionGripper_a68fa9b0bbdb90e348593167f62d823f9}{generate\+Suction\+Cup}} (const pcl\+::\+Point\+Cloud$<$ pcl\+::\+Point\+X\+Y\+Z\+R\+GB $>$\+::Ptr \&projected\+\_\+cloud, const pcl\+::\+Point\+Cloud$<$ pcl\+::\+Point\+Normal $>$\+::Ptr \&sliced\+\_\+cloud\+\_\+normal, const Eigen\+::\+Vector3f \&suction\+\_\+cup\+\_\+center, const pcl\+::\+Point\+X\+YZ \&object\+\_\+center, const float \&object\+\_\+max\+\_\+dim)
+\item 
+void \mbox{\hyperlink{classSuctionGripper_a84d5e094f917077df45d8db31ea37ac6}{get\+Sliced\+Cloud}} (const pcl\+::\+Point\+Cloud$<$ pcl\+::\+Point\+X\+Y\+Z\+R\+GB $>$\+::Ptr \&input\+\_\+cloud, const pcl\+::\+Point\+Cloud$<$ pcl\+::\+Point\+Normal $>$\+::Ptr \&input\+\_\+cloud\+\_\+normal, const float \&top\+\_\+limit, const float \&bottom\+\_\+limit, pcl\+::\+Point\+Cloud$<$ pcl\+::\+Point\+X\+Y\+Z\+R\+GB $>$\+::Ptr sliced\+\_\+cloud, pcl\+::\+Point\+Cloud$<$ pcl\+::\+Point\+Normal $>$\+::Ptr sliced\+\_\+cloud\+\_\+normal, const char \&height\+\_\+axis)
+\item 
+void \mbox{\hyperlink{classSuctionGripper_a8fa99f60c3e198dd6f7992e09555496a}{project\+Cloud\+To\+Plane}} (const pcl\+::\+Point\+Cloud$<$ pcl\+::\+Point\+X\+Y\+Z\+R\+GB $>$\+::Ptr \&input\+\_\+cloud, const pcl\+::\+Model\+Coefficients\+::\+Ptr \&plane\+\_\+coefficients, pcl\+::\+Point\+Cloud$<$ pcl\+::\+Point\+X\+Y\+Z\+R\+GB $>$\+::Ptr projected\+\_\+cloud)
+\item 
+std\+::vector$<$ int $>$ \mbox{\hyperlink{classSuctionGripper_af8a8a7387c6bf25932770d5b6ae57152}{create\+Disk\+From\+Cloud}} (pcl\+::\+Point\+Cloud$<$ pcl\+::\+Point\+X\+Y\+Z\+R\+GB $>$\+::Ptr input\+\_\+cloud, pcl\+::\+Point\+Cloud$<$ pcl\+::\+Point\+Normal $>$\+::Ptr sliced\+\_\+cloud\+\_\+normal, pcl\+::\+Point\+X\+YZ centerpoint, float radius, pcl\+::\+Point\+Cloud$<$ pcl\+::\+Point\+X\+Y\+Z\+R\+GB $>$\+::Ptr disk\+\_\+cloud, float $\ast$curvature\+\_\+sum)
+\item 
+pcl\+::\+Point\+X\+YZ \mbox{\hyperlink{classSuctionGripper_a95d62e5e89f829c00344a913480a19de}{get\+Gripper\+Center}} (const Eigen\+::\+Vector3f \&object\+\_\+axis, const float \&offset, const pcl\+::\+Point\+X\+Y\+Z\+R\+GB \&slice\+\_\+centroid)
+\item 
+int \mbox{\hyperlink{classSuctionGripper_a3aaf130b6819d8025e0d1d8c6977ef36}{get\+Contact\+Points}} (const pcl\+::\+Point\+Cloud$<$ pcl\+::\+Point\+X\+Y\+Z\+R\+GB $>$\+::Ptr \&input\+\_\+cloud, const pcl\+::\+Point\+Cloud$<$ pcl\+::\+Point\+Normal $>$\+::Ptr \&sliced\+\_\+cloud\+\_\+normal, const pcl\+::\+Point\+X\+YZ \&centerpoint, float $\ast$curvature\+\_\+sum)
+\item 
+void \mbox{\hyperlink{classSuctionGripper_a6f783965f44a7293022cace216c0c23e}{update\+Max\+Min\+Values}} (const int \&num\+\_\+contact\+\_\+points, const float \&average\+\_\+curvature, const float \&center\+\_\+dist)
+\item 
+void \mbox{\hyperlink{classSuctionGripper_a29b302613449fb8ac7bc465c3fba4405}{get\+All\+Grasp\+Ranks}} (emd\+\_\+msgs\+::msg\+::\+Grasp\+Method $\ast$grasp\+\_\+method, const std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classGraspObject}{Grasp\+Object}} $>$ \&object)
+\item 
+std\+::vector$<$ double $>$ \mbox{\hyperlink{classSuctionGripper_af8c1ad418963f41ccdbbf0d26212bbf0}{get\+Planar\+R\+PY}} (const Eigen\+::\+Vector3f \&col\+\_\+vector, const Eigen\+::\+Vector3f \&row\+\_\+vector)
+\item 
+geometry\+\_\+msgs\+::msg\+::\+Pose\+Stamped \mbox{\hyperlink{classSuctionGripper_a4677ed4db9a9fb4e812e44ffca16b51c}{get\+Grasp\+Pose}} (const std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{structsuctionCupArray}{suction\+Cup\+Array}} $>$ \&grasp, const std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classGraspObject}{Grasp\+Object}} $>$ \&object)
+\item 
+\mbox{\hyperlink{structsuctionCupArray}{suction\+Cup\+Array}} \mbox{\hyperlink{classSuctionGripper_a49be8edc1eabc887800f29914c751aa9}{generate\+Grasp\+Sample}} (const pcl\+::\+Point\+Cloud$<$ pcl\+::\+Point\+X\+Y\+Z\+R\+GB $>$\+::Ptr \&projected\+\_\+cloud, const pcl\+::\+Point\+Cloud$<$ pcl\+::\+Point\+Normal $>$\+::Ptr \&sliced\+\_\+cloud\+\_\+normal, const pcl\+::\+Point\+X\+YZ \&sample\+\_\+gripper\+\_\+center, const pcl\+::\+Point\+X\+YZ \&object\+\_\+center, const Eigen\+::\+Vector3f \&grasp\+\_\+direction, const Eigen\+::\+Vector3f \&object\+\_\+direction, const float \&object\+\_\+max\+\_\+dim, std\+::string camera\+\_\+frame)
+\item 
+int \mbox{\hyperlink{classSuctionGripper_ae70b625e9cc9d7ebd12a13c68933c9be}{generate\+Weighted\+Contact\+Points}} (const int \&contact\+\_\+points, const float \&cup\+\_\+to\+\_\+center\+\_\+dist, const float \&object\+\_\+max\+\_\+dim)
+\item 
+float \mbox{\hyperlink{classSuctionGripper_a4e5a822696fa722f1ce0c505d4f62704}{get\+Gap}} (const int \&itr, const bool \&is\+\_\+even, const float \&initial\+\_\+gap, const float \&dist\+\_\+between\+\_\+cups)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::string \mbox{\hyperlink{classSuctionGripper_abc63ef21127d89a2b1a2c361eaa164f4}{id}}
+\begin{DoxyCompactList}\small\item\em Gripper ID. \end{DoxyCompactList}\item 
+const int \mbox{\hyperlink{classSuctionGripper_a7c3398a65f29a10093c1f996deba073a}{num\+\_\+cups\+\_\+length}}
+\begin{DoxyCompactList}\small\item\em User Defined\+: Number of suction cups in the length direction. \end{DoxyCompactList}\item 
+const int \mbox{\hyperlink{classSuctionGripper_a573bc1cdef472d0d57d9b10fe053d431}{num\+\_\+cups\+\_\+breadth}}
+\begin{DoxyCompactList}\small\item\em User Defined\+: Number of suction cups in the breadth direction. \end{DoxyCompactList}\item 
+const float \mbox{\hyperlink{classSuctionGripper_a3b7802ea5e8ced5954898fb10d502558}{dist\+\_\+between\+\_\+cups\+\_\+length}}
+\begin{DoxyCompactList}\small\item\em User Defined\+: Distance between the suction cups in the length direction. \end{DoxyCompactList}\item 
+const float \mbox{\hyperlink{classSuctionGripper_a715718918bef638685bd44790377e383}{dist\+\_\+between\+\_\+cups\+\_\+breadth}}
+\begin{DoxyCompactList}\small\item\em User Defined\+: Distance between the suction cups in the breadth direction. \end{DoxyCompactList}\item 
+const float \mbox{\hyperlink{classSuctionGripper_adc5103645cef45f281f3de168ec8f4ed}{cup\+\_\+radius}}
+\begin{DoxyCompactList}\small\item\em User Defined\+: Radius of each suction cup. \end{DoxyCompactList}\item 
+const float \mbox{\hyperlink{classSuctionGripper_a26a448d0b238f9457478aa3b1c203e31}{cup\+\_\+height}}
+\begin{DoxyCompactList}\small\item\em User Defined\+: Height of each suction cup. \end{DoxyCompactList}\item 
+const int \mbox{\hyperlink{classSuctionGripper_a57590586642476907a236f90abfe46ff}{num\+\_\+sample\+\_\+along\+\_\+axis}}
+\begin{DoxyCompactList}\small\item\em User Defined\+: Number of grasp samples to be sampled along the axis for each search iteration. \end{DoxyCompactList}\item 
+const float \mbox{\hyperlink{classSuctionGripper_aac51b57be4f2aea92cc8e59499621016}{search\+\_\+resolution}}
+\begin{DoxyCompactList}\small\item\em User Defined\+: Step size for each search iteration. \end{DoxyCompactList}\item 
+const int \mbox{\hyperlink{classSuctionGripper_ad7db986821a0ccce62d5be008ca441f2}{search\+\_\+angle\+\_\+resolution}}
+\begin{DoxyCompactList}\small\item\em User Defined\+: Angle resolution for each search iteration. Default is 3 for a single 90 degree angle iteration. Min 3, Max 9. \end{DoxyCompactList}\item 
+const float \mbox{\hyperlink{classSuctionGripper_a7612efbc78a528f990d27556d193850b}{cloud\+\_\+normal\+\_\+radius}}
+\begin{DoxyCompactList}\small\item\em User Defined\+: Radius used for creating Normal Point Cloud of grasp samples. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{classSuctionGripper_a30fe28bcb9eb7e8407d2a0d18cd29c17}{curvature\+\_\+weight}}
+\begin{DoxyCompactList}\small\item\em User Defined\+: Weights to determine importance of curvature. Default is 1.\+0. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{classSuctionGripper_a111277c631d57defea898bbc8229f183}{grasp\+\_\+center\+\_\+distance\+\_\+weight}}
+\begin{DoxyCompactList}\small\item\em User Defined\+: Weights to determine importance of Center Distance. Default is 1.\+0. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{classSuctionGripper_a4d8256805157824fe9466da1c59bd219}{num\+\_\+contact\+\_\+points\+\_\+weight}}
+\begin{DoxyCompactList}\small\item\em User Defined\+: Weights to determine importance of the number of contact points. Default is 1.\+0. \end{DoxyCompactList}\item 
+const char \mbox{\hyperlink{classSuctionGripper_a292890215b0d1db432356223c25c6159}{length\+\_\+direction}}
+\begin{DoxyCompactList}\small\item\em Axis in the direction of the length vector. \end{DoxyCompactList}\item 
+const char \mbox{\hyperlink{classSuctionGripper_adb9ada814d497ccff7a7dc23d84cd7bb}{breadth\+\_\+direction}}
+\begin{DoxyCompactList}\small\item\em Axis in the direction of the breadth vector. \end{DoxyCompactList}\item 
+const char \mbox{\hyperlink{classSuctionGripper_a6404148c81f75fa2a5889248d0930e4e}{grasp\+\_\+approach\+\_\+direction}}
+\begin{DoxyCompactList}\small\item\em Axis in which the gripper approaches the object. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{classSuctionGripper_a9858102c934d1dfab2dec53d0b817d8b}{breadth\+\_\+dim}}
+\begin{DoxyCompactList}\small\item\em Actual breadth dimensions of the entire suction gripper. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{classSuctionGripper_a96f2d41677a35291869378d77d94e7e3}{length\+\_\+dim}}
+\begin{DoxyCompactList}\small\item\em Actual length dimensions of the entire suction gripper. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classSuctionGripper_acce361aaea95cb02697f957cd879fe0c}{col\+\_\+is\+\_\+even}}
+\begin{DoxyCompactList}\small\item\em True if number of cups is even in the column direction. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{classSuctionGripper_ac658980008bed8861c72ffdcb9ddd9df}{col\+\_\+itr}}
+\begin{DoxyCompactList}\small\item\em Number of iterations to generate full suction cup array in the column direction. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{classSuctionGripper_a029502ed6a75c61e34c360e1a017d6c9}{col\+\_\+dist\+\_\+between\+\_\+cups}}
+\begin{DoxyCompactList}\small\item\em Distance between cups in the column direction. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{classSuctionGripper_a31431262c71f2914f379caeb13353327}{col\+\_\+initial\+\_\+gap}}
+\begin{DoxyCompactList}\small\item\em Initial distance between center of suction array gripper to the first suction cup in the column direction. \end{DoxyCompactList}\item 
+char \mbox{\hyperlink{classSuctionGripper_aee2f9d3179212e8127b3031575dd3686}{col\+\_\+direction}}
+\begin{DoxyCompactList}\small\item\em Axis in the direction of the col vector. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classSuctionGripper_aa7fe085c6d95d85a47bfbd79c4e01261}{row\+\_\+is\+\_\+even}}
+\begin{DoxyCompactList}\small\item\em True if number of cups is even in the row direction. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{classSuctionGripper_ac2eabc1107e705a9f378ef75804347d5}{row\+\_\+itr}}
+\begin{DoxyCompactList}\small\item\em Number of iterations to generate full suction cup array in the row direction. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{classSuctionGripper_adf718be5b7edd7f7d0f3815b6eaa2c28}{row\+\_\+dist\+\_\+between\+\_\+cups}}
+\begin{DoxyCompactList}\small\item\em Distance between cups in the row direction. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{classSuctionGripper_a18140d1980bc2cab8e7fa70e7f5b77d1}{row\+\_\+initial\+\_\+gap}}
+\begin{DoxyCompactList}\small\item\em Initial distance between center of suction array gripper to the first suction cup in the row direction. \end{DoxyCompactList}\item 
+char \mbox{\hyperlink{classSuctionGripper_a1d910efbaa620014ad681b745207eb13}{row\+\_\+direction}}
+\begin{DoxyCompactList}\small\item\em Axis in the direction of the breadth vector. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{classSuctionGripper_a6328a65499bbf124c0f5a4e5b41d7af4}{max\+\_\+curvature}}
+\begin{DoxyCompactList}\small\item\em Maximum average curvature value, comparing all the grasp samples sampled. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{classSuctionGripper_a707feb9173b1447c0bdc4e76d6e5335d}{min\+\_\+curvature}}
+\begin{DoxyCompactList}\small\item\em Maximum average curvature value, comparing all the grasp samples sampled. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classSuctionGripper_a6300d384daa65fad8092664933bfc6a7}{max\+\_\+contact\+\_\+points}}
+\begin{DoxyCompactList}\small\item\em Maximum total contact points, comparing all the grasp samples sampled. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classSuctionGripper_af26e0ff3e234dc714acd6086485483ea}{min\+\_\+contact\+\_\+points}}
+\begin{DoxyCompactList}\small\item\em Minimum total contact points, comparing all the grasp samples sampled. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{classSuctionGripper_ac52649dd80757216e7fa0ef8c27e87e3}{max\+\_\+center\+\_\+dist}}
+\begin{DoxyCompactList}\small\item\em Maximum distance from the center of grasp to the object center, comparing all the grasp samples sampled. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{classSuctionGripper_af2efcfa93e8538fe3227a979365531a3}{min\+\_\+center\+\_\+dist}}
+\begin{DoxyCompactList}\small\item\em Minimum total contact points, comparing all the grasp samples sampled. \end{DoxyCompactList}\item 
+std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{structsuctionCupArray}{suction\+Cup\+Array}} $>$ $>$ \mbox{\hyperlink{classSuctionGripper_a1c9ac34b4ca4b564f3283ad87007a62f}{cup\+\_\+array\+\_\+samples}}
+\begin{DoxyCompactList}\small\item\em All sampled grasp array grasps. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+General Class for Suction Gripper grasp planning ~\newline
+ 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classSuctionGripper_aaf242011415b35140ff98a6854b565d6}\label{classSuctionGripper_aaf242011415b35140ff98a6854b565d6}} 
+\index{SuctionGripper@{SuctionGripper}!SuctionGripper@{SuctionGripper}}
+\index{SuctionGripper@{SuctionGripper}!SuctionGripper@{SuctionGripper}}
+\doxysubsubsection{\texorpdfstring{SuctionGripper()}{SuctionGripper()}}
+{\footnotesize\ttfamily Suction\+Gripper\+::\+Suction\+Gripper (\begin{DoxyParamCaption}\item[{std\+::string}]{id\+\_\+,  }\item[{const int \&}]{num\+\_\+cups\+\_\+length\+\_\+,  }\item[{const int \&}]{num\+\_\+cups\+\_\+breadth\+\_\+,  }\item[{const float \&}]{dist\+\_\+between\+\_\+cups\+\_\+length\+\_\+,  }\item[{const float \&}]{dist\+\_\+between\+\_\+cups\+\_\+breadth\+\_\+,  }\item[{const float \&}]{cup\+\_\+radius\+\_\+,  }\item[{const float \&}]{cup\+\_\+height\+\_\+,  }\item[{const int \&}]{num\+\_\+sample\+\_\+along\+\_\+axis\+\_\+,  }\item[{const float \&}]{search\+\_\+resolution\+\_\+,  }\item[{const int \&}]{search\+\_\+angle\+\_\+resolution\+\_\+,  }\item[{const float \&}]{cloud\+\_\+normal\+\_\+radius\+\_\+,  }\item[{const float \&}]{curvature\+\_\+weight\+\_\+,  }\item[{const float \&}]{grasp\+\_\+center\+\_\+distance\+\_\+weight\+\_\+,  }\item[{const float \&}]{num\+\_\+contact\+\_\+points\+\_\+weight\+\_\+,  }\item[{std\+::string}]{length\+\_\+direction\+\_\+,  }\item[{std\+::string}]{breadth\+\_\+direction\+\_\+,  }\item[{std\+::string}]{grasp\+\_\+approach\+\_\+direction\+\_\+ }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classSuctionGripper_af8a8a7387c6bf25932770d5b6ae57152}\label{classSuctionGripper_af8a8a7387c6bf25932770d5b6ae57152}} 
+\index{SuctionGripper@{SuctionGripper}!createDiskFromCloud@{createDiskFromCloud}}
+\index{createDiskFromCloud@{createDiskFromCloud}!SuctionGripper@{SuctionGripper}}
+\doxysubsubsection{\texorpdfstring{createDiskFromCloud()}{createDiskFromCloud()}}
+{\footnotesize\ttfamily std\+::vector$<$int$>$ Suction\+Gripper\+::create\+Disk\+From\+Cloud (\begin{DoxyParamCaption}\item[{pcl\+::\+Point\+Cloud$<$ pcl\+::\+Point\+X\+Y\+Z\+R\+GB $>$\+::Ptr}]{input\+\_\+cloud,  }\item[{pcl\+::\+Point\+Cloud$<$ pcl\+::\+Point\+Normal $>$\+::Ptr}]{sliced\+\_\+cloud\+\_\+normal,  }\item[{pcl\+::\+Point\+X\+YZ}]{centerpoint,  }\item[{float}]{radius,  }\item[{pcl\+::\+Point\+Cloud$<$ pcl\+::\+Point\+X\+Y\+Z\+R\+GB $>$\+::Ptr}]{disk\+\_\+cloud,  }\item[{float $\ast$}]{curvature\+\_\+sum }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classSuctionGripper_a81caa8e22bcbeb9d763914706bb8d562}\label{classSuctionGripper_a81caa8e22bcbeb9d763914706bb8d562}} 
+\index{SuctionGripper@{SuctionGripper}!findHighestPoint@{findHighestPoint}}
+\index{findHighestPoint@{findHighestPoint}!SuctionGripper@{SuctionGripper}}
+\doxysubsubsection{\texorpdfstring{findHighestPoint()}{findHighestPoint()}}
+{\footnotesize\ttfamily pcl\+::\+Point\+X\+Y\+Z\+R\+GB Suction\+Gripper\+::find\+Highest\+Point (\begin{DoxyParamCaption}\item[{const pcl\+::\+Point\+Cloud$<$ pcl\+::\+Point\+X\+Y\+Z\+R\+GB $>$\+::Ptr \&}]{cloud,  }\item[{const char \&}]{height\+\_\+axis,  }\item[{const bool \&}]{is\+\_\+positive }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classSuctionGripper_a49be8edc1eabc887800f29914c751aa9}\label{classSuctionGripper_a49be8edc1eabc887800f29914c751aa9}} 
+\index{SuctionGripper@{SuctionGripper}!generateGraspSample@{generateGraspSample}}
+\index{generateGraspSample@{generateGraspSample}!SuctionGripper@{SuctionGripper}}
+\doxysubsubsection{\texorpdfstring{generateGraspSample()}{generateGraspSample()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structsuctionCupArray}{suction\+Cup\+Array}} Suction\+Gripper\+::generate\+Grasp\+Sample (\begin{DoxyParamCaption}\item[{const pcl\+::\+Point\+Cloud$<$ pcl\+::\+Point\+X\+Y\+Z\+R\+GB $>$\+::Ptr \&}]{projected\+\_\+cloud,  }\item[{const pcl\+::\+Point\+Cloud$<$ pcl\+::\+Point\+Normal $>$\+::Ptr \&}]{sliced\+\_\+cloud\+\_\+normal,  }\item[{const pcl\+::\+Point\+X\+YZ \&}]{sample\+\_\+gripper\+\_\+center,  }\item[{const pcl\+::\+Point\+X\+YZ \&}]{object\+\_\+center,  }\item[{const Eigen\+::\+Vector3f \&}]{grasp\+\_\+direction,  }\item[{const Eigen\+::\+Vector3f \&}]{object\+\_\+direction,  }\item[{const float \&}]{object\+\_\+max\+\_\+dim,  }\item[{std\+::string}]{camera\+\_\+frame }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classSuctionGripper_adc775f0baa16a727a79739da18ac62f9}\label{classSuctionGripper_adc775f0baa16a727a79739da18ac62f9}} 
+\index{SuctionGripper@{SuctionGripper}!generateGripperAttributes@{generateGripperAttributes}}
+\index{generateGripperAttributes@{generateGripperAttributes}!SuctionGripper@{SuctionGripper}}
+\doxysubsubsection{\texorpdfstring{generateGripperAttributes()}{generateGripperAttributes()}}
+{\footnotesize\ttfamily void Suction\+Gripper\+::generate\+Gripper\+Attributes (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classSuctionGripper_a68fa9b0bbdb90e348593167f62d823f9}\label{classSuctionGripper_a68fa9b0bbdb90e348593167f62d823f9}} 
+\index{SuctionGripper@{SuctionGripper}!generateSuctionCup@{generateSuctionCup}}
+\index{generateSuctionCup@{generateSuctionCup}!SuctionGripper@{SuctionGripper}}
+\doxysubsubsection{\texorpdfstring{generateSuctionCup()}{generateSuctionCup()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structsingleSuctionCup}{single\+Suction\+Cup}} Suction\+Gripper\+::generate\+Suction\+Cup (\begin{DoxyParamCaption}\item[{const pcl\+::\+Point\+Cloud$<$ pcl\+::\+Point\+X\+Y\+Z\+R\+GB $>$\+::Ptr \&}]{projected\+\_\+cloud,  }\item[{const pcl\+::\+Point\+Cloud$<$ pcl\+::\+Point\+Normal $>$\+::Ptr \&}]{sliced\+\_\+cloud\+\_\+normal,  }\item[{const Eigen\+::\+Vector3f \&}]{suction\+\_\+cup\+\_\+center,  }\item[{const pcl\+::\+Point\+X\+YZ \&}]{object\+\_\+center,  }\item[{const float \&}]{object\+\_\+max\+\_\+dim }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classSuctionGripper_ae70b625e9cc9d7ebd12a13c68933c9be}\label{classSuctionGripper_ae70b625e9cc9d7ebd12a13c68933c9be}} 
+\index{SuctionGripper@{SuctionGripper}!generateWeightedContactPoints@{generateWeightedContactPoints}}
+\index{generateWeightedContactPoints@{generateWeightedContactPoints}!SuctionGripper@{SuctionGripper}}
+\doxysubsubsection{\texorpdfstring{generateWeightedContactPoints()}{generateWeightedContactPoints()}}
+{\footnotesize\ttfamily int Suction\+Gripper\+::generate\+Weighted\+Contact\+Points (\begin{DoxyParamCaption}\item[{const int \&}]{contact\+\_\+points,  }\item[{const float \&}]{cup\+\_\+to\+\_\+center\+\_\+dist,  }\item[{const float \&}]{object\+\_\+max\+\_\+dim }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classSuctionGripper_a29b302613449fb8ac7bc465c3fba4405}\label{classSuctionGripper_a29b302613449fb8ac7bc465c3fba4405}} 
+\index{SuctionGripper@{SuctionGripper}!getAllGraspRanks@{getAllGraspRanks}}
+\index{getAllGraspRanks@{getAllGraspRanks}!SuctionGripper@{SuctionGripper}}
+\doxysubsubsection{\texorpdfstring{getAllGraspRanks()}{getAllGraspRanks()}}
+{\footnotesize\ttfamily void Suction\+Gripper\+::get\+All\+Grasp\+Ranks (\begin{DoxyParamCaption}\item[{emd\+\_\+msgs\+::msg\+::\+Grasp\+Method $\ast$}]{grasp\+\_\+method,  }\item[{const std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classGraspObject}{Grasp\+Object}} $>$ \&}]{object }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classSuctionGripper_a7660c5913f90811ff35247b3a8a0bfc2}\label{classSuctionGripper_a7660c5913f90811ff35247b3a8a0bfc2}} 
+\index{SuctionGripper@{SuctionGripper}!getAllPossibleGrasps@{getAllPossibleGrasps}}
+\index{getAllPossibleGrasps@{getAllPossibleGrasps}!SuctionGripper@{SuctionGripper}}
+\doxysubsubsection{\texorpdfstring{getAllPossibleGrasps()}{getAllPossibleGrasps()}}
+{\footnotesize\ttfamily void Suction\+Gripper\+::get\+All\+Possible\+Grasps (\begin{DoxyParamCaption}\item[{const std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classGraspObject}{Grasp\+Object}} $>$ \&}]{object,  }\item[{const pcl\+::\+Point\+X\+YZ \&}]{object\+\_\+center,  }\item[{const pcl\+::\+Point\+X\+Y\+Z\+R\+GB \&}]{top\+\_\+point,  }\item[{std\+::string}]{camera\+\_\+frame }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classSuctionGripper_a6176745acff96457358cbf9f4538167c}\label{classSuctionGripper_a6176745acff96457358cbf9f4538167c}} 
+\index{SuctionGripper@{SuctionGripper}!getCentroidIndex@{getCentroidIndex}}
+\index{getCentroidIndex@{getCentroidIndex}!SuctionGripper@{SuctionGripper}}
+\doxysubsubsection{\texorpdfstring{getCentroidIndex()}{getCentroidIndex()}}
+{\footnotesize\ttfamily int Suction\+Gripper\+::get\+Centroid\+Index (\begin{DoxyParamCaption}\item[{const pcl\+::\+Point\+Cloud$<$ pcl\+::\+Point\+X\+Y\+Z\+R\+GB $>$\+::Ptr \&}]{cloud }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classSuctionGripper_a3aaf130b6819d8025e0d1d8c6977ef36}\label{classSuctionGripper_a3aaf130b6819d8025e0d1d8c6977ef36}} 
+\index{SuctionGripper@{SuctionGripper}!getContactPoints@{getContactPoints}}
+\index{getContactPoints@{getContactPoints}!SuctionGripper@{SuctionGripper}}
+\doxysubsubsection{\texorpdfstring{getContactPoints()}{getContactPoints()}}
+{\footnotesize\ttfamily int Suction\+Gripper\+::get\+Contact\+Points (\begin{DoxyParamCaption}\item[{const pcl\+::\+Point\+Cloud$<$ pcl\+::\+Point\+X\+Y\+Z\+R\+GB $>$\+::Ptr \&}]{input\+\_\+cloud,  }\item[{const pcl\+::\+Point\+Cloud$<$ pcl\+::\+Point\+Normal $>$\+::Ptr \&}]{sliced\+\_\+cloud\+\_\+normal,  }\item[{const pcl\+::\+Point\+X\+YZ \&}]{centerpoint,  }\item[{float $\ast$}]{curvature\+\_\+sum }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classSuctionGripper_aae7bda371e5a6cc6981129bbab33beb6}\label{classSuctionGripper_aae7bda371e5a6cc6981129bbab33beb6}} 
+\index{SuctionGripper@{SuctionGripper}!getCupContactCloud@{getCupContactCloud}}
+\index{getCupContactCloud@{getCupContactCloud}!SuctionGripper@{SuctionGripper}}
+\doxysubsubsection{\texorpdfstring{getCupContactCloud()}{getCupContactCloud()}}
+{\footnotesize\ttfamily bool Suction\+Gripper\+::get\+Cup\+Contact\+Cloud (\begin{DoxyParamCaption}\item[{pcl\+::\+Point\+X\+Y\+Z\+R\+GB}]{contact\+\_\+point,  }\item[{float}]{radius,  }\item[{pcl\+::\+Point\+Cloud$<$ pcl\+::\+Point\+X\+Y\+Z\+R\+GB $>$\+::Ptr}]{cloud\+\_\+input,  }\item[{pcl\+::\+Point\+Cloud$<$ pcl\+::\+Point\+X\+YZ $>$\+::Ptr}]{cloud\+\_\+output }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classSuctionGripper_ac3242e7c8034e4b769c1b9186eb48e1b}\label{classSuctionGripper_ac3242e7c8034e4b769c1b9186eb48e1b}} 
+\index{SuctionGripper@{SuctionGripper}!getCupContactIndices@{getCupContactIndices}}
+\index{getCupContactIndices@{getCupContactIndices}!SuctionGripper@{SuctionGripper}}
+\doxysubsubsection{\texorpdfstring{getCupContactIndices()}{getCupContactIndices()}}
+{\footnotesize\ttfamily std\+::vector$<$int$>$ Suction\+Gripper\+::get\+Cup\+Contact\+Indices (\begin{DoxyParamCaption}\item[{pcl\+::\+Point\+X\+Y\+Z\+R\+GB}]{contact\+\_\+point,  }\item[{float}]{radius,  }\item[{pcl\+::\+Point\+Cloud$<$ pcl\+::\+Point\+X\+Y\+Z\+R\+GB $>$\+::Ptr}]{cloud\+\_\+input }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classSuctionGripper_a4e5a822696fa722f1ce0c505d4f62704}\label{classSuctionGripper_a4e5a822696fa722f1ce0c505d4f62704}} 
+\index{SuctionGripper@{SuctionGripper}!getGap@{getGap}}
+\index{getGap@{getGap}!SuctionGripper@{SuctionGripper}}
+\doxysubsubsection{\texorpdfstring{getGap()}{getGap()}}
+{\footnotesize\ttfamily float Suction\+Gripper\+::get\+Gap (\begin{DoxyParamCaption}\item[{const int \&}]{itr,  }\item[{const bool \&}]{is\+\_\+even,  }\item[{const float \&}]{initial\+\_\+gap,  }\item[{const float \&}]{dist\+\_\+between\+\_\+cups }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classSuctionGripper_a4677ed4db9a9fb4e812e44ffca16b51c}\label{classSuctionGripper_a4677ed4db9a9fb4e812e44ffca16b51c}} 
+\index{SuctionGripper@{SuctionGripper}!getGraspPose@{getGraspPose}}
+\index{getGraspPose@{getGraspPose}!SuctionGripper@{SuctionGripper}}
+\doxysubsubsection{\texorpdfstring{getGraspPose()}{getGraspPose()}}
+{\footnotesize\ttfamily geometry\+\_\+msgs\+::msg\+::\+Pose\+Stamped Suction\+Gripper\+::get\+Grasp\+Pose (\begin{DoxyParamCaption}\item[{const std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{structsuctionCupArray}{suction\+Cup\+Array}} $>$ \&}]{grasp,  }\item[{const std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classGraspObject}{Grasp\+Object}} $>$ \&}]{object }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classSuctionGripper_a95d62e5e89f829c00344a913480a19de}\label{classSuctionGripper_a95d62e5e89f829c00344a913480a19de}} 
+\index{SuctionGripper@{SuctionGripper}!getGripperCenter@{getGripperCenter}}
+\index{getGripperCenter@{getGripperCenter}!SuctionGripper@{SuctionGripper}}
+\doxysubsubsection{\texorpdfstring{getGripperCenter()}{getGripperCenter()}}
+{\footnotesize\ttfamily pcl\+::\+Point\+X\+YZ Suction\+Gripper\+::get\+Gripper\+Center (\begin{DoxyParamCaption}\item[{const Eigen\+::\+Vector3f \&}]{object\+\_\+axis,  }\item[{const float \&}]{offset,  }\item[{const pcl\+::\+Point\+X\+Y\+Z\+R\+GB \&}]{slice\+\_\+centroid }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classSuctionGripper_ad303c6918e1f54f15a4e9267d5937b30}\label{classSuctionGripper_ad303c6918e1f54f15a4e9267d5937b30}} 
+\index{SuctionGripper@{SuctionGripper}!getID@{getID}}
+\index{getID@{getID}!SuctionGripper@{SuctionGripper}}
+\doxysubsubsection{\texorpdfstring{getID()}{getID()}}
+{\footnotesize\ttfamily std\+::string Suction\+Gripper\+::get\+ID (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{classEndEffector_a8e31e81d48fa8cf8b1be104153ed2f11}{End\+Effector}}.
+
+\mbox{\Hypertarget{classSuctionGripper_af8c1ad418963f41ccdbbf0d26212bbf0}\label{classSuctionGripper_af8c1ad418963f41ccdbbf0d26212bbf0}} 
+\index{SuctionGripper@{SuctionGripper}!getPlanarRPY@{getPlanarRPY}}
+\index{getPlanarRPY@{getPlanarRPY}!SuctionGripper@{SuctionGripper}}
+\doxysubsubsection{\texorpdfstring{getPlanarRPY()}{getPlanarRPY()}}
+{\footnotesize\ttfamily std\+::vector$<$double$>$ Suction\+Gripper\+::get\+Planar\+R\+PY (\begin{DoxyParamCaption}\item[{const Eigen\+::\+Vector3f \&}]{col\+\_\+vector,  }\item[{const Eigen\+::\+Vector3f \&}]{row\+\_\+vector }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classSuctionGripper_a84d5e094f917077df45d8db31ea37ac6}\label{classSuctionGripper_a84d5e094f917077df45d8db31ea37ac6}} 
+\index{SuctionGripper@{SuctionGripper}!getSlicedCloud@{getSlicedCloud}}
+\index{getSlicedCloud@{getSlicedCloud}!SuctionGripper@{SuctionGripper}}
+\doxysubsubsection{\texorpdfstring{getSlicedCloud()}{getSlicedCloud()}}
+{\footnotesize\ttfamily void Suction\+Gripper\+::get\+Sliced\+Cloud (\begin{DoxyParamCaption}\item[{const pcl\+::\+Point\+Cloud$<$ pcl\+::\+Point\+X\+Y\+Z\+R\+GB $>$\+::Ptr \&}]{input\+\_\+cloud,  }\item[{const pcl\+::\+Point\+Cloud$<$ pcl\+::\+Point\+Normal $>$\+::Ptr \&}]{input\+\_\+cloud\+\_\+normal,  }\item[{const float \&}]{top\+\_\+limit,  }\item[{const float \&}]{bottom\+\_\+limit,  }\item[{pcl\+::\+Point\+Cloud$<$ pcl\+::\+Point\+X\+Y\+Z\+R\+GB $>$\+::Ptr}]{sliced\+\_\+cloud,  }\item[{pcl\+::\+Point\+Cloud$<$ pcl\+::\+Point\+Normal $>$\+::Ptr}]{sliced\+\_\+cloud\+\_\+normal,  }\item[{const char \&}]{height\+\_\+axis }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classSuctionGripper_a43b7d4f5c12504b4a2305a8f2be67518}\label{classSuctionGripper_a43b7d4f5c12504b4a2305a8f2be67518}} 
+\index{SuctionGripper@{SuctionGripper}!getStartingPlane@{getStartingPlane}}
+\index{getStartingPlane@{getStartingPlane}!SuctionGripper@{SuctionGripper}}
+\doxysubsubsection{\texorpdfstring{getStartingPlane()}{getStartingPlane()}}
+{\footnotesize\ttfamily void Suction\+Gripper\+::get\+Starting\+Plane (\begin{DoxyParamCaption}\item[{pcl\+::\+Model\+Coefficients\+::\+Ptr}]{plane\+\_\+coefficients,  }\item[{const Eigen\+::\+Vector3f \&}]{axis,  }\item[{const Eigen\+::\+Vector4f \&}]{object\+\_\+centerpoint,  }\item[{const pcl\+::\+Point\+X\+Y\+Z\+R\+GB \&}]{top\+\_\+point,  }\item[{const char \&}]{height\+\_\+axis }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classSuctionGripper_aab0ef261e5f26b0aa8790b16a68e8d76}\label{classSuctionGripper_aab0ef261e5f26b0aa8790b16a68e8d76}} 
+\index{SuctionGripper@{SuctionGripper}!planGrasps@{planGrasps}}
+\index{planGrasps@{planGrasps}!SuctionGripper@{SuctionGripper}}
+\doxysubsubsection{\texorpdfstring{planGrasps()}{planGrasps()}}
+{\footnotesize\ttfamily void Suction\+Gripper\+::plan\+Grasps (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classGraspObject}{Grasp\+Object}} $>$}]{object,  }\item[{emd\+\_\+msgs\+::msg\+::\+Grasp\+Method $\ast$}]{grasp\+\_\+method,  }\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classEndEffector_a786988d384b481e8b03d035bbe26e26d}{Collision\+Object}} $>$}]{world\+\_\+collision\+\_\+object,  }\item[{std\+::string}]{camera\+\_\+frame }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{classEndEffector_ad29fc2c7977c27f94cb61779a5029739}{End\+Effector}}.
+
+\mbox{\Hypertarget{classSuctionGripper_a8fa99f60c3e198dd6f7992e09555496a}\label{classSuctionGripper_a8fa99f60c3e198dd6f7992e09555496a}} 
+\index{SuctionGripper@{SuctionGripper}!projectCloudToPlane@{projectCloudToPlane}}
+\index{projectCloudToPlane@{projectCloudToPlane}!SuctionGripper@{SuctionGripper}}
+\doxysubsubsection{\texorpdfstring{projectCloudToPlane()}{projectCloudToPlane()}}
+{\footnotesize\ttfamily void Suction\+Gripper\+::project\+Cloud\+To\+Plane (\begin{DoxyParamCaption}\item[{const pcl\+::\+Point\+Cloud$<$ pcl\+::\+Point\+X\+Y\+Z\+R\+GB $>$\+::Ptr \&}]{input\+\_\+cloud,  }\item[{const pcl\+::\+Model\+Coefficients\+::\+Ptr \&}]{plane\+\_\+coefficients,  }\item[{pcl\+::\+Point\+Cloud$<$ pcl\+::\+Point\+X\+Y\+Z\+R\+GB $>$\+::Ptr}]{projected\+\_\+cloud }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classSuctionGripper_a6f783965f44a7293022cace216c0c23e}\label{classSuctionGripper_a6f783965f44a7293022cace216c0c23e}} 
+\index{SuctionGripper@{SuctionGripper}!updateMaxMinValues@{updateMaxMinValues}}
+\index{updateMaxMinValues@{updateMaxMinValues}!SuctionGripper@{SuctionGripper}}
+\doxysubsubsection{\texorpdfstring{updateMaxMinValues()}{updateMaxMinValues()}}
+{\footnotesize\ttfamily void Suction\+Gripper\+::update\+Max\+Min\+Values (\begin{DoxyParamCaption}\item[{const int \&}]{num\+\_\+contact\+\_\+points,  }\item[{const float \&}]{average\+\_\+curvature,  }\item[{const float \&}]{center\+\_\+dist }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classSuctionGripper_a8df7dcf58b19b7e1766018f425f0895b}\label{classSuctionGripper_a8df7dcf58b19b7e1766018f425f0895b}} 
+\index{SuctionGripper@{SuctionGripper}!visualizeGrasps@{visualizeGrasps}}
+\index{visualizeGrasps@{visualizeGrasps}!SuctionGripper@{SuctionGripper}}
+\doxysubsubsection{\texorpdfstring{visualizeGrasps()}{visualizeGrasps()}}
+{\footnotesize\ttfamily void Suction\+Gripper\+::visualize\+Grasps (\begin{DoxyParamCaption}\item[{pcl\+::visualization\+::\+P\+C\+L\+Visualizer\+::\+Ptr}]{viewer }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{classEndEffector_a43c2afac8b1021dfe6eff3ad5bf86ecf}{End\+Effector}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classSuctionGripper_a9858102c934d1dfab2dec53d0b817d8b}\label{classSuctionGripper_a9858102c934d1dfab2dec53d0b817d8b}} 
+\index{SuctionGripper@{SuctionGripper}!breadth\_dim@{breadth\_dim}}
+\index{breadth\_dim@{breadth\_dim}!SuctionGripper@{SuctionGripper}}
+\doxysubsubsection{\texorpdfstring{breadth\_dim}{breadth\_dim}}
+{\footnotesize\ttfamily float Suction\+Gripper\+::breadth\+\_\+dim}
+
+
+
+Actual breadth dimensions of the entire suction gripper. 
+
+\mbox{\Hypertarget{classSuctionGripper_adb9ada814d497ccff7a7dc23d84cd7bb}\label{classSuctionGripper_adb9ada814d497ccff7a7dc23d84cd7bb}} 
+\index{SuctionGripper@{SuctionGripper}!breadth\_direction@{breadth\_direction}}
+\index{breadth\_direction@{breadth\_direction}!SuctionGripper@{SuctionGripper}}
+\doxysubsubsection{\texorpdfstring{breadth\_direction}{breadth\_direction}}
+{\footnotesize\ttfamily const char Suction\+Gripper\+::breadth\+\_\+direction}
+
+
+
+Axis in the direction of the breadth vector. 
+
+\mbox{\Hypertarget{classSuctionGripper_a7612efbc78a528f990d27556d193850b}\label{classSuctionGripper_a7612efbc78a528f990d27556d193850b}} 
+\index{SuctionGripper@{SuctionGripper}!cloud\_normal\_radius@{cloud\_normal\_radius}}
+\index{cloud\_normal\_radius@{cloud\_normal\_radius}!SuctionGripper@{SuctionGripper}}
+\doxysubsubsection{\texorpdfstring{cloud\_normal\_radius}{cloud\_normal\_radius}}
+{\footnotesize\ttfamily const float Suction\+Gripper\+::cloud\+\_\+normal\+\_\+radius}
+
+
+
+User Defined\+: Radius used for creating Normal Point Cloud of grasp samples. 
+
+\mbox{\Hypertarget{classSuctionGripper_aee2f9d3179212e8127b3031575dd3686}\label{classSuctionGripper_aee2f9d3179212e8127b3031575dd3686}} 
+\index{SuctionGripper@{SuctionGripper}!col\_direction@{col\_direction}}
+\index{col\_direction@{col\_direction}!SuctionGripper@{SuctionGripper}}
+\doxysubsubsection{\texorpdfstring{col\_direction}{col\_direction}}
+{\footnotesize\ttfamily char Suction\+Gripper\+::col\+\_\+direction}
+
+
+
+Axis in the direction of the col vector. 
+
+\mbox{\Hypertarget{classSuctionGripper_a029502ed6a75c61e34c360e1a017d6c9}\label{classSuctionGripper_a029502ed6a75c61e34c360e1a017d6c9}} 
+\index{SuctionGripper@{SuctionGripper}!col\_dist\_between\_cups@{col\_dist\_between\_cups}}
+\index{col\_dist\_between\_cups@{col\_dist\_between\_cups}!SuctionGripper@{SuctionGripper}}
+\doxysubsubsection{\texorpdfstring{col\_dist\_between\_cups}{col\_dist\_between\_cups}}
+{\footnotesize\ttfamily float Suction\+Gripper\+::col\+\_\+dist\+\_\+between\+\_\+cups}
+
+
+
+Distance between cups in the column direction. 
+
+\mbox{\Hypertarget{classSuctionGripper_a31431262c71f2914f379caeb13353327}\label{classSuctionGripper_a31431262c71f2914f379caeb13353327}} 
+\index{SuctionGripper@{SuctionGripper}!col\_initial\_gap@{col\_initial\_gap}}
+\index{col\_initial\_gap@{col\_initial\_gap}!SuctionGripper@{SuctionGripper}}
+\doxysubsubsection{\texorpdfstring{col\_initial\_gap}{col\_initial\_gap}}
+{\footnotesize\ttfamily float Suction\+Gripper\+::col\+\_\+initial\+\_\+gap}
+
+
+
+Initial distance between center of suction array gripper to the first suction cup in the column direction. 
+
+\mbox{\Hypertarget{classSuctionGripper_acce361aaea95cb02697f957cd879fe0c}\label{classSuctionGripper_acce361aaea95cb02697f957cd879fe0c}} 
+\index{SuctionGripper@{SuctionGripper}!col\_is\_even@{col\_is\_even}}
+\index{col\_is\_even@{col\_is\_even}!SuctionGripper@{SuctionGripper}}
+\doxysubsubsection{\texorpdfstring{col\_is\_even}{col\_is\_even}}
+{\footnotesize\ttfamily bool Suction\+Gripper\+::col\+\_\+is\+\_\+even}
+
+
+
+True if number of cups is even in the column direction. 
+
+\mbox{\Hypertarget{classSuctionGripper_ac658980008bed8861c72ffdcb9ddd9df}\label{classSuctionGripper_ac658980008bed8861c72ffdcb9ddd9df}} 
+\index{SuctionGripper@{SuctionGripper}!col\_itr@{col\_itr}}
+\index{col\_itr@{col\_itr}!SuctionGripper@{SuctionGripper}}
+\doxysubsubsection{\texorpdfstring{col\_itr}{col\_itr}}
+{\footnotesize\ttfamily float Suction\+Gripper\+::col\+\_\+itr}
+
+
+
+Number of iterations to generate full suction cup array in the column direction. 
+
+\mbox{\Hypertarget{classSuctionGripper_a1c9ac34b4ca4b564f3283ad87007a62f}\label{classSuctionGripper_a1c9ac34b4ca4b564f3283ad87007a62f}} 
+\index{SuctionGripper@{SuctionGripper}!cup\_array\_samples@{cup\_array\_samples}}
+\index{cup\_array\_samples@{cup\_array\_samples}!SuctionGripper@{SuctionGripper}}
+\doxysubsubsection{\texorpdfstring{cup\_array\_samples}{cup\_array\_samples}}
+{\footnotesize\ttfamily std\+::vector$<$std\+::shared\+\_\+ptr$<$\mbox{\hyperlink{structsuctionCupArray}{suction\+Cup\+Array}}$>$ $>$ Suction\+Gripper\+::cup\+\_\+array\+\_\+samples}
+
+
+
+All sampled grasp array grasps. 
+
+\mbox{\Hypertarget{classSuctionGripper_a26a448d0b238f9457478aa3b1c203e31}\label{classSuctionGripper_a26a448d0b238f9457478aa3b1c203e31}} 
+\index{SuctionGripper@{SuctionGripper}!cup\_height@{cup\_height}}
+\index{cup\_height@{cup\_height}!SuctionGripper@{SuctionGripper}}
+\doxysubsubsection{\texorpdfstring{cup\_height}{cup\_height}}
+{\footnotesize\ttfamily const float Suction\+Gripper\+::cup\+\_\+height}
+
+
+
+User Defined\+: Height of each suction cup. 
+
+\mbox{\Hypertarget{classSuctionGripper_adc5103645cef45f281f3de168ec8f4ed}\label{classSuctionGripper_adc5103645cef45f281f3de168ec8f4ed}} 
+\index{SuctionGripper@{SuctionGripper}!cup\_radius@{cup\_radius}}
+\index{cup\_radius@{cup\_radius}!SuctionGripper@{SuctionGripper}}
+\doxysubsubsection{\texorpdfstring{cup\_radius}{cup\_radius}}
+{\footnotesize\ttfamily const float Suction\+Gripper\+::cup\+\_\+radius}
+
+
+
+User Defined\+: Radius of each suction cup. 
+
+\mbox{\Hypertarget{classSuctionGripper_a30fe28bcb9eb7e8407d2a0d18cd29c17}\label{classSuctionGripper_a30fe28bcb9eb7e8407d2a0d18cd29c17}} 
+\index{SuctionGripper@{SuctionGripper}!curvature\_weight@{curvature\_weight}}
+\index{curvature\_weight@{curvature\_weight}!SuctionGripper@{SuctionGripper}}
+\doxysubsubsection{\texorpdfstring{curvature\_weight}{curvature\_weight}}
+{\footnotesize\ttfamily float Suction\+Gripper\+::curvature\+\_\+weight}
+
+
+
+User Defined\+: Weights to determine importance of curvature. Default is 1.\+0. 
+
+\mbox{\Hypertarget{classSuctionGripper_a715718918bef638685bd44790377e383}\label{classSuctionGripper_a715718918bef638685bd44790377e383}} 
+\index{SuctionGripper@{SuctionGripper}!dist\_between\_cups\_breadth@{dist\_between\_cups\_breadth}}
+\index{dist\_between\_cups\_breadth@{dist\_between\_cups\_breadth}!SuctionGripper@{SuctionGripper}}
+\doxysubsubsection{\texorpdfstring{dist\_between\_cups\_breadth}{dist\_between\_cups\_breadth}}
+{\footnotesize\ttfamily const float Suction\+Gripper\+::dist\+\_\+between\+\_\+cups\+\_\+breadth}
+
+
+
+User Defined\+: Distance between the suction cups in the breadth direction. 
+
+\mbox{\Hypertarget{classSuctionGripper_a3b7802ea5e8ced5954898fb10d502558}\label{classSuctionGripper_a3b7802ea5e8ced5954898fb10d502558}} 
+\index{SuctionGripper@{SuctionGripper}!dist\_between\_cups\_length@{dist\_between\_cups\_length}}
+\index{dist\_between\_cups\_length@{dist\_between\_cups\_length}!SuctionGripper@{SuctionGripper}}
+\doxysubsubsection{\texorpdfstring{dist\_between\_cups\_length}{dist\_between\_cups\_length}}
+{\footnotesize\ttfamily const float Suction\+Gripper\+::dist\+\_\+between\+\_\+cups\+\_\+length}
+
+
+
+User Defined\+: Distance between the suction cups in the length direction. 
+
+\mbox{\Hypertarget{classSuctionGripper_a6404148c81f75fa2a5889248d0930e4e}\label{classSuctionGripper_a6404148c81f75fa2a5889248d0930e4e}} 
+\index{SuctionGripper@{SuctionGripper}!grasp\_approach\_direction@{grasp\_approach\_direction}}
+\index{grasp\_approach\_direction@{grasp\_approach\_direction}!SuctionGripper@{SuctionGripper}}
+\doxysubsubsection{\texorpdfstring{grasp\_approach\_direction}{grasp\_approach\_direction}}
+{\footnotesize\ttfamily const char Suction\+Gripper\+::grasp\+\_\+approach\+\_\+direction}
+
+
+
+Axis in which the gripper approaches the object. 
+
+\mbox{\Hypertarget{classSuctionGripper_a111277c631d57defea898bbc8229f183}\label{classSuctionGripper_a111277c631d57defea898bbc8229f183}} 
+\index{SuctionGripper@{SuctionGripper}!grasp\_center\_distance\_weight@{grasp\_center\_distance\_weight}}
+\index{grasp\_center\_distance\_weight@{grasp\_center\_distance\_weight}!SuctionGripper@{SuctionGripper}}
+\doxysubsubsection{\texorpdfstring{grasp\_center\_distance\_weight}{grasp\_center\_distance\_weight}}
+{\footnotesize\ttfamily float Suction\+Gripper\+::grasp\+\_\+center\+\_\+distance\+\_\+weight}
+
+
+
+User Defined\+: Weights to determine importance of Center Distance. Default is 1.\+0. 
+
+\mbox{\Hypertarget{classSuctionGripper_abc63ef21127d89a2b1a2c361eaa164f4}\label{classSuctionGripper_abc63ef21127d89a2b1a2c361eaa164f4}} 
+\index{SuctionGripper@{SuctionGripper}!id@{id}}
+\index{id@{id}!SuctionGripper@{SuctionGripper}}
+\doxysubsubsection{\texorpdfstring{id}{id}}
+{\footnotesize\ttfamily std\+::string Suction\+Gripper\+::id}
+
+
+
+Gripper ID. 
+
+\mbox{\Hypertarget{classSuctionGripper_a96f2d41677a35291869378d77d94e7e3}\label{classSuctionGripper_a96f2d41677a35291869378d77d94e7e3}} 
+\index{SuctionGripper@{SuctionGripper}!length\_dim@{length\_dim}}
+\index{length\_dim@{length\_dim}!SuctionGripper@{SuctionGripper}}
+\doxysubsubsection{\texorpdfstring{length\_dim}{length\_dim}}
+{\footnotesize\ttfamily float Suction\+Gripper\+::length\+\_\+dim}
+
+
+
+Actual length dimensions of the entire suction gripper. 
+
+\mbox{\Hypertarget{classSuctionGripper_a292890215b0d1db432356223c25c6159}\label{classSuctionGripper_a292890215b0d1db432356223c25c6159}} 
+\index{SuctionGripper@{SuctionGripper}!length\_direction@{length\_direction}}
+\index{length\_direction@{length\_direction}!SuctionGripper@{SuctionGripper}}
+\doxysubsubsection{\texorpdfstring{length\_direction}{length\_direction}}
+{\footnotesize\ttfamily const char Suction\+Gripper\+::length\+\_\+direction}
+
+
+
+Axis in the direction of the length vector. 
+
+\mbox{\Hypertarget{classSuctionGripper_ac52649dd80757216e7fa0ef8c27e87e3}\label{classSuctionGripper_ac52649dd80757216e7fa0ef8c27e87e3}} 
+\index{SuctionGripper@{SuctionGripper}!max\_center\_dist@{max\_center\_dist}}
+\index{max\_center\_dist@{max\_center\_dist}!SuctionGripper@{SuctionGripper}}
+\doxysubsubsection{\texorpdfstring{max\_center\_dist}{max\_center\_dist}}
+{\footnotesize\ttfamily float Suction\+Gripper\+::max\+\_\+center\+\_\+dist}
+
+
+
+Maximum distance from the center of grasp to the object center, comparing all the grasp samples sampled. 
+
+\mbox{\Hypertarget{classSuctionGripper_a6300d384daa65fad8092664933bfc6a7}\label{classSuctionGripper_a6300d384daa65fad8092664933bfc6a7}} 
+\index{SuctionGripper@{SuctionGripper}!max\_contact\_points@{max\_contact\_points}}
+\index{max\_contact\_points@{max\_contact\_points}!SuctionGripper@{SuctionGripper}}
+\doxysubsubsection{\texorpdfstring{max\_contact\_points}{max\_contact\_points}}
+{\footnotesize\ttfamily int Suction\+Gripper\+::max\+\_\+contact\+\_\+points}
+
+
+
+Maximum total contact points, comparing all the grasp samples sampled. 
+
+\mbox{\Hypertarget{classSuctionGripper_a6328a65499bbf124c0f5a4e5b41d7af4}\label{classSuctionGripper_a6328a65499bbf124c0f5a4e5b41d7af4}} 
+\index{SuctionGripper@{SuctionGripper}!max\_curvature@{max\_curvature}}
+\index{max\_curvature@{max\_curvature}!SuctionGripper@{SuctionGripper}}
+\doxysubsubsection{\texorpdfstring{max\_curvature}{max\_curvature}}
+{\footnotesize\ttfamily float Suction\+Gripper\+::max\+\_\+curvature}
+
+
+
+Maximum average curvature value, comparing all the grasp samples sampled. 
+
+\mbox{\Hypertarget{classSuctionGripper_af2efcfa93e8538fe3227a979365531a3}\label{classSuctionGripper_af2efcfa93e8538fe3227a979365531a3}} 
+\index{SuctionGripper@{SuctionGripper}!min\_center\_dist@{min\_center\_dist}}
+\index{min\_center\_dist@{min\_center\_dist}!SuctionGripper@{SuctionGripper}}
+\doxysubsubsection{\texorpdfstring{min\_center\_dist}{min\_center\_dist}}
+{\footnotesize\ttfamily float Suction\+Gripper\+::min\+\_\+center\+\_\+dist}
+
+
+
+Minimum total contact points, comparing all the grasp samples sampled. 
+
+\mbox{\Hypertarget{classSuctionGripper_af26e0ff3e234dc714acd6086485483ea}\label{classSuctionGripper_af26e0ff3e234dc714acd6086485483ea}} 
+\index{SuctionGripper@{SuctionGripper}!min\_contact\_points@{min\_contact\_points}}
+\index{min\_contact\_points@{min\_contact\_points}!SuctionGripper@{SuctionGripper}}
+\doxysubsubsection{\texorpdfstring{min\_contact\_points}{min\_contact\_points}}
+{\footnotesize\ttfamily int Suction\+Gripper\+::min\+\_\+contact\+\_\+points}
+
+
+
+Minimum total contact points, comparing all the grasp samples sampled. 
+
+\mbox{\Hypertarget{classSuctionGripper_a707feb9173b1447c0bdc4e76d6e5335d}\label{classSuctionGripper_a707feb9173b1447c0bdc4e76d6e5335d}} 
+\index{SuctionGripper@{SuctionGripper}!min\_curvature@{min\_curvature}}
+\index{min\_curvature@{min\_curvature}!SuctionGripper@{SuctionGripper}}
+\doxysubsubsection{\texorpdfstring{min\_curvature}{min\_curvature}}
+{\footnotesize\ttfamily float Suction\+Gripper\+::min\+\_\+curvature}
+
+
+
+Maximum average curvature value, comparing all the grasp samples sampled. 
+
+\mbox{\Hypertarget{classSuctionGripper_a4d8256805157824fe9466da1c59bd219}\label{classSuctionGripper_a4d8256805157824fe9466da1c59bd219}} 
+\index{SuctionGripper@{SuctionGripper}!num\_contact\_points\_weight@{num\_contact\_points\_weight}}
+\index{num\_contact\_points\_weight@{num\_contact\_points\_weight}!SuctionGripper@{SuctionGripper}}
+\doxysubsubsection{\texorpdfstring{num\_contact\_points\_weight}{num\_contact\_points\_weight}}
+{\footnotesize\ttfamily float Suction\+Gripper\+::num\+\_\+contact\+\_\+points\+\_\+weight}
+
+
+
+User Defined\+: Weights to determine importance of the number of contact points. Default is 1.\+0. 
+
+\mbox{\Hypertarget{classSuctionGripper_a573bc1cdef472d0d57d9b10fe053d431}\label{classSuctionGripper_a573bc1cdef472d0d57d9b10fe053d431}} 
+\index{SuctionGripper@{SuctionGripper}!num\_cups\_breadth@{num\_cups\_breadth}}
+\index{num\_cups\_breadth@{num\_cups\_breadth}!SuctionGripper@{SuctionGripper}}
+\doxysubsubsection{\texorpdfstring{num\_cups\_breadth}{num\_cups\_breadth}}
+{\footnotesize\ttfamily const int Suction\+Gripper\+::num\+\_\+cups\+\_\+breadth}
+
+
+
+User Defined\+: Number of suction cups in the breadth direction. 
+
+\mbox{\Hypertarget{classSuctionGripper_a7c3398a65f29a10093c1f996deba073a}\label{classSuctionGripper_a7c3398a65f29a10093c1f996deba073a}} 
+\index{SuctionGripper@{SuctionGripper}!num\_cups\_length@{num\_cups\_length}}
+\index{num\_cups\_length@{num\_cups\_length}!SuctionGripper@{SuctionGripper}}
+\doxysubsubsection{\texorpdfstring{num\_cups\_length}{num\_cups\_length}}
+{\footnotesize\ttfamily const int Suction\+Gripper\+::num\+\_\+cups\+\_\+length}
+
+
+
+User Defined\+: Number of suction cups in the length direction. 
+
+\mbox{\Hypertarget{classSuctionGripper_a57590586642476907a236f90abfe46ff}\label{classSuctionGripper_a57590586642476907a236f90abfe46ff}} 
+\index{SuctionGripper@{SuctionGripper}!num\_sample\_along\_axis@{num\_sample\_along\_axis}}
+\index{num\_sample\_along\_axis@{num\_sample\_along\_axis}!SuctionGripper@{SuctionGripper}}
+\doxysubsubsection{\texorpdfstring{num\_sample\_along\_axis}{num\_sample\_along\_axis}}
+{\footnotesize\ttfamily const int Suction\+Gripper\+::num\+\_\+sample\+\_\+along\+\_\+axis}
+
+
+
+User Defined\+: Number of grasp samples to be sampled along the axis for each search iteration. 
+
+\mbox{\Hypertarget{classSuctionGripper_a1d910efbaa620014ad681b745207eb13}\label{classSuctionGripper_a1d910efbaa620014ad681b745207eb13}} 
+\index{SuctionGripper@{SuctionGripper}!row\_direction@{row\_direction}}
+\index{row\_direction@{row\_direction}!SuctionGripper@{SuctionGripper}}
+\doxysubsubsection{\texorpdfstring{row\_direction}{row\_direction}}
+{\footnotesize\ttfamily char Suction\+Gripper\+::row\+\_\+direction}
+
+
+
+Axis in the direction of the breadth vector. 
+
+\mbox{\Hypertarget{classSuctionGripper_adf718be5b7edd7f7d0f3815b6eaa2c28}\label{classSuctionGripper_adf718be5b7edd7f7d0f3815b6eaa2c28}} 
+\index{SuctionGripper@{SuctionGripper}!row\_dist\_between\_cups@{row\_dist\_between\_cups}}
+\index{row\_dist\_between\_cups@{row\_dist\_between\_cups}!SuctionGripper@{SuctionGripper}}
+\doxysubsubsection{\texorpdfstring{row\_dist\_between\_cups}{row\_dist\_between\_cups}}
+{\footnotesize\ttfamily float Suction\+Gripper\+::row\+\_\+dist\+\_\+between\+\_\+cups}
+
+
+
+Distance between cups in the row direction. 
+
+\mbox{\Hypertarget{classSuctionGripper_a18140d1980bc2cab8e7fa70e7f5b77d1}\label{classSuctionGripper_a18140d1980bc2cab8e7fa70e7f5b77d1}} 
+\index{SuctionGripper@{SuctionGripper}!row\_initial\_gap@{row\_initial\_gap}}
+\index{row\_initial\_gap@{row\_initial\_gap}!SuctionGripper@{SuctionGripper}}
+\doxysubsubsection{\texorpdfstring{row\_initial\_gap}{row\_initial\_gap}}
+{\footnotesize\ttfamily float Suction\+Gripper\+::row\+\_\+initial\+\_\+gap}
+
+
+
+Initial distance between center of suction array gripper to the first suction cup in the row direction. 
+
+\mbox{\Hypertarget{classSuctionGripper_aa7fe085c6d95d85a47bfbd79c4e01261}\label{classSuctionGripper_aa7fe085c6d95d85a47bfbd79c4e01261}} 
+\index{SuctionGripper@{SuctionGripper}!row\_is\_even@{row\_is\_even}}
+\index{row\_is\_even@{row\_is\_even}!SuctionGripper@{SuctionGripper}}
+\doxysubsubsection{\texorpdfstring{row\_is\_even}{row\_is\_even}}
+{\footnotesize\ttfamily bool Suction\+Gripper\+::row\+\_\+is\+\_\+even}
+
+
+
+True if number of cups is even in the row direction. 
+
+\mbox{\Hypertarget{classSuctionGripper_ac2eabc1107e705a9f378ef75804347d5}\label{classSuctionGripper_ac2eabc1107e705a9f378ef75804347d5}} 
+\index{SuctionGripper@{SuctionGripper}!row\_itr@{row\_itr}}
+\index{row\_itr@{row\_itr}!SuctionGripper@{SuctionGripper}}
+\doxysubsubsection{\texorpdfstring{row\_itr}{row\_itr}}
+{\footnotesize\ttfamily float Suction\+Gripper\+::row\+\_\+itr}
+
+
+
+Number of iterations to generate full suction cup array in the row direction. 
+
+\mbox{\Hypertarget{classSuctionGripper_ad7db986821a0ccce62d5be008ca441f2}\label{classSuctionGripper_ad7db986821a0ccce62d5be008ca441f2}} 
+\index{SuctionGripper@{SuctionGripper}!search\_angle\_resolution@{search\_angle\_resolution}}
+\index{search\_angle\_resolution@{search\_angle\_resolution}!SuctionGripper@{SuctionGripper}}
+\doxysubsubsection{\texorpdfstring{search\_angle\_resolution}{search\_angle\_resolution}}
+{\footnotesize\ttfamily const int Suction\+Gripper\+::search\+\_\+angle\+\_\+resolution}
+
+
+
+User Defined\+: Angle resolution for each search iteration. Default is 3 for a single 90 degree angle iteration. Min 3, Max 9. 
+
+\mbox{\Hypertarget{classSuctionGripper_aac51b57be4f2aea92cc8e59499621016}\label{classSuctionGripper_aac51b57be4f2aea92cc8e59499621016}} 
+\index{SuctionGripper@{SuctionGripper}!search\_resolution@{search\_resolution}}
+\index{search\_resolution@{search\_resolution}!SuctionGripper@{SuctionGripper}}
+\doxysubsubsection{\texorpdfstring{search\_resolution}{search\_resolution}}
+{\footnotesize\ttfamily const float Suction\+Gripper\+::search\+\_\+resolution}
+
+
+
+User Defined\+: Step size for each search iteration. 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/rosi5/workspaces/emd\+\_\+ws/src/easy\+\_\+manipulation\+\_\+deployment/grasp\+\_\+planner/include/grasp\+\_\+planner/end\+\_\+effectors/\mbox{\hyperlink{suction__gripper_8hpp}{suction\+\_\+gripper.\+hpp}}\end{DoxyCompactItemize}

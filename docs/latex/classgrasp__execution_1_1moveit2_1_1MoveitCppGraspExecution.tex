@@ -1,0 +1,345 @@
+\hypertarget{classgrasp__execution_1_1moveit2_1_1MoveitCppGraspExecution}{}\doxysection{grasp\+\_\+execution\+::moveit2\+::Moveit\+Cpp\+Grasp\+Execution Class Reference}
+\label{classgrasp__execution_1_1moveit2_1_1MoveitCppGraspExecution}\index{grasp\_execution::moveit2::MoveitCppGraspExecution@{grasp\_execution::moveit2::MoveitCppGraspExecution}}
+
+
+{\ttfamily \#include $<$moveit\+\_\+cpp\+\_\+if.\+hpp$>$}
+
+
+
+Inheritance diagram for grasp\+\_\+execution\+::moveit2\+::Moveit\+Cpp\+Grasp\+Execution\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=259pt]{classgrasp__execution_1_1moveit2_1_1MoveitCppGraspExecution__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for grasp\+\_\+execution\+::moveit2\+::Moveit\+Cpp\+Grasp\+Execution\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=271pt]{classgrasp__execution_1_1moveit2_1_1MoveitCppGraspExecution__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classgrasp__execution_1_1moveit2_1_1MoveitCppGraspExecution_ae01f06df6063744bcb5c3d026f8e3fb4}{Moveit\+Cpp\+Grasp\+Execution}} (const rclcpp\+::\+Node\+::\+Shared\+Ptr \&node, const std\+::string \&grasp\+\_\+poses\+\_\+topic=\char`\"{}grasp\+\_\+request\char`\"{}, size\+\_\+t planning\+\_\+concurrency=1, size\+\_\+t execution\+\_\+concurrency=0)
+\item 
+\mbox{\hyperlink{classgrasp__execution_1_1moveit2_1_1MoveitCppGraspExecution_abcf6626c395ce2745d2809bdcc16f8e0}{$\sim$\+Moveit\+Cpp\+Grasp\+Execution}} ()
+\item 
+virtual bool \mbox{\hyperlink{classgrasp__execution_1_1moveit2_1_1MoveitCppGraspExecution_abc9c29fc24f7f4a353a98704c5c6d516}{init}} (const std\+::string \&planning\+\_\+group, const std\+::string \&\+\_\+ee\+\_\+link=\char`\"{}\char`\"{}, const std\+::string \&execution\+\_\+method=\char`\"{}default\char`\"{}, const std\+::string \&execution\+\_\+type=\char`\"{}\char`\"{}, const std\+::string \&controller\+\_\+name=\char`\"{}\char`\"{})
+\item 
+void \mbox{\hyperlink{classgrasp__execution_1_1moveit2_1_1MoveitCppGraspExecution_aa54dc62acfdc0efbc6f3afcd25246e53}{order\+\_\+schedule}} (const emd\+\_\+msgs\+::msg\+::\+Grasp\+Task\+::\+Shared\+Ptr \&) override
+\item 
+void \mbox{\hyperlink{classgrasp__execution_1_1moveit2_1_1MoveitCppGraspExecution_a832fba8d2b3c6fac89712ce60f359793}{register\+\_\+target\+\_\+objects}} (const emd\+\_\+msgs\+::msg\+::\+Grasp\+Task\+::\+Shared\+Ptr \&msg) override
+\item 
+geometry\+\_\+msgs\+::msg\+::\+Pose \mbox{\hyperlink{classgrasp__execution_1_1moveit2_1_1MoveitCppGraspExecution_ae95bf8b1fbdb3dab7420159f778b731d}{get\+\_\+object\+\_\+pose}} (const std\+::string \&object\+\_\+id) const override
+\item 
+geometry\+\_\+msgs\+::msg\+::\+Pose\+Stamped \mbox{\hyperlink{classgrasp__execution_1_1moveit2_1_1MoveitCppGraspExecution_a9f886e1afdc028a5d68e50684adc70c2}{get\+\_\+curr\+\_\+pose}} (const std\+::string \&link\+\_\+name) const override
+\item 
+moveit\+::core\+::\+Robot\+State\+Ptr \mbox{\hyperlink{classgrasp__execution_1_1moveit2_1_1MoveitCppGraspExecution_ade9b738923bdd617a5da8c3c79473431}{get\+\_\+curr\+\_\+state}} () const
+\item 
+bool \mbox{\hyperlink{classgrasp__execution_1_1moveit2_1_1MoveitCppGraspExecution_aef28708b46d78fd51db6e8eb94ca59b0}{move\+\_\+to}} (const std\+::string \&planning\+\_\+group, const geometry\+\_\+msgs\+::msg\+::\+Pose\+Stamped \&pose, const std\+::string \&link, bool \mbox{\hyperlink{classgrasp__execution_1_1moveit2_1_1MoveitCppGraspExecution_acf9f15a4c0e76956158674111cb42c01}{execute}}=true) override
+\item 
+bool \mbox{\hyperlink{classgrasp__execution_1_1moveit2_1_1MoveitCppGraspExecution_a7512c0427222b83d6c8b80af5a05adba}{move\+\_\+to}} (const std\+::string \&planning\+\_\+group, const moveit\+::core\+::\+Robot\+State \&state, bool \mbox{\hyperlink{classgrasp__execution_1_1moveit2_1_1MoveitCppGraspExecution_acf9f15a4c0e76956158674111cb42c01}{execute}}=true)
+\item 
+bool \mbox{\hyperlink{classgrasp__execution_1_1moveit2_1_1MoveitCppGraspExecution_a25fbad2fceabc26043ab303b552f40ca}{move\+\_\+to}} (const std\+::string \&planning\+\_\+group, const std\+::string \&named\+\_\+state, bool \mbox{\hyperlink{classgrasp__execution_1_1moveit2_1_1MoveitCppGraspExecution_acf9f15a4c0e76956158674111cb42c01}{execute}}=true) override
+\item 
+bool \mbox{\hyperlink{classgrasp__execution_1_1moveit2_1_1MoveitCppGraspExecution_a3b608d07c1b36eba0e213a456b304eb6}{home}} (const std\+::string \&) override
+\item 
+bool \mbox{\hyperlink{classgrasp__execution_1_1moveit2_1_1MoveitCppGraspExecution_a8338583fc88e63c58e820aae498e781e}{move\+\_\+to}} (const std\+::string \&, const sensor\+\_\+msgs\+::msg\+::\+Joint\+State \&, bool) override
+\item 
+double \mbox{\hyperlink{classgrasp__execution_1_1moveit2_1_1MoveitCppGraspExecution_a609aadd55af64376e06ab9ec467d189b}{cartesian\+\_\+to}} (const std\+::string \&planning\+\_\+group, moveit\+::core\+::\+Robot\+State \&start\+\_\+state, const std\+::vector$<$ geometry\+\_\+msgs\+::msg\+::\+Pose $>$ \&\+\_\+waypoints, robot\+\_\+trajectory\+::\+Robot\+Trajectory\+Ptr \&traj, const std\+::string \&\+\_\+link, double step, double jump\+\_\+threshold=0)
+\item 
+bool \mbox{\hyperlink{classgrasp__execution_1_1moveit2_1_1MoveitCppGraspExecution_ae73b12e2fb8e3c5ecb3672d01410cdd3}{cartesian\+\_\+to}} (const std\+::string \&planning\+\_\+group, const std\+::vector$<$ geometry\+\_\+msgs\+::msg\+::\+Pose $>$ \&\+\_\+waypoints, const std\+::string \&\+\_\+link, double step, double jump\+\_\+threshold=0, bool \mbox{\hyperlink{classgrasp__execution_1_1moveit2_1_1MoveitCppGraspExecution_acf9f15a4c0e76956158674111cb42c01}{execute}}=true) override
+\item 
+bool \mbox{\hyperlink{classgrasp__execution_1_1moveit2_1_1MoveitCppGraspExecution_a2046032d23c63accaf0a53239876d0ad}{move\+\_\+until\+\_\+before\+\_\+collide}} (const std\+::string \&planning\+\_\+group, const geometry\+\_\+msgs\+::msg\+::\+Pose\+Stamped \&pose, const std\+::string \&link, double step\+\_\+size, int max\+\_\+attempts, char axis, bool \mbox{\hyperlink{classgrasp__execution_1_1moveit2_1_1MoveitCppGraspExecution_acf9f15a4c0e76956158674111cb42c01}{execute}}=true) override
+\item 
+void \mbox{\hyperlink{classgrasp__execution_1_1moveit2_1_1MoveitCppGraspExecution_a65761bd9734be1f36b16ebc17ca7c936}{attach\+\_\+object\+\_\+to\+\_\+ee}} (const moveit\+\_\+msgs\+::msg\+::\+Collision\+Object \&object, const std\+::string \&ee\+\_\+link)
+\item 
+void \mbox{\hyperlink{classgrasp__execution_1_1moveit2_1_1MoveitCppGraspExecution_a4b6473f16f0148d8324d9b4e75bed9ff}{detach\+\_\+object\+\_\+from\+\_\+ee}} (const moveit\+\_\+msgs\+::msg\+::\+Collision\+Object \&object, const std\+::string \&ee\+\_\+link)
+\item 
+void \mbox{\hyperlink{classgrasp__execution_1_1moveit2_1_1MoveitCppGraspExecution_ae155586537183d02077ae7ae37d2a4ab}{attach\+\_\+object\+\_\+to\+\_\+ee}} (const std\+::string \&target\+\_\+id, const std\+::string \&ee\+\_\+link) override
+\item 
+void \mbox{\hyperlink{classgrasp__execution_1_1moveit2_1_1MoveitCppGraspExecution_af42930b2d7ea2fdea275d38ad9a3d8b4}{detach\+\_\+object\+\_\+from\+\_\+ee}} (const std\+::string \&target\+\_\+id, const std\+::string \&ee\+\_\+link) override
+\item 
+void \mbox{\hyperlink{classgrasp__execution_1_1moveit2_1_1MoveitCppGraspExecution_a2da27d5ed2cb0db2e8d3268f770bc422}{remove\+\_\+object}} (const std\+::string \&target\+\_\+id) override
+\item 
+bool \mbox{\hyperlink{classgrasp__execution_1_1moveit2_1_1MoveitCppGraspExecution_acf9f15a4c0e76956158674111cb42c01}{execute}} (const robot\+\_\+trajectory\+::\+Robot\+Trajectory\+Ptr \&traj, const std\+::string \&method=\char`\"{}default\char`\"{})
+\item 
+bool \mbox{\hyperlink{classgrasp__execution_1_1moveit2_1_1MoveitCppGraspExecution_ac2e9d51e084213a755ca4d5348932e43}{squash\+\_\+and\+\_\+execute}} (const std\+::string \&group, const std\+::string \&method=\char`\"{}default\char`\"{}, const double velocity=1.\+0) override
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classgrasp__execution_1_1moveit2_1_1MoveitCppGraspExecution_a176dffe956cf6da5d72afad51716af85}{squash\+\_\+trajectories}} (const std\+::string \&planning\+\_\+group, const double velocity, int start\+\_\+idx=0, int end\+\_\+idx=-\/1, bool time\+\_\+parameterization=true)
+\item 
+void \mbox{\hyperlink{classgrasp__execution_1_1moveit2_1_1MoveitCppGraspExecution_a9fa1eb2fc53ca76345653b6b2af787c2}{print\+\_\+trajectory\+\_\+ros}} (const rclcpp\+::\+Logger \&logger, const robot\+\_\+trajectory\+::\+Robot\+Trajectory\+Ptr \&traj)
+\item 
+void \mbox{\hyperlink{classgrasp__execution_1_1moveit2_1_1MoveitCppGraspExecution_a2bf2689e1cdf8c38df05a8d1cd2814be}{print\+\_\+trajectory}} (const robot\+\_\+trajectory\+::\+Robot\+Trajectory\+Ptr \&traj, std\+::ostream \&\+\_\+out=std\+::cout)
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+moveit\+::planning\+\_\+interface\+::\+Move\+It\+Cpp\+Ptr \mbox{\hyperlink{classgrasp__execution_1_1moveit2_1_1MoveitCppGraspExecution_aff7d2af6051383ac26c6a72a583c94c0}{moveit\+\_\+cpp\+\_\+}}
+\item 
+std\+::unordered\+\_\+map$<$ std\+::string, \mbox{\hyperlink{structgrasp__execution_1_1moveit2_1_1JmgContext}{moveit2\+::\+Jmg\+Context}} $>$ \mbox{\hyperlink{classgrasp__execution_1_1moveit2_1_1MoveitCppGraspExecution_a7f14c0f70360336741fa972fe4348ce0}{arms\+\_\+}}
+\item 
+moveit2\+::\+Executor\+::\+Unique\+Ptr \mbox{\hyperlink{classgrasp__execution_1_1moveit2_1_1MoveitCppGraspExecution_a76890132ad6d9972cb956c629ba8d71d}{default\+\_\+executor\+\_\+}}
+\item 
+std\+::shared\+\_\+ptr$<$ pluginlib\+::\+Class\+Loader$<$ \mbox{\hyperlink{classgrasp__execution_1_1moveit2_1_1Executor}{grasp\+\_\+execution\+::moveit2\+::\+Executor}} $>$ $>$ \mbox{\hyperlink{classgrasp__execution_1_1moveit2_1_1MoveitCppGraspExecution_af7181468870910a222f94ef0b4c5decb}{executor\+\_\+loader\+\_\+}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classgrasp__execution_1_1moveit2_1_1MoveitCppGraspExecution_ae01f06df6063744bcb5c3d026f8e3fb4}\label{classgrasp__execution_1_1moveit2_1_1MoveitCppGraspExecution_ae01f06df6063744bcb5c3d026f8e3fb4}} 
+\index{grasp\_execution::moveit2::MoveitCppGraspExecution@{grasp\_execution::moveit2::MoveitCppGraspExecution}!MoveitCppGraspExecution@{MoveitCppGraspExecution}}
+\index{MoveitCppGraspExecution@{MoveitCppGraspExecution}!grasp\_execution::moveit2::MoveitCppGraspExecution@{grasp\_execution::moveit2::MoveitCppGraspExecution}}
+\doxysubsubsection{\texorpdfstring{MoveitCppGraspExecution()}{MoveitCppGraspExecution()}}
+{\footnotesize\ttfamily grasp\+\_\+execution\+::moveit2\+::\+Moveit\+Cpp\+Grasp\+Execution\+::\+Moveit\+Cpp\+Grasp\+Execution (\begin{DoxyParamCaption}\item[{const rclcpp\+::\+Node\+::\+Shared\+Ptr \&}]{node,  }\item[{const std\+::string \&}]{grasp\+\_\+poses\+\_\+topic = {\ttfamily \char`\"{}grasp\+\_\+request\char`\"{}},  }\item[{size\+\_\+t}]{planning\+\_\+concurrency = {\ttfamily 1},  }\item[{size\+\_\+t}]{execution\+\_\+concurrency = {\ttfamily 0} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+\mbox{\Hypertarget{classgrasp__execution_1_1moveit2_1_1MoveitCppGraspExecution_abcf6626c395ce2745d2809bdcc16f8e0}\label{classgrasp__execution_1_1moveit2_1_1MoveitCppGraspExecution_abcf6626c395ce2745d2809bdcc16f8e0}} 
+\index{grasp\_execution::moveit2::MoveitCppGraspExecution@{grasp\_execution::moveit2::MoveitCppGraspExecution}!````~MoveitCppGraspExecution@{$\sim$MoveitCppGraspExecution}}
+\index{````~MoveitCppGraspExecution@{$\sim$MoveitCppGraspExecution}!grasp\_execution::moveit2::MoveitCppGraspExecution@{grasp\_execution::moveit2::MoveitCppGraspExecution}}
+\doxysubsubsection{\texorpdfstring{$\sim$MoveitCppGraspExecution()}{~MoveitCppGraspExecution()}}
+{\footnotesize\ttfamily grasp\+\_\+execution\+::moveit2\+::\+Moveit\+Cpp\+Grasp\+Execution\+::$\sim$\+Moveit\+Cpp\+Grasp\+Execution (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classgrasp__execution_1_1moveit2_1_1MoveitCppGraspExecution_a65761bd9734be1f36b16ebc17ca7c936}\label{classgrasp__execution_1_1moveit2_1_1MoveitCppGraspExecution_a65761bd9734be1f36b16ebc17ca7c936}} 
+\index{grasp\_execution::moveit2::MoveitCppGraspExecution@{grasp\_execution::moveit2::MoveitCppGraspExecution}!attach\_object\_to\_ee@{attach\_object\_to\_ee}}
+\index{attach\_object\_to\_ee@{attach\_object\_to\_ee}!grasp\_execution::moveit2::MoveitCppGraspExecution@{grasp\_execution::moveit2::MoveitCppGraspExecution}}
+\doxysubsubsection{\texorpdfstring{attach\_object\_to\_ee()}{attach\_object\_to\_ee()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void grasp\+\_\+execution\+::moveit2\+::\+Moveit\+Cpp\+Grasp\+Execution\+::attach\+\_\+object\+\_\+to\+\_\+ee (\begin{DoxyParamCaption}\item[{const moveit\+\_\+msgs\+::msg\+::\+Collision\+Object \&}]{object,  }\item[{const std\+::string \&}]{ee\+\_\+link }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classgrasp__execution_1_1moveit2_1_1MoveitCppGraspExecution_ae155586537183d02077ae7ae37d2a4ab}\label{classgrasp__execution_1_1moveit2_1_1MoveitCppGraspExecution_ae155586537183d02077ae7ae37d2a4ab}} 
+\index{grasp\_execution::moveit2::MoveitCppGraspExecution@{grasp\_execution::moveit2::MoveitCppGraspExecution}!attach\_object\_to\_ee@{attach\_object\_to\_ee}}
+\index{attach\_object\_to\_ee@{attach\_object\_to\_ee}!grasp\_execution::moveit2::MoveitCppGraspExecution@{grasp\_execution::moveit2::MoveitCppGraspExecution}}
+\doxysubsubsection{\texorpdfstring{attach\_object\_to\_ee()}{attach\_object\_to\_ee()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void grasp\+\_\+execution\+::moveit2\+::\+Moveit\+Cpp\+Grasp\+Execution\+::attach\+\_\+object\+\_\+to\+\_\+ee (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{target\+\_\+id,  }\item[{const std\+::string \&}]{ee\+\_\+link }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classgrasp__execution_1_1GraspExecutionInterface_a4527a35bc56f73c74d35fb5dfde64971}{grasp\+\_\+execution\+::\+Grasp\+Execution\+Interface}}.
+
+\mbox{\Hypertarget{classgrasp__execution_1_1moveit2_1_1MoveitCppGraspExecution_ae73b12e2fb8e3c5ecb3672d01410cdd3}\label{classgrasp__execution_1_1moveit2_1_1MoveitCppGraspExecution_ae73b12e2fb8e3c5ecb3672d01410cdd3}} 
+\index{grasp\_execution::moveit2::MoveitCppGraspExecution@{grasp\_execution::moveit2::MoveitCppGraspExecution}!cartesian\_to@{cartesian\_to}}
+\index{cartesian\_to@{cartesian\_to}!grasp\_execution::moveit2::MoveitCppGraspExecution@{grasp\_execution::moveit2::MoveitCppGraspExecution}}
+\doxysubsubsection{\texorpdfstring{cartesian\_to()}{cartesian\_to()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily bool grasp\+\_\+execution\+::moveit2\+::\+Moveit\+Cpp\+Grasp\+Execution\+::cartesian\+\_\+to (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{planning\+\_\+group,  }\item[{const std\+::vector$<$ geometry\+\_\+msgs\+::msg\+::\+Pose $>$ \&}]{\+\_\+waypoints,  }\item[{const std\+::string \&}]{\+\_\+link,  }\item[{double}]{step,  }\item[{double}]{jump\+\_\+threshold = {\ttfamily 0},  }\item[{bool}]{execute = {\ttfamily true} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classgrasp__execution_1_1GraspExecutionInterface_aba631954c10420562d7c0af01df76120}{grasp\+\_\+execution\+::\+Grasp\+Execution\+Interface}}.
+
+\mbox{\Hypertarget{classgrasp__execution_1_1moveit2_1_1MoveitCppGraspExecution_a609aadd55af64376e06ab9ec467d189b}\label{classgrasp__execution_1_1moveit2_1_1MoveitCppGraspExecution_a609aadd55af64376e06ab9ec467d189b}} 
+\index{grasp\_execution::moveit2::MoveitCppGraspExecution@{grasp\_execution::moveit2::MoveitCppGraspExecution}!cartesian\_to@{cartesian\_to}}
+\index{cartesian\_to@{cartesian\_to}!grasp\_execution::moveit2::MoveitCppGraspExecution@{grasp\_execution::moveit2::MoveitCppGraspExecution}}
+\doxysubsubsection{\texorpdfstring{cartesian\_to()}{cartesian\_to()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily double grasp\+\_\+execution\+::moveit2\+::\+Moveit\+Cpp\+Grasp\+Execution\+::cartesian\+\_\+to (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{planning\+\_\+group,  }\item[{moveit\+::core\+::\+Robot\+State \&}]{start\+\_\+state,  }\item[{const std\+::vector$<$ geometry\+\_\+msgs\+::msg\+::\+Pose $>$ \&}]{\+\_\+waypoints,  }\item[{robot\+\_\+trajectory\+::\+Robot\+Trajectory\+Ptr \&}]{traj,  }\item[{const std\+::string \&}]{\+\_\+link,  }\item[{double}]{step,  }\item[{double}]{jump\+\_\+threshold = {\ttfamily 0} }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classgrasp__execution_1_1moveit2_1_1MoveitCppGraspExecution_a4b6473f16f0148d8324d9b4e75bed9ff}\label{classgrasp__execution_1_1moveit2_1_1MoveitCppGraspExecution_a4b6473f16f0148d8324d9b4e75bed9ff}} 
+\index{grasp\_execution::moveit2::MoveitCppGraspExecution@{grasp\_execution::moveit2::MoveitCppGraspExecution}!detach\_object\_from\_ee@{detach\_object\_from\_ee}}
+\index{detach\_object\_from\_ee@{detach\_object\_from\_ee}!grasp\_execution::moveit2::MoveitCppGraspExecution@{grasp\_execution::moveit2::MoveitCppGraspExecution}}
+\doxysubsubsection{\texorpdfstring{detach\_object\_from\_ee()}{detach\_object\_from\_ee()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void grasp\+\_\+execution\+::moveit2\+::\+Moveit\+Cpp\+Grasp\+Execution\+::detach\+\_\+object\+\_\+from\+\_\+ee (\begin{DoxyParamCaption}\item[{const moveit\+\_\+msgs\+::msg\+::\+Collision\+Object \&}]{object,  }\item[{const std\+::string \&}]{ee\+\_\+link }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classgrasp__execution_1_1moveit2_1_1MoveitCppGraspExecution_af42930b2d7ea2fdea275d38ad9a3d8b4}\label{classgrasp__execution_1_1moveit2_1_1MoveitCppGraspExecution_af42930b2d7ea2fdea275d38ad9a3d8b4}} 
+\index{grasp\_execution::moveit2::MoveitCppGraspExecution@{grasp\_execution::moveit2::MoveitCppGraspExecution}!detach\_object\_from\_ee@{detach\_object\_from\_ee}}
+\index{detach\_object\_from\_ee@{detach\_object\_from\_ee}!grasp\_execution::moveit2::MoveitCppGraspExecution@{grasp\_execution::moveit2::MoveitCppGraspExecution}}
+\doxysubsubsection{\texorpdfstring{detach\_object\_from\_ee()}{detach\_object\_from\_ee()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void grasp\+\_\+execution\+::moveit2\+::\+Moveit\+Cpp\+Grasp\+Execution\+::detach\+\_\+object\+\_\+from\+\_\+ee (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{target\+\_\+id,  }\item[{const std\+::string \&}]{ee\+\_\+link }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classgrasp__execution_1_1GraspExecutionInterface_a77af37181c492a2fdfa93086a45cfbb7}{grasp\+\_\+execution\+::\+Grasp\+Execution\+Interface}}.
+
+\mbox{\Hypertarget{classgrasp__execution_1_1moveit2_1_1MoveitCppGraspExecution_acf9f15a4c0e76956158674111cb42c01}\label{classgrasp__execution_1_1moveit2_1_1MoveitCppGraspExecution_acf9f15a4c0e76956158674111cb42c01}} 
+\index{grasp\_execution::moveit2::MoveitCppGraspExecution@{grasp\_execution::moveit2::MoveitCppGraspExecution}!execute@{execute}}
+\index{execute@{execute}!grasp\_execution::moveit2::MoveitCppGraspExecution@{grasp\_execution::moveit2::MoveitCppGraspExecution}}
+\doxysubsubsection{\texorpdfstring{execute()}{execute()}}
+{\footnotesize\ttfamily bool grasp\+\_\+execution\+::moveit2\+::\+Moveit\+Cpp\+Grasp\+Execution\+::execute (\begin{DoxyParamCaption}\item[{const robot\+\_\+trajectory\+::\+Robot\+Trajectory\+Ptr \&}]{traj,  }\item[{const std\+::string \&}]{method = {\ttfamily \char`\"{}default\char`\"{}} }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classgrasp__execution_1_1moveit2_1_1MoveitCppGraspExecution_a9f886e1afdc028a5d68e50684adc70c2}\label{classgrasp__execution_1_1moveit2_1_1MoveitCppGraspExecution_a9f886e1afdc028a5d68e50684adc70c2}} 
+\index{grasp\_execution::moveit2::MoveitCppGraspExecution@{grasp\_execution::moveit2::MoveitCppGraspExecution}!get\_curr\_pose@{get\_curr\_pose}}
+\index{get\_curr\_pose@{get\_curr\_pose}!grasp\_execution::moveit2::MoveitCppGraspExecution@{grasp\_execution::moveit2::MoveitCppGraspExecution}}
+\doxysubsubsection{\texorpdfstring{get\_curr\_pose()}{get\_curr\_pose()}}
+{\footnotesize\ttfamily geometry\+\_\+msgs\+::msg\+::\+Pose\+Stamped grasp\+\_\+execution\+::moveit2\+::\+Moveit\+Cpp\+Grasp\+Execution\+::get\+\_\+curr\+\_\+pose (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{link\+\_\+name }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classgrasp__execution_1_1GraspExecutionInterface_a8a806a9bc75fa249b47f8a57a3eb7822}{grasp\+\_\+execution\+::\+Grasp\+Execution\+Interface}}.
+
+\mbox{\Hypertarget{classgrasp__execution_1_1moveit2_1_1MoveitCppGraspExecution_ade9b738923bdd617a5da8c3c79473431}\label{classgrasp__execution_1_1moveit2_1_1MoveitCppGraspExecution_ade9b738923bdd617a5da8c3c79473431}} 
+\index{grasp\_execution::moveit2::MoveitCppGraspExecution@{grasp\_execution::moveit2::MoveitCppGraspExecution}!get\_curr\_state@{get\_curr\_state}}
+\index{get\_curr\_state@{get\_curr\_state}!grasp\_execution::moveit2::MoveitCppGraspExecution@{grasp\_execution::moveit2::MoveitCppGraspExecution}}
+\doxysubsubsection{\texorpdfstring{get\_curr\_state()}{get\_curr\_state()}}
+{\footnotesize\ttfamily moveit\+::core\+::\+Robot\+State\+Ptr grasp\+\_\+execution\+::moveit2\+::\+Moveit\+Cpp\+Grasp\+Execution\+::get\+\_\+curr\+\_\+state (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{classgrasp__execution_1_1moveit2_1_1MoveitCppGraspExecution_ae95bf8b1fbdb3dab7420159f778b731d}\label{classgrasp__execution_1_1moveit2_1_1MoveitCppGraspExecution_ae95bf8b1fbdb3dab7420159f778b731d}} 
+\index{grasp\_execution::moveit2::MoveitCppGraspExecution@{grasp\_execution::moveit2::MoveitCppGraspExecution}!get\_object\_pose@{get\_object\_pose}}
+\index{get\_object\_pose@{get\_object\_pose}!grasp\_execution::moveit2::MoveitCppGraspExecution@{grasp\_execution::moveit2::MoveitCppGraspExecution}}
+\doxysubsubsection{\texorpdfstring{get\_object\_pose()}{get\_object\_pose()}}
+{\footnotesize\ttfamily geometry\+\_\+msgs\+::msg\+::\+Pose grasp\+\_\+execution\+::moveit2\+::\+Moveit\+Cpp\+Grasp\+Execution\+::get\+\_\+object\+\_\+pose (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{object\+\_\+id }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classgrasp__execution_1_1GraspExecutionInterface_a33692253cde26bb32d1c2fb4e35505f9}{grasp\+\_\+execution\+::\+Grasp\+Execution\+Interface}}.
+
+\mbox{\Hypertarget{classgrasp__execution_1_1moveit2_1_1MoveitCppGraspExecution_a3b608d07c1b36eba0e213a456b304eb6}\label{classgrasp__execution_1_1moveit2_1_1MoveitCppGraspExecution_a3b608d07c1b36eba0e213a456b304eb6}} 
+\index{grasp\_execution::moveit2::MoveitCppGraspExecution@{grasp\_execution::moveit2::MoveitCppGraspExecution}!home@{home}}
+\index{home@{home}!grasp\_execution::moveit2::MoveitCppGraspExecution@{grasp\_execution::moveit2::MoveitCppGraspExecution}}
+\doxysubsubsection{\texorpdfstring{home()}{home()}}
+{\footnotesize\ttfamily bool grasp\+\_\+execution\+::moveit2\+::\+Moveit\+Cpp\+Grasp\+Execution\+::home (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classgrasp__execution_1_1GraspExecutionInterface_accfbbfea134463941d5a328ac9bb04fb}{grasp\+\_\+execution\+::\+Grasp\+Execution\+Interface}}.
+
+\mbox{\Hypertarget{classgrasp__execution_1_1moveit2_1_1MoveitCppGraspExecution_abc9c29fc24f7f4a353a98704c5c6d516}\label{classgrasp__execution_1_1moveit2_1_1MoveitCppGraspExecution_abc9c29fc24f7f4a353a98704c5c6d516}} 
+\index{grasp\_execution::moveit2::MoveitCppGraspExecution@{grasp\_execution::moveit2::MoveitCppGraspExecution}!init@{init}}
+\index{init@{init}!grasp\_execution::moveit2::MoveitCppGraspExecution@{grasp\_execution::moveit2::MoveitCppGraspExecution}}
+\doxysubsubsection{\texorpdfstring{init()}{init()}}
+{\footnotesize\ttfamily virtual bool grasp\+\_\+execution\+::moveit2\+::\+Moveit\+Cpp\+Grasp\+Execution\+::init (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{planning\+\_\+group,  }\item[{const std\+::string \&}]{\+\_\+ee\+\_\+link = {\ttfamily \char`\"{}\char`\"{}},  }\item[{const std\+::string \&}]{execution\+\_\+method = {\ttfamily \char`\"{}default\char`\"{}},  }\item[{const std\+::string \&}]{execution\+\_\+type = {\ttfamily \char`\"{}\char`\"{}},  }\item[{const std\+::string \&}]{controller\+\_\+name = {\ttfamily \char`\"{}\char`\"{}} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+\mbox{\Hypertarget{classgrasp__execution_1_1moveit2_1_1MoveitCppGraspExecution_a8338583fc88e63c58e820aae498e781e}\label{classgrasp__execution_1_1moveit2_1_1MoveitCppGraspExecution_a8338583fc88e63c58e820aae498e781e}} 
+\index{grasp\_execution::moveit2::MoveitCppGraspExecution@{grasp\_execution::moveit2::MoveitCppGraspExecution}!move\_to@{move\_to}}
+\index{move\_to@{move\_to}!grasp\_execution::moveit2::MoveitCppGraspExecution@{grasp\_execution::moveit2::MoveitCppGraspExecution}}
+\doxysubsubsection{\texorpdfstring{move\_to()}{move\_to()}\hspace{0.1cm}{\footnotesize\ttfamily [1/4]}}
+{\footnotesize\ttfamily bool grasp\+\_\+execution\+::moveit2\+::\+Moveit\+Cpp\+Grasp\+Execution\+::move\+\_\+to (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{,  }\item[{const sensor\+\_\+msgs\+::msg\+::\+Joint\+State \&}]{,  }\item[{bool}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classgrasp__execution_1_1GraspExecutionInterface_ab65023539583cd1e45a5a3331f2b40ec}{grasp\+\_\+execution\+::\+Grasp\+Execution\+Interface}}.
+
+\mbox{\Hypertarget{classgrasp__execution_1_1moveit2_1_1MoveitCppGraspExecution_aef28708b46d78fd51db6e8eb94ca59b0}\label{classgrasp__execution_1_1moveit2_1_1MoveitCppGraspExecution_aef28708b46d78fd51db6e8eb94ca59b0}} 
+\index{grasp\_execution::moveit2::MoveitCppGraspExecution@{grasp\_execution::moveit2::MoveitCppGraspExecution}!move\_to@{move\_to}}
+\index{move\_to@{move\_to}!grasp\_execution::moveit2::MoveitCppGraspExecution@{grasp\_execution::moveit2::MoveitCppGraspExecution}}
+\doxysubsubsection{\texorpdfstring{move\_to()}{move\_to()}\hspace{0.1cm}{\footnotesize\ttfamily [2/4]}}
+{\footnotesize\ttfamily bool grasp\+\_\+execution\+::moveit2\+::\+Moveit\+Cpp\+Grasp\+Execution\+::move\+\_\+to (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{planning\+\_\+group,  }\item[{const geometry\+\_\+msgs\+::msg\+::\+Pose\+Stamped \&}]{pose,  }\item[{const std\+::string \&}]{link,  }\item[{bool}]{execute = {\ttfamily true} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classgrasp__execution_1_1GraspExecutionInterface_a254af3e2135f7e346a2b9b645289e7ba}{grasp\+\_\+execution\+::\+Grasp\+Execution\+Interface}}.
+
+\mbox{\Hypertarget{classgrasp__execution_1_1moveit2_1_1MoveitCppGraspExecution_a7512c0427222b83d6c8b80af5a05adba}\label{classgrasp__execution_1_1moveit2_1_1MoveitCppGraspExecution_a7512c0427222b83d6c8b80af5a05adba}} 
+\index{grasp\_execution::moveit2::MoveitCppGraspExecution@{grasp\_execution::moveit2::MoveitCppGraspExecution}!move\_to@{move\_to}}
+\index{move\_to@{move\_to}!grasp\_execution::moveit2::MoveitCppGraspExecution@{grasp\_execution::moveit2::MoveitCppGraspExecution}}
+\doxysubsubsection{\texorpdfstring{move\_to()}{move\_to()}\hspace{0.1cm}{\footnotesize\ttfamily [3/4]}}
+{\footnotesize\ttfamily bool grasp\+\_\+execution\+::moveit2\+::\+Moveit\+Cpp\+Grasp\+Execution\+::move\+\_\+to (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{planning\+\_\+group,  }\item[{const moveit\+::core\+::\+Robot\+State \&}]{state,  }\item[{bool}]{execute = {\ttfamily true} }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classgrasp__execution_1_1moveit2_1_1MoveitCppGraspExecution_a25fbad2fceabc26043ab303b552f40ca}\label{classgrasp__execution_1_1moveit2_1_1MoveitCppGraspExecution_a25fbad2fceabc26043ab303b552f40ca}} 
+\index{grasp\_execution::moveit2::MoveitCppGraspExecution@{grasp\_execution::moveit2::MoveitCppGraspExecution}!move\_to@{move\_to}}
+\index{move\_to@{move\_to}!grasp\_execution::moveit2::MoveitCppGraspExecution@{grasp\_execution::moveit2::MoveitCppGraspExecution}}
+\doxysubsubsection{\texorpdfstring{move\_to()}{move\_to()}\hspace{0.1cm}{\footnotesize\ttfamily [4/4]}}
+{\footnotesize\ttfamily bool grasp\+\_\+execution\+::moveit2\+::\+Moveit\+Cpp\+Grasp\+Execution\+::move\+\_\+to (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{planning\+\_\+group,  }\item[{const std\+::string \&}]{named\+\_\+state,  }\item[{bool}]{execute = {\ttfamily true} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classgrasp__execution_1_1GraspExecutionInterface_acb0cbb6bfc634eebc6dd8665e4088e0d}{grasp\+\_\+execution\+::\+Grasp\+Execution\+Interface}}.
+
+\mbox{\Hypertarget{classgrasp__execution_1_1moveit2_1_1MoveitCppGraspExecution_a2046032d23c63accaf0a53239876d0ad}\label{classgrasp__execution_1_1moveit2_1_1MoveitCppGraspExecution_a2046032d23c63accaf0a53239876d0ad}} 
+\index{grasp\_execution::moveit2::MoveitCppGraspExecution@{grasp\_execution::moveit2::MoveitCppGraspExecution}!move\_until\_before\_collide@{move\_until\_before\_collide}}
+\index{move\_until\_before\_collide@{move\_until\_before\_collide}!grasp\_execution::moveit2::MoveitCppGraspExecution@{grasp\_execution::moveit2::MoveitCppGraspExecution}}
+\doxysubsubsection{\texorpdfstring{move\_until\_before\_collide()}{move\_until\_before\_collide()}}
+{\footnotesize\ttfamily bool grasp\+\_\+execution\+::moveit2\+::\+Moveit\+Cpp\+Grasp\+Execution\+::move\+\_\+until\+\_\+before\+\_\+collide (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{planning\+\_\+group,  }\item[{const geometry\+\_\+msgs\+::msg\+::\+Pose\+Stamped \&}]{pose,  }\item[{const std\+::string \&}]{link,  }\item[{double}]{step\+\_\+size,  }\item[{int}]{max\+\_\+attempts,  }\item[{char}]{axis,  }\item[{bool}]{execute = {\ttfamily true} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classgrasp__execution_1_1GraspExecutionInterface_a60063f2b16947f501b901875f4cc2626}{grasp\+\_\+execution\+::\+Grasp\+Execution\+Interface}}.
+
+\mbox{\Hypertarget{classgrasp__execution_1_1moveit2_1_1MoveitCppGraspExecution_aa54dc62acfdc0efbc6f3afcd25246e53}\label{classgrasp__execution_1_1moveit2_1_1MoveitCppGraspExecution_aa54dc62acfdc0efbc6f3afcd25246e53}} 
+\index{grasp\_execution::moveit2::MoveitCppGraspExecution@{grasp\_execution::moveit2::MoveitCppGraspExecution}!order\_schedule@{order\_schedule}}
+\index{order\_schedule@{order\_schedule}!grasp\_execution::moveit2::MoveitCppGraspExecution@{grasp\_execution::moveit2::MoveitCppGraspExecution}}
+\doxysubsubsection{\texorpdfstring{order\_schedule()}{order\_schedule()}}
+{\footnotesize\ttfamily void grasp\+\_\+execution\+::moveit2\+::\+Moveit\+Cpp\+Grasp\+Execution\+::order\+\_\+schedule (\begin{DoxyParamCaption}\item[{const emd\+\_\+msgs\+::msg\+::\+Grasp\+Task\+::\+Shared\+Ptr \&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classgrasp__execution_1_1GraspExecutionInterface_a887859de4b1a8bb0d51bfaca60774f5b}{grasp\+\_\+execution\+::\+Grasp\+Execution\+Interface}}.
+
+\mbox{\Hypertarget{classgrasp__execution_1_1moveit2_1_1MoveitCppGraspExecution_a2bf2689e1cdf8c38df05a8d1cd2814be}\label{classgrasp__execution_1_1moveit2_1_1MoveitCppGraspExecution_a2bf2689e1cdf8c38df05a8d1cd2814be}} 
+\index{grasp\_execution::moveit2::MoveitCppGraspExecution@{grasp\_execution::moveit2::MoveitCppGraspExecution}!print\_trajectory@{print\_trajectory}}
+\index{print\_trajectory@{print\_trajectory}!grasp\_execution::moveit2::MoveitCppGraspExecution@{grasp\_execution::moveit2::MoveitCppGraspExecution}}
+\doxysubsubsection{\texorpdfstring{print\_trajectory()}{print\_trajectory()}}
+{\footnotesize\ttfamily void grasp\+\_\+execution\+::moveit2\+::\+Moveit\+Cpp\+Grasp\+Execution\+::print\+\_\+trajectory (\begin{DoxyParamCaption}\item[{const robot\+\_\+trajectory\+::\+Robot\+Trajectory\+Ptr \&}]{traj,  }\item[{std\+::ostream \&}]{\+\_\+out = {\ttfamily std\+:\+:cout} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classgrasp__execution_1_1moveit2_1_1MoveitCppGraspExecution_a9fa1eb2fc53ca76345653b6b2af787c2}\label{classgrasp__execution_1_1moveit2_1_1MoveitCppGraspExecution_a9fa1eb2fc53ca76345653b6b2af787c2}} 
+\index{grasp\_execution::moveit2::MoveitCppGraspExecution@{grasp\_execution::moveit2::MoveitCppGraspExecution}!print\_trajectory\_ros@{print\_trajectory\_ros}}
+\index{print\_trajectory\_ros@{print\_trajectory\_ros}!grasp\_execution::moveit2::MoveitCppGraspExecution@{grasp\_execution::moveit2::MoveitCppGraspExecution}}
+\doxysubsubsection{\texorpdfstring{print\_trajectory\_ros()}{print\_trajectory\_ros()}}
+{\footnotesize\ttfamily void grasp\+\_\+execution\+::moveit2\+::\+Moveit\+Cpp\+Grasp\+Execution\+::print\+\_\+trajectory\+\_\+ros (\begin{DoxyParamCaption}\item[{const rclcpp\+::\+Logger \&}]{logger,  }\item[{const robot\+\_\+trajectory\+::\+Robot\+Trajectory\+Ptr \&}]{traj }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classgrasp__execution_1_1moveit2_1_1MoveitCppGraspExecution_a832fba8d2b3c6fac89712ce60f359793}\label{classgrasp__execution_1_1moveit2_1_1MoveitCppGraspExecution_a832fba8d2b3c6fac89712ce60f359793}} 
+\index{grasp\_execution::moveit2::MoveitCppGraspExecution@{grasp\_execution::moveit2::MoveitCppGraspExecution}!register\_target\_objects@{register\_target\_objects}}
+\index{register\_target\_objects@{register\_target\_objects}!grasp\_execution::moveit2::MoveitCppGraspExecution@{grasp\_execution::moveit2::MoveitCppGraspExecution}}
+\doxysubsubsection{\texorpdfstring{register\_target\_objects()}{register\_target\_objects()}}
+{\footnotesize\ttfamily void grasp\+\_\+execution\+::moveit2\+::\+Moveit\+Cpp\+Grasp\+Execution\+::register\+\_\+target\+\_\+objects (\begin{DoxyParamCaption}\item[{const emd\+\_\+msgs\+::msg\+::\+Grasp\+Task\+::\+Shared\+Ptr \&}]{msg }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classgrasp__execution_1_1GraspExecutionInterface_a65752c63c22e50115c0e7f4d5f81ee74}{grasp\+\_\+execution\+::\+Grasp\+Execution\+Interface}}.
+
+\mbox{\Hypertarget{classgrasp__execution_1_1moveit2_1_1MoveitCppGraspExecution_a2da27d5ed2cb0db2e8d3268f770bc422}\label{classgrasp__execution_1_1moveit2_1_1MoveitCppGraspExecution_a2da27d5ed2cb0db2e8d3268f770bc422}} 
+\index{grasp\_execution::moveit2::MoveitCppGraspExecution@{grasp\_execution::moveit2::MoveitCppGraspExecution}!remove\_object@{remove\_object}}
+\index{remove\_object@{remove\_object}!grasp\_execution::moveit2::MoveitCppGraspExecution@{grasp\_execution::moveit2::MoveitCppGraspExecution}}
+\doxysubsubsection{\texorpdfstring{remove\_object()}{remove\_object()}}
+{\footnotesize\ttfamily void grasp\+\_\+execution\+::moveit2\+::\+Moveit\+Cpp\+Grasp\+Execution\+::remove\+\_\+object (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{target\+\_\+id }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classgrasp__execution_1_1GraspExecutionInterface_a27678c0a17fbd72af991864be0cb1569}{grasp\+\_\+execution\+::\+Grasp\+Execution\+Interface}}.
+
+\mbox{\Hypertarget{classgrasp__execution_1_1moveit2_1_1MoveitCppGraspExecution_ac2e9d51e084213a755ca4d5348932e43}\label{classgrasp__execution_1_1moveit2_1_1MoveitCppGraspExecution_ac2e9d51e084213a755ca4d5348932e43}} 
+\index{grasp\_execution::moveit2::MoveitCppGraspExecution@{grasp\_execution::moveit2::MoveitCppGraspExecution}!squash\_and\_execute@{squash\_and\_execute}}
+\index{squash\_and\_execute@{squash\_and\_execute}!grasp\_execution::moveit2::MoveitCppGraspExecution@{grasp\_execution::moveit2::MoveitCppGraspExecution}}
+\doxysubsubsection{\texorpdfstring{squash\_and\_execute()}{squash\_and\_execute()}}
+{\footnotesize\ttfamily bool grasp\+\_\+execution\+::moveit2\+::\+Moveit\+Cpp\+Grasp\+Execution\+::squash\+\_\+and\+\_\+execute (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{group,  }\item[{const std\+::string \&}]{method = {\ttfamily \char`\"{}default\char`\"{}},  }\item[{const double}]{velocity = {\ttfamily 1.0} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classgrasp__execution_1_1GraspExecutionInterface_a1cbbe031829f567cbd1a9cd0cc11ade2}{grasp\+\_\+execution\+::\+Grasp\+Execution\+Interface}}.
+
+\mbox{\Hypertarget{classgrasp__execution_1_1moveit2_1_1MoveitCppGraspExecution_a176dffe956cf6da5d72afad51716af85}\label{classgrasp__execution_1_1moveit2_1_1MoveitCppGraspExecution_a176dffe956cf6da5d72afad51716af85}} 
+\index{grasp\_execution::moveit2::MoveitCppGraspExecution@{grasp\_execution::moveit2::MoveitCppGraspExecution}!squash\_trajectories@{squash\_trajectories}}
+\index{squash\_trajectories@{squash\_trajectories}!grasp\_execution::moveit2::MoveitCppGraspExecution@{grasp\_execution::moveit2::MoveitCppGraspExecution}}
+\doxysubsubsection{\texorpdfstring{squash\_trajectories()}{squash\_trajectories()}}
+{\footnotesize\ttfamily void grasp\+\_\+execution\+::moveit2\+::\+Moveit\+Cpp\+Grasp\+Execution\+::squash\+\_\+trajectories (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{planning\+\_\+group,  }\item[{const double}]{velocity,  }\item[{int}]{start\+\_\+idx = {\ttfamily 0},  }\item[{int}]{end\+\_\+idx = {\ttfamily -\/1},  }\item[{bool}]{time\+\_\+parameterization = {\ttfamily true} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classgrasp__execution_1_1moveit2_1_1MoveitCppGraspExecution_a7f14c0f70360336741fa972fe4348ce0}\label{classgrasp__execution_1_1moveit2_1_1MoveitCppGraspExecution_a7f14c0f70360336741fa972fe4348ce0}} 
+\index{grasp\_execution::moveit2::MoveitCppGraspExecution@{grasp\_execution::moveit2::MoveitCppGraspExecution}!arms\_@{arms\_}}
+\index{arms\_@{arms\_}!grasp\_execution::moveit2::MoveitCppGraspExecution@{grasp\_execution::moveit2::MoveitCppGraspExecution}}
+\doxysubsubsection{\texorpdfstring{arms\_}{arms\_}}
+{\footnotesize\ttfamily std\+::unordered\+\_\+map$<$std\+::string, \mbox{\hyperlink{structgrasp__execution_1_1moveit2_1_1JmgContext}{moveit2\+::\+Jmg\+Context}}$>$ grasp\+\_\+execution\+::moveit2\+::\+Moveit\+Cpp\+Grasp\+Execution\+::arms\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classgrasp__execution_1_1moveit2_1_1MoveitCppGraspExecution_a76890132ad6d9972cb956c629ba8d71d}\label{classgrasp__execution_1_1moveit2_1_1MoveitCppGraspExecution_a76890132ad6d9972cb956c629ba8d71d}} 
+\index{grasp\_execution::moveit2::MoveitCppGraspExecution@{grasp\_execution::moveit2::MoveitCppGraspExecution}!default\_executor\_@{default\_executor\_}}
+\index{default\_executor\_@{default\_executor\_}!grasp\_execution::moveit2::MoveitCppGraspExecution@{grasp\_execution::moveit2::MoveitCppGraspExecution}}
+\doxysubsubsection{\texorpdfstring{default\_executor\_}{default\_executor\_}}
+{\footnotesize\ttfamily moveit2\+::\+Executor\+::\+Unique\+Ptr grasp\+\_\+execution\+::moveit2\+::\+Moveit\+Cpp\+Grasp\+Execution\+::default\+\_\+executor\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classgrasp__execution_1_1moveit2_1_1MoveitCppGraspExecution_af7181468870910a222f94ef0b4c5decb}\label{classgrasp__execution_1_1moveit2_1_1MoveitCppGraspExecution_af7181468870910a222f94ef0b4c5decb}} 
+\index{grasp\_execution::moveit2::MoveitCppGraspExecution@{grasp\_execution::moveit2::MoveitCppGraspExecution}!executor\_loader\_@{executor\_loader\_}}
+\index{executor\_loader\_@{executor\_loader\_}!grasp\_execution::moveit2::MoveitCppGraspExecution@{grasp\_execution::moveit2::MoveitCppGraspExecution}}
+\doxysubsubsection{\texorpdfstring{executor\_loader\_}{executor\_loader\_}}
+{\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$pluginlib\+::\+Class\+Loader$<$ \mbox{\hyperlink{classgrasp__execution_1_1moveit2_1_1Executor}{grasp\+\_\+execution\+::moveit2\+::\+Executor}}$>$ $>$ grasp\+\_\+execution\+::moveit2\+::\+Moveit\+Cpp\+Grasp\+Execution\+::executor\+\_\+loader\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classgrasp__execution_1_1moveit2_1_1MoveitCppGraspExecution_aff7d2af6051383ac26c6a72a583c94c0}\label{classgrasp__execution_1_1moveit2_1_1MoveitCppGraspExecution_aff7d2af6051383ac26c6a72a583c94c0}} 
+\index{grasp\_execution::moveit2::MoveitCppGraspExecution@{grasp\_execution::moveit2::MoveitCppGraspExecution}!moveit\_cpp\_@{moveit\_cpp\_}}
+\index{moveit\_cpp\_@{moveit\_cpp\_}!grasp\_execution::moveit2::MoveitCppGraspExecution@{grasp\_execution::moveit2::MoveitCppGraspExecution}}
+\doxysubsubsection{\texorpdfstring{moveit\_cpp\_}{moveit\_cpp\_}}
+{\footnotesize\ttfamily moveit\+::planning\+\_\+interface\+::\+Move\+It\+Cpp\+Ptr grasp\+\_\+execution\+::moveit2\+::\+Moveit\+Cpp\+Grasp\+Execution\+::moveit\+\_\+cpp\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/rosi5/workspaces/emd\+\_\+ws/src/easy\+\_\+manipulation\+\_\+deployment/grasp\+\_\+execution/include/grasp\+\_\+execution/moveit2/\mbox{\hyperlink{moveit__cpp__if_8hpp}{moveit\+\_\+cpp\+\_\+if.\+hpp}}\end{DoxyCompactItemize}

@@ -1,0 +1,576 @@
+\hypertarget{classGraspScene}{}\doxysection{Grasp\+Scene Class Reference}
+\label{classGraspScene}\index{GraspScene@{GraspScene}}
+
+
+General Class for a grasp scene.  
+
+
+
+
+{\ttfamily \#include $<$grasp\+\_\+scene.\+hpp$>$}
+
+
+
+Inheritance diagram for Grasp\+Scene\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=157pt]{classGraspScene__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Grasp\+Scene\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=157pt]{classGraspScene__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classGraspScene_a224d53999e5b28051e34a02730fc4c79}{get\+Camera\+Position}} ()
+\item 
+std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classGraspObject}{Grasp\+Object}} $>$ $>$ \mbox{\hyperlink{classGraspScene_aaae4624716738e44b3a6a31e78598de4}{extract\+Objects}} (std\+::string camera\+\_\+frame, float cloud\+\_\+normal\+\_\+radius, pcl\+::\+Point\+Cloud$<$ pcl\+::\+Point\+X\+Y\+Z\+R\+GB $>$\+::Ptr \mbox{\hyperlink{classGraspScene_a6b83cb11d0726bf09a66b24ad99d82ff}{cloud}}, float \mbox{\hyperlink{classGraspScene_a8d542442d34c344313b4739af60e5517}{cluster\+\_\+tolerance}}, int \mbox{\hyperlink{classGraspScene_acdff84c16b17c52f3930bd0f6f8740f5}{min\+\_\+cluster\+\_\+size}})
+\item 
+std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classGraspObject}{Grasp\+Object}} $>$ $>$ \mbox{\hyperlink{classGraspScene_aa77a0463b4f3a35b8a557ee23c7dda08}{process\+E\+P\+D\+Objects}} (std\+::vector$<$ epd\+\_\+msgs\+::msg\+::\+Localized\+Object $>$ objects, std\+::string camera\+\_\+frame, float cloud\+\_\+normal\+\_\+radius)
+\item 
+void \mbox{\hyperlink{classGraspScene_a6d519d3301d88363f08e6927545b18f5}{print\+Pose}} (const geometry\+\_\+msgs\+::msg\+::\+Pose\+Stamped \&\+\_\+pose)
+\item 
+void \mbox{\hyperlink{classGraspScene_a1a9323d74647278bae8f45ba77f5ca09}{print\+Pose}} (const geometry\+\_\+msgs\+::msg\+::\+Pose \&\+\_\+pose)
+\item 
+void \mbox{\hyperlink{classGraspScene_a589914f675f27ddb21a5b8f7da9e2eb5}{planning\+\_\+init}} (const sensor\+\_\+msgs\+::msg\+::\+Point\+Cloud2\+::\+Const\+Shared\+Ptr \&msg)
+\item 
+void \mbox{\hyperlink{classGraspScene_a94ed7b3304b60c341607ca5f4352367c}{load\+End\+Effectors}} ()
+\item 
+void \mbox{\hyperlink{classGraspScene_a2e9b68588588f3a84b4eb571fb9e0f21}{process\+Point\+Cloud}} (const sensor\+\_\+msgs\+::msg\+::\+Point\+Cloud2\+::\+Const\+Shared\+Ptr \&msg)
+\item 
+void \mbox{\hyperlink{classGraspScene_abd323dfd3f5e5a6f36a541ebdebfe050}{create\+World\+Collision}} (const sensor\+\_\+msgs\+::msg\+::\+Point\+Cloud2\+::\+Const\+Shared\+Ptr \&msg)
+\item 
+std\+::string \mbox{\hyperlink{classGraspScene_a69f7fde218ea1f218ecbb165360d3b6d}{generate\+\_\+task\+\_\+id}} ()
+\item 
+{\footnotesize template$<$typename T $>$ }\\void \mbox{\hyperlink{classGraspScene_a7a136e644a4f75e078c60d8ba096365d}{E\+P\+D\+Create\+World\+Collision\+Object}} (const T \&msg)
+\item 
+{\footnotesize template$<$typename U $>$ }\\void \mbox{\hyperlink{classGraspScene_a4123f9964f29376c9d4c2a975b53333c}{planning\+Init}} (const U \&msg)
+\item 
+void \mbox{\hyperlink{classGraspScene_aaa6a0f14cbb68a61a65c6282913c7e86}{E\+P\+D\+Tracking\+Callback}} (const epd\+\_\+msgs\+::msg\+::\+E\+P\+D\+Object\+Tracking\+::\+Const\+Shared\+Ptr \&msg)
+\item 
+void \mbox{\hyperlink{classGraspScene_a039fabbb9d477b133a5e012021d61e44}{E\+P\+D\+Localization\+Callback}} (const epd\+\_\+msgs\+::msg\+::\+E\+P\+D\+Object\+Localization\+::\+Const\+Shared\+Ptr \&msg)
+\item 
+\mbox{\hyperlink{classGraspScene_a89845b0fdd269b521bd68a7656cb0eb2}{$\sim$\+Grasp\+Scene}} ()
+\item 
+\mbox{\hyperlink{classGraspScene_a696e4d0dc7d6d586f99173fb1a945f01}{Grasp\+Scene}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+const float \mbox{\hyperlink{classGraspScene_a16ea485baa233450479d9fa9350d3c92}{pt\+Filter\+\_\+\+Ulimit\+\_\+x}}
+\begin{DoxyCompactList}\small\item\em Upper limit for passthrough filter in the x direction. \end{DoxyCompactList}\item 
+const float \mbox{\hyperlink{classGraspScene_a2c5b7659972475e4ee2f96c9aa888bd6}{pt\+Filter\+\_\+\+Llimit\+\_\+x}}
+\begin{DoxyCompactList}\small\item\em Lower limit for passthrough filter in the x direction. \end{DoxyCompactList}\item 
+const float \mbox{\hyperlink{classGraspScene_a0862eaa80afe00c60e9bdca87a99942e}{pt\+Filter\+\_\+\+Ulimit\+\_\+y}}
+\begin{DoxyCompactList}\small\item\em Upper limit for passthrough filter in the y direction. \end{DoxyCompactList}\item 
+const float \mbox{\hyperlink{classGraspScene_ae287f91ea8c7557c6d2d4ac6e053b61e}{pt\+Filter\+\_\+\+Llimit\+\_\+y}}
+\begin{DoxyCompactList}\small\item\em Lower limit for passthrough filter in the y direction. \end{DoxyCompactList}\item 
+const float \mbox{\hyperlink{classGraspScene_a65d4160258be1f85bb241cc3d7bd5cc2}{pt\+Filter\+\_\+\+Ulimit\+\_\+z}}
+\begin{DoxyCompactList}\small\item\em Upper limit for passthrough filter in the z direction. \end{DoxyCompactList}\item 
+const float \mbox{\hyperlink{classGraspScene_af439217c1289f5d98c88b915c4e611fd}{pt\+Filter\+\_\+\+Llimit\+\_\+z}}
+\begin{DoxyCompactList}\small\item\em Lower limit for passthrough filter in the z direction. \end{DoxyCompactList}\item 
+const int \mbox{\hyperlink{classGraspScene_a60562b7f9bb4c9558c0b519f190d5293}{segmentation\+\_\+max\+\_\+iterations}}
+\begin{DoxyCompactList}\small\item\em Max iteration for Pointcloud Plane Segmentation. \end{DoxyCompactList}\item 
+const float \mbox{\hyperlink{classGraspScene_a7170d883de2c4ce5f7f39b39c8466125}{segmentation\+\_\+distance\+\_\+threshold}}
+\begin{DoxyCompactList}\small\item\em Distance threshhold for Pointcloud Plane Segmentation. \end{DoxyCompactList}\item 
+const float \mbox{\hyperlink{classGraspScene_a8d542442d34c344313b4739af60e5517}{cluster\+\_\+tolerance}}
+\begin{DoxyCompactList}\small\item\em Tolerance when doing point cloud clustering for object segmentation. \end{DoxyCompactList}\item 
+const int \mbox{\hyperlink{classGraspScene_acdff84c16b17c52f3930bd0f6f8740f5}{min\+\_\+cluster\+\_\+size}}
+\begin{DoxyCompactList}\small\item\em Minimum size of a cluster to constitute as an object cluster. \end{DoxyCompactList}\item 
+const float \mbox{\hyperlink{classGraspScene_a86b7a67d05e385752d75c3a3e2b05e69}{fcl\+\_\+voxel\+\_\+size}}
+\begin{DoxyCompactList}\small\item\em Voxel size for fcl collision object generation. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{classGraspScene_a65f5d56baeeebba9df2fbd4a2a2cf445}{incloudfile}}
+\begin{DoxyCompactList}\small\item\em ~\newline
+ \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{classGraspScene_aa75d3144d3c893cb4e64920fe7797108}{outcloudfile}}
+\begin{DoxyCompactList}\small\item\em ~\newline
+ \end{DoxyCompactList}\item 
+pcl\+::\+Point\+Cloud$<$ pcl\+::\+Point\+X\+Y\+Z\+R\+GB $>$\+::Ptr \mbox{\hyperlink{classGraspScene_a6b83cb11d0726bf09a66b24ad99d82ff}{cloud}}
+\begin{DoxyCompactList}\small\item\em Input cloud. \end{DoxyCompactList}\item 
+pcl\+::\+Point\+Cloud$<$ pcl\+::\+Point\+X\+Y\+Z\+R\+GB $>$\+::Ptr \mbox{\hyperlink{classGraspScene_aead5d2b07c96b7b3f6cfc015dd2a168b}{cloud\+\_\+plane\+\_\+removed}}
+\begin{DoxyCompactList}\small\item\em Input cloud without the plane. \end{DoxyCompactList}\item 
+pcl\+::\+Point\+Cloud$<$ pcl\+::\+Point\+X\+Y\+Z\+R\+GB $>$\+::Ptr \mbox{\hyperlink{classGraspScene_a6627e25480b867f1ba93416b9623f709}{org\+\_\+cloud}}
+\begin{DoxyCompactList}\small\item\em ~\newline
+ \end{DoxyCompactList}\item 
+pcl\+::\+Point\+Cloud$<$ pcl\+::\+Point\+X\+Y\+Z\+R\+GB $>$\+::Ptr \mbox{\hyperlink{classGraspScene_ad99cf1e540d35944ec0f6c125ec3a8af}{cloud\+\_\+table}}
+\begin{DoxyCompactList}\small\item\em Point cloud representing the surface on which the object is placed on. \end{DoxyCompactList}\item 
+pcl\+::\+Model\+Coefficients\+::\+Ptr \mbox{\hyperlink{classGraspScene_a76b83f32ced6e57ddb360d71a3c0bb16}{table\+\_\+coeff}}
+\begin{DoxyCompactList}\small\item\em Coefficient of plane representing surface containing objects. \end{DoxyCompactList}\item 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{namespacegrasp__planner_1_1collision_aba4922be9b9bd4fedd3cdf2193b2aaf5}{grasp\+\_\+planner\+::collision\+::\+Collision\+Object}} $>$ \mbox{\hyperlink{classGraspScene_a57784f85dc1399b1b0d9c8ca93e201f2}{world\+\_\+collision\+\_\+object}}
+\begin{DoxyCompactList}\small\item\em Collision object represented by the input cloud (all in scene) \end{DoxyCompactList}\item 
+pcl\+::visualization\+::\+P\+C\+L\+Visualizer\+::\+Ptr \mbox{\hyperlink{classGraspScene_a2d5704ed5de60e58218faed54dfac2ca}{viewer}}
+\begin{DoxyCompactList}\small\item\em P\+CL Visualizer ~\newline
+ \end{DoxyCompactList}\item 
+sensor\+\_\+msgs\+::msg\+::\+Point\+Cloud2 \mbox{\hyperlink{classGraspScene_ac28ed53e9c52f40c65c3cf8de704b75c}{pointcloud2}}
+\begin{DoxyCompactList}\small\item\em Intermediate message type for conversion to Point\+Cloud2 message. \end{DoxyCompactList}\item 
+std\+::shared\+\_\+ptr$<$ tf2\+\_\+ros\+::\+Buffer $>$ \mbox{\hyperlink{classGraspScene_a90096aa452c743033eed5b10a9029495}{buffer\+\_\+}}
+\begin{DoxyCompactList}\small\item\em Pointer Buffer. \end{DoxyCompactList}\item 
+std\+::shared\+\_\+ptr$<$ tf2\+\_\+ros\+::\+Transform\+Listener $>$ \mbox{\hyperlink{classGraspScene_ad364ad4f0a43c48ebbe7df53e39cfc84}{tf\+\_\+listener}}
+\begin{DoxyCompactList}\small\item\em Tf listener to listen for frame transforms. \end{DoxyCompactList}\item 
+rclcpp\+::\+Publisher$<$ emd\+\_\+msgs\+::msg\+::\+Grasp\+Task $>$\+::Shared\+Ptr \mbox{\hyperlink{classGraspScene_a0b59259060a7795b993ed7ca4a919b3f}{output\+\_\+pub}}
+\begin{DoxyCompactList}\small\item\em Publisher that provides the Grasp\+Task information for the Grasp execution component. \end{DoxyCompactList}\item 
+std\+::shared\+\_\+ptr$<$ message\+\_\+filters\+::\+Subscriber$<$ sensor\+\_\+msgs\+::msg\+::\+Point\+Cloud2 $>$ $>$ \mbox{\hyperlink{classGraspScene_ad77eb6eb7296e1aae8b6737c792e1611}{cloud\+\_\+sub}}
+\begin{DoxyCompactList}\small\item\em Publisher that provides markers for R\+V\+IZ {\itshape / rclcpp\+::\+Publisher$<$visualization\+\_\+msgs\+::msg\+::\+Marker$>$\+::\+Shared\+Ptr marker\+\_\+pub; /}! \end{DoxyCompactList}\item 
+std\+::shared\+\_\+ptr$<$ tf2\+\_\+ros\+::\+Message\+Filter$<$ sensor\+\_\+msgs\+::msg\+::\+Point\+Cloud2 $>$ $>$ \mbox{\hyperlink{classGraspScene_a7ad13b09c4fecba30c5a9af669b19e62}{tf\+\_\+cloud\+\_\+sub}}
+\begin{DoxyCompactList}\small\item\em Message filter for pointcloud message. \end{DoxyCompactList}\item 
+std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classGraspObject}{Grasp\+Object}} $>$ $>$ \mbox{\hyperlink{classGraspScene_a8a352c8952b63d42f2f0a94df5d75ccc}{grasp\+\_\+objects}}
+\begin{DoxyCompactList}\small\item\em Vector of objects in the scene to be picked. \end{DoxyCompactList}\item 
+std\+::shared\+\_\+ptr$<$ message\+\_\+filters\+::\+Subscriber$<$ epd\+\_\+msgs\+::msg\+::\+E\+P\+D\+Object\+Localization $>$ $>$ \mbox{\hyperlink{classGraspScene_a862593d419d94c2b3f2acd0ef121c968}{epd\+\_\+localize\+\_\+sub}}
+\begin{DoxyCompactList}\small\item\em Subscriber that subscribes to the E\+PD precision 2 output. \end{DoxyCompactList}\item 
+std\+::shared\+\_\+ptr$<$ tf2\+\_\+ros\+::\+Message\+Filter$<$ epd\+\_\+msgs\+::msg\+::\+E\+P\+D\+Object\+Localization $>$ $>$ \mbox{\hyperlink{classGraspScene_ab4fa1f6a794ce070c27bb775be9372a7}{tf\+\_\+epd\+\_\+localize\+\_\+sub}}
+\begin{DoxyCompactList}\small\item\em Message filter for E\+PD precision 2 message. \end{DoxyCompactList}\item 
+std\+::shared\+\_\+ptr$<$ message\+\_\+filters\+::\+Subscriber$<$ epd\+\_\+msgs\+::msg\+::\+E\+P\+D\+Object\+Tracking $>$ $>$ \mbox{\hyperlink{classGraspScene_a2c41d61106fc184ad4f3f0eacaa19851}{epd\+\_\+tracking\+\_\+sub}}
+\begin{DoxyCompactList}\small\item\em Subscriber that subscribes to the E\+PD precision 3 output. \end{DoxyCompactList}\item 
+std\+::shared\+\_\+ptr$<$ tf2\+\_\+ros\+::\+Message\+Filter$<$ epd\+\_\+msgs\+::msg\+::\+E\+P\+D\+Object\+Tracking $>$ $>$ \mbox{\hyperlink{classGraspScene_ae7d22945983cfe6e112f8abd558bc535}{tf\+\_\+epd\+\_\+tracking\+\_\+sub}}
+\begin{DoxyCompactList}\small\item\em Message filter for E\+PD precision 3 message. \end{DoxyCompactList}\item 
+std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classEndEffector}{End\+Effector}} $>$ $>$ \mbox{\hyperlink{classGraspScene_a889ee7b86c3f6ffdf40a6cf0529a64b8}{end\+\_\+effectors}}
+\begin{DoxyCompactList}\small\item\em Vector of End effectors available. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+General Class for a grasp scene. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classGraspScene_a89845b0fdd269b521bd68a7656cb0eb2}\label{classGraspScene_a89845b0fdd269b521bd68a7656cb0eb2}} 
+\index{GraspScene@{GraspScene}!````~GraspScene@{$\sim$GraspScene}}
+\index{````~GraspScene@{$\sim$GraspScene}!GraspScene@{GraspScene}}
+\doxysubsubsection{\texorpdfstring{$\sim$GraspScene()}{~GraspScene()}}
+{\footnotesize\ttfamily Grasp\+Scene\+::$\sim$\+Grasp\+Scene (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classGraspScene_a696e4d0dc7d6d586f99173fb1a945f01}\label{classGraspScene_a696e4d0dc7d6d586f99173fb1a945f01}} 
+\index{GraspScene@{GraspScene}!GraspScene@{GraspScene}}
+\index{GraspScene@{GraspScene}!GraspScene@{GraspScene}}
+\doxysubsubsection{\texorpdfstring{GraspScene()}{GraspScene()}}
+{\footnotesize\ttfamily Grasp\+Scene\+::\+Grasp\+Scene (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classGraspScene_abd323dfd3f5e5a6f36a541ebdebfe050}\label{classGraspScene_abd323dfd3f5e5a6f36a541ebdebfe050}} 
+\index{GraspScene@{GraspScene}!createWorldCollision@{createWorldCollision}}
+\index{createWorldCollision@{createWorldCollision}!GraspScene@{GraspScene}}
+\doxysubsubsection{\texorpdfstring{createWorldCollision()}{createWorldCollision()}}
+{\footnotesize\ttfamily void Grasp\+Scene\+::create\+World\+Collision (\begin{DoxyParamCaption}\item[{const sensor\+\_\+msgs\+::msg\+::\+Point\+Cloud2\+::\+Const\+Shared\+Ptr \&}]{msg }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classGraspScene_a7a136e644a4f75e078c60d8ba096365d}\label{classGraspScene_a7a136e644a4f75e078c60d8ba096365d}} 
+\index{GraspScene@{GraspScene}!EPDCreateWorldCollisionObject@{EPDCreateWorldCollisionObject}}
+\index{EPDCreateWorldCollisionObject@{EPDCreateWorldCollisionObject}!GraspScene@{GraspScene}}
+\doxysubsubsection{\texorpdfstring{EPDCreateWorldCollisionObject()}{EPDCreateWorldCollisionObject()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+void Grasp\+Scene\+::\+E\+P\+D\+Create\+World\+Collision\+Object (\begin{DoxyParamCaption}\item[{const T \&}]{msg }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classGraspScene_a039fabbb9d477b133a5e012021d61e44}\label{classGraspScene_a039fabbb9d477b133a5e012021d61e44}} 
+\index{GraspScene@{GraspScene}!EPDLocalizationCallback@{EPDLocalizationCallback}}
+\index{EPDLocalizationCallback@{EPDLocalizationCallback}!GraspScene@{GraspScene}}
+\doxysubsubsection{\texorpdfstring{EPDLocalizationCallback()}{EPDLocalizationCallback()}}
+{\footnotesize\ttfamily void Grasp\+Scene\+::\+E\+P\+D\+Localization\+Callback (\begin{DoxyParamCaption}\item[{const epd\+\_\+msgs\+::msg\+::\+E\+P\+D\+Object\+Localization\+::\+Const\+Shared\+Ptr \&}]{msg }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classGraspScene_aaa6a0f14cbb68a61a65c6282913c7e86}\label{classGraspScene_aaa6a0f14cbb68a61a65c6282913c7e86}} 
+\index{GraspScene@{GraspScene}!EPDTrackingCallback@{EPDTrackingCallback}}
+\index{EPDTrackingCallback@{EPDTrackingCallback}!GraspScene@{GraspScene}}
+\doxysubsubsection{\texorpdfstring{EPDTrackingCallback()}{EPDTrackingCallback()}}
+{\footnotesize\ttfamily void Grasp\+Scene\+::\+E\+P\+D\+Tracking\+Callback (\begin{DoxyParamCaption}\item[{const epd\+\_\+msgs\+::msg\+::\+E\+P\+D\+Object\+Tracking\+::\+Const\+Shared\+Ptr \&}]{msg }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classGraspScene_aaae4624716738e44b3a6a31e78598de4}\label{classGraspScene_aaae4624716738e44b3a6a31e78598de4}} 
+\index{GraspScene@{GraspScene}!extractObjects@{extractObjects}}
+\index{extractObjects@{extractObjects}!GraspScene@{GraspScene}}
+\doxysubsubsection{\texorpdfstring{extractObjects()}{extractObjects()}}
+{\footnotesize\ttfamily std\+::vector$<$std\+::shared\+\_\+ptr$<$\mbox{\hyperlink{classGraspObject}{Grasp\+Object}}$>$ $>$ Grasp\+Scene\+::extract\+Objects (\begin{DoxyParamCaption}\item[{std\+::string}]{camera\+\_\+frame,  }\item[{float}]{cloud\+\_\+normal\+\_\+radius,  }\item[{pcl\+::\+Point\+Cloud$<$ pcl\+::\+Point\+X\+Y\+Z\+R\+GB $>$\+::Ptr}]{cloud,  }\item[{float}]{cluster\+\_\+tolerance,  }\item[{int}]{min\+\_\+cluster\+\_\+size }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classGraspScene_a69f7fde218ea1f218ecbb165360d3b6d}\label{classGraspScene_a69f7fde218ea1f218ecbb165360d3b6d}} 
+\index{GraspScene@{GraspScene}!generate\_task\_id@{generate\_task\_id}}
+\index{generate\_task\_id@{generate\_task\_id}!GraspScene@{GraspScene}}
+\doxysubsubsection{\texorpdfstring{generate\_task\_id()}{generate\_task\_id()}}
+{\footnotesize\ttfamily std\+::string Grasp\+Scene\+::generate\+\_\+task\+\_\+id (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classGraspScene_a224d53999e5b28051e34a02730fc4c79}\label{classGraspScene_a224d53999e5b28051e34a02730fc4c79}} 
+\index{GraspScene@{GraspScene}!getCameraPosition@{getCameraPosition}}
+\index{getCameraPosition@{getCameraPosition}!GraspScene@{GraspScene}}
+\doxysubsubsection{\texorpdfstring{getCameraPosition()}{getCameraPosition()}}
+{\footnotesize\ttfamily void Grasp\+Scene\+::get\+Camera\+Position (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classGraspScene_a94ed7b3304b60c341607ca5f4352367c}\label{classGraspScene_a94ed7b3304b60c341607ca5f4352367c}} 
+\index{GraspScene@{GraspScene}!loadEndEffectors@{loadEndEffectors}}
+\index{loadEndEffectors@{loadEndEffectors}!GraspScene@{GraspScene}}
+\doxysubsubsection{\texorpdfstring{loadEndEffectors()}{loadEndEffectors()}}
+{\footnotesize\ttfamily void Grasp\+Scene\+::load\+End\+Effectors (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classGraspScene_a589914f675f27ddb21a5b8f7da9e2eb5}\label{classGraspScene_a589914f675f27ddb21a5b8f7da9e2eb5}} 
+\index{GraspScene@{GraspScene}!planning\_init@{planning\_init}}
+\index{planning\_init@{planning\_init}!GraspScene@{GraspScene}}
+\doxysubsubsection{\texorpdfstring{planning\_init()}{planning\_init()}}
+{\footnotesize\ttfamily void Grasp\+Scene\+::planning\+\_\+init (\begin{DoxyParamCaption}\item[{const sensor\+\_\+msgs\+::msg\+::\+Point\+Cloud2\+::\+Const\+Shared\+Ptr \&}]{msg }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classGraspScene_a4123f9964f29376c9d4c2a975b53333c}\label{classGraspScene_a4123f9964f29376c9d4c2a975b53333c}} 
+\index{GraspScene@{GraspScene}!planningInit@{planningInit}}
+\index{planningInit@{planningInit}!GraspScene@{GraspScene}}
+\doxysubsubsection{\texorpdfstring{planningInit()}{planningInit()}}
+{\footnotesize\ttfamily template$<$typename U $>$ \\
+void Grasp\+Scene\+::planning\+Init (\begin{DoxyParamCaption}\item[{const U \&}]{msg }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classGraspScene_a1a9323d74647278bae8f45ba77f5ca09}\label{classGraspScene_a1a9323d74647278bae8f45ba77f5ca09}} 
+\index{GraspScene@{GraspScene}!printPose@{printPose}}
+\index{printPose@{printPose}!GraspScene@{GraspScene}}
+\doxysubsubsection{\texorpdfstring{printPose()}{printPose()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void Grasp\+Scene\+::print\+Pose (\begin{DoxyParamCaption}\item[{const geometry\+\_\+msgs\+::msg\+::\+Pose \&}]{\+\_\+pose }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classGraspScene_a6d519d3301d88363f08e6927545b18f5}\label{classGraspScene_a6d519d3301d88363f08e6927545b18f5}} 
+\index{GraspScene@{GraspScene}!printPose@{printPose}}
+\index{printPose@{printPose}!GraspScene@{GraspScene}}
+\doxysubsubsection{\texorpdfstring{printPose()}{printPose()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void Grasp\+Scene\+::print\+Pose (\begin{DoxyParamCaption}\item[{const geometry\+\_\+msgs\+::msg\+::\+Pose\+Stamped \&}]{\+\_\+pose }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classGraspScene_aa77a0463b4f3a35b8a557ee23c7dda08}\label{classGraspScene_aa77a0463b4f3a35b8a557ee23c7dda08}} 
+\index{GraspScene@{GraspScene}!processEPDObjects@{processEPDObjects}}
+\index{processEPDObjects@{processEPDObjects}!GraspScene@{GraspScene}}
+\doxysubsubsection{\texorpdfstring{processEPDObjects()}{processEPDObjects()}}
+{\footnotesize\ttfamily std\+::vector$<$std\+::shared\+\_\+ptr$<$\mbox{\hyperlink{classGraspObject}{Grasp\+Object}}$>$ $>$ Grasp\+Scene\+::process\+E\+P\+D\+Objects (\begin{DoxyParamCaption}\item[{std\+::vector$<$ epd\+\_\+msgs\+::msg\+::\+Localized\+Object $>$}]{objects,  }\item[{std\+::string}]{camera\+\_\+frame,  }\item[{float}]{cloud\+\_\+normal\+\_\+radius }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classGraspScene_a2e9b68588588f3a84b4eb571fb9e0f21}\label{classGraspScene_a2e9b68588588f3a84b4eb571fb9e0f21}} 
+\index{GraspScene@{GraspScene}!processPointCloud@{processPointCloud}}
+\index{processPointCloud@{processPointCloud}!GraspScene@{GraspScene}}
+\doxysubsubsection{\texorpdfstring{processPointCloud()}{processPointCloud()}}
+{\footnotesize\ttfamily void Grasp\+Scene\+::process\+Point\+Cloud (\begin{DoxyParamCaption}\item[{const sensor\+\_\+msgs\+::msg\+::\+Point\+Cloud2\+::\+Const\+Shared\+Ptr \&}]{msg }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classGraspScene_a90096aa452c743033eed5b10a9029495}\label{classGraspScene_a90096aa452c743033eed5b10a9029495}} 
+\index{GraspScene@{GraspScene}!buffer\_@{buffer\_}}
+\index{buffer\_@{buffer\_}!GraspScene@{GraspScene}}
+\doxysubsubsection{\texorpdfstring{buffer\_}{buffer\_}}
+{\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$tf2\+\_\+ros\+::\+Buffer$>$ Grasp\+Scene\+::buffer\+\_\+}
+
+
+
+Pointer Buffer. 
+
+\mbox{\Hypertarget{classGraspScene_a6b83cb11d0726bf09a66b24ad99d82ff}\label{classGraspScene_a6b83cb11d0726bf09a66b24ad99d82ff}} 
+\index{GraspScene@{GraspScene}!cloud@{cloud}}
+\index{cloud@{cloud}!GraspScene@{GraspScene}}
+\doxysubsubsection{\texorpdfstring{cloud}{cloud}}
+{\footnotesize\ttfamily pcl\+::\+Point\+Cloud$<$pcl\+::\+Point\+X\+Y\+Z\+R\+GB$>$\+::Ptr Grasp\+Scene\+::cloud}
+
+
+
+Input cloud. 
+
+\mbox{\Hypertarget{classGraspScene_aead5d2b07c96b7b3f6cfc015dd2a168b}\label{classGraspScene_aead5d2b07c96b7b3f6cfc015dd2a168b}} 
+\index{GraspScene@{GraspScene}!cloud\_plane\_removed@{cloud\_plane\_removed}}
+\index{cloud\_plane\_removed@{cloud\_plane\_removed}!GraspScene@{GraspScene}}
+\doxysubsubsection{\texorpdfstring{cloud\_plane\_removed}{cloud\_plane\_removed}}
+{\footnotesize\ttfamily pcl\+::\+Point\+Cloud$<$pcl\+::\+Point\+X\+Y\+Z\+R\+GB$>$\+::Ptr Grasp\+Scene\+::cloud\+\_\+plane\+\_\+removed}
+
+
+
+Input cloud without the plane. 
+
+\mbox{\Hypertarget{classGraspScene_ad77eb6eb7296e1aae8b6737c792e1611}\label{classGraspScene_ad77eb6eb7296e1aae8b6737c792e1611}} 
+\index{GraspScene@{GraspScene}!cloud\_sub@{cloud\_sub}}
+\index{cloud\_sub@{cloud\_sub}!GraspScene@{GraspScene}}
+\doxysubsubsection{\texorpdfstring{cloud\_sub}{cloud\_sub}}
+{\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$message\+\_\+filters\+::\+Subscriber$<$sensor\+\_\+msgs\+::msg\+::\+Point\+Cloud2$>$ $>$ Grasp\+Scene\+::cloud\+\_\+sub}
+
+
+
+Publisher that provides markers for R\+V\+IZ {\itshape / rclcpp\+::\+Publisher$<$visualization\+\_\+msgs\+::msg\+::\+Marker$>$\+::\+Shared\+Ptr marker\+\_\+pub; /}! 
+
+Subscriber that subscribes to the camera output \mbox{\Hypertarget{classGraspScene_ad99cf1e540d35944ec0f6c125ec3a8af}\label{classGraspScene_ad99cf1e540d35944ec0f6c125ec3a8af}} 
+\index{GraspScene@{GraspScene}!cloud\_table@{cloud\_table}}
+\index{cloud\_table@{cloud\_table}!GraspScene@{GraspScene}}
+\doxysubsubsection{\texorpdfstring{cloud\_table}{cloud\_table}}
+{\footnotesize\ttfamily pcl\+::\+Point\+Cloud$<$pcl\+::\+Point\+X\+Y\+Z\+R\+GB$>$\+::Ptr Grasp\+Scene\+::cloud\+\_\+table}
+
+
+
+Point cloud representing the surface on which the object is placed on. 
+
+\mbox{\Hypertarget{classGraspScene_a8d542442d34c344313b4739af60e5517}\label{classGraspScene_a8d542442d34c344313b4739af60e5517}} 
+\index{GraspScene@{GraspScene}!cluster\_tolerance@{cluster\_tolerance}}
+\index{cluster\_tolerance@{cluster\_tolerance}!GraspScene@{GraspScene}}
+\doxysubsubsection{\texorpdfstring{cluster\_tolerance}{cluster\_tolerance}}
+{\footnotesize\ttfamily const float Grasp\+Scene\+::cluster\+\_\+tolerance}
+
+
+
+Tolerance when doing point cloud clustering for object segmentation. 
+
+\mbox{\Hypertarget{classGraspScene_a889ee7b86c3f6ffdf40a6cf0529a64b8}\label{classGraspScene_a889ee7b86c3f6ffdf40a6cf0529a64b8}} 
+\index{GraspScene@{GraspScene}!end\_effectors@{end\_effectors}}
+\index{end\_effectors@{end\_effectors}!GraspScene@{GraspScene}}
+\doxysubsubsection{\texorpdfstring{end\_effectors}{end\_effectors}}
+{\footnotesize\ttfamily std\+::vector$<$std\+::shared\+\_\+ptr$<$\mbox{\hyperlink{classEndEffector}{End\+Effector}}$>$ $>$ Grasp\+Scene\+::end\+\_\+effectors}
+
+
+
+Vector of End effectors available. 
+
+\mbox{\Hypertarget{classGraspScene_a862593d419d94c2b3f2acd0ef121c968}\label{classGraspScene_a862593d419d94c2b3f2acd0ef121c968}} 
+\index{GraspScene@{GraspScene}!epd\_localize\_sub@{epd\_localize\_sub}}
+\index{epd\_localize\_sub@{epd\_localize\_sub}!GraspScene@{GraspScene}}
+\doxysubsubsection{\texorpdfstring{epd\_localize\_sub}{epd\_localize\_sub}}
+{\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$message\+\_\+filters\+::\+Subscriber$<$epd\+\_\+msgs\+::msg\+::\+E\+P\+D\+Object\+Localization$>$ $>$ Grasp\+Scene\+::epd\+\_\+localize\+\_\+sub}
+
+
+
+Subscriber that subscribes to the E\+PD precision 2 output. 
+
+\mbox{\Hypertarget{classGraspScene_a2c41d61106fc184ad4f3f0eacaa19851}\label{classGraspScene_a2c41d61106fc184ad4f3f0eacaa19851}} 
+\index{GraspScene@{GraspScene}!epd\_tracking\_sub@{epd\_tracking\_sub}}
+\index{epd\_tracking\_sub@{epd\_tracking\_sub}!GraspScene@{GraspScene}}
+\doxysubsubsection{\texorpdfstring{epd\_tracking\_sub}{epd\_tracking\_sub}}
+{\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$message\+\_\+filters\+::\+Subscriber$<$epd\+\_\+msgs\+::msg\+::\+E\+P\+D\+Object\+Tracking$>$ $>$ Grasp\+Scene\+::epd\+\_\+tracking\+\_\+sub}
+
+
+
+Subscriber that subscribes to the E\+PD precision 3 output. 
+
+\mbox{\Hypertarget{classGraspScene_a86b7a67d05e385752d75c3a3e2b05e69}\label{classGraspScene_a86b7a67d05e385752d75c3a3e2b05e69}} 
+\index{GraspScene@{GraspScene}!fcl\_voxel\_size@{fcl\_voxel\_size}}
+\index{fcl\_voxel\_size@{fcl\_voxel\_size}!GraspScene@{GraspScene}}
+\doxysubsubsection{\texorpdfstring{fcl\_voxel\_size}{fcl\_voxel\_size}}
+{\footnotesize\ttfamily const float Grasp\+Scene\+::fcl\+\_\+voxel\+\_\+size}
+
+
+
+Voxel size for fcl collision object generation. 
+
+\mbox{\Hypertarget{classGraspScene_a8a352c8952b63d42f2f0a94df5d75ccc}\label{classGraspScene_a8a352c8952b63d42f2f0a94df5d75ccc}} 
+\index{GraspScene@{GraspScene}!grasp\_objects@{grasp\_objects}}
+\index{grasp\_objects@{grasp\_objects}!GraspScene@{GraspScene}}
+\doxysubsubsection{\texorpdfstring{grasp\_objects}{grasp\_objects}}
+{\footnotesize\ttfamily std\+::vector$<$std\+::shared\+\_\+ptr$<$\mbox{\hyperlink{classGraspObject}{Grasp\+Object}}$>$ $>$ Grasp\+Scene\+::grasp\+\_\+objects}
+
+
+
+Vector of objects in the scene to be picked. 
+
+\mbox{\Hypertarget{classGraspScene_a65f5d56baeeebba9df2fbd4a2a2cf445}\label{classGraspScene_a65f5d56baeeebba9df2fbd4a2a2cf445}} 
+\index{GraspScene@{GraspScene}!incloudfile@{incloudfile}}
+\index{incloudfile@{incloudfile}!GraspScene@{GraspScene}}
+\doxysubsubsection{\texorpdfstring{incloudfile}{incloudfile}}
+{\footnotesize\ttfamily std\+::string Grasp\+Scene\+::incloudfile}
+
+
+
+~\newline
+ 
+
+\mbox{\Hypertarget{classGraspScene_acdff84c16b17c52f3930bd0f6f8740f5}\label{classGraspScene_acdff84c16b17c52f3930bd0f6f8740f5}} 
+\index{GraspScene@{GraspScene}!min\_cluster\_size@{min\_cluster\_size}}
+\index{min\_cluster\_size@{min\_cluster\_size}!GraspScene@{GraspScene}}
+\doxysubsubsection{\texorpdfstring{min\_cluster\_size}{min\_cluster\_size}}
+{\footnotesize\ttfamily const int Grasp\+Scene\+::min\+\_\+cluster\+\_\+size}
+
+
+
+Minimum size of a cluster to constitute as an object cluster. 
+
+\mbox{\Hypertarget{classGraspScene_a6627e25480b867f1ba93416b9623f709}\label{classGraspScene_a6627e25480b867f1ba93416b9623f709}} 
+\index{GraspScene@{GraspScene}!org\_cloud@{org\_cloud}}
+\index{org\_cloud@{org\_cloud}!GraspScene@{GraspScene}}
+\doxysubsubsection{\texorpdfstring{org\_cloud}{org\_cloud}}
+{\footnotesize\ttfamily pcl\+::\+Point\+Cloud$<$pcl\+::\+Point\+X\+Y\+Z\+R\+GB$>$\+::Ptr Grasp\+Scene\+::org\+\_\+cloud}
+
+
+
+~\newline
+ 
+
+\mbox{\Hypertarget{classGraspScene_aa75d3144d3c893cb4e64920fe7797108}\label{classGraspScene_aa75d3144d3c893cb4e64920fe7797108}} 
+\index{GraspScene@{GraspScene}!outcloudfile@{outcloudfile}}
+\index{outcloudfile@{outcloudfile}!GraspScene@{GraspScene}}
+\doxysubsubsection{\texorpdfstring{outcloudfile}{outcloudfile}}
+{\footnotesize\ttfamily std\+::string Grasp\+Scene\+::outcloudfile}
+
+
+
+~\newline
+ 
+
+\mbox{\Hypertarget{classGraspScene_a0b59259060a7795b993ed7ca4a919b3f}\label{classGraspScene_a0b59259060a7795b993ed7ca4a919b3f}} 
+\index{GraspScene@{GraspScene}!output\_pub@{output\_pub}}
+\index{output\_pub@{output\_pub}!GraspScene@{GraspScene}}
+\doxysubsubsection{\texorpdfstring{output\_pub}{output\_pub}}
+{\footnotesize\ttfamily rclcpp\+::\+Publisher$<$emd\+\_\+msgs\+::msg\+::\+Grasp\+Task$>$\+::Shared\+Ptr Grasp\+Scene\+::output\+\_\+pub}
+
+
+
+Publisher that provides the Grasp\+Task information for the Grasp execution component. 
+
+\mbox{\Hypertarget{classGraspScene_ac28ed53e9c52f40c65c3cf8de704b75c}\label{classGraspScene_ac28ed53e9c52f40c65c3cf8de704b75c}} 
+\index{GraspScene@{GraspScene}!pointcloud2@{pointcloud2}}
+\index{pointcloud2@{pointcloud2}!GraspScene@{GraspScene}}
+\doxysubsubsection{\texorpdfstring{pointcloud2}{pointcloud2}}
+{\footnotesize\ttfamily sensor\+\_\+msgs\+::msg\+::\+Point\+Cloud2 Grasp\+Scene\+::pointcloud2}
+
+
+
+Intermediate message type for conversion to Point\+Cloud2 message. 
+
+\mbox{\Hypertarget{classGraspScene_a2c5b7659972475e4ee2f96c9aa888bd6}\label{classGraspScene_a2c5b7659972475e4ee2f96c9aa888bd6}} 
+\index{GraspScene@{GraspScene}!ptFilter\_Llimit\_x@{ptFilter\_Llimit\_x}}
+\index{ptFilter\_Llimit\_x@{ptFilter\_Llimit\_x}!GraspScene@{GraspScene}}
+\doxysubsubsection{\texorpdfstring{ptFilter\_Llimit\_x}{ptFilter\_Llimit\_x}}
+{\footnotesize\ttfamily const float Grasp\+Scene\+::pt\+Filter\+\_\+\+Llimit\+\_\+x}
+
+
+
+Lower limit for passthrough filter in the x direction. 
+
+\mbox{\Hypertarget{classGraspScene_ae287f91ea8c7557c6d2d4ac6e053b61e}\label{classGraspScene_ae287f91ea8c7557c6d2d4ac6e053b61e}} 
+\index{GraspScene@{GraspScene}!ptFilter\_Llimit\_y@{ptFilter\_Llimit\_y}}
+\index{ptFilter\_Llimit\_y@{ptFilter\_Llimit\_y}!GraspScene@{GraspScene}}
+\doxysubsubsection{\texorpdfstring{ptFilter\_Llimit\_y}{ptFilter\_Llimit\_y}}
+{\footnotesize\ttfamily const float Grasp\+Scene\+::pt\+Filter\+\_\+\+Llimit\+\_\+y}
+
+
+
+Lower limit for passthrough filter in the y direction. 
+
+\mbox{\Hypertarget{classGraspScene_af439217c1289f5d98c88b915c4e611fd}\label{classGraspScene_af439217c1289f5d98c88b915c4e611fd}} 
+\index{GraspScene@{GraspScene}!ptFilter\_Llimit\_z@{ptFilter\_Llimit\_z}}
+\index{ptFilter\_Llimit\_z@{ptFilter\_Llimit\_z}!GraspScene@{GraspScene}}
+\doxysubsubsection{\texorpdfstring{ptFilter\_Llimit\_z}{ptFilter\_Llimit\_z}}
+{\footnotesize\ttfamily const float Grasp\+Scene\+::pt\+Filter\+\_\+\+Llimit\+\_\+z}
+
+
+
+Lower limit for passthrough filter in the z direction. 
+
+\mbox{\Hypertarget{classGraspScene_a16ea485baa233450479d9fa9350d3c92}\label{classGraspScene_a16ea485baa233450479d9fa9350d3c92}} 
+\index{GraspScene@{GraspScene}!ptFilter\_Ulimit\_x@{ptFilter\_Ulimit\_x}}
+\index{ptFilter\_Ulimit\_x@{ptFilter\_Ulimit\_x}!GraspScene@{GraspScene}}
+\doxysubsubsection{\texorpdfstring{ptFilter\_Ulimit\_x}{ptFilter\_Ulimit\_x}}
+{\footnotesize\ttfamily const float Grasp\+Scene\+::pt\+Filter\+\_\+\+Ulimit\+\_\+x}
+
+
+
+Upper limit for passthrough filter in the x direction. 
+
+\mbox{\Hypertarget{classGraspScene_a0862eaa80afe00c60e9bdca87a99942e}\label{classGraspScene_a0862eaa80afe00c60e9bdca87a99942e}} 
+\index{GraspScene@{GraspScene}!ptFilter\_Ulimit\_y@{ptFilter\_Ulimit\_y}}
+\index{ptFilter\_Ulimit\_y@{ptFilter\_Ulimit\_y}!GraspScene@{GraspScene}}
+\doxysubsubsection{\texorpdfstring{ptFilter\_Ulimit\_y}{ptFilter\_Ulimit\_y}}
+{\footnotesize\ttfamily const float Grasp\+Scene\+::pt\+Filter\+\_\+\+Ulimit\+\_\+y}
+
+
+
+Upper limit for passthrough filter in the y direction. 
+
+\mbox{\Hypertarget{classGraspScene_a65d4160258be1f85bb241cc3d7bd5cc2}\label{classGraspScene_a65d4160258be1f85bb241cc3d7bd5cc2}} 
+\index{GraspScene@{GraspScene}!ptFilter\_Ulimit\_z@{ptFilter\_Ulimit\_z}}
+\index{ptFilter\_Ulimit\_z@{ptFilter\_Ulimit\_z}!GraspScene@{GraspScene}}
+\doxysubsubsection{\texorpdfstring{ptFilter\_Ulimit\_z}{ptFilter\_Ulimit\_z}}
+{\footnotesize\ttfamily const float Grasp\+Scene\+::pt\+Filter\+\_\+\+Ulimit\+\_\+z}
+
+
+
+Upper limit for passthrough filter in the z direction. 
+
+\mbox{\Hypertarget{classGraspScene_a7170d883de2c4ce5f7f39b39c8466125}\label{classGraspScene_a7170d883de2c4ce5f7f39b39c8466125}} 
+\index{GraspScene@{GraspScene}!segmentation\_distance\_threshold@{segmentation\_distance\_threshold}}
+\index{segmentation\_distance\_threshold@{segmentation\_distance\_threshold}!GraspScene@{GraspScene}}
+\doxysubsubsection{\texorpdfstring{segmentation\_distance\_threshold}{segmentation\_distance\_threshold}}
+{\footnotesize\ttfamily const float Grasp\+Scene\+::segmentation\+\_\+distance\+\_\+threshold}
+
+
+
+Distance threshhold for Pointcloud Plane Segmentation. 
+
+\mbox{\Hypertarget{classGraspScene_a60562b7f9bb4c9558c0b519f190d5293}\label{classGraspScene_a60562b7f9bb4c9558c0b519f190d5293}} 
+\index{GraspScene@{GraspScene}!segmentation\_max\_iterations@{segmentation\_max\_iterations}}
+\index{segmentation\_max\_iterations@{segmentation\_max\_iterations}!GraspScene@{GraspScene}}
+\doxysubsubsection{\texorpdfstring{segmentation\_max\_iterations}{segmentation\_max\_iterations}}
+{\footnotesize\ttfamily const int Grasp\+Scene\+::segmentation\+\_\+max\+\_\+iterations}
+
+
+
+Max iteration for Pointcloud Plane Segmentation. 
+
+\mbox{\Hypertarget{classGraspScene_a76b83f32ced6e57ddb360d71a3c0bb16}\label{classGraspScene_a76b83f32ced6e57ddb360d71a3c0bb16}} 
+\index{GraspScene@{GraspScene}!table\_coeff@{table\_coeff}}
+\index{table\_coeff@{table\_coeff}!GraspScene@{GraspScene}}
+\doxysubsubsection{\texorpdfstring{table\_coeff}{table\_coeff}}
+{\footnotesize\ttfamily pcl\+::\+Model\+Coefficients\+::\+Ptr Grasp\+Scene\+::table\+\_\+coeff}
+
+
+
+Coefficient of plane representing surface containing objects. 
+
+\mbox{\Hypertarget{classGraspScene_a7ad13b09c4fecba30c5a9af669b19e62}\label{classGraspScene_a7ad13b09c4fecba30c5a9af669b19e62}} 
+\index{GraspScene@{GraspScene}!tf\_cloud\_sub@{tf\_cloud\_sub}}
+\index{tf\_cloud\_sub@{tf\_cloud\_sub}!GraspScene@{GraspScene}}
+\doxysubsubsection{\texorpdfstring{tf\_cloud\_sub}{tf\_cloud\_sub}}
+{\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$tf2\+\_\+ros\+::\+Message\+Filter$<$sensor\+\_\+msgs\+::msg\+::\+Point\+Cloud2$>$ $>$ Grasp\+Scene\+::tf\+\_\+cloud\+\_\+sub}
+
+
+
+Message filter for pointcloud message. 
+
+\mbox{\Hypertarget{classGraspScene_ab4fa1f6a794ce070c27bb775be9372a7}\label{classGraspScene_ab4fa1f6a794ce070c27bb775be9372a7}} 
+\index{GraspScene@{GraspScene}!tf\_epd\_localize\_sub@{tf\_epd\_localize\_sub}}
+\index{tf\_epd\_localize\_sub@{tf\_epd\_localize\_sub}!GraspScene@{GraspScene}}
+\doxysubsubsection{\texorpdfstring{tf\_epd\_localize\_sub}{tf\_epd\_localize\_sub}}
+{\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$tf2\+\_\+ros\+::\+Message\+Filter$<$epd\+\_\+msgs\+::msg\+::\+E\+P\+D\+Object\+Localization$>$ $>$ Grasp\+Scene\+::tf\+\_\+epd\+\_\+localize\+\_\+sub}
+
+
+
+Message filter for E\+PD precision 2 message. 
+
+\mbox{\Hypertarget{classGraspScene_ae7d22945983cfe6e112f8abd558bc535}\label{classGraspScene_ae7d22945983cfe6e112f8abd558bc535}} 
+\index{GraspScene@{GraspScene}!tf\_epd\_tracking\_sub@{tf\_epd\_tracking\_sub}}
+\index{tf\_epd\_tracking\_sub@{tf\_epd\_tracking\_sub}!GraspScene@{GraspScene}}
+\doxysubsubsection{\texorpdfstring{tf\_epd\_tracking\_sub}{tf\_epd\_tracking\_sub}}
+{\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$tf2\+\_\+ros\+::\+Message\+Filter$<$epd\+\_\+msgs\+::msg\+::\+E\+P\+D\+Object\+Tracking$>$ $>$ Grasp\+Scene\+::tf\+\_\+epd\+\_\+tracking\+\_\+sub}
+
+
+
+Message filter for E\+PD precision 3 message. 
+
+\mbox{\Hypertarget{classGraspScene_ad364ad4f0a43c48ebbe7df53e39cfc84}\label{classGraspScene_ad364ad4f0a43c48ebbe7df53e39cfc84}} 
+\index{GraspScene@{GraspScene}!tf\_listener@{tf\_listener}}
+\index{tf\_listener@{tf\_listener}!GraspScene@{GraspScene}}
+\doxysubsubsection{\texorpdfstring{tf\_listener}{tf\_listener}}
+{\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$tf2\+\_\+ros\+::\+Transform\+Listener$>$ Grasp\+Scene\+::tf\+\_\+listener}
+
+
+
+Tf listener to listen for frame transforms. 
+
+\mbox{\Hypertarget{classGraspScene_a2d5704ed5de60e58218faed54dfac2ca}\label{classGraspScene_a2d5704ed5de60e58218faed54dfac2ca}} 
+\index{GraspScene@{GraspScene}!viewer@{viewer}}
+\index{viewer@{viewer}!GraspScene@{GraspScene}}
+\doxysubsubsection{\texorpdfstring{viewer}{viewer}}
+{\footnotesize\ttfamily pcl\+::visualization\+::\+P\+C\+L\+Visualizer\+::\+Ptr Grasp\+Scene\+::viewer}
+
+
+
+P\+CL Visualizer ~\newline
+ 
+
+\mbox{\Hypertarget{classGraspScene_a57784f85dc1399b1b0d9c8ca93e201f2}\label{classGraspScene_a57784f85dc1399b1b0d9c8ca93e201f2}} 
+\index{GraspScene@{GraspScene}!world\_collision\_object@{world\_collision\_object}}
+\index{world\_collision\_object@{world\_collision\_object}!GraspScene@{GraspScene}}
+\doxysubsubsection{\texorpdfstring{world\_collision\_object}{world\_collision\_object}}
+{\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$\mbox{\hyperlink{namespacegrasp__planner_1_1collision_aba4922be9b9bd4fedd3cdf2193b2aaf5}{grasp\+\_\+planner\+::collision\+::\+Collision\+Object}}$>$ Grasp\+Scene\+::world\+\_\+collision\+\_\+object}
+
+
+
+Collision object represented by the input cloud (all in scene) 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/rosi5/workspaces/emd\+\_\+ws/src/easy\+\_\+manipulation\+\_\+deployment/grasp\+\_\+planner/include/grasp\+\_\+planner/\mbox{\hyperlink{grasp__scene_8hpp}{grasp\+\_\+scene.\+hpp}}\end{DoxyCompactItemize}

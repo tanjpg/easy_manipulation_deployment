@@ -1,0 +1,118 @@
+\hypertarget{namespacegrasp__execution}{}\doxysection{grasp\+\_\+execution Namespace Reference}
+\label{namespacegrasp__execution}\index{grasp\_execution@{grasp\_execution}}
+\doxysubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \mbox{\hyperlink{namespacegrasp__execution_1_1core}{core}}
+\item 
+ \mbox{\hyperlink{namespacegrasp__execution_1_1dynamic__safety}{dynamic\+\_\+safety}}
+\item 
+ \mbox{\hyperlink{namespacegrasp__execution_1_1moveit2}{moveit2}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classgrasp__execution_1_1GraspExecutionInterface}{Grasp\+Execution\+Interface}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+std\+::string \mbox{\hyperlink{namespacegrasp__execution_aa872b79598bd80e79607a90ef39c86ac}{gen\+\_\+uuid}} ()
+\item 
+void \mbox{\hyperlink{namespacegrasp__execution_a68716446cdfc0ca140da282c311b3ff3}{print\+\_\+pose}} (const geometry\+\_\+msgs\+::msg\+::\+Pose \&\+\_\+pose, std\+::ostream \&\+\_\+out=std\+::cout, bool \+\_\+euler=true)
+\begin{DoxyCompactList}\small\item\em Print Pose Message T\+O\+D\+O(\+Briancbn)\+: default std\+::cout doesn\textquotesingle{}t seems to work here. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{namespacegrasp__execution_a3354b6d874b760fa92bc4e8c51d941d6}{print\+\_\+pose}} (const geometry\+\_\+msgs\+::msg\+::\+Pose\+Stamped \&\+\_\+pose, std\+::ostream \&\+\_\+out=std\+::cout, bool \+\_\+euler=true)
+\begin{DoxyCompactList}\small\item\em Print Pose\+Stamped Message. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{namespacegrasp__execution_a8ec71a601a1d505c1732d3174e3fbbbf}{print\+\_\+pose\+\_\+ros}} (const rclcpp\+::\+Logger logger, const geometry\+\_\+msgs\+::msg\+::\+Pose \&\+\_\+pose, bool \+\_\+euler=true)
+\begin{DoxyCompactList}\small\item\em Use R\+OS to print Pose\+Stamped message. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{namespacegrasp__execution_a0b08614f446fb2fc6d76cd538df780b9}{print\+\_\+pose\+\_\+ros}} (const rclcpp\+::\+Logger logger, const geometry\+\_\+msgs\+::msg\+::\+Pose\+Stamped \&\+\_\+pose, bool \+\_\+euler=true)
+\begin{DoxyCompactList}\small\item\em Use R\+OS to print Pose\+Stamped message. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{namespacegrasp__execution_a95f0436cde14207521e7001d7865d1e7}{to\+\_\+frame}} (const geometry\+\_\+msgs\+::msg\+::\+Pose\+Stamped \&in\+\_\+, geometry\+\_\+msgs\+::msg\+::\+Pose\+Stamped \&out\+\_\+, const std\+::string \&\+\_\+target\+\_\+frame, const tf2\+\_\+ros\+::\+Buffer \&\+\_\+buffer)
+\begin{DoxyCompactList}\small\item\em Transform pose to target end reference frame. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{namespacegrasp__execution_acdbc03a70c6a20e59961cf6da4049551}{parse\+\_\+pose\+\_\+vector}} (const std\+::vector$<$ double $>$ \&param, geometry\+\_\+msgs\+::msg\+::\+Pose \&pose)
+\begin{DoxyCompactList}\small\item\em Parse vector with 6 or 7 variables to a pose. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T $>$ }\\void \mbox{\hyperlink{namespacegrasp__execution_a3913cdb0cf51e9946e3cca7df581a319}{declare\+\_\+or\+\_\+get\+\_\+param}} (T \&output\+\_\+value, const std\+::string \&param\+\_\+name, const rclcpp\+::\+Node\+::\+Shared\+Ptr \&node, const rclcpp\+::\+Logger \&logger, const T \&default\+\_\+value=T\{\})
+\begin{DoxyCompactList}\small\item\em Get parameter (declare if doesn\textquotesingle{}t allow overload) \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{namespacegrasp__execution_a3913cdb0cf51e9946e3cca7df581a319}\label{namespacegrasp__execution_a3913cdb0cf51e9946e3cca7df581a319}} 
+\index{grasp\_execution@{grasp\_execution}!declare\_or\_get\_param@{declare\_or\_get\_param}}
+\index{declare\_or\_get\_param@{declare\_or\_get\_param}!grasp\_execution@{grasp\_execution}}
+\doxysubsubsection{\texorpdfstring{declare\_or\_get\_param()}{declare\_or\_get\_param()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+void grasp\+\_\+execution\+::declare\+\_\+or\+\_\+get\+\_\+param (\begin{DoxyParamCaption}\item[{T \&}]{output\+\_\+value,  }\item[{const std\+::string \&}]{param\+\_\+name,  }\item[{const rclcpp\+::\+Node\+::\+Shared\+Ptr \&}]{node,  }\item[{const rclcpp\+::\+Logger \&}]{logger,  }\item[{const T \&}]{default\+\_\+value = {\ttfamily T\{\}} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get parameter (declare if doesn\textquotesingle{}t allow overload) 
+
+Referenced from moveit servo. \mbox{\Hypertarget{namespacegrasp__execution_aa872b79598bd80e79607a90ef39c86ac}\label{namespacegrasp__execution_aa872b79598bd80e79607a90ef39c86ac}} 
+\index{grasp\_execution@{grasp\_execution}!gen\_uuid@{gen\_uuid}}
+\index{gen\_uuid@{gen\_uuid}!grasp\_execution@{grasp\_execution}}
+\doxysubsubsection{\texorpdfstring{gen\_uuid()}{gen\_uuid()}}
+{\footnotesize\ttfamily std\+::string grasp\+\_\+execution\+::gen\+\_\+uuid (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Generate U\+U\+ID \begin{DoxyReturn}{Returns}
+U\+U\+ID in string 
+\end{DoxyReturn}
+\mbox{\Hypertarget{namespacegrasp__execution_acdbc03a70c6a20e59961cf6da4049551}\label{namespacegrasp__execution_acdbc03a70c6a20e59961cf6da4049551}} 
+\index{grasp\_execution@{grasp\_execution}!parse\_pose\_vector@{parse\_pose\_vector}}
+\index{parse\_pose\_vector@{parse\_pose\_vector}!grasp\_execution@{grasp\_execution}}
+\doxysubsubsection{\texorpdfstring{parse\_pose\_vector()}{parse\_pose\_vector()}}
+{\footnotesize\ttfamily bool grasp\+\_\+execution\+::parse\+\_\+pose\+\_\+vector (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ double $>$ \&}]{param,  }\item[{geometry\+\_\+msgs\+::msg\+::\+Pose \&}]{pose }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Parse vector with 6 or 7 variables to a pose. 
+
+\mbox{\Hypertarget{namespacegrasp__execution_a68716446cdfc0ca140da282c311b3ff3}\label{namespacegrasp__execution_a68716446cdfc0ca140da282c311b3ff3}} 
+\index{grasp\_execution@{grasp\_execution}!print\_pose@{print\_pose}}
+\index{print\_pose@{print\_pose}!grasp\_execution@{grasp\_execution}}
+\doxysubsubsection{\texorpdfstring{print\_pose()}{print\_pose()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void grasp\+\_\+execution\+::print\+\_\+pose (\begin{DoxyParamCaption}\item[{const geometry\+\_\+msgs\+::msg\+::\+Pose \&}]{\+\_\+pose,  }\item[{std\+::ostream \&}]{\+\_\+out = {\ttfamily std\+:\+:cout},  }\item[{bool}]{\+\_\+euler = {\ttfamily true} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Print Pose Message T\+O\+D\+O(\+Briancbn)\+: default std\+::cout doesn\textquotesingle{}t seems to work here. 
+
+\mbox{\Hypertarget{namespacegrasp__execution_a3354b6d874b760fa92bc4e8c51d941d6}\label{namespacegrasp__execution_a3354b6d874b760fa92bc4e8c51d941d6}} 
+\index{grasp\_execution@{grasp\_execution}!print\_pose@{print\_pose}}
+\index{print\_pose@{print\_pose}!grasp\_execution@{grasp\_execution}}
+\doxysubsubsection{\texorpdfstring{print\_pose()}{print\_pose()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void grasp\+\_\+execution\+::print\+\_\+pose (\begin{DoxyParamCaption}\item[{const geometry\+\_\+msgs\+::msg\+::\+Pose\+Stamped \&}]{\+\_\+pose,  }\item[{std\+::ostream \&}]{\+\_\+out = {\ttfamily std\+:\+:cout},  }\item[{bool}]{\+\_\+euler = {\ttfamily true} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Print Pose\+Stamped Message. 
+
+\mbox{\Hypertarget{namespacegrasp__execution_a8ec71a601a1d505c1732d3174e3fbbbf}\label{namespacegrasp__execution_a8ec71a601a1d505c1732d3174e3fbbbf}} 
+\index{grasp\_execution@{grasp\_execution}!print\_pose\_ros@{print\_pose\_ros}}
+\index{print\_pose\_ros@{print\_pose\_ros}!grasp\_execution@{grasp\_execution}}
+\doxysubsubsection{\texorpdfstring{print\_pose\_ros()}{print\_pose\_ros()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void grasp\+\_\+execution\+::print\+\_\+pose\+\_\+ros (\begin{DoxyParamCaption}\item[{const rclcpp\+::\+Logger}]{logger,  }\item[{const geometry\+\_\+msgs\+::msg\+::\+Pose \&}]{\+\_\+pose,  }\item[{bool}]{\+\_\+euler = {\ttfamily true} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Use R\+OS to print Pose\+Stamped message. 
+
+\mbox{\Hypertarget{namespacegrasp__execution_a0b08614f446fb2fc6d76cd538df780b9}\label{namespacegrasp__execution_a0b08614f446fb2fc6d76cd538df780b9}} 
+\index{grasp\_execution@{grasp\_execution}!print\_pose\_ros@{print\_pose\_ros}}
+\index{print\_pose\_ros@{print\_pose\_ros}!grasp\_execution@{grasp\_execution}}
+\doxysubsubsection{\texorpdfstring{print\_pose\_ros()}{print\_pose\_ros()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void grasp\+\_\+execution\+::print\+\_\+pose\+\_\+ros (\begin{DoxyParamCaption}\item[{const rclcpp\+::\+Logger}]{logger,  }\item[{const geometry\+\_\+msgs\+::msg\+::\+Pose\+Stamped \&}]{\+\_\+pose,  }\item[{bool}]{\+\_\+euler = {\ttfamily true} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Use R\+OS to print Pose\+Stamped message. 
+
+\mbox{\Hypertarget{namespacegrasp__execution_a95f0436cde14207521e7001d7865d1e7}\label{namespacegrasp__execution_a95f0436cde14207521e7001d7865d1e7}} 
+\index{grasp\_execution@{grasp\_execution}!to\_frame@{to\_frame}}
+\index{to\_frame@{to\_frame}!grasp\_execution@{grasp\_execution}}
+\doxysubsubsection{\texorpdfstring{to\_frame()}{to\_frame()}}
+{\footnotesize\ttfamily void grasp\+\_\+execution\+::to\+\_\+frame (\begin{DoxyParamCaption}\item[{const geometry\+\_\+msgs\+::msg\+::\+Pose\+Stamped \&}]{in\+\_\+,  }\item[{geometry\+\_\+msgs\+::msg\+::\+Pose\+Stamped \&}]{out\+\_\+,  }\item[{const std\+::string \&}]{\+\_\+target\+\_\+frame,  }\item[{const tf2\+\_\+ros\+::\+Buffer \&}]{\+\_\+buffer }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Transform pose to target end reference frame. 
+

@@ -1,0 +1,46 @@
+\hypertarget{namespaceoctomap}{}\doxysection{octomap Namespace Reference}
+\label{namespaceoctomap}\index{octomap@{octomap}}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{namespaceoctomap_a6bd593a082e9684a093a6e5e678f61d4}{points\+Octomap\+To\+Point\+Cloud2}} (const point3d\+\_\+list \&points, sensor\+\_\+msgs\+::msg\+::\+Point\+Cloud2 \&cloud)
+\begin{DoxyCompactList}\small\item\em Conversion from octomap\+::point3d\+\_\+list (e.\+g. all occupied nodes from get\+Occupied()) to sensor\+\_\+msgs\+::msg\+::\+Point\+Cloud2. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{namespaceoctomap_a25eaba20037e42cf2fde21a4f7fbf93d}{point\+Cloud2\+To\+Octomap}} (const sensor\+\_\+msgs\+::msg\+::\+Point\+Cloud2 \&cloud, Pointcloud \&octomap\+Cloud)
+\begin{DoxyCompactList}\small\item\em Conversion from a sensor\+\_\+msgs\+::msg\+::\+Point\+C\+Loud2 to octomap\+::\+Pointcloud, used internally in Octo\+Map. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{namespaceoctomap_a25eaba20037e42cf2fde21a4f7fbf93d}\label{namespaceoctomap_a25eaba20037e42cf2fde21a4f7fbf93d}} 
+\index{octomap@{octomap}!pointCloud2ToOctomap@{pointCloud2ToOctomap}}
+\index{pointCloud2ToOctomap@{pointCloud2ToOctomap}!octomap@{octomap}}
+\doxysubsubsection{\texorpdfstring{pointCloud2ToOctomap()}{pointCloud2ToOctomap()}}
+{\footnotesize\ttfamily void octomap\+::point\+Cloud2\+To\+Octomap (\begin{DoxyParamCaption}\item[{const sensor\+\_\+msgs\+::msg\+::\+Point\+Cloud2 \&}]{cloud,  }\item[{Pointcloud \&}]{octomap\+Cloud }\end{DoxyParamCaption})}
+
+
+
+Conversion from a sensor\+\_\+msgs\+::msg\+::\+Point\+C\+Loud2 to octomap\+::\+Pointcloud, used internally in Octo\+Map. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em cloud} & \\
+\hline
+{\em octomap\+Cloud} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{namespaceoctomap_a6bd593a082e9684a093a6e5e678f61d4}\label{namespaceoctomap_a6bd593a082e9684a093a6e5e678f61d4}} 
+\index{octomap@{octomap}!pointsOctomapToPointCloud2@{pointsOctomapToPointCloud2}}
+\index{pointsOctomapToPointCloud2@{pointsOctomapToPointCloud2}!octomap@{octomap}}
+\doxysubsubsection{\texorpdfstring{pointsOctomapToPointCloud2()}{pointsOctomapToPointCloud2()}}
+{\footnotesize\ttfamily void octomap\+::points\+Octomap\+To\+Point\+Cloud2 (\begin{DoxyParamCaption}\item[{const point3d\+\_\+list \&}]{points,  }\item[{sensor\+\_\+msgs\+::msg\+::\+Point\+Cloud2 \&}]{cloud }\end{DoxyParamCaption})}
+
+
+
+Conversion from octomap\+::point3d\+\_\+list (e.\+g. all occupied nodes from get\+Occupied()) to sensor\+\_\+msgs\+::msg\+::\+Point\+Cloud2. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em points} & \\
+\hline
+{\em cloud} & \\
+\hline
+\end{DoxyParams}

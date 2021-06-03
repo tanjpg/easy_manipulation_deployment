@@ -1,0 +1,237 @@
+\hypertarget{classgrasp__execution_1_1dynamic__safety_1_1SafetyZone}{}\doxysection{grasp\+\_\+execution\+::dynamic\+\_\+safety\+::Safety\+Zone Class Reference}
+\label{classgrasp__execution_1_1dynamic__safety_1_1SafetyZone}\index{grasp\_execution::dynamic\_safety::SafetyZone@{grasp\_execution::dynamic\_safety::SafetyZone}}
+
+
+Safety Zone for dynamic safety.  
+
+
+
+
+{\ttfamily \#include $<$safety\+\_\+zone.\+hpp$>$}
+
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structgrasp__execution_1_1dynamic__safety_1_1SafetyZone_1_1Option}{Option}}
+\begin{DoxyCompactList}\small\item\em Safety Zone option. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classgrasp__execution_1_1dynamic__safety_1_1SafetyZone_a70fc70a818f29512018d940fc6eb472d}{Safety\+Zone}} ()
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classgrasp__execution_1_1dynamic__safety_1_1SafetyZone_a7eaa4a50f6a3d3ccd3e96eed9e5f67c7}{Safety\+Zone}} (const \mbox{\hyperlink{structgrasp__execution_1_1dynamic__safety_1_1SafetyZone_1_1Option}{Option}} \&option)
+\begin{DoxyCompactList}\small\item\em Constructor with option. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classgrasp__execution_1_1dynamic__safety_1_1SafetyZone_abaa907b1d5a0d8f4bca24300b0e6f63e}{verify}} ()
+\begin{DoxyCompactList}\small\item\em Zone limit\+: Last zone is not needed since it\textquotesingle{}s infinite. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classgrasp__execution_1_1dynamic__safety_1_1SafetyZone_abac1ae8cb4717288951ee46cc000e082}{set}} (const \mbox{\hyperlink{structgrasp__execution_1_1dynamic__safety_1_1SafetyZone_1_1Option}{Option}} \&option)
+\begin{DoxyCompactList}\small\item\em Update safety zone option. \end{DoxyCompactList}\item 
+uint8\+\_\+t \mbox{\hyperlink{classgrasp__execution_1_1dynamic__safety_1_1SafetyZone_a83bbc81a8da72cd67c61b8679b0f10c3}{get\+\_\+zone}} (double point) const
+\begin{DoxyCompactList}\small\item\em Get the zone the time point resides. \end{DoxyCompactList}\item 
+const double \& \mbox{\hyperlink{classgrasp__execution_1_1dynamic__safety_1_1SafetyZone_a20211d1be036d56e40589202ff9032b1}{get\+\_\+zone\+\_\+limit}} (uint8\+\_\+t zone) const
+\begin{DoxyCompactList}\small\item\em Get zone limit. \end{DoxyCompactList}\item 
+double \& \mbox{\hyperlink{classgrasp__execution_1_1dynamic__safety_1_1SafetyZone_a1eef0013bc4f83807f62702ff3638d84}{get\+\_\+zone\+\_\+limit\+\_\+non\+\_\+const}} (uint8\+\_\+t zone)
+\begin{DoxyCompactList}\small\item\em Get non const zone limit. \end{DoxyCompactList}\item 
+const std\+::string \& \mbox{\hyperlink{classgrasp__execution_1_1dynamic__safety_1_1SafetyZone_ab5eb370e96d17e6d0e78f000e3441b51}{get\+\_\+unit\+\_\+type}} () const
+\begin{DoxyCompactList}\small\item\em Get the unit type. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static const uint8\+\_\+t \mbox{\hyperlink{classgrasp__execution_1_1dynamic__safety_1_1SafetyZone_afc93638d6beb73749ee233c5873ccd46}{B\+L\+I\+ND}} = 0
+\begin{DoxyCompactList}\small\item\em Flags for the 5 zones. \end{DoxyCompactList}\item 
+static const uint8\+\_\+t \mbox{\hyperlink{classgrasp__execution_1_1dynamic__safety_1_1SafetyZone_a1ab8b5ba175e75c18f781d459a8dda6e}{E\+M\+E\+R\+G\+E\+N\+CY}} = 1
+\item 
+static const uint8\+\_\+t \mbox{\hyperlink{classgrasp__execution_1_1dynamic__safety_1_1SafetyZone_ab4b397f852a44688822d934b29a2eb16}{S\+L\+O\+W\+D\+O\+WN}} = 2
+\item 
+static const uint8\+\_\+t \mbox{\hyperlink{classgrasp__execution_1_1dynamic__safety_1_1SafetyZone_acfe619b5b6a45a09af0b12a17d1224d5}{R\+E\+P\+L\+AN}} = 3
+\item 
+static const uint8\+\_\+t \mbox{\hyperlink{classgrasp__execution_1_1dynamic__safety_1_1SafetyZone_ab9408684730ca8e051609019b1cb1793}{S\+A\+FE}} = 4
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Safety Zone for dynamic safety. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classgrasp__execution_1_1dynamic__safety_1_1SafetyZone_a70fc70a818f29512018d940fc6eb472d}\label{classgrasp__execution_1_1dynamic__safety_1_1SafetyZone_a70fc70a818f29512018d940fc6eb472d}} 
+\index{grasp\_execution::dynamic\_safety::SafetyZone@{grasp\_execution::dynamic\_safety::SafetyZone}!SafetyZone@{SafetyZone}}
+\index{SafetyZone@{SafetyZone}!grasp\_execution::dynamic\_safety::SafetyZone@{grasp\_execution::dynamic\_safety::SafetyZone}}
+\doxysubsubsection{\texorpdfstring{SafetyZone()}{SafetyZone()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily grasp\+\_\+execution\+::dynamic\+\_\+safety\+::\+Safety\+Zone\+::\+Safety\+Zone (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Constructor. 
+
+\mbox{\Hypertarget{classgrasp__execution_1_1dynamic__safety_1_1SafetyZone_a7eaa4a50f6a3d3ccd3e96eed9e5f67c7}\label{classgrasp__execution_1_1dynamic__safety_1_1SafetyZone_a7eaa4a50f6a3d3ccd3e96eed9e5f67c7}} 
+\index{grasp\_execution::dynamic\_safety::SafetyZone@{grasp\_execution::dynamic\_safety::SafetyZone}!SafetyZone@{SafetyZone}}
+\index{SafetyZone@{SafetyZone}!grasp\_execution::dynamic\_safety::SafetyZone@{grasp\_execution::dynamic\_safety::SafetyZone}}
+\doxysubsubsection{\texorpdfstring{SafetyZone()}{SafetyZone()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily grasp\+\_\+execution\+::dynamic\+\_\+safety\+::\+Safety\+Zone\+::\+Safety\+Zone (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structgrasp__execution_1_1dynamic__safety_1_1SafetyZone_1_1Option}{Option}} \&}]{option }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [explicit]}}
+
+
+
+Constructor with option. 
+
+Safety zone initiated with option. This will implicitly call \mbox{\hyperlink{classgrasp__execution_1_1dynamic__safety_1_1SafetyZone_abac1ae8cb4717288951ee46cc000e082}{set()}}.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classgrasp__execution_1_1dynamic__safety_1_1SafetyZone_abac1ae8cb4717288951ee46cc000e082}{set()}} 
+\end{DoxySeeAlso}
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em option} & Safety zone option. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Error} & if the option timing is invalid. \\
+\hline
+\end{DoxyExceptions}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classgrasp__execution_1_1dynamic__safety_1_1SafetyZone_ab5eb370e96d17e6d0e78f000e3441b51}\label{classgrasp__execution_1_1dynamic__safety_1_1SafetyZone_ab5eb370e96d17e6d0e78f000e3441b51}} 
+\index{grasp\_execution::dynamic\_safety::SafetyZone@{grasp\_execution::dynamic\_safety::SafetyZone}!get\_unit\_type@{get\_unit\_type}}
+\index{get\_unit\_type@{get\_unit\_type}!grasp\_execution::dynamic\_safety::SafetyZone@{grasp\_execution::dynamic\_safety::SafetyZone}}
+\doxysubsubsection{\texorpdfstring{get\_unit\_type()}{get\_unit\_type()}}
+{\footnotesize\ttfamily const std\+::string\& grasp\+\_\+execution\+::dynamic\+\_\+safety\+::\+Safety\+Zone\+::get\+\_\+unit\+\_\+type (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get the unit type. 
+
+Right now only seconds is allowed.
+
+\begin{DoxyRefDesc}{Todo}
+\item[\mbox{\hyperlink{todo__todo000001}{Todo}}]Other time unit or distanced based unit.\end{DoxyRefDesc}
+
+
+\begin{DoxyReturn}{Returns}
+The type of unit that the safety zone used. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classgrasp__execution_1_1dynamic__safety_1_1SafetyZone_a83bbc81a8da72cd67c61b8679b0f10c3}\label{classgrasp__execution_1_1dynamic__safety_1_1SafetyZone_a83bbc81a8da72cd67c61b8679b0f10c3}} 
+\index{grasp\_execution::dynamic\_safety::SafetyZone@{grasp\_execution::dynamic\_safety::SafetyZone}!get\_zone@{get\_zone}}
+\index{get\_zone@{get\_zone}!grasp\_execution::dynamic\_safety::SafetyZone@{grasp\_execution::dynamic\_safety::SafetyZone}}
+\doxysubsubsection{\texorpdfstring{get\_zone()}{get\_zone()}}
+{\footnotesize\ttfamily uint8\+\_\+t grasp\+\_\+execution\+::dynamic\+\_\+safety\+::\+Safety\+Zone\+::get\+\_\+zone (\begin{DoxyParamCaption}\item[{double}]{point }\end{DoxyParamCaption}) const}
+
+
+
+Get the zone the time point resides. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em point} & Time point from start. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The safety zone it belongs. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classgrasp__execution_1_1dynamic__safety_1_1SafetyZone_a20211d1be036d56e40589202ff9032b1}\label{classgrasp__execution_1_1dynamic__safety_1_1SafetyZone_a20211d1be036d56e40589202ff9032b1}} 
+\index{grasp\_execution::dynamic\_safety::SafetyZone@{grasp\_execution::dynamic\_safety::SafetyZone}!get\_zone\_limit@{get\_zone\_limit}}
+\index{get\_zone\_limit@{get\_zone\_limit}!grasp\_execution::dynamic\_safety::SafetyZone@{grasp\_execution::dynamic\_safety::SafetyZone}}
+\doxysubsubsection{\texorpdfstring{get\_zone\_limit()}{get\_zone\_limit()}}
+{\footnotesize\ttfamily const double\& grasp\+\_\+execution\+::dynamic\+\_\+safety\+::\+Safety\+Zone\+::get\+\_\+zone\+\_\+limit (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{zone }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get zone limit. 
+
+As there is no limit for S\+A\+FE, Segmentation fault will occur.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em zone} & The name of the zone. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classgrasp__execution_1_1dynamic__safety_1_1SafetyZone_a1eef0013bc4f83807f62702ff3638d84}\label{classgrasp__execution_1_1dynamic__safety_1_1SafetyZone_a1eef0013bc4f83807f62702ff3638d84}} 
+\index{grasp\_execution::dynamic\_safety::SafetyZone@{grasp\_execution::dynamic\_safety::SafetyZone}!get\_zone\_limit\_non\_const@{get\_zone\_limit\_non\_const}}
+\index{get\_zone\_limit\_non\_const@{get\_zone\_limit\_non\_const}!grasp\_execution::dynamic\_safety::SafetyZone@{grasp\_execution::dynamic\_safety::SafetyZone}}
+\doxysubsubsection{\texorpdfstring{get\_zone\_limit\_non\_const()}{get\_zone\_limit\_non\_const()}}
+{\footnotesize\ttfamily double\& grasp\+\_\+execution\+::dynamic\+\_\+safety\+::\+Safety\+Zone\+::get\+\_\+zone\+\_\+limit\+\_\+non\+\_\+const (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{zone }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get non const zone limit. 
+
+As there is no limit for S\+A\+FE, Segmentation fault will occur.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em zone} & The name of the zone. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classgrasp__execution_1_1dynamic__safety_1_1SafetyZone_abac1ae8cb4717288951ee46cc000e082}\label{classgrasp__execution_1_1dynamic__safety_1_1SafetyZone_abac1ae8cb4717288951ee46cc000e082}} 
+\index{grasp\_execution::dynamic\_safety::SafetyZone@{grasp\_execution::dynamic\_safety::SafetyZone}!set@{set}}
+\index{set@{set}!grasp\_execution::dynamic\_safety::SafetyZone@{grasp\_execution::dynamic\_safety::SafetyZone}}
+\doxysubsubsection{\texorpdfstring{set()}{set()}}
+{\footnotesize\ttfamily bool grasp\+\_\+execution\+::dynamic\+\_\+safety\+::\+Safety\+Zone\+::set (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structgrasp__execution_1_1dynamic__safety_1_1SafetyZone_1_1Option}{Option}} \&}]{option }\end{DoxyParamCaption})}
+
+
+
+Update safety zone option. 
+
+Based on the timing specified in option, safety zone limit will be calculated. If option is valid, the following output will be printed in the terminal 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{zone: | \mbox{\hyperlink{classgrasp__execution_1_1dynamic__safety_1_1SafetyZone_afc93638d6beb73749ee233c5873ccd46}{BLIND}} | \mbox{\hyperlink{classgrasp__execution_1_1dynamic__safety_1_1SafetyZone_a1ab8b5ba175e75c18f781d459a8dda6e}{EMERGENCY}} | \mbox{\hyperlink{classgrasp__execution_1_1dynamic__safety_1_1SafetyZone_ab4b397f852a44688822d934b29a2eb16}{SLOWDOWN}} | \mbox{\hyperlink{classgrasp__execution_1_1dynamic__safety_1_1SafetyZone_acfe619b5b6a45a09af0b12a17d1224d5}{REPLAN}} | \mbox{\hyperlink{classgrasp__execution_1_1dynamic__safety_1_1SafetyZone_ab9408684730ca8e051609019b1cb1793}{SAFE}}}
+\DoxyCodeLine{      0    \{value1,     value2,    value3,  value4\}}
+\end{DoxyCode}
+
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em option} & Safety zone option. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classgrasp__execution_1_1dynamic__safety_1_1SafetyZone_abaa907b1d5a0d8f4bca24300b0e6f63e}\label{classgrasp__execution_1_1dynamic__safety_1_1SafetyZone_abaa907b1d5a0d8f4bca24300b0e6f63e}} 
+\index{grasp\_execution::dynamic\_safety::SafetyZone@{grasp\_execution::dynamic\_safety::SafetyZone}!verify@{verify}}
+\index{verify@{verify}!grasp\_execution::dynamic\_safety::SafetyZone@{grasp\_execution::dynamic\_safety::SafetyZone}}
+\doxysubsubsection{\texorpdfstring{verify()}{verify()}}
+{\footnotesize\ttfamily bool grasp\+\_\+execution\+::dynamic\+\_\+safety\+::\+Safety\+Zone\+::verify (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Zone limit\+: Last zone is not needed since it\textquotesingle{}s infinite. 
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classgrasp__execution_1_1dynamic__safety_1_1SafetyZone_afc93638d6beb73749ee233c5873ccd46}\label{classgrasp__execution_1_1dynamic__safety_1_1SafetyZone_afc93638d6beb73749ee233c5873ccd46}} 
+\index{grasp\_execution::dynamic\_safety::SafetyZone@{grasp\_execution::dynamic\_safety::SafetyZone}!BLIND@{BLIND}}
+\index{BLIND@{BLIND}!grasp\_execution::dynamic\_safety::SafetyZone@{grasp\_execution::dynamic\_safety::SafetyZone}}
+\doxysubsubsection{\texorpdfstring{BLIND}{BLIND}}
+{\footnotesize\ttfamily const uint8\+\_\+t grasp\+\_\+execution\+::dynamic\+\_\+safety\+::\+Safety\+Zone\+::\+B\+L\+I\+ND = 0\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Flags for the 5 zones. 
+
+\mbox{\Hypertarget{classgrasp__execution_1_1dynamic__safety_1_1SafetyZone_a1ab8b5ba175e75c18f781d459a8dda6e}\label{classgrasp__execution_1_1dynamic__safety_1_1SafetyZone_a1ab8b5ba175e75c18f781d459a8dda6e}} 
+\index{grasp\_execution::dynamic\_safety::SafetyZone@{grasp\_execution::dynamic\_safety::SafetyZone}!EMERGENCY@{EMERGENCY}}
+\index{EMERGENCY@{EMERGENCY}!grasp\_execution::dynamic\_safety::SafetyZone@{grasp\_execution::dynamic\_safety::SafetyZone}}
+\doxysubsubsection{\texorpdfstring{EMERGENCY}{EMERGENCY}}
+{\footnotesize\ttfamily const uint8\+\_\+t grasp\+\_\+execution\+::dynamic\+\_\+safety\+::\+Safety\+Zone\+::\+E\+M\+E\+R\+G\+E\+N\+CY = 1\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{classgrasp__execution_1_1dynamic__safety_1_1SafetyZone_acfe619b5b6a45a09af0b12a17d1224d5}\label{classgrasp__execution_1_1dynamic__safety_1_1SafetyZone_acfe619b5b6a45a09af0b12a17d1224d5}} 
+\index{grasp\_execution::dynamic\_safety::SafetyZone@{grasp\_execution::dynamic\_safety::SafetyZone}!REPLAN@{REPLAN}}
+\index{REPLAN@{REPLAN}!grasp\_execution::dynamic\_safety::SafetyZone@{grasp\_execution::dynamic\_safety::SafetyZone}}
+\doxysubsubsection{\texorpdfstring{REPLAN}{REPLAN}}
+{\footnotesize\ttfamily const uint8\+\_\+t grasp\+\_\+execution\+::dynamic\+\_\+safety\+::\+Safety\+Zone\+::\+R\+E\+P\+L\+AN = 3\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{classgrasp__execution_1_1dynamic__safety_1_1SafetyZone_ab9408684730ca8e051609019b1cb1793}\label{classgrasp__execution_1_1dynamic__safety_1_1SafetyZone_ab9408684730ca8e051609019b1cb1793}} 
+\index{grasp\_execution::dynamic\_safety::SafetyZone@{grasp\_execution::dynamic\_safety::SafetyZone}!SAFE@{SAFE}}
+\index{SAFE@{SAFE}!grasp\_execution::dynamic\_safety::SafetyZone@{grasp\_execution::dynamic\_safety::SafetyZone}}
+\doxysubsubsection{\texorpdfstring{SAFE}{SAFE}}
+{\footnotesize\ttfamily const uint8\+\_\+t grasp\+\_\+execution\+::dynamic\+\_\+safety\+::\+Safety\+Zone\+::\+S\+A\+FE = 4\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{classgrasp__execution_1_1dynamic__safety_1_1SafetyZone_ab4b397f852a44688822d934b29a2eb16}\label{classgrasp__execution_1_1dynamic__safety_1_1SafetyZone_ab4b397f852a44688822d934b29a2eb16}} 
+\index{grasp\_execution::dynamic\_safety::SafetyZone@{grasp\_execution::dynamic\_safety::SafetyZone}!SLOWDOWN@{SLOWDOWN}}
+\index{SLOWDOWN@{SLOWDOWN}!grasp\_execution::dynamic\_safety::SafetyZone@{grasp\_execution::dynamic\_safety::SafetyZone}}
+\doxysubsubsection{\texorpdfstring{SLOWDOWN}{SLOWDOWN}}
+{\footnotesize\ttfamily const uint8\+\_\+t grasp\+\_\+execution\+::dynamic\+\_\+safety\+::\+Safety\+Zone\+::\+S\+L\+O\+W\+D\+O\+WN = 2\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/rosi5/workspaces/emd\+\_\+ws/src/easy\+\_\+manipulation\+\_\+deployment/grasp\+\_\+execution/include/grasp\+\_\+execution/dynamic\+\_\+safety/\mbox{\hyperlink{safety__zone_8hpp}{safety\+\_\+zone.\+hpp}}\end{DoxyCompactItemize}

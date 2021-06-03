@@ -1,0 +1,132 @@
+\hypertarget{classgrasp__execution_1_1dynamic__safety_1_1Visualizer}{}\doxysection{grasp\+\_\+execution\+::dynamic\+\_\+safety\+::Visualizer Class Reference}
+\label{classgrasp__execution_1_1dynamic__safety_1_1Visualizer}\index{grasp\_execution::dynamic\_safety::Visualizer@{grasp\_execution::dynamic\_safety::Visualizer}}
+
+
+\mbox{\hyperlink{classgrasp__execution_1_1dynamic__safety_1_1Visualizer}{Visualizer}} for dynamic safety.  
+
+
+
+
+{\ttfamily \#include $<$visualizer.\+hpp$>$}
+
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structgrasp__execution_1_1dynamic__safety_1_1Visualizer_1_1Option}{Option}}
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{structgrasp__execution_1_1dynamic__safety_1_1Visualizer_1_1Option}{Option}} for visualizer. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classgrasp__execution_1_1dynamic__safety_1_1Visualizer_ae6d1c755af1e618a4931a28c63b2ab11}{Visualizer}} ()
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classgrasp__execution_1_1dynamic__safety_1_1Visualizer_ae44c9589f1008ce7ed45eae893210eb8}{configure}} (const robot\+\_\+trajectory\+::\+Robot\+Trajectory\+Ptr \&rt, const rclcpp\+::\+Node\+::\+Shared\+Ptr \&node, const \mbox{\hyperlink{structgrasp__execution_1_1dynamic__safety_1_1Visualizer_1_1Option}{Option}} \&option, const \mbox{\hyperlink{structgrasp__execution_1_1dynamic__safety_1_1SafetyZone_1_1Option}{Safety\+Zone\+::\+Option}} \&zone\+\_\+option)
+\begin{DoxyCompactList}\small\item\em Configure and prepare the \mbox{\hyperlink{classgrasp__execution_1_1dynamic__safety_1_1Visualizer}{Visualizer}}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classgrasp__execution_1_1dynamic__safety_1_1Visualizer_ab37b0b3e5cf9758042f1f94b61b489a8}{update\+\_\+trajectory}} (const robot\+\_\+trajectory\+::\+Robot\+Trajectory\+Ptr \&rt)
+\begin{DoxyCompactList}\small\item\em Update existing trajectory. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classgrasp__execution_1_1dynamic__safety_1_1Visualizer_a0136c187db9a5e92998f99475d51f0ee}{update}} (double current\+\_\+time\+\_\+point, double collision\+\_\+time\+\_\+point=-\/1)
+\begin{DoxyCompactList}\small\item\em Update the current state. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classgrasp__execution_1_1dynamic__safety_1_1Visualizer_aeace99715f683b0f01012dc2ddf0b212}{start}} ()
+\begin{DoxyCompactList}\small\item\em Start the \mbox{\hyperlink{classgrasp__execution_1_1dynamic__safety_1_1Visualizer}{Visualizer}}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classgrasp__execution_1_1dynamic__safety_1_1Visualizer_adb595394db021193695549916e83d10b}{reset}} ()
+\begin{DoxyCompactList}\small\item\em Reset the \mbox{\hyperlink{classgrasp__execution_1_1dynamic__safety_1_1Visualizer}{Visualizer}}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\mbox{\hyperlink{classgrasp__execution_1_1dynamic__safety_1_1Visualizer}{Visualizer}} for dynamic safety. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classgrasp__execution_1_1dynamic__safety_1_1Visualizer_ae6d1c755af1e618a4931a28c63b2ab11}\label{classgrasp__execution_1_1dynamic__safety_1_1Visualizer_ae6d1c755af1e618a4931a28c63b2ab11}} 
+\index{grasp\_execution::dynamic\_safety::Visualizer@{grasp\_execution::dynamic\_safety::Visualizer}!Visualizer@{Visualizer}}
+\index{Visualizer@{Visualizer}!grasp\_execution::dynamic\_safety::Visualizer@{grasp\_execution::dynamic\_safety::Visualizer}}
+\doxysubsubsection{\texorpdfstring{Visualizer()}{Visualizer()}}
+{\footnotesize\ttfamily grasp\+\_\+execution\+::dynamic\+\_\+safety\+::\+Visualizer\+::\+Visualizer (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Constructor. 
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classgrasp__execution_1_1dynamic__safety_1_1Visualizer_ae44c9589f1008ce7ed45eae893210eb8}\label{classgrasp__execution_1_1dynamic__safety_1_1Visualizer_ae44c9589f1008ce7ed45eae893210eb8}} 
+\index{grasp\_execution::dynamic\_safety::Visualizer@{grasp\_execution::dynamic\_safety::Visualizer}!configure@{configure}}
+\index{configure@{configure}!grasp\_execution::dynamic\_safety::Visualizer@{grasp\_execution::dynamic\_safety::Visualizer}}
+\doxysubsubsection{\texorpdfstring{configure()}{configure()}}
+{\footnotesize\ttfamily void grasp\+\_\+execution\+::dynamic\+\_\+safety\+::\+Visualizer\+::configure (\begin{DoxyParamCaption}\item[{const robot\+\_\+trajectory\+::\+Robot\+Trajectory\+Ptr \&}]{rt,  }\item[{const rclcpp\+::\+Node\+::\+Shared\+Ptr \&}]{node,  }\item[{const \mbox{\hyperlink{structgrasp__execution_1_1dynamic__safety_1_1Visualizer_1_1Option}{Option}} \&}]{option,  }\item[{const \mbox{\hyperlink{structgrasp__execution_1_1dynamic__safety_1_1SafetyZone_1_1Option}{Safety\+Zone\+::\+Option}} \&}]{zone\+\_\+option }\end{DoxyParamCaption})}
+
+
+
+Configure and prepare the \mbox{\hyperlink{classgrasp__execution_1_1dynamic__safety_1_1Visualizer}{Visualizer}}. 
+
+An internal safety zone is created.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em rt} & Robot trajectory to display and track. \\
+\hline
+\mbox{\texttt{ in}}  & {\em node} & This is needed to create publisher and timer. \\
+\hline
+\mbox{\texttt{ in}}  & {\em option} & \mbox{\hyperlink{classgrasp__execution_1_1dynamic__safety_1_1Visualizer}{Visualizer}} option. \\
+\hline
+\mbox{\texttt{ in}}  & {\em zone\+\_\+option} & This can be used to create safety zone. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classgrasp__execution_1_1dynamic__safety_1_1Visualizer_adb595394db021193695549916e83d10b}\label{classgrasp__execution_1_1dynamic__safety_1_1Visualizer_adb595394db021193695549916e83d10b}} 
+\index{grasp\_execution::dynamic\_safety::Visualizer@{grasp\_execution::dynamic\_safety::Visualizer}!reset@{reset}}
+\index{reset@{reset}!grasp\_execution::dynamic\_safety::Visualizer@{grasp\_execution::dynamic\_safety::Visualizer}}
+\doxysubsubsection{\texorpdfstring{reset()}{reset()}}
+{\footnotesize\ttfamily void grasp\+\_\+execution\+::dynamic\+\_\+safety\+::\+Visualizer\+::reset (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Reset the \mbox{\hyperlink{classgrasp__execution_1_1dynamic__safety_1_1Visualizer}{Visualizer}}. 
+
+\mbox{\hyperlink{classgrasp__execution_1_1dynamic__safety_1_1Visualizer}{Visualizer}} needs to be configured to start again. \mbox{\Hypertarget{classgrasp__execution_1_1dynamic__safety_1_1Visualizer_aeace99715f683b0f01012dc2ddf0b212}\label{classgrasp__execution_1_1dynamic__safety_1_1Visualizer_aeace99715f683b0f01012dc2ddf0b212}} 
+\index{grasp\_execution::dynamic\_safety::Visualizer@{grasp\_execution::dynamic\_safety::Visualizer}!start@{start}}
+\index{start@{start}!grasp\_execution::dynamic\_safety::Visualizer@{grasp\_execution::dynamic\_safety::Visualizer}}
+\doxysubsubsection{\texorpdfstring{start()}{start()}}
+{\footnotesize\ttfamily void grasp\+\_\+execution\+::dynamic\+\_\+safety\+::\+Visualizer\+::start (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Start the \mbox{\hyperlink{classgrasp__execution_1_1dynamic__safety_1_1Visualizer}{Visualizer}}. 
+
+\mbox{\Hypertarget{classgrasp__execution_1_1dynamic__safety_1_1Visualizer_a0136c187db9a5e92998f99475d51f0ee}\label{classgrasp__execution_1_1dynamic__safety_1_1Visualizer_a0136c187db9a5e92998f99475d51f0ee}} 
+\index{grasp\_execution::dynamic\_safety::Visualizer@{grasp\_execution::dynamic\_safety::Visualizer}!update@{update}}
+\index{update@{update}!grasp\_execution::dynamic\_safety::Visualizer@{grasp\_execution::dynamic\_safety::Visualizer}}
+\doxysubsubsection{\texorpdfstring{update()}{update()}}
+{\footnotesize\ttfamily void grasp\+\_\+execution\+::dynamic\+\_\+safety\+::\+Visualizer\+::update (\begin{DoxyParamCaption}\item[{double}]{current\+\_\+time\+\_\+point,  }\item[{double}]{collision\+\_\+time\+\_\+point = {\ttfamily -\/1} }\end{DoxyParamCaption})}
+
+
+
+Update the current state. 
+
+If there is no collision, collision time point will be -\/1. 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em current\+\_\+time\+\_\+point} & Relative time point to start of the trajectory. \\
+\hline
+\mbox{\texttt{ in}}  & {\em collision\+\_\+time\+\_\+point} & Relative collision time point. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classgrasp__execution_1_1dynamic__safety_1_1Visualizer_ab37b0b3e5cf9758042f1f94b61b489a8}\label{classgrasp__execution_1_1dynamic__safety_1_1Visualizer_ab37b0b3e5cf9758042f1f94b61b489a8}} 
+\index{grasp\_execution::dynamic\_safety::Visualizer@{grasp\_execution::dynamic\_safety::Visualizer}!update\_trajectory@{update\_trajectory}}
+\index{update\_trajectory@{update\_trajectory}!grasp\_execution::dynamic\_safety::Visualizer@{grasp\_execution::dynamic\_safety::Visualizer}}
+\doxysubsubsection{\texorpdfstring{update\_trajectory()}{update\_trajectory()}}
+{\footnotesize\ttfamily void grasp\+\_\+execution\+::dynamic\+\_\+safety\+::\+Visualizer\+::update\+\_\+trajectory (\begin{DoxyParamCaption}\item[{const robot\+\_\+trajectory\+::\+Robot\+Trajectory\+Ptr \&}]{rt }\end{DoxyParamCaption})}
+
+
+
+Update existing trajectory. 
+
+Update the trajectory being displayed.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em rt} & Trajectory to update. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/rosi5/workspaces/emd\+\_\+ws/src/easy\+\_\+manipulation\+\_\+deployment/grasp\+\_\+execution/include/grasp\+\_\+execution/dynamic\+\_\+safety/\mbox{\hyperlink{visualizer_8hpp}{visualizer.\+hpp}}\end{DoxyCompactItemize}

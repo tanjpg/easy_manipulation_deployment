@@ -1,0 +1,60 @@
+\hypertarget{conversions_8hpp}{}\doxysection{/home/rosi5/workspaces/emd\+\_\+ws/src/easy\+\_\+manipulation\+\_\+deployment/grasp\+\_\+planner/include/grasp\+\_\+planner/common/conversions.hpp File Reference}
+\label{conversions_8hpp}\index{/home/rosi5/workspaces/emd\_ws/src/easy\_manipulation\_deployment/grasp\_planner/include/grasp\_planner/common/conversions.hpp@{/home/rosi5/workspaces/emd\_ws/src/easy\_manipulation\_deployment/grasp\_planner/include/grasp\_planner/common/conversions.hpp}}
+{\ttfamily \#include $<$octomap/octomap.\+h$>$}\newline
+{\ttfamily \#include $<$sensor\+\_\+msgs/msg/point\+\_\+cloud2.\+hpp$>$}\newline
+{\ttfamily \#include $<$geometry\+\_\+msgs/msg/point.\+hpp$>$}\newline
+{\ttfamily \#include $<$geometry\+\_\+msgs/msg/vector3.\+hpp$>$}\newline
+{\ttfamily \#include $<$geometry\+\_\+msgs/msg/pose.\+hpp$>$}\newline
+{\ttfamily \#include $<$geometry\+\_\+msgs/msg/quaternion.\+hpp$>$}\newline
+{\ttfamily \#include $<$tf2/transform\+\_\+datatypes.\+h$>$}\newline
+{\ttfamily \#include $<$tf2\+\_\+geometry\+\_\+msgs/tf2\+\_\+geometry\+\_\+msgs.\+h$>$}\newline
+Include dependency graph for conversions.\+hpp\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{conversions_8hpp__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=297pt]{conversions_8hpp__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \mbox{\hyperlink{namespaceoctomap}{octomap}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{conversions_8hpp_aea63dc882754a9740f88518e694168e1}{G\+R\+A\+S\+P\+\_\+\+P\+L\+A\+N\+N\+E\+R\+\_\+\+\_\+\+C\+O\+M\+M\+O\+N\+\_\+\+\_\+\+C\+O\+N\+V\+E\+R\+S\+I\+O\+N\+S\+\_\+\+H\+P\+P\+\_\+}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{namespaceoctomap_a6bd593a082e9684a093a6e5e678f61d4}{octomap\+::points\+Octomap\+To\+Point\+Cloud2}} (const point3d\+\_\+list \&points, sensor\+\_\+msgs\+::msg\+::\+Point\+Cloud2 \&cloud)
+\begin{DoxyCompactList}\small\item\em Conversion from octomap\+::point3d\+\_\+list (e.\+g. all occupied nodes from get\+Occupied()) to sensor\+\_\+msgs\+::msg\+::\+Point\+Cloud2. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{namespaceoctomap_a25eaba20037e42cf2fde21a4f7fbf93d}{octomap\+::point\+Cloud2\+To\+Octomap}} (const sensor\+\_\+msgs\+::msg\+::\+Point\+Cloud2 \&cloud, Pointcloud \&octomap\+Cloud)
+\begin{DoxyCompactList}\small\item\em Conversion from a sensor\+\_\+msgs\+::msg\+::\+Point\+C\+Loud2 to octomap\+::\+Pointcloud, used internally in Octo\+Map. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{conversions_8hpp_aea63dc882754a9740f88518e694168e1}\label{conversions_8hpp_aea63dc882754a9740f88518e694168e1}} 
+\index{conversions.hpp@{conversions.hpp}!GRASP\_PLANNER\_\_COMMON\_\_CONVERSIONS\_HPP\_@{GRASP\_PLANNER\_\_COMMON\_\_CONVERSIONS\_HPP\_}}
+\index{GRASP\_PLANNER\_\_COMMON\_\_CONVERSIONS\_HPP\_@{GRASP\_PLANNER\_\_COMMON\_\_CONVERSIONS\_HPP\_}!conversions.hpp@{conversions.hpp}}
+\doxysubsubsection{\texorpdfstring{GRASP\_PLANNER\_\_COMMON\_\_CONVERSIONS\_HPP\_}{GRASP\_PLANNER\_\_COMMON\_\_CONVERSIONS\_HPP\_}}
+{\footnotesize\ttfamily \#define G\+R\+A\+S\+P\+\_\+\+P\+L\+A\+N\+N\+E\+R\+\_\+\+\_\+\+C\+O\+M\+M\+O\+N\+\_\+\+\_\+\+C\+O\+N\+V\+E\+R\+S\+I\+O\+N\+S\+\_\+\+H\+P\+P\+\_\+}
+
+Octo\+Map R\+OS integration
+
+\begin{DoxyAuthor}{Author}
+A. Hornung, University of Freiburg, Copyright (C) 2011-\/2012. 
+\end{DoxyAuthor}
+\begin{DoxySeeAlso}{See also}
+\href{http://www.ros.org/wiki/octomap_ros}{\texttt{ http\+://www.\+ros.\+org/wiki/octomap\+\_\+ros}} License\+: B\+SD 
+\end{DoxySeeAlso}

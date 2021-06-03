@@ -1,0 +1,402 @@
+\hypertarget{classGraspObject}{}\doxysection{Grasp\+Object Class Reference}
+\label{classGraspObject}\index{GraspObject@{GraspObject}}
+
+
+General Class for a grasp object.  
+
+
+
+
+{\ttfamily \#include $<$grasp\+\_\+object.\+hpp$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classGraspObject_a8e05c555959a375ae87621eafd1ceaea}{Grasp\+Object}} (std\+::string object\+\_\+frame\+\_\+, pcl\+::\+Point\+Cloud$<$ pcl\+::\+Point\+X\+Y\+Z\+R\+GB $>$\+::Ptr cloud\+\_\+, Eigen\+::\+Vector4f centerpoint\+\_\+)
+\item 
+\mbox{\hyperlink{classGraspObject_af9f1e87487afba79369828ffc4f02b39}{Grasp\+Object}} (std\+::string object\+\_\+name\+\_\+, std\+::string object\+\_\+frame\+\_\+, pcl\+::\+Point\+Cloud$<$ pcl\+::\+Point\+X\+Y\+Z\+R\+GB $>$\+::Ptr cloud\+\_\+, Eigen\+::\+Vector4f centerpoint\+\_\+)
+\item 
+void \mbox{\hyperlink{classGraspObject_a88df9743856d5ded59f4a3f83828182d}{get\+\_\+object\+\_\+bb}} ()
+\item 
+void \mbox{\hyperlink{classGraspObject_afd554650ec42502eb5adb16fc406835a}{get\+\_\+object\+\_\+world\+\_\+angles}} ()
+\item 
+void \mbox{\hyperlink{classGraspObject_a2316dd94c6203cad0d088320a2374f37}{add\+\_\+bb\+\_\+viewer}} (int pos, pcl\+::visualization\+::\+P\+C\+L\+Visualizer\+::\+Ptr viewer)
+\item 
+shape\+\_\+msgs\+::msg\+::\+Solid\+Primitive \mbox{\hyperlink{classGraspObject_a1f917753682ee262f9f7884abcb467c2}{get\+Object\+Shape}} ()
+\item 
+void \mbox{\hyperlink{classGraspObject_a374c36607e1886f6a111d3125fad03d6}{get\+Object\+Dimensions}} ()
+\item 
+void \mbox{\hyperlink{classGraspObject_ab0665421da3eb59bc76942708492eae3}{get\+Axis\+Alignments}} ()
+\item 
+char \mbox{\hyperlink{classGraspObject_ae7f39b1a2f67a2628b927f639eec5c39}{get\+Axis}} (Eigen\+::\+Vector3f vector)
+\item 
+geometry\+\_\+msgs\+::msg\+::\+Pose\+Stamped \mbox{\hyperlink{classGraspObject_acac6b623560a64c4b371193e7209dfac}{get\+Object\+Pose}} (std\+::string pose\+\_\+frame)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+emd\+\_\+msgs\+::msg\+::\+Grasp\+Target \mbox{\hyperlink{classGraspObject_aee6aae506eeaf75d0929c3889a8f1a51}{grasp\+\_\+target}}
+\begin{DoxyCompactList}\small\item\em Message output to describe grasp decisions for this object. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{classGraspObject_a38a345edcc59a477a282eef655c39186}{object\+\_\+name}}
+\begin{DoxyCompactList}\small\item\em Object Name. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{classGraspObject_ae7595cca3f986711a07937bb01c5f381}{object\+\_\+frame}}
+\begin{DoxyCompactList}\small\item\em Tf frame the object pose is with respect to. \end{DoxyCompactList}\item 
+pcl\+::\+Point\+Cloud$<$ pcl\+::\+Point\+X\+Y\+Z\+R\+GB $>$\+::Ptr \mbox{\hyperlink{classGraspObject_af389bbaae9dde7996ada87cc6ed223ed}{cloud}}
+\begin{DoxyCompactList}\small\item\em Object point cloud. \end{DoxyCompactList}\item 
+pcl\+::\+Point\+Cloud$<$ pcl\+::\+Point\+X\+Y\+Z\+R\+GB $>$\+::Ptr \mbox{\hyperlink{classGraspObject_a42fa6aa2591c64bbd105e39c8dd99843}{cloud\+\_\+projected}}
+\begin{DoxyCompactList}\small\item\em Projected Objected Point Cloud. \end{DoxyCompactList}\item 
+pcl\+::\+Point\+Cloud$<$ pcl\+::\+Point\+Normal $>$\+::Ptr \mbox{\hyperlink{classGraspObject_a6ca165854a777781216a7b69a1fc3dd5}{cloud\+\_\+normal}}
+\begin{DoxyCompactList}\small\item\em Grasp Object Normal Point cloud. \end{DoxyCompactList}\item 
+Eigen\+::\+Vector3f \mbox{\hyperlink{classGraspObject_a219eb1b9ee81bd794b647cc0b17d8195}{axis}}
+\begin{DoxyCompactList}\small\item\em Vector representing the major axis of the Grasp Object. \end{DoxyCompactList}\item 
+Eigen\+::\+Vector3f \mbox{\hyperlink{classGraspObject_add14527a8ca6bc58db6105bf73da211e}{minor\+\_\+axis}}
+\begin{DoxyCompactList}\small\item\em Vector representing the minor axis of the Grasp Object. \end{DoxyCompactList}\item 
+Eigen\+::\+Vector3f \mbox{\hyperlink{classGraspObject_ab72f87126dfb40a90eff3c3bb560b2e8}{grasp\+\_\+axis}}
+\begin{DoxyCompactList}\small\item\em Vector representing the grasp axis of the Grasp Object. \end{DoxyCompactList}\item 
+Eigen\+::\+Vector4f \mbox{\hyperlink{classGraspObject_acfc0ef8557427ceed7e70bdf18cef3dd}{centerpoint}}
+\begin{DoxyCompactList}\small\item\em Computed 3D centroid of the Grasp Object point cloud. \end{DoxyCompactList}\item 
+Eigen\+::\+Vector3f \mbox{\hyperlink{classGraspObject_a0094872f1ce63a84cb31a3a1bcc6a7f1}{eigenvalues}}
+\begin{DoxyCompactList}\small\item\em Eigenvalues of the Object point cloud from the covariance matrix. \end{DoxyCompactList}\item 
+Eigen\+::\+Matrix3f \mbox{\hyperlink{classGraspObject_a1671ea1c9bd8ebcf8776b24396a10b82}{eigenvectors}}
+\begin{DoxyCompactList}\small\item\em Eigenvectors of the Object point cloud from the covariance matrix. \end{DoxyCompactList}\item 
+Eigen\+::\+Matrix3f \mbox{\hyperlink{classGraspObject_a174bcb167ae7a56380bd541b50d2f7cf}{covariance\+\_\+matrix}}
+\begin{DoxyCompactList}\small\item\em Covariance Matrix calculated using Principal Component Analysis of the Object point cloud. \end{DoxyCompactList}\item 
+Eigen\+::\+Quaternionf \mbox{\hyperlink{classGraspObject_a5c71507ddc5055545bb2ef6841e23e6a}{bbox\+Quaternion}}
+\begin{DoxyCompactList}\small\item\em Quaternion of the 3D bounding box. \end{DoxyCompactList}\item 
+Eigen\+::\+Vector3f \mbox{\hyperlink{classGraspObject_ad2640ffa7882b8b5b980066fd6cdd9fa}{bbox\+Transform}}
+\begin{DoxyCompactList}\small\item\em Transform of the 3D bounding box. \end{DoxyCompactList}\item 
+pcl\+::\+Point\+X\+Y\+Z\+R\+GB \mbox{\hyperlink{classGraspObject_a7fd397c6d58ef663ca7ede5df2936352}{min\+Point}}
+\begin{DoxyCompactList}\small\item\em Calculated Minimum 3D point of the object point cloud. \end{DoxyCompactList}\item 
+pcl\+::\+Point\+X\+Y\+Z\+R\+GB \mbox{\hyperlink{classGraspObject_a3fdd2b88b83ee59c614d693c491843d9}{max\+Point}}
+\begin{DoxyCompactList}\small\item\em Calculated Maximum 3D point of the object point cloud. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{classGraspObject_a960fd2cc3b20c3c27223495fb5ffb839}{object\+World\+CosX}}
+\begin{DoxyCompactList}\small\item\em Cos angle of the object with respect to the world X axis. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{classGraspObject_a9df5866baf7f245c435c4f0b5d922aa7}{object\+World\+CosY}}
+\begin{DoxyCompactList}\small\item\em Cos angle of the object with respect to the world Y axis. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{classGraspObject_a53581728616112d062db2a9286202f70}{object\+World\+CosZ}}
+\begin{DoxyCompactList}\small\item\em Cos angle of the object with respect to the world Z axis. \end{DoxyCompactList}\item 
+char \mbox{\hyperlink{classGraspObject_ac295df1a143a645e02249b38652f3d00}{alignments}} \mbox{[}3\mbox{]}
+\begin{DoxyCompactList}\small\item\em Alignment of each eigenvector wrt world axes. \end{DoxyCompactList}\item 
+Eigen\+::\+Matrix4f \mbox{\hyperlink{classGraspObject_a92378ec29f9d48b3d798edb28dfde24e}{affine\+\_\+matrix}}
+\begin{DoxyCompactList}\small\item\em Affine transform matrix of the object. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classGraspObject_a4aa4b61630c7cddefd19ac8a64c37777}{max\+\_\+grasp\+\_\+samples}}
+\begin{DoxyCompactList}\small\item\em Maximum number of grasp options. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{classGraspObject_a7c363776863c788867528cfed9b25f36}{dimensions}} \mbox{[}3\mbox{]}
+\begin{DoxyCompactList}\small\item\em Dimensions of the object. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+General Class for a grasp object. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classGraspObject_a8e05c555959a375ae87621eafd1ceaea}\label{classGraspObject_a8e05c555959a375ae87621eafd1ceaea}} 
+\index{GraspObject@{GraspObject}!GraspObject@{GraspObject}}
+\index{GraspObject@{GraspObject}!GraspObject@{GraspObject}}
+\doxysubsubsection{\texorpdfstring{GraspObject()}{GraspObject()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Grasp\+Object\+::\+Grasp\+Object (\begin{DoxyParamCaption}\item[{std\+::string}]{object\+\_\+frame\+\_\+,  }\item[{pcl\+::\+Point\+Cloud$<$ pcl\+::\+Point\+X\+Y\+Z\+R\+GB $>$\+::Ptr}]{cloud\+\_\+,  }\item[{Eigen\+::\+Vector4f}]{centerpoint\+\_\+ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classGraspObject_af9f1e87487afba79369828ffc4f02b39}\label{classGraspObject_af9f1e87487afba79369828ffc4f02b39}} 
+\index{GraspObject@{GraspObject}!GraspObject@{GraspObject}}
+\index{GraspObject@{GraspObject}!GraspObject@{GraspObject}}
+\doxysubsubsection{\texorpdfstring{GraspObject()}{GraspObject()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Grasp\+Object\+::\+Grasp\+Object (\begin{DoxyParamCaption}\item[{std\+::string}]{object\+\_\+name\+\_\+,  }\item[{std\+::string}]{object\+\_\+frame\+\_\+,  }\item[{pcl\+::\+Point\+Cloud$<$ pcl\+::\+Point\+X\+Y\+Z\+R\+GB $>$\+::Ptr}]{cloud\+\_\+,  }\item[{Eigen\+::\+Vector4f}]{centerpoint\+\_\+ }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classGraspObject_a2316dd94c6203cad0d088320a2374f37}\label{classGraspObject_a2316dd94c6203cad0d088320a2374f37}} 
+\index{GraspObject@{GraspObject}!add\_bb\_viewer@{add\_bb\_viewer}}
+\index{add\_bb\_viewer@{add\_bb\_viewer}!GraspObject@{GraspObject}}
+\doxysubsubsection{\texorpdfstring{add\_bb\_viewer()}{add\_bb\_viewer()}}
+{\footnotesize\ttfamily void Grasp\+Object\+::add\+\_\+bb\+\_\+viewer (\begin{DoxyParamCaption}\item[{int}]{pos,  }\item[{pcl\+::visualization\+::\+P\+C\+L\+Visualizer\+::\+Ptr}]{viewer }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classGraspObject_a88df9743856d5ded59f4a3f83828182d}\label{classGraspObject_a88df9743856d5ded59f4a3f83828182d}} 
+\index{GraspObject@{GraspObject}!get\_object\_bb@{get\_object\_bb}}
+\index{get\_object\_bb@{get\_object\_bb}!GraspObject@{GraspObject}}
+\doxysubsubsection{\texorpdfstring{get\_object\_bb()}{get\_object\_bb()}}
+{\footnotesize\ttfamily void Grasp\+Object\+::get\+\_\+object\+\_\+bb (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classGraspObject_afd554650ec42502eb5adb16fc406835a}\label{classGraspObject_afd554650ec42502eb5adb16fc406835a}} 
+\index{GraspObject@{GraspObject}!get\_object\_world\_angles@{get\_object\_world\_angles}}
+\index{get\_object\_world\_angles@{get\_object\_world\_angles}!GraspObject@{GraspObject}}
+\doxysubsubsection{\texorpdfstring{get\_object\_world\_angles()}{get\_object\_world\_angles()}}
+{\footnotesize\ttfamily void Grasp\+Object\+::get\+\_\+object\+\_\+world\+\_\+angles (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classGraspObject_ae7f39b1a2f67a2628b927f639eec5c39}\label{classGraspObject_ae7f39b1a2f67a2628b927f639eec5c39}} 
+\index{GraspObject@{GraspObject}!getAxis@{getAxis}}
+\index{getAxis@{getAxis}!GraspObject@{GraspObject}}
+\doxysubsubsection{\texorpdfstring{getAxis()}{getAxis()}}
+{\footnotesize\ttfamily char Grasp\+Object\+::get\+Axis (\begin{DoxyParamCaption}\item[{Eigen\+::\+Vector3f}]{vector }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classGraspObject_ab0665421da3eb59bc76942708492eae3}\label{classGraspObject_ab0665421da3eb59bc76942708492eae3}} 
+\index{GraspObject@{GraspObject}!getAxisAlignments@{getAxisAlignments}}
+\index{getAxisAlignments@{getAxisAlignments}!GraspObject@{GraspObject}}
+\doxysubsubsection{\texorpdfstring{getAxisAlignments()}{getAxisAlignments()}}
+{\footnotesize\ttfamily void Grasp\+Object\+::get\+Axis\+Alignments (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classGraspObject_a374c36607e1886f6a111d3125fad03d6}\label{classGraspObject_a374c36607e1886f6a111d3125fad03d6}} 
+\index{GraspObject@{GraspObject}!getObjectDimensions@{getObjectDimensions}}
+\index{getObjectDimensions@{getObjectDimensions}!GraspObject@{GraspObject}}
+\doxysubsubsection{\texorpdfstring{getObjectDimensions()}{getObjectDimensions()}}
+{\footnotesize\ttfamily void Grasp\+Object\+::get\+Object\+Dimensions (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classGraspObject_acac6b623560a64c4b371193e7209dfac}\label{classGraspObject_acac6b623560a64c4b371193e7209dfac}} 
+\index{GraspObject@{GraspObject}!getObjectPose@{getObjectPose}}
+\index{getObjectPose@{getObjectPose}!GraspObject@{GraspObject}}
+\doxysubsubsection{\texorpdfstring{getObjectPose()}{getObjectPose()}}
+{\footnotesize\ttfamily geometry\+\_\+msgs\+::msg\+::\+Pose\+Stamped Grasp\+Object\+::get\+Object\+Pose (\begin{DoxyParamCaption}\item[{std\+::string}]{pose\+\_\+frame }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classGraspObject_a1f917753682ee262f9f7884abcb467c2}\label{classGraspObject_a1f917753682ee262f9f7884abcb467c2}} 
+\index{GraspObject@{GraspObject}!getObjectShape@{getObjectShape}}
+\index{getObjectShape@{getObjectShape}!GraspObject@{GraspObject}}
+\doxysubsubsection{\texorpdfstring{getObjectShape()}{getObjectShape()}}
+{\footnotesize\ttfamily shape\+\_\+msgs\+::msg\+::\+Solid\+Primitive Grasp\+Object\+::get\+Object\+Shape (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classGraspObject_a92378ec29f9d48b3d798edb28dfde24e}\label{classGraspObject_a92378ec29f9d48b3d798edb28dfde24e}} 
+\index{GraspObject@{GraspObject}!affine\_matrix@{affine\_matrix}}
+\index{affine\_matrix@{affine\_matrix}!GraspObject@{GraspObject}}
+\doxysubsubsection{\texorpdfstring{affine\_matrix}{affine\_matrix}}
+{\footnotesize\ttfamily Eigen\+::\+Matrix4f Grasp\+Object\+::affine\+\_\+matrix}
+
+
+
+Affine transform matrix of the object. 
+
+\mbox{\Hypertarget{classGraspObject_ac295df1a143a645e02249b38652f3d00}\label{classGraspObject_ac295df1a143a645e02249b38652f3d00}} 
+\index{GraspObject@{GraspObject}!alignments@{alignments}}
+\index{alignments@{alignments}!GraspObject@{GraspObject}}
+\doxysubsubsection{\texorpdfstring{alignments}{alignments}}
+{\footnotesize\ttfamily char Grasp\+Object\+::alignments\mbox{[}3\mbox{]}}
+
+
+
+Alignment of each eigenvector wrt world axes. 
+
+\mbox{\Hypertarget{classGraspObject_a219eb1b9ee81bd794b647cc0b17d8195}\label{classGraspObject_a219eb1b9ee81bd794b647cc0b17d8195}} 
+\index{GraspObject@{GraspObject}!axis@{axis}}
+\index{axis@{axis}!GraspObject@{GraspObject}}
+\doxysubsubsection{\texorpdfstring{axis}{axis}}
+{\footnotesize\ttfamily Eigen\+::\+Vector3f Grasp\+Object\+::axis}
+
+
+
+Vector representing the major axis of the Grasp Object. 
+
+\mbox{\Hypertarget{classGraspObject_a5c71507ddc5055545bb2ef6841e23e6a}\label{classGraspObject_a5c71507ddc5055545bb2ef6841e23e6a}} 
+\index{GraspObject@{GraspObject}!bboxQuaternion@{bboxQuaternion}}
+\index{bboxQuaternion@{bboxQuaternion}!GraspObject@{GraspObject}}
+\doxysubsubsection{\texorpdfstring{bboxQuaternion}{bboxQuaternion}}
+{\footnotesize\ttfamily Eigen\+::\+Quaternionf Grasp\+Object\+::bbox\+Quaternion}
+
+
+
+Quaternion of the 3D bounding box. 
+
+\mbox{\Hypertarget{classGraspObject_ad2640ffa7882b8b5b980066fd6cdd9fa}\label{classGraspObject_ad2640ffa7882b8b5b980066fd6cdd9fa}} 
+\index{GraspObject@{GraspObject}!bboxTransform@{bboxTransform}}
+\index{bboxTransform@{bboxTransform}!GraspObject@{GraspObject}}
+\doxysubsubsection{\texorpdfstring{bboxTransform}{bboxTransform}}
+{\footnotesize\ttfamily Eigen\+::\+Vector3f Grasp\+Object\+::bbox\+Transform}
+
+
+
+Transform of the 3D bounding box. 
+
+\mbox{\Hypertarget{classGraspObject_acfc0ef8557427ceed7e70bdf18cef3dd}\label{classGraspObject_acfc0ef8557427ceed7e70bdf18cef3dd}} 
+\index{GraspObject@{GraspObject}!centerpoint@{centerpoint}}
+\index{centerpoint@{centerpoint}!GraspObject@{GraspObject}}
+\doxysubsubsection{\texorpdfstring{centerpoint}{centerpoint}}
+{\footnotesize\ttfamily Eigen\+::\+Vector4f Grasp\+Object\+::centerpoint}
+
+
+
+Computed 3D centroid of the Grasp Object point cloud. 
+
+\mbox{\Hypertarget{classGraspObject_af389bbaae9dde7996ada87cc6ed223ed}\label{classGraspObject_af389bbaae9dde7996ada87cc6ed223ed}} 
+\index{GraspObject@{GraspObject}!cloud@{cloud}}
+\index{cloud@{cloud}!GraspObject@{GraspObject}}
+\doxysubsubsection{\texorpdfstring{cloud}{cloud}}
+{\footnotesize\ttfamily pcl\+::\+Point\+Cloud$<$pcl\+::\+Point\+X\+Y\+Z\+R\+GB$>$\+::Ptr Grasp\+Object\+::cloud}
+
+
+
+Object point cloud. 
+
+\mbox{\Hypertarget{classGraspObject_a6ca165854a777781216a7b69a1fc3dd5}\label{classGraspObject_a6ca165854a777781216a7b69a1fc3dd5}} 
+\index{GraspObject@{GraspObject}!cloud\_normal@{cloud\_normal}}
+\index{cloud\_normal@{cloud\_normal}!GraspObject@{GraspObject}}
+\doxysubsubsection{\texorpdfstring{cloud\_normal}{cloud\_normal}}
+{\footnotesize\ttfamily pcl\+::\+Point\+Cloud$<$pcl\+::\+Point\+Normal$>$\+::Ptr Grasp\+Object\+::cloud\+\_\+normal}
+
+
+
+Grasp Object Normal Point cloud. 
+
+\mbox{\Hypertarget{classGraspObject_a42fa6aa2591c64bbd105e39c8dd99843}\label{classGraspObject_a42fa6aa2591c64bbd105e39c8dd99843}} 
+\index{GraspObject@{GraspObject}!cloud\_projected@{cloud\_projected}}
+\index{cloud\_projected@{cloud\_projected}!GraspObject@{GraspObject}}
+\doxysubsubsection{\texorpdfstring{cloud\_projected}{cloud\_projected}}
+{\footnotesize\ttfamily pcl\+::\+Point\+Cloud$<$pcl\+::\+Point\+X\+Y\+Z\+R\+GB$>$\+::Ptr Grasp\+Object\+::cloud\+\_\+projected}
+
+
+
+Projected Objected Point Cloud. 
+
+\mbox{\Hypertarget{classGraspObject_a174bcb167ae7a56380bd541b50d2f7cf}\label{classGraspObject_a174bcb167ae7a56380bd541b50d2f7cf}} 
+\index{GraspObject@{GraspObject}!covariance\_matrix@{covariance\_matrix}}
+\index{covariance\_matrix@{covariance\_matrix}!GraspObject@{GraspObject}}
+\doxysubsubsection{\texorpdfstring{covariance\_matrix}{covariance\_matrix}}
+{\footnotesize\ttfamily Eigen\+::\+Matrix3f Grasp\+Object\+::covariance\+\_\+matrix}
+
+
+
+Covariance Matrix calculated using Principal Component Analysis of the Object point cloud. 
+
+\mbox{\Hypertarget{classGraspObject_a7c363776863c788867528cfed9b25f36}\label{classGraspObject_a7c363776863c788867528cfed9b25f36}} 
+\index{GraspObject@{GraspObject}!dimensions@{dimensions}}
+\index{dimensions@{dimensions}!GraspObject@{GraspObject}}
+\doxysubsubsection{\texorpdfstring{dimensions}{dimensions}}
+{\footnotesize\ttfamily float Grasp\+Object\+::dimensions\mbox{[}3\mbox{]}}
+
+
+
+Dimensions of the object. 
+
+\mbox{\Hypertarget{classGraspObject_a0094872f1ce63a84cb31a3a1bcc6a7f1}\label{classGraspObject_a0094872f1ce63a84cb31a3a1bcc6a7f1}} 
+\index{GraspObject@{GraspObject}!eigenvalues@{eigenvalues}}
+\index{eigenvalues@{eigenvalues}!GraspObject@{GraspObject}}
+\doxysubsubsection{\texorpdfstring{eigenvalues}{eigenvalues}}
+{\footnotesize\ttfamily Eigen\+::\+Vector3f Grasp\+Object\+::eigenvalues}
+
+
+
+Eigenvalues of the Object point cloud from the covariance matrix. 
+
+\mbox{\Hypertarget{classGraspObject_a1671ea1c9bd8ebcf8776b24396a10b82}\label{classGraspObject_a1671ea1c9bd8ebcf8776b24396a10b82}} 
+\index{GraspObject@{GraspObject}!eigenvectors@{eigenvectors}}
+\index{eigenvectors@{eigenvectors}!GraspObject@{GraspObject}}
+\doxysubsubsection{\texorpdfstring{eigenvectors}{eigenvectors}}
+{\footnotesize\ttfamily Eigen\+::\+Matrix3f Grasp\+Object\+::eigenvectors}
+
+
+
+Eigenvectors of the Object point cloud from the covariance matrix. 
+
+\mbox{\Hypertarget{classGraspObject_ab72f87126dfb40a90eff3c3bb560b2e8}\label{classGraspObject_ab72f87126dfb40a90eff3c3bb560b2e8}} 
+\index{GraspObject@{GraspObject}!grasp\_axis@{grasp\_axis}}
+\index{grasp\_axis@{grasp\_axis}!GraspObject@{GraspObject}}
+\doxysubsubsection{\texorpdfstring{grasp\_axis}{grasp\_axis}}
+{\footnotesize\ttfamily Eigen\+::\+Vector3f Grasp\+Object\+::grasp\+\_\+axis}
+
+
+
+Vector representing the grasp axis of the Grasp Object. 
+
+\mbox{\Hypertarget{classGraspObject_aee6aae506eeaf75d0929c3889a8f1a51}\label{classGraspObject_aee6aae506eeaf75d0929c3889a8f1a51}} 
+\index{GraspObject@{GraspObject}!grasp\_target@{grasp\_target}}
+\index{grasp\_target@{grasp\_target}!GraspObject@{GraspObject}}
+\doxysubsubsection{\texorpdfstring{grasp\_target}{grasp\_target}}
+{\footnotesize\ttfamily emd\+\_\+msgs\+::msg\+::\+Grasp\+Target Grasp\+Object\+::grasp\+\_\+target}
+
+
+
+Message output to describe grasp decisions for this object. 
+
+\mbox{\Hypertarget{classGraspObject_a4aa4b61630c7cddefd19ac8a64c37777}\label{classGraspObject_a4aa4b61630c7cddefd19ac8a64c37777}} 
+\index{GraspObject@{GraspObject}!max\_grasp\_samples@{max\_grasp\_samples}}
+\index{max\_grasp\_samples@{max\_grasp\_samples}!GraspObject@{GraspObject}}
+\doxysubsubsection{\texorpdfstring{max\_grasp\_samples}{max\_grasp\_samples}}
+{\footnotesize\ttfamily int Grasp\+Object\+::max\+\_\+grasp\+\_\+samples}
+
+
+
+Maximum number of grasp options. 
+
+\mbox{\Hypertarget{classGraspObject_a3fdd2b88b83ee59c614d693c491843d9}\label{classGraspObject_a3fdd2b88b83ee59c614d693c491843d9}} 
+\index{GraspObject@{GraspObject}!maxPoint@{maxPoint}}
+\index{maxPoint@{maxPoint}!GraspObject@{GraspObject}}
+\doxysubsubsection{\texorpdfstring{maxPoint}{maxPoint}}
+{\footnotesize\ttfamily pcl\+::\+Point\+X\+Y\+Z\+R\+GB Grasp\+Object\+::max\+Point}
+
+
+
+Calculated Maximum 3D point of the object point cloud. 
+
+\mbox{\Hypertarget{classGraspObject_add14527a8ca6bc58db6105bf73da211e}\label{classGraspObject_add14527a8ca6bc58db6105bf73da211e}} 
+\index{GraspObject@{GraspObject}!minor\_axis@{minor\_axis}}
+\index{minor\_axis@{minor\_axis}!GraspObject@{GraspObject}}
+\doxysubsubsection{\texorpdfstring{minor\_axis}{minor\_axis}}
+{\footnotesize\ttfamily Eigen\+::\+Vector3f Grasp\+Object\+::minor\+\_\+axis}
+
+
+
+Vector representing the minor axis of the Grasp Object. 
+
+\mbox{\Hypertarget{classGraspObject_a7fd397c6d58ef663ca7ede5df2936352}\label{classGraspObject_a7fd397c6d58ef663ca7ede5df2936352}} 
+\index{GraspObject@{GraspObject}!minPoint@{minPoint}}
+\index{minPoint@{minPoint}!GraspObject@{GraspObject}}
+\doxysubsubsection{\texorpdfstring{minPoint}{minPoint}}
+{\footnotesize\ttfamily pcl\+::\+Point\+X\+Y\+Z\+R\+GB Grasp\+Object\+::min\+Point}
+
+
+
+Calculated Minimum 3D point of the object point cloud. 
+
+\mbox{\Hypertarget{classGraspObject_ae7595cca3f986711a07937bb01c5f381}\label{classGraspObject_ae7595cca3f986711a07937bb01c5f381}} 
+\index{GraspObject@{GraspObject}!object\_frame@{object\_frame}}
+\index{object\_frame@{object\_frame}!GraspObject@{GraspObject}}
+\doxysubsubsection{\texorpdfstring{object\_frame}{object\_frame}}
+{\footnotesize\ttfamily std\+::string Grasp\+Object\+::object\+\_\+frame}
+
+
+
+Tf frame the object pose is with respect to. 
+
+\mbox{\Hypertarget{classGraspObject_a38a345edcc59a477a282eef655c39186}\label{classGraspObject_a38a345edcc59a477a282eef655c39186}} 
+\index{GraspObject@{GraspObject}!object\_name@{object\_name}}
+\index{object\_name@{object\_name}!GraspObject@{GraspObject}}
+\doxysubsubsection{\texorpdfstring{object\_name}{object\_name}}
+{\footnotesize\ttfamily std\+::string Grasp\+Object\+::object\+\_\+name}
+
+
+
+Object Name. 
+
+\mbox{\Hypertarget{classGraspObject_a960fd2cc3b20c3c27223495fb5ffb839}\label{classGraspObject_a960fd2cc3b20c3c27223495fb5ffb839}} 
+\index{GraspObject@{GraspObject}!objectWorldCosX@{objectWorldCosX}}
+\index{objectWorldCosX@{objectWorldCosX}!GraspObject@{GraspObject}}
+\doxysubsubsection{\texorpdfstring{objectWorldCosX}{objectWorldCosX}}
+{\footnotesize\ttfamily float Grasp\+Object\+::object\+World\+CosX}
+
+
+
+Cos angle of the object with respect to the world X axis. 
+
+\mbox{\Hypertarget{classGraspObject_a9df5866baf7f245c435c4f0b5d922aa7}\label{classGraspObject_a9df5866baf7f245c435c4f0b5d922aa7}} 
+\index{GraspObject@{GraspObject}!objectWorldCosY@{objectWorldCosY}}
+\index{objectWorldCosY@{objectWorldCosY}!GraspObject@{GraspObject}}
+\doxysubsubsection{\texorpdfstring{objectWorldCosY}{objectWorldCosY}}
+{\footnotesize\ttfamily float Grasp\+Object\+::object\+World\+CosY}
+
+
+
+Cos angle of the object with respect to the world Y axis. 
+
+\mbox{\Hypertarget{classGraspObject_a53581728616112d062db2a9286202f70}\label{classGraspObject_a53581728616112d062db2a9286202f70}} 
+\index{GraspObject@{GraspObject}!objectWorldCosZ@{objectWorldCosZ}}
+\index{objectWorldCosZ@{objectWorldCosZ}!GraspObject@{GraspObject}}
+\doxysubsubsection{\texorpdfstring{objectWorldCosZ}{objectWorldCosZ}}
+{\footnotesize\ttfamily float Grasp\+Object\+::object\+World\+CosZ}
+
+
+
+Cos angle of the object with respect to the world Z axis. 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/rosi5/workspaces/emd\+\_\+ws/src/easy\+\_\+manipulation\+\_\+deployment/grasp\+\_\+planner/include/grasp\+\_\+planner/\mbox{\hyperlink{grasp__object_8hpp}{grasp\+\_\+object.\+hpp}}\end{DoxyCompactItemize}

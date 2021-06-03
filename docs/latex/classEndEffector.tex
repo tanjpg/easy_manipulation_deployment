@@ -1,0 +1,99 @@
+\hypertarget{classEndEffector}{}\doxysection{End\+Effector Class Reference}
+\label{classEndEffector}\index{EndEffector@{EndEffector}}
+
+
+Generic class for an end effector, to be inherited by other end effectors.  
+
+
+
+
+{\ttfamily \#include $<$end\+\_\+effector.\+hpp$>$}
+
+
+
+Inheritance diagram for End\+Effector\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=270pt]{classEndEffector__inherit__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+using \mbox{\hyperlink{classEndEffector_a786988d384b481e8b03d035bbe26e26d}{Collision\+Object}} = \mbox{\hyperlink{namespacegrasp__planner_1_1collision_aba4922be9b9bd4fedd3cdf2193b2aaf5}{grasp\+\_\+planner\+::collision\+::\+Collision\+Object}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{classEndEffector_ad29fc2c7977c27f94cb61779a5029739}{plan\+Grasps}} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classGraspObject}{Grasp\+Object}} $>$ object, emd\+\_\+msgs\+::msg\+::\+Grasp\+Method $\ast$grasp\+\_\+method, std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classEndEffector_a786988d384b481e8b03d035bbe26e26d}{Collision\+Object}} $>$ world\+\_\+collision\+\_\+object, std\+::string camera\+\_\+frame)
+\item 
+virtual void \mbox{\hyperlink{classEndEffector_a43c2afac8b1021dfe6eff3ad5bf86ecf}{visualize\+Grasps}} (pcl\+::visualization\+::\+P\+C\+L\+Visualizer\+::\+Ptr viewer)
+\item 
+virtual std\+::string \mbox{\hyperlink{classEndEffector_a8e31e81d48fa8cf8b1be104153ed2f11}{get\+ID}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::string \mbox{\hyperlink{classEndEffector_a930701256a4338fcb78c170c645caca4}{id}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Generic class for an end effector, to be inherited by other end effectors. 
+
+\doxysubsection{Member Typedef Documentation}
+\mbox{\Hypertarget{classEndEffector_a786988d384b481e8b03d035bbe26e26d}\label{classEndEffector_a786988d384b481e8b03d035bbe26e26d}} 
+\index{EndEffector@{EndEffector}!CollisionObject@{CollisionObject}}
+\index{CollisionObject@{CollisionObject}!EndEffector@{EndEffector}}
+\doxysubsubsection{\texorpdfstring{CollisionObject}{CollisionObject}}
+{\footnotesize\ttfamily using \mbox{\hyperlink{classEndEffector_a786988d384b481e8b03d035bbe26e26d}{End\+Effector\+::\+Collision\+Object}} =  \mbox{\hyperlink{namespacegrasp__planner_1_1collision_aba4922be9b9bd4fedd3cdf2193b2aaf5}{grasp\+\_\+planner\+::collision\+::\+Collision\+Object}}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classEndEffector_a8e31e81d48fa8cf8b1be104153ed2f11}\label{classEndEffector_a8e31e81d48fa8cf8b1be104153ed2f11}} 
+\index{EndEffector@{EndEffector}!getID@{getID}}
+\index{getID@{getID}!EndEffector@{EndEffector}}
+\doxysubsubsection{\texorpdfstring{getID()}{getID()}}
+{\footnotesize\ttfamily virtual std\+::string End\+Effector\+::get\+ID (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented in \mbox{\hyperlink{classFingerGripper_aa3d85bd8df5a9a8710198993b16d5306}{Finger\+Gripper}}, and \mbox{\hyperlink{classSuctionGripper_ad303c6918e1f54f15a4e9267d5937b30}{Suction\+Gripper}}.
+
+\mbox{\Hypertarget{classEndEffector_ad29fc2c7977c27f94cb61779a5029739}\label{classEndEffector_ad29fc2c7977c27f94cb61779a5029739}} 
+\index{EndEffector@{EndEffector}!planGrasps@{planGrasps}}
+\index{planGrasps@{planGrasps}!EndEffector@{EndEffector}}
+\doxysubsubsection{\texorpdfstring{planGrasps()}{planGrasps()}}
+{\footnotesize\ttfamily virtual void End\+Effector\+::plan\+Grasps (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classGraspObject}{Grasp\+Object}} $>$}]{object,  }\item[{emd\+\_\+msgs\+::msg\+::\+Grasp\+Method $\ast$}]{grasp\+\_\+method,  }\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classEndEffector_a786988d384b481e8b03d035bbe26e26d}{Collision\+Object}} $>$}]{world\+\_\+collision\+\_\+object,  }\item[{std\+::string}]{camera\+\_\+frame }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented in \mbox{\hyperlink{classFingerGripper_a1163df20343293093fdb75d4e46bf5c6}{Finger\+Gripper}}, and \mbox{\hyperlink{classSuctionGripper_aab0ef261e5f26b0aa8790b16a68e8d76}{Suction\+Gripper}}.
+
+\mbox{\Hypertarget{classEndEffector_a43c2afac8b1021dfe6eff3ad5bf86ecf}\label{classEndEffector_a43c2afac8b1021dfe6eff3ad5bf86ecf}} 
+\index{EndEffector@{EndEffector}!visualizeGrasps@{visualizeGrasps}}
+\index{visualizeGrasps@{visualizeGrasps}!EndEffector@{EndEffector}}
+\doxysubsubsection{\texorpdfstring{visualizeGrasps()}{visualizeGrasps()}}
+{\footnotesize\ttfamily virtual void End\+Effector\+::visualize\+Grasps (\begin{DoxyParamCaption}\item[{pcl\+::visualization\+::\+P\+C\+L\+Visualizer\+::\+Ptr}]{viewer }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented in \mbox{\hyperlink{classFingerGripper_a5cbf84a4aaef00a760c3574ad3aed774}{Finger\+Gripper}}, and \mbox{\hyperlink{classSuctionGripper_a8df7dcf58b19b7e1766018f425f0895b}{Suction\+Gripper}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classEndEffector_a930701256a4338fcb78c170c645caca4}\label{classEndEffector_a930701256a4338fcb78c170c645caca4}} 
+\index{EndEffector@{EndEffector}!id@{id}}
+\index{id@{id}!EndEffector@{EndEffector}}
+\doxysubsubsection{\texorpdfstring{id}{id}}
+{\footnotesize\ttfamily std\+::string End\+Effector\+::id\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/rosi5/workspaces/emd\+\_\+ws/src/easy\+\_\+manipulation\+\_\+deployment/grasp\+\_\+planner/include/grasp\+\_\+planner/end\+\_\+effectors/\mbox{\hyperlink{end__effector_8hpp}{end\+\_\+effector.\+hpp}}\end{DoxyCompactItemize}

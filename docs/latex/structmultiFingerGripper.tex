@@ -1,0 +1,258 @@
+\hypertarget{structmultiFingerGripper}{}\doxysection{multi\+Finger\+Gripper Struct Reference}
+\label{structmultiFingerGripper}\index{multiFingerGripper@{multiFingerGripper}}
+
+
+General Struct for a finger grasp sample ~\newline
+  
+
+
+
+
+{\ttfamily \#include $<$finger\+\_\+gripper.\+hpp$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{structmultiFingerGripper_aaafe8452e18221da5b8bbce93d931c2a}{multi\+Finger\+Gripper}} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{structsingleFinger}{single\+Finger}} $>$ base\+\_\+point\+\_\+1\+\_\+, std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{structsingleFinger}{single\+Finger}} $>$ base\+\_\+point\+\_\+2\+\_\+, Eigen\+::\+Vector3f grasping\+\_\+direction\+\_\+, Eigen\+::\+Vector3f grasping\+\_\+normal\+\_\+direction\+\_\+)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{structsingleFinger}{single\+Finger}} $>$ $>$ \mbox{\hyperlink{structmultiFingerGripper_a8eb25755009f9133a7223fc9fa48f33c}{closed\+\_\+fingers\+\_\+1}}
+\begin{DoxyCompactList}\small\item\em Closed finger configuration on side 1. \end{DoxyCompactList}\item 
+std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{structsingleFinger}{single\+Finger}} $>$ $>$ \mbox{\hyperlink{structmultiFingerGripper_a6409e7474254a01708e4d3c557385c3b}{closed\+\_\+fingers\+\_\+2}}
+\begin{DoxyCompactList}\small\item\em Closed finger configuration on side 2. \end{DoxyCompactList}\item 
+std\+::vector$<$ int $>$ \mbox{\hyperlink{structmultiFingerGripper_af3f14d4b9160636dec96ffde87b10542}{closed\+\_\+fingers\+\_\+1\+\_\+index}}
+\begin{DoxyCompactList}\small\item\em Currently not used (I think) \end{DoxyCompactList}\item 
+std\+::vector$<$ int $>$ \mbox{\hyperlink{structmultiFingerGripper_a84c02b21b7d51781df7d8a4da39670f2}{closed\+\_\+fingers\+\_\+2\+\_\+index}}
+\begin{DoxyCompactList}\small\item\em Currently not used (I think) \end{DoxyCompactList}\item 
+std\+::vector$<$ Eigen\+::\+Vector3f $>$ \mbox{\hyperlink{structmultiFingerGripper_a4ec9b64a5046d0e564e75176927b62b9}{open\+\_\+fingers\+\_\+1}}
+\begin{DoxyCompactList}\small\item\em 3D coordinates of the open configuration for finger gripper on side 1 \end{DoxyCompactList}\item 
+std\+::vector$<$ Eigen\+::\+Vector3f $>$ \mbox{\hyperlink{structmultiFingerGripper_a45d60fa0d34c53f490b52fb9dce9d12f}{open\+\_\+fingers\+\_\+2}}
+\begin{DoxyCompactList}\small\item\em 3D coordinates of the open configuration for finger gripper on side 2 \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{structmultiFingerGripper_a4602d646865aa7077ebafb201ed17f67}{grasp\+\_\+plane\+\_\+angle\+\_\+cos}}
+\begin{DoxyCompactList}\small\item\em Angle of multifinger gripper with respect to the object axis. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{structmultiFingerGripper_a9d2d898cd4d2a264147b6e065bc3cebe}{rank}}
+\begin{DoxyCompactList}\small\item\em Rank of current Gripper. \end{DoxyCompactList}\item 
+geometry\+\_\+msgs\+::msg\+::\+Pose\+Stamped \mbox{\hyperlink{structmultiFingerGripper_ae19645807ebada4bf5db8b49084f3327}{pose}}
+\begin{DoxyCompactList}\small\item\em Pose of gripper. \end{DoxyCompactList}\item 
+visualization\+\_\+msgs\+::msg\+::\+Marker \mbox{\hyperlink{structmultiFingerGripper_a35c53372e2dea581feeccc5db58ae133}{marker}}
+\begin{DoxyCompactList}\small\item\em Marker representing the grasp points of open configuration on both sides. \end{DoxyCompactList}\item 
+pcl\+::\+Point\+X\+YZ \mbox{\hyperlink{structmultiFingerGripper_af1742edcce60991fbef89275d2176250}{gripper\+\_\+palm\+\_\+center}}
+\begin{DoxyCompactList}\small\item\em Centerpoint of gripper. \end{DoxyCompactList}\item 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{structsingleFinger}{single\+Finger}} $>$ \mbox{\hyperlink{structmultiFingerGripper_aec01970f5bdaf1299e710ecd04c52484}{base\+\_\+point\+\_\+1}}
+\begin{DoxyCompactList}\small\item\em Middle finger on side 1. \end{DoxyCompactList}\item 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{structsingleFinger}{single\+Finger}} $>$ \mbox{\hyperlink{structmultiFingerGripper_a25113a8be6ab8bfa6036adb93dfef9f4}{base\+\_\+point\+\_\+2}}
+\begin{DoxyCompactList}\small\item\em Middle finger on side 2. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{structmultiFingerGripper_a7bb489039e509dc0a6a2306e96528242}{collides\+\_\+with\+\_\+world}}
+\begin{DoxyCompactList}\small\item\em True if colliding with world. \end{DoxyCompactList}\item 
+Eigen\+::\+Vector3f \mbox{\hyperlink{structmultiFingerGripper_a2297b10b830e1f0c008005629bf624ba}{grasping\+\_\+direction}}
+\begin{DoxyCompactList}\small\item\em Unit vector of grasping direction. \end{DoxyCompactList}\item 
+Eigen\+::\+Vector3f \mbox{\hyperlink{structmultiFingerGripper_aabded51e938288b365a782fc626f2f1f}{grasping\+\_\+normal\+\_\+direction}}
+\begin{DoxyCompactList}\small\item\em Unit vector perpendicular to grasping direction. \end{DoxyCompactList}\item 
+Eigen\+::\+Vector3f \mbox{\hyperlink{structmultiFingerGripper_a08ba33168cc6cef7fe06b834a495a31d}{grasp\+\_\+approach\+\_\+direction}}
+\begin{DoxyCompactList}\small\item\em Unit vector of approach direction of gripper. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+General Struct for a finger grasp sample ~\newline
+ 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{structmultiFingerGripper_aaafe8452e18221da5b8bbce93d931c2a}\label{structmultiFingerGripper_aaafe8452e18221da5b8bbce93d931c2a}} 
+\index{multiFingerGripper@{multiFingerGripper}!multiFingerGripper@{multiFingerGripper}}
+\index{multiFingerGripper@{multiFingerGripper}!multiFingerGripper@{multiFingerGripper}}
+\doxysubsubsection{\texorpdfstring{multiFingerGripper()}{multiFingerGripper()}}
+{\footnotesize\ttfamily multi\+Finger\+Gripper\+::multi\+Finger\+Gripper (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{structsingleFinger}{single\+Finger}} $>$}]{base\+\_\+point\+\_\+1\+\_\+,  }\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{structsingleFinger}{single\+Finger}} $>$}]{base\+\_\+point\+\_\+2\+\_\+,  }\item[{Eigen\+::\+Vector3f}]{grasping\+\_\+direction\+\_\+,  }\item[{Eigen\+::\+Vector3f}]{grasping\+\_\+normal\+\_\+direction\+\_\+ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\hyperlink{structmultiFingerGripper}{multi\+Finger\+Gripper}} Constructor
+
+
+\begin{DoxyParams}{Parameters}
+{\em base\+\_\+point\+\_\+1\+\_\+} & middle single finger on side 1 \\
+\hline
+{\em base\+\_\+point\+\_\+2\+\_\+} & middle single finger on side 2 \\
+\hline
+{\em grasping\+\_\+direction\+\_\+} & vector representing the grasping direction \\
+\hline
+{\em grasping\+\_\+normal\+\_\+direction\+\_\+} & vector perpendicular to the grasping direction \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{structmultiFingerGripper_aec01970f5bdaf1299e710ecd04c52484}\label{structmultiFingerGripper_aec01970f5bdaf1299e710ecd04c52484}} 
+\index{multiFingerGripper@{multiFingerGripper}!base\_point\_1@{base\_point\_1}}
+\index{base\_point\_1@{base\_point\_1}!multiFingerGripper@{multiFingerGripper}}
+\doxysubsubsection{\texorpdfstring{base\_point\_1}{base\_point\_1}}
+{\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$\mbox{\hyperlink{structsingleFinger}{single\+Finger}}$>$ multi\+Finger\+Gripper\+::base\+\_\+point\+\_\+1}
+
+
+
+Middle finger on side 1. 
+
+\mbox{\Hypertarget{structmultiFingerGripper_a25113a8be6ab8bfa6036adb93dfef9f4}\label{structmultiFingerGripper_a25113a8be6ab8bfa6036adb93dfef9f4}} 
+\index{multiFingerGripper@{multiFingerGripper}!base\_point\_2@{base\_point\_2}}
+\index{base\_point\_2@{base\_point\_2}!multiFingerGripper@{multiFingerGripper}}
+\doxysubsubsection{\texorpdfstring{base\_point\_2}{base\_point\_2}}
+{\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$\mbox{\hyperlink{structsingleFinger}{single\+Finger}}$>$ multi\+Finger\+Gripper\+::base\+\_\+point\+\_\+2}
+
+
+
+Middle finger on side 2. 
+
+\mbox{\Hypertarget{structmultiFingerGripper_a8eb25755009f9133a7223fc9fa48f33c}\label{structmultiFingerGripper_a8eb25755009f9133a7223fc9fa48f33c}} 
+\index{multiFingerGripper@{multiFingerGripper}!closed\_fingers\_1@{closed\_fingers\_1}}
+\index{closed\_fingers\_1@{closed\_fingers\_1}!multiFingerGripper@{multiFingerGripper}}
+\doxysubsubsection{\texorpdfstring{closed\_fingers\_1}{closed\_fingers\_1}}
+{\footnotesize\ttfamily std\+::vector$<$std\+::shared\+\_\+ptr$<$\mbox{\hyperlink{structsingleFinger}{single\+Finger}}$>$ $>$ multi\+Finger\+Gripper\+::closed\+\_\+fingers\+\_\+1}
+
+
+
+Closed finger configuration on side 1. 
+
+\mbox{\Hypertarget{structmultiFingerGripper_af3f14d4b9160636dec96ffde87b10542}\label{structmultiFingerGripper_af3f14d4b9160636dec96ffde87b10542}} 
+\index{multiFingerGripper@{multiFingerGripper}!closed\_fingers\_1\_index@{closed\_fingers\_1\_index}}
+\index{closed\_fingers\_1\_index@{closed\_fingers\_1\_index}!multiFingerGripper@{multiFingerGripper}}
+\doxysubsubsection{\texorpdfstring{closed\_fingers\_1\_index}{closed\_fingers\_1\_index}}
+{\footnotesize\ttfamily std\+::vector$<$int$>$ multi\+Finger\+Gripper\+::closed\+\_\+fingers\+\_\+1\+\_\+index}
+
+
+
+Currently not used (I think) 
+
+\mbox{\Hypertarget{structmultiFingerGripper_a6409e7474254a01708e4d3c557385c3b}\label{structmultiFingerGripper_a6409e7474254a01708e4d3c557385c3b}} 
+\index{multiFingerGripper@{multiFingerGripper}!closed\_fingers\_2@{closed\_fingers\_2}}
+\index{closed\_fingers\_2@{closed\_fingers\_2}!multiFingerGripper@{multiFingerGripper}}
+\doxysubsubsection{\texorpdfstring{closed\_fingers\_2}{closed\_fingers\_2}}
+{\footnotesize\ttfamily std\+::vector$<$std\+::shared\+\_\+ptr$<$\mbox{\hyperlink{structsingleFinger}{single\+Finger}}$>$ $>$ multi\+Finger\+Gripper\+::closed\+\_\+fingers\+\_\+2}
+
+
+
+Closed finger configuration on side 2. 
+
+\mbox{\Hypertarget{structmultiFingerGripper_a84c02b21b7d51781df7d8a4da39670f2}\label{structmultiFingerGripper_a84c02b21b7d51781df7d8a4da39670f2}} 
+\index{multiFingerGripper@{multiFingerGripper}!closed\_fingers\_2\_index@{closed\_fingers\_2\_index}}
+\index{closed\_fingers\_2\_index@{closed\_fingers\_2\_index}!multiFingerGripper@{multiFingerGripper}}
+\doxysubsubsection{\texorpdfstring{closed\_fingers\_2\_index}{closed\_fingers\_2\_index}}
+{\footnotesize\ttfamily std\+::vector$<$int$>$ multi\+Finger\+Gripper\+::closed\+\_\+fingers\+\_\+2\+\_\+index}
+
+
+
+Currently not used (I think) 
+
+\mbox{\Hypertarget{structmultiFingerGripper_a7bb489039e509dc0a6a2306e96528242}\label{structmultiFingerGripper_a7bb489039e509dc0a6a2306e96528242}} 
+\index{multiFingerGripper@{multiFingerGripper}!collides\_with\_world@{collides\_with\_world}}
+\index{collides\_with\_world@{collides\_with\_world}!multiFingerGripper@{multiFingerGripper}}
+\doxysubsubsection{\texorpdfstring{collides\_with\_world}{collides\_with\_world}}
+{\footnotesize\ttfamily bool multi\+Finger\+Gripper\+::collides\+\_\+with\+\_\+world}
+
+
+
+True if colliding with world. 
+
+\mbox{\Hypertarget{structmultiFingerGripper_a08ba33168cc6cef7fe06b834a495a31d}\label{structmultiFingerGripper_a08ba33168cc6cef7fe06b834a495a31d}} 
+\index{multiFingerGripper@{multiFingerGripper}!grasp\_approach\_direction@{grasp\_approach\_direction}}
+\index{grasp\_approach\_direction@{grasp\_approach\_direction}!multiFingerGripper@{multiFingerGripper}}
+\doxysubsubsection{\texorpdfstring{grasp\_approach\_direction}{grasp\_approach\_direction}}
+{\footnotesize\ttfamily Eigen\+::\+Vector3f multi\+Finger\+Gripper\+::grasp\+\_\+approach\+\_\+direction}
+
+
+
+Unit vector of approach direction of gripper. 
+
+\mbox{\Hypertarget{structmultiFingerGripper_a4602d646865aa7077ebafb201ed17f67}\label{structmultiFingerGripper_a4602d646865aa7077ebafb201ed17f67}} 
+\index{multiFingerGripper@{multiFingerGripper}!grasp\_plane\_angle\_cos@{grasp\_plane\_angle\_cos}}
+\index{grasp\_plane\_angle\_cos@{grasp\_plane\_angle\_cos}!multiFingerGripper@{multiFingerGripper}}
+\doxysubsubsection{\texorpdfstring{grasp\_plane\_angle\_cos}{grasp\_plane\_angle\_cos}}
+{\footnotesize\ttfamily float multi\+Finger\+Gripper\+::grasp\+\_\+plane\+\_\+angle\+\_\+cos}
+
+
+
+Angle of multifinger gripper with respect to the object axis. 
+
+\mbox{\Hypertarget{structmultiFingerGripper_a2297b10b830e1f0c008005629bf624ba}\label{structmultiFingerGripper_a2297b10b830e1f0c008005629bf624ba}} 
+\index{multiFingerGripper@{multiFingerGripper}!grasping\_direction@{grasping\_direction}}
+\index{grasping\_direction@{grasping\_direction}!multiFingerGripper@{multiFingerGripper}}
+\doxysubsubsection{\texorpdfstring{grasping\_direction}{grasping\_direction}}
+{\footnotesize\ttfamily Eigen\+::\+Vector3f multi\+Finger\+Gripper\+::grasping\+\_\+direction}
+
+
+
+Unit vector of grasping direction. 
+
+\mbox{\Hypertarget{structmultiFingerGripper_aabded51e938288b365a782fc626f2f1f}\label{structmultiFingerGripper_aabded51e938288b365a782fc626f2f1f}} 
+\index{multiFingerGripper@{multiFingerGripper}!grasping\_normal\_direction@{grasping\_normal\_direction}}
+\index{grasping\_normal\_direction@{grasping\_normal\_direction}!multiFingerGripper@{multiFingerGripper}}
+\doxysubsubsection{\texorpdfstring{grasping\_normal\_direction}{grasping\_normal\_direction}}
+{\footnotesize\ttfamily Eigen\+::\+Vector3f multi\+Finger\+Gripper\+::grasping\+\_\+normal\+\_\+direction}
+
+
+
+Unit vector perpendicular to grasping direction. 
+
+\mbox{\Hypertarget{structmultiFingerGripper_af1742edcce60991fbef89275d2176250}\label{structmultiFingerGripper_af1742edcce60991fbef89275d2176250}} 
+\index{multiFingerGripper@{multiFingerGripper}!gripper\_palm\_center@{gripper\_palm\_center}}
+\index{gripper\_palm\_center@{gripper\_palm\_center}!multiFingerGripper@{multiFingerGripper}}
+\doxysubsubsection{\texorpdfstring{gripper\_palm\_center}{gripper\_palm\_center}}
+{\footnotesize\ttfamily pcl\+::\+Point\+X\+YZ multi\+Finger\+Gripper\+::gripper\+\_\+palm\+\_\+center}
+
+
+
+Centerpoint of gripper. 
+
+\mbox{\Hypertarget{structmultiFingerGripper_a35c53372e2dea581feeccc5db58ae133}\label{structmultiFingerGripper_a35c53372e2dea581feeccc5db58ae133}} 
+\index{multiFingerGripper@{multiFingerGripper}!marker@{marker}}
+\index{marker@{marker}!multiFingerGripper@{multiFingerGripper}}
+\doxysubsubsection{\texorpdfstring{marker}{marker}}
+{\footnotesize\ttfamily visualization\+\_\+msgs\+::msg\+::\+Marker multi\+Finger\+Gripper\+::marker}
+
+
+
+Marker representing the grasp points of open configuration on both sides. 
+
+\mbox{\Hypertarget{structmultiFingerGripper_a4ec9b64a5046d0e564e75176927b62b9}\label{structmultiFingerGripper_a4ec9b64a5046d0e564e75176927b62b9}} 
+\index{multiFingerGripper@{multiFingerGripper}!open\_fingers\_1@{open\_fingers\_1}}
+\index{open\_fingers\_1@{open\_fingers\_1}!multiFingerGripper@{multiFingerGripper}}
+\doxysubsubsection{\texorpdfstring{open\_fingers\_1}{open\_fingers\_1}}
+{\footnotesize\ttfamily std\+::vector$<$Eigen\+::\+Vector3f$>$ multi\+Finger\+Gripper\+::open\+\_\+fingers\+\_\+1}
+
+
+
+3D coordinates of the open configuration for finger gripper on side 1 
+
+\mbox{\Hypertarget{structmultiFingerGripper_a45d60fa0d34c53f490b52fb9dce9d12f}\label{structmultiFingerGripper_a45d60fa0d34c53f490b52fb9dce9d12f}} 
+\index{multiFingerGripper@{multiFingerGripper}!open\_fingers\_2@{open\_fingers\_2}}
+\index{open\_fingers\_2@{open\_fingers\_2}!multiFingerGripper@{multiFingerGripper}}
+\doxysubsubsection{\texorpdfstring{open\_fingers\_2}{open\_fingers\_2}}
+{\footnotesize\ttfamily std\+::vector$<$Eigen\+::\+Vector3f$>$ multi\+Finger\+Gripper\+::open\+\_\+fingers\+\_\+2}
+
+
+
+3D coordinates of the open configuration for finger gripper on side 2 
+
+\mbox{\Hypertarget{structmultiFingerGripper_ae19645807ebada4bf5db8b49084f3327}\label{structmultiFingerGripper_ae19645807ebada4bf5db8b49084f3327}} 
+\index{multiFingerGripper@{multiFingerGripper}!pose@{pose}}
+\index{pose@{pose}!multiFingerGripper@{multiFingerGripper}}
+\doxysubsubsection{\texorpdfstring{pose}{pose}}
+{\footnotesize\ttfamily geometry\+\_\+msgs\+::msg\+::\+Pose\+Stamped multi\+Finger\+Gripper\+::pose}
+
+
+
+Pose of gripper. 
+
+\mbox{\Hypertarget{structmultiFingerGripper_a9d2d898cd4d2a264147b6e065bc3cebe}\label{structmultiFingerGripper_a9d2d898cd4d2a264147b6e065bc3cebe}} 
+\index{multiFingerGripper@{multiFingerGripper}!rank@{rank}}
+\index{rank@{rank}!multiFingerGripper@{multiFingerGripper}}
+\doxysubsubsection{\texorpdfstring{rank}{rank}}
+{\footnotesize\ttfamily float multi\+Finger\+Gripper\+::rank}
+
+
+
+Rank of current Gripper. 
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/rosi5/workspaces/emd\+\_\+ws/src/easy\+\_\+manipulation\+\_\+deployment/grasp\+\_\+planner/include/grasp\+\_\+planner/end\+\_\+effectors/\mbox{\hyperlink{finger__gripper_8hpp}{finger\+\_\+gripper.\+hpp}}\end{DoxyCompactItemize}

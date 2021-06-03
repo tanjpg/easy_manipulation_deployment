@@ -1,0 +1,78 @@
+\hypertarget{classgrasp__execution_1_1dynamic__safety_1_1Replanner}{}\doxysection{grasp\+\_\+execution\+::dynamic\+\_\+safety\+::Replanner Class Reference}
+\label{classgrasp__execution_1_1dynamic__safety_1_1Replanner}\index{grasp\_execution::dynamic\_safety::Replanner@{grasp\_execution::dynamic\_safety::Replanner}}
+
+
+{\ttfamily \#include $<$replanner.\+hpp$>$}
+
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structgrasp__execution_1_1dynamic__safety_1_1Replanner_1_1Option}{Option}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classgrasp__execution_1_1dynamic__safety_1_1Replanner_ad9cabf21fbc841d271deed2ae236322c}{configure}} (const planning\+\_\+scene\+::\+Planning\+Scene\+Ptr \&scene, const robot\+\_\+trajectory\+::\+Robot\+Trajectory\+Ptr \&rt, const rclcpp\+::\+Node\+::\+Shared\+Ptr \&node, const \mbox{\hyperlink{structgrasp__execution_1_1dynamic__safety_1_1Replanner_1_1Option}{Option}} \&option)
+\item 
+void \mbox{\hyperlink{classgrasp__execution_1_1dynamic__safety_1_1Replanner_abfebc426669abc2bd291cbacd0ce681a}{start}} (double start\+\_\+time\+\_\+point, double deadline)
+\item 
+void \mbox{\hyperlink{classgrasp__execution_1_1dynamic__safety_1_1Replanner_a5cf20e09d66ff3670ff372a35a4383a0}{update}} (const sensor\+\_\+msgs\+::msg\+::\+Joint\+State\+::\+Shared\+Ptr \&msg)
+\item 
+bool \mbox{\hyperlink{classgrasp__execution_1_1dynamic__safety_1_1Replanner_a512c0eae3dbe8c355871c49993ac473d}{started}} () const
+\item 
+bool \mbox{\hyperlink{classgrasp__execution_1_1dynamic__safety_1_1Replanner_acce449e1482ad296e60be42ebeb0f114}{get\+\_\+result}} () const
+\item 
+void \mbox{\hyperlink{classgrasp__execution_1_1dynamic__safety_1_1Replanner_a254a016b8b47e083c57f0af6521af216}{reset}} ()
+\item 
+const robot\+\_\+trajectory\+::\+Robot\+Trajectory\+Ptr \& \mbox{\hyperlink{classgrasp__execution_1_1dynamic__safety_1_1Replanner_a8a6eb8d46d11aad42b438d7dd637c90c}{get\+\_\+trajectory}} () const
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classgrasp__execution_1_1dynamic__safety_1_1Replanner_ad9cabf21fbc841d271deed2ae236322c}\label{classgrasp__execution_1_1dynamic__safety_1_1Replanner_ad9cabf21fbc841d271deed2ae236322c}} 
+\index{grasp\_execution::dynamic\_safety::Replanner@{grasp\_execution::dynamic\_safety::Replanner}!configure@{configure}}
+\index{configure@{configure}!grasp\_execution::dynamic\_safety::Replanner@{grasp\_execution::dynamic\_safety::Replanner}}
+\doxysubsubsection{\texorpdfstring{configure()}{configure()}}
+{\footnotesize\ttfamily void grasp\+\_\+execution\+::dynamic\+\_\+safety\+::\+Replanner\+::configure (\begin{DoxyParamCaption}\item[{const planning\+\_\+scene\+::\+Planning\+Scene\+Ptr \&}]{scene,  }\item[{const robot\+\_\+trajectory\+::\+Robot\+Trajectory\+Ptr \&}]{rt,  }\item[{const rclcpp\+::\+Node\+::\+Shared\+Ptr \&}]{node,  }\item[{const \mbox{\hyperlink{structgrasp__execution_1_1dynamic__safety_1_1Replanner_1_1Option}{Option}} \&}]{option }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classgrasp__execution_1_1dynamic__safety_1_1Replanner_acce449e1482ad296e60be42ebeb0f114}\label{classgrasp__execution_1_1dynamic__safety_1_1Replanner_acce449e1482ad296e60be42ebeb0f114}} 
+\index{grasp\_execution::dynamic\_safety::Replanner@{grasp\_execution::dynamic\_safety::Replanner}!get\_result@{get\_result}}
+\index{get\_result@{get\_result}!grasp\_execution::dynamic\_safety::Replanner@{grasp\_execution::dynamic\_safety::Replanner}}
+\doxysubsubsection{\texorpdfstring{get\_result()}{get\_result()}}
+{\footnotesize\ttfamily bool grasp\+\_\+execution\+::dynamic\+\_\+safety\+::\+Replanner\+::get\+\_\+result (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classgrasp__execution_1_1dynamic__safety_1_1Replanner_a8a6eb8d46d11aad42b438d7dd637c90c}\label{classgrasp__execution_1_1dynamic__safety_1_1Replanner_a8a6eb8d46d11aad42b438d7dd637c90c}} 
+\index{grasp\_execution::dynamic\_safety::Replanner@{grasp\_execution::dynamic\_safety::Replanner}!get\_trajectory@{get\_trajectory}}
+\index{get\_trajectory@{get\_trajectory}!grasp\_execution::dynamic\_safety::Replanner@{grasp\_execution::dynamic\_safety::Replanner}}
+\doxysubsubsection{\texorpdfstring{get\_trajectory()}{get\_trajectory()}}
+{\footnotesize\ttfamily const robot\+\_\+trajectory\+::\+Robot\+Trajectory\+Ptr\& grasp\+\_\+execution\+::dynamic\+\_\+safety\+::\+Replanner\+::get\+\_\+trajectory (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classgrasp__execution_1_1dynamic__safety_1_1Replanner_a254a016b8b47e083c57f0af6521af216}\label{classgrasp__execution_1_1dynamic__safety_1_1Replanner_a254a016b8b47e083c57f0af6521af216}} 
+\index{grasp\_execution::dynamic\_safety::Replanner@{grasp\_execution::dynamic\_safety::Replanner}!reset@{reset}}
+\index{reset@{reset}!grasp\_execution::dynamic\_safety::Replanner@{grasp\_execution::dynamic\_safety::Replanner}}
+\doxysubsubsection{\texorpdfstring{reset()}{reset()}}
+{\footnotesize\ttfamily void grasp\+\_\+execution\+::dynamic\+\_\+safety\+::\+Replanner\+::reset (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classgrasp__execution_1_1dynamic__safety_1_1Replanner_abfebc426669abc2bd291cbacd0ce681a}\label{classgrasp__execution_1_1dynamic__safety_1_1Replanner_abfebc426669abc2bd291cbacd0ce681a}} 
+\index{grasp\_execution::dynamic\_safety::Replanner@{grasp\_execution::dynamic\_safety::Replanner}!start@{start}}
+\index{start@{start}!grasp\_execution::dynamic\_safety::Replanner@{grasp\_execution::dynamic\_safety::Replanner}}
+\doxysubsubsection{\texorpdfstring{start()}{start()}}
+{\footnotesize\ttfamily void grasp\+\_\+execution\+::dynamic\+\_\+safety\+::\+Replanner\+::start (\begin{DoxyParamCaption}\item[{double}]{start\+\_\+time\+\_\+point,  }\item[{double}]{deadline }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classgrasp__execution_1_1dynamic__safety_1_1Replanner_a512c0eae3dbe8c355871c49993ac473d}\label{classgrasp__execution_1_1dynamic__safety_1_1Replanner_a512c0eae3dbe8c355871c49993ac473d}} 
+\index{grasp\_execution::dynamic\_safety::Replanner@{grasp\_execution::dynamic\_safety::Replanner}!started@{started}}
+\index{started@{started}!grasp\_execution::dynamic\_safety::Replanner@{grasp\_execution::dynamic\_safety::Replanner}}
+\doxysubsubsection{\texorpdfstring{started()}{started()}}
+{\footnotesize\ttfamily bool grasp\+\_\+execution\+::dynamic\+\_\+safety\+::\+Replanner\+::started (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classgrasp__execution_1_1dynamic__safety_1_1Replanner_a5cf20e09d66ff3670ff372a35a4383a0}\label{classgrasp__execution_1_1dynamic__safety_1_1Replanner_a5cf20e09d66ff3670ff372a35a4383a0}} 
+\index{grasp\_execution::dynamic\_safety::Replanner@{grasp\_execution::dynamic\_safety::Replanner}!update@{update}}
+\index{update@{update}!grasp\_execution::dynamic\_safety::Replanner@{grasp\_execution::dynamic\_safety::Replanner}}
+\doxysubsubsection{\texorpdfstring{update()}{update()}}
+{\footnotesize\ttfamily void grasp\+\_\+execution\+::dynamic\+\_\+safety\+::\+Replanner\+::update (\begin{DoxyParamCaption}\item[{const sensor\+\_\+msgs\+::msg\+::\+Joint\+State\+::\+Shared\+Ptr \&}]{msg }\end{DoxyParamCaption})}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/rosi5/workspaces/emd\+\_\+ws/src/easy\+\_\+manipulation\+\_\+deployment/grasp\+\_\+execution/include/grasp\+\_\+execution/dynamic\+\_\+safety/\mbox{\hyperlink{replanner_8hpp}{replanner.\+hpp}}\end{DoxyCompactItemize}

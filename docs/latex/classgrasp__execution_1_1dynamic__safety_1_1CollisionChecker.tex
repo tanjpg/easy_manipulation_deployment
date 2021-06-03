@@ -1,0 +1,154 @@
+\hypertarget{classgrasp__execution_1_1dynamic__safety_1_1CollisionChecker}{}\doxysection{grasp\+\_\+execution\+::dynamic\+\_\+safety\+::Collision\+Checker Class Reference}
+\label{classgrasp__execution_1_1dynamic__safety_1_1CollisionChecker}\index{grasp\_execution::dynamic\_safety::CollisionChecker@{grasp\_execution::dynamic\_safety::CollisionChecker}}
+
+
+Collision checker for dynamic safety.  
+
+
+
+
+{\ttfamily \#include $<$collision\+\_\+checker.\+hpp$>$}
+
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structgrasp__execution_1_1dynamic__safety_1_1CollisionChecker_1_1Option}{Option}}
+\begin{DoxyCompactList}\small\item\em Collision checker options. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classgrasp__execution_1_1dynamic__safety_1_1CollisionChecker_ac619d0d01efebdaa47f13e88da422992}{Collision\+Checker}} ()
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classgrasp__execution_1_1dynamic__safety_1_1CollisionChecker_a638d945781bc0d52c1891f4af692a82b}{$\sim$\+Collision\+Checker}} ()
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classgrasp__execution_1_1dynamic__safety_1_1CollisionChecker_a923bda7df055dc9e8c96215f7f26fe5f}{configure}} (const \mbox{\hyperlink{structgrasp__execution_1_1dynamic__safety_1_1CollisionChecker_1_1Option}{Option}} \&option, const planning\+\_\+scene\+::\+Planning\+Scene\+Ptr \&scene, const robot\+\_\+trajectory\+::\+Robot\+Trajectory\+Ptr \&rt)
+\begin{DoxyCompactList}\small\item\em Configure the collision checker to prepare for collision checking. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classgrasp__execution_1_1dynamic__safety_1_1CollisionChecker_a962e0431d891589f6ed6920569a512ae}{update}} (const moveit\+::core\+::\+Robot\+State \&state)
+\begin{DoxyCompactList}\small\item\em Update the rest of the robot state beyond the detector group. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classgrasp__execution_1_1dynamic__safety_1_1CollisionChecker_a3ffb9a204bdb54b67d847a0343ea451b}{run\+\_\+once}} (double point, double look\+\_\+ahead\+\_\+time, double \&collision\+\_\+point)
+\begin{DoxyCompactList}\small\item\em Run collision checking once. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classgrasp__execution_1_1dynamic__safety_1_1CollisionChecker_ad115f23d59829096bd3a7fd2290cd723}{reset}} ()
+\begin{DoxyCompactList}\small\item\em Reset / stop collision checker. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classgrasp__execution_1_1dynamic__safety_1_1CollisionChecker_a2070b092e993f2037a723b35305ea92d}{update\+\_\+traj}} (const robot\+\_\+trajectory\+::\+Robot\+Trajectory\+Ptr \&traj, const \mbox{\hyperlink{structgrasp__execution_1_1dynamic__safety_1_1CollisionChecker_1_1Option}{Option}} \&option)
+\begin{DoxyCompactList}\small\item\em Update the trajectory after collision checker has started. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Collision checker for dynamic safety. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classgrasp__execution_1_1dynamic__safety_1_1CollisionChecker_ac619d0d01efebdaa47f13e88da422992}\label{classgrasp__execution_1_1dynamic__safety_1_1CollisionChecker_ac619d0d01efebdaa47f13e88da422992}} 
+\index{grasp\_execution::dynamic\_safety::CollisionChecker@{grasp\_execution::dynamic\_safety::CollisionChecker}!CollisionChecker@{CollisionChecker}}
+\index{CollisionChecker@{CollisionChecker}!grasp\_execution::dynamic\_safety::CollisionChecker@{grasp\_execution::dynamic\_safety::CollisionChecker}}
+\doxysubsubsection{\texorpdfstring{CollisionChecker()}{CollisionChecker()}}
+{\footnotesize\ttfamily grasp\+\_\+execution\+::dynamic\+\_\+safety\+::\+Collision\+Checker\+::\+Collision\+Checker (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Constructor. 
+
+\mbox{\Hypertarget{classgrasp__execution_1_1dynamic__safety_1_1CollisionChecker_a638d945781bc0d52c1891f4af692a82b}\label{classgrasp__execution_1_1dynamic__safety_1_1CollisionChecker_a638d945781bc0d52c1891f4af692a82b}} 
+\index{grasp\_execution::dynamic\_safety::CollisionChecker@{grasp\_execution::dynamic\_safety::CollisionChecker}!````~CollisionChecker@{$\sim$CollisionChecker}}
+\index{````~CollisionChecker@{$\sim$CollisionChecker}!grasp\_execution::dynamic\_safety::CollisionChecker@{grasp\_execution::dynamic\_safety::CollisionChecker}}
+\doxysubsubsection{\texorpdfstring{$\sim$CollisionChecker()}{~CollisionChecker()}}
+{\footnotesize\ttfamily grasp\+\_\+execution\+::dynamic\+\_\+safety\+::\+Collision\+Checker\+::$\sim$\+Collision\+Checker (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Destructor. 
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classgrasp__execution_1_1dynamic__safety_1_1CollisionChecker_a923bda7df055dc9e8c96215f7f26fe5f}\label{classgrasp__execution_1_1dynamic__safety_1_1CollisionChecker_a923bda7df055dc9e8c96215f7f26fe5f}} 
+\index{grasp\_execution::dynamic\_safety::CollisionChecker@{grasp\_execution::dynamic\_safety::CollisionChecker}!configure@{configure}}
+\index{configure@{configure}!grasp\_execution::dynamic\_safety::CollisionChecker@{grasp\_execution::dynamic\_safety::CollisionChecker}}
+\doxysubsubsection{\texorpdfstring{configure()}{configure()}}
+{\footnotesize\ttfamily void grasp\+\_\+execution\+::dynamic\+\_\+safety\+::\+Collision\+Checker\+::configure (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structgrasp__execution_1_1dynamic__safety_1_1CollisionChecker_1_1Option}{Option}} \&}]{option,  }\item[{const planning\+\_\+scene\+::\+Planning\+Scene\+Ptr \&}]{scene,  }\item[{const robot\+\_\+trajectory\+::\+Robot\+Trajectory\+Ptr \&}]{rt }\end{DoxyParamCaption})}
+
+
+
+Configure the collision checker to prepare for collision checking. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em option} & Collison checker options. \\
+\hline
+\mbox{\texttt{ in}}  & {\em scene} & Moveit scene to use / clone for collision checking. \\
+\hline
+\mbox{\texttt{ in}}  & {\em rt} & Robot trajectory to check collision for. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classgrasp__execution_1_1dynamic__safety_1_1CollisionChecker_ad115f23d59829096bd3a7fd2290cd723}\label{classgrasp__execution_1_1dynamic__safety_1_1CollisionChecker_ad115f23d59829096bd3a7fd2290cd723}} 
+\index{grasp\_execution::dynamic\_safety::CollisionChecker@{grasp\_execution::dynamic\_safety::CollisionChecker}!reset@{reset}}
+\index{reset@{reset}!grasp\_execution::dynamic\_safety::CollisionChecker@{grasp\_execution::dynamic\_safety::CollisionChecker}}
+\doxysubsubsection{\texorpdfstring{reset()}{reset()}}
+{\footnotesize\ttfamily void grasp\+\_\+execution\+::dynamic\+\_\+safety\+::\+Collision\+Checker\+::reset (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Reset / stop collision checker. 
+
+After this is called, \mbox{\hyperlink{classgrasp__execution_1_1dynamic__safety_1_1CollisionChecker_a923bda7df055dc9e8c96215f7f26fe5f}{configure()}} has to be called again before running \mbox{\hyperlink{classgrasp__execution_1_1dynamic__safety_1_1CollisionChecker_a3ffb9a204bdb54b67d847a0343ea451b}{run\+\_\+once()}}.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classgrasp__execution_1_1dynamic__safety_1_1CollisionChecker_a923bda7df055dc9e8c96215f7f26fe5f}{configure()}} 
+
+\mbox{\hyperlink{classgrasp__execution_1_1dynamic__safety_1_1CollisionChecker_a3ffb9a204bdb54b67d847a0343ea451b}{run\+\_\+once()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classgrasp__execution_1_1dynamic__safety_1_1CollisionChecker_a3ffb9a204bdb54b67d847a0343ea451b}\label{classgrasp__execution_1_1dynamic__safety_1_1CollisionChecker_a3ffb9a204bdb54b67d847a0343ea451b}} 
+\index{grasp\_execution::dynamic\_safety::CollisionChecker@{grasp\_execution::dynamic\_safety::CollisionChecker}!run\_once@{run\_once}}
+\index{run\_once@{run\_once}!grasp\_execution::dynamic\_safety::CollisionChecker@{grasp\_execution::dynamic\_safety::CollisionChecker}}
+\doxysubsubsection{\texorpdfstring{run\_once()}{run\_once()}}
+{\footnotesize\ttfamily void grasp\+\_\+execution\+::dynamic\+\_\+safety\+::\+Collision\+Checker\+::run\+\_\+once (\begin{DoxyParamCaption}\item[{double}]{point,  }\item[{double}]{look\+\_\+ahead\+\_\+time,  }\item[{double \&}]{collision\+\_\+point }\end{DoxyParamCaption})}
+
+
+
+Run collision checking once. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em point} & Current time point. \\
+\hline
+\mbox{\texttt{ in}}  & {\em look\+\_\+ahead\+\_\+time} & How far to check beyond the current time point. \\
+\hline
+\mbox{\texttt{ out}}  & {\em collision\+\_\+point} & Collision time point, -\/1 if no collision found. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classgrasp__execution_1_1dynamic__safety_1_1CollisionChecker_a962e0431d891589f6ed6920569a512ae}\label{classgrasp__execution_1_1dynamic__safety_1_1CollisionChecker_a962e0431d891589f6ed6920569a512ae}} 
+\index{grasp\_execution::dynamic\_safety::CollisionChecker@{grasp\_execution::dynamic\_safety::CollisionChecker}!update@{update}}
+\index{update@{update}!grasp\_execution::dynamic\_safety::CollisionChecker@{grasp\_execution::dynamic\_safety::CollisionChecker}}
+\doxysubsubsection{\texorpdfstring{update()}{update()}}
+{\footnotesize\ttfamily void grasp\+\_\+execution\+::dynamic\+\_\+safety\+::\+Collision\+Checker\+::update (\begin{DoxyParamCaption}\item[{const moveit\+::core\+::\+Robot\+State \&}]{state }\end{DoxyParamCaption})}
+
+
+
+Update the rest of the robot state beyond the detector group. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em state} & Robot state to reference and update from. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classgrasp__execution_1_1dynamic__safety_1_1CollisionChecker_a2070b092e993f2037a723b35305ea92d}\label{classgrasp__execution_1_1dynamic__safety_1_1CollisionChecker_a2070b092e993f2037a723b35305ea92d}} 
+\index{grasp\_execution::dynamic\_safety::CollisionChecker@{grasp\_execution::dynamic\_safety::CollisionChecker}!update\_traj@{update\_traj}}
+\index{update\_traj@{update\_traj}!grasp\_execution::dynamic\_safety::CollisionChecker@{grasp\_execution::dynamic\_safety::CollisionChecker}}
+\doxysubsubsection{\texorpdfstring{update\_traj()}{update\_traj()}}
+{\footnotesize\ttfamily void grasp\+\_\+execution\+::dynamic\+\_\+safety\+::\+Collision\+Checker\+::update\+\_\+traj (\begin{DoxyParamCaption}\item[{const robot\+\_\+trajectory\+::\+Robot\+Trajectory\+Ptr \&}]{traj,  }\item[{const \mbox{\hyperlink{structgrasp__execution_1_1dynamic__safety_1_1CollisionChecker_1_1Option}{Option}} \&}]{option }\end{DoxyParamCaption})}
+
+
+
+Update the trajectory after collision checker has started. 
+
+This cannot run parallel with \mbox{\hyperlink{classgrasp__execution_1_1dynamic__safety_1_1CollisionChecker_a3ffb9a204bdb54b67d847a0343ea451b}{run\+\_\+once()}}. 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em traj} & Trajectory to replace the current one. \\
+\hline
+\mbox{\texttt{ in}}  & {\em option} & Collision checking option to update. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/rosi5/workspaces/emd\+\_\+ws/src/easy\+\_\+manipulation\+\_\+deployment/grasp\+\_\+execution/include/grasp\+\_\+execution/dynamic\+\_\+safety/\mbox{\hyperlink{collision__checker_8hpp}{collision\+\_\+checker.\+hpp}}\end{DoxyCompactItemize}
